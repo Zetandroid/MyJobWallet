@@ -6,11 +6,13 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_profilo"
+            android:textColor="@color/colorAccent"
             android:title="Profilo" />
 
             <item
                 android:id="@+id/nav_setting"
                 android:icon="@drawable/ic_menu_setting"
+                android:textColor="@color/colorAccent"
                 android:title="Impostazioni" />
    </group>
 
