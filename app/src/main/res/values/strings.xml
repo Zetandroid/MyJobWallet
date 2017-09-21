@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyJobWallet</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- NOMI IMPOSTAZIONI SU TOOLBAR -->
+    <string name="actionSetting">Altre Impostazioni</string>
+
+    <!-- NOMI SU TOOLBAR -->
+    <string name="toolBarSetting">Impostazioni</string>
+    <string name="toolbarProfile">Profilo</string>
+
+</resources>
