@@ -74,7 +74,7 @@
                     <Button
                         android:id="@+id/bottone_revoca"
                         android:layout_width="350dp"
-                        android:layout_height="32dp"
+                        android:layout_height="48dp"
                         android:layout_marginBottom="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginLeft="16dp"
@@ -82,17 +82,16 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_weight="1"
-                        android:background="@drawable/button_circle"
                         android:text="@string/bottone_revoca"
-                        android:textColor="@color/darkText"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
+                        android:textColor="@color/lightText"
+                        android:textSize="12sp"
+                        android:theme="@style/PrimaryFlatButton"
                         android:visibility="visible" />
 
                     <Button
                         android:id="@+id/bottone_disconnetti"
                         android:layout_width="350dp"
-                        android:layout_height="32dp"
+                        android:layout_height="48dp"
                         android:layout_marginBottom="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginLeft="16dp"
@@ -100,11 +99,10 @@
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_weight="1"
-                        android:background="@drawable/button_circle"
                         android:text="@string/bottone_disconnetti"
-                        android:textColor="@color/darkText"
-                        android:textSize="10sp"
-                        android:textStyle="bold"
+                        android:textColor="@color/lightText"
+                        android:textSize="12sp"
+                        android:theme="@style/PrimaryFlatButton"
                         android:visibility="visible" />
 
                 </LinearLayout>
