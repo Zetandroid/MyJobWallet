@@ -38,7 +38,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
-                    android:clickable="false">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
 
                     <ImageView
                         android:id="@+id/imageOre"
@@ -66,7 +67,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
-                    android:clickable="false">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
 
                     <ImageView
                         android:id="@+id/imageTurni"
@@ -102,7 +104,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
-                    android:clickable="false">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
 
                     <ImageView
                         android:id="@+id/imageSpese"
@@ -130,7 +133,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
-                    android:clickable="false">
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
 
                     <ImageView
                         android:id="@+id/imageStorico"
