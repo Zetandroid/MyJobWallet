@@ -134,6 +134,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="SettingActivity"
                     android:clickable="true">
 
                     <ImageView

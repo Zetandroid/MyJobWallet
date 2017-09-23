@@ -24,7 +24,6 @@ public class CardViewActivity extends AppCompatActivity {
         setContentView(R.layout.container_main);
 
 
-
     }
 
 }
