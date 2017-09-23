@@ -1,0 +1,10 @@
+<tabs>
+    <tab
+        id="@+id/tab_conto"
+        icon="@drawable/ic_bottom_conto"
+        title="Conto" />
+    <tab
+        id="@+id/tab_memo"
+        icon="@drawable/ic_bottom_memo"
+        title="Memo" />
+</tabs>
