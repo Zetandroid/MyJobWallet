@@ -104,4 +104,14 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    //Questo evento apre le activity, va modificato il codice a seconda dell'activity da aprire
+    //Ogni activity va aperta creando un metodo come questo.
+
+    public void apriActivity1(View v){
+        startActivity(new Intent(MainActivity.this, NomeClasse.class));
+    }
+
+    //Poi dopo nell'xml del layout, alla voce android:onclick dell'elemento da cliccare
+    //Ci scrivi apriActivity1
 }
