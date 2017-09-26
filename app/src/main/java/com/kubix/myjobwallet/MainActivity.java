@@ -105,13 +105,22 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    //Questo evento apre le activity, va modificato il codice a seconda dell'activity da aprire
-    //Ogni activity va aperta creando un metodo come questo.
+    //TODO Questo evento apre le activity, va modificato il codice a seconda dell'activity da aprire
+    //TODO Ogni activity va aperta creando un metodo come questo.
+    //TODO Poi dopo nell'xml del layout, alla voce android:onclick dell'elemento da cliccare
+    //TODO Ci scrivi apriActivity1
 
-    public void apriActivity1(View v){
-        startActivity(new Intent(MainActivity.this, NomeClasse.class));
+    public void OreActivity (View v){
+        startActivity (new Intent(MainActivity.this, OreActivity.class));
+    }
+    public void TurniActivity (View v){
+        startActivity (new Intent(MainActivity.this,TurniActivity.class));
+    }
+    public void SpeseActivity (View V){
+        startActivity (new Intent(MainActivity.this,SpeseActivity.class));
+    }
+    public void StoricoActivity (View v){
+        startActivity (new Intent(MainActivity.this,StoricoActivity.class));
     }
 
-    //Poi dopo nell'xml del layout, alla voce android:onclick dell'elemento da cliccare
-    //Ci scrivi apriActivity1
 }

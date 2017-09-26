@@ -23,6 +23,14 @@
             android:label="@string/toolBarSetting" />
         <activity android:name=".ProfileActivity"
             android:label="@string/toolbarProfile" />
+        <activity android:name=".OreActivity"
+            android:label="@string/toolbarOre"/>
+        <activity android:name=".TurniActivity"
+            android:label="@string/toolbarTurni"/>
+        <activity android:name=".SpeseActivity"
+            android:label="@string/toolbarSpese"/>
+        <activity android:name=".StoricoActivity"
+            android:label="@string/toolbarStorico"/>
 
     </application>
 

@@ -10,6 +10,10 @@
     <!-- NOMI SU TOOLBAR -->
     <string name="toolBarSetting">Impostazioni</string>
     <string name="toolbarProfile">Profilo</string>
+    <string name="toolbarOre">Ore</string>
+    <string name="toolbarTurni">Turni</string>
+    <string name="toolbarSpese">Spese</string>
+    <string name="toolbarStorico">Storico</string>
 
 
     <!-- MENU PROFILO -->

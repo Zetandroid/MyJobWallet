@@ -40,6 +40,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="OreActivity"
                     android:clickable="true">
 
                     <ImageView
@@ -69,6 +70,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="TurniActivity"
                     android:clickable="true">
 
                     <ImageView
@@ -106,6 +108,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="SpeseActivity"
                     android:clickable="true">
 
                     <ImageView
@@ -135,7 +138,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:onClick="SettingActivity"
+                    android:onClick="StoricoActivity"
                     android:clickable="true">
 
                     <ImageView

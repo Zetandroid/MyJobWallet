@@ -85,7 +85,7 @@
                         android:text="@string/bottone_revoca"
                         android:textColor="@color/lightText"
                         android:textSize="12sp"
-                        android:theme="@style/PrimaryFlatButton"
+                        android:theme="@style/PrimaryButton"
                         android:visibility="visible" />
 
                     <Button
@@ -102,7 +102,7 @@
                         android:text="@string/bottone_disconnetti"
                         android:textColor="@color/lightText"
                         android:textSize="12sp"
-                        android:theme="@style/PrimaryFlatButton"
+                        android:theme="@style/PrimaryButton"
                         android:visibility="visible" />
 
                 </LinearLayout>
