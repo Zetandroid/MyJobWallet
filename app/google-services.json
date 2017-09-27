@@ -1,33 +1,27 @@
 {
   "project_info": {
-    "project_number": "201333013796",
-    "project_id": "myjobwallet"
+    "project_number": "771912042701",
+    "firebase_url": "https://myjobwallet-e5b27.firebaseio.com",
+    "project_id": "myjobwallet-e5b27",
+    "storage_bucket": "myjobwallet-e5b27.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:201333013796:android:d2fc5e3637e9a128",
+        "mobilesdk_app_id": "1:771912042701:android:d2fc5e3637e9a128",
         "android_client_info": {
           "package_name": "com.kubix.myjobwallet"
         }
       },
       "oauth_client": [
         {
-          "client_id": "201333013796-7elrua1vjg40hb9rvqq0ct7r0nhm63p7.apps.googleusercontent.com",
+          "client_id": "771912042701-ir6ght3nhedcec1olvn2bn66l05og7fd.apps.googleusercontent.com",
           "client_type": 3
-        },
-        {
-          "client_id": "201333013796-jj7cd5e6d2gsig4fgvc060eggbgt70ok.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.kubix.myjobwallet",
-            "certificate_hash": "0c4d5324f045c7f05c19ffcf91ba5f9bd9cbe69c"
-          }
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAizIjT0q9bLcK0aPV3gaCppUJ8LG6oJvo"
+          "current_key": "AIzaSyBUwwEAcmwcIToFoekW81BRWRpmerStzDw"
         }
       ],
       "services": {
@@ -39,7 +33,7 @@
           "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
