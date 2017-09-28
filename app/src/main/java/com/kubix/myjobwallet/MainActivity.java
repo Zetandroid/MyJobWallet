@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabReselectListener;
 
@@ -29,22 +31,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        //TODO BOTTOMBAR
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
-        bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
-            @Override
-            public void onTabReSelected(@IdRes int tabId) {
-                if (tabId == R.id.tab_conto) {
-                    startActivity(new Intent(MainActivity.this,ProfileActivity.class));
-
-                }else if (tabId == R.id.tab_memo) {
-                    startActivity(new Intent(MainActivity.this,SettingActivity.class));
-                }
-            }
-        });
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -57,6 +43,9 @@ public class MainActivity extends AppCompatActivity
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Turni (Data Varchar(50) Unique, oraEntrata Varchar (50), oraUscita Varchar(50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Controlli (Data Varchar (50) Unique);");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Stipendi (Mese Varchar (50), Importo Varchar (50))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Note (Testo Varchar (50))");
+        Toast.makeText(this, "Benvenuto in MyJobWallet", Toast.LENGTH_SHORT).show();
     }
 
     @Override

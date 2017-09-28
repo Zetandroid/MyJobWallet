@@ -5,13 +5,6 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        app:bb_tabXmlResource="@xml/bottombar" />
-
 
     <ScrollView
         android:layout_width="match_parent"
@@ -181,7 +174,7 @@
                         android:layout_gravity="bottom|center"
                         android:layout_marginBottom="8dp"
                         android:padding="8dp"
-                        android:text="Storico"
+                        android:text="Note"
                         android:textColor="@color/darkText"
                         android:textStyle="bold" />
 
