@@ -6,13 +6,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/bottomBar"
-        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,7 +23,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="1234,47"
+                    android:text="1234,47 €"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="28sp"
@@ -132,6 +125,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
                     android:foreground="?android:attr/selectableItemBackground"
+                    android:onClick="SpeseActivity"
                     android:clickable="true">
 
                     <ImageView
@@ -172,7 +166,7 @@
                         app:srcCompat="@drawable/ic_memo" />
 
                     <TextView
-                        android:id="@+id/textStorico"
+                        android:id="@+id/textMemo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center"
@@ -186,6 +180,5 @@
 
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
 </RelativeLayout>
 

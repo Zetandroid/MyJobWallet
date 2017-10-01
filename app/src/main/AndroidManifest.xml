@@ -29,6 +29,8 @@
             android:label="@string/toolbarTurni"/>
         <activity android:name=".SpeseActivity"
             android:label="@string/toolbarSpese"/>
+        <activity android:name=".SpeseAggiungiActivity"
+            android:label="@string/toolbarSpeseAggiungi"/>
         <activity android:name=".StoricoActivity"
             android:label="@string/toolbarStorico"/>
 
