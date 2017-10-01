@@ -14,7 +14,8 @@
     <string name="toolbarTurni">Turni</string>
     <string name="toolbarSpese">Spese</string>
     <string name="toolbarSpeseAggiungi">Aggiungi Spese</string>
-    <string name="toolbarStorico">Storico</string>
+    <string name="toolbarNote">Note</string>
+    <string name="toolbarNoteAggiungi">Aggiungi Nota</string>
 
 
     <!-- MENU PROFILO -->
@@ -25,8 +26,8 @@
 
     <string name="text_email">nome@gmail.com</string>
     <string name="text_nome">Nome</string>
-    
-    
+    <string name="prova">prova</string>
+    <string name="prova_summary">prova summary</string>
 
 
 </resources>

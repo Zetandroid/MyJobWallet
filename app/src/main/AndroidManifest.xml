@@ -31,8 +31,10 @@
             android:label="@string/toolbarSpese"/>
         <activity android:name=".SpeseAggiungiActivity"
             android:label="@string/toolbarSpeseAggiungi"/>
-        <activity android:name=".StoricoActivity"
-            android:label="@string/toolbarStorico"/>
+        <activity android:name=".NoteActivity"
+            android:label="@string/toolbarNote"/>
+        <activity android:name=".NoteAggiungiActivity"
+            android:label="@string/toolbarNoteAggiungi"/>
 
     </application>
 

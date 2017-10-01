@@ -3,7 +3,6 @@ package com.kubix.myjobwallet;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnTabReselectListener;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -112,8 +108,8 @@ public class MainActivity extends AppCompatActivity
     public void SpeseActivity (View V){
         startActivity (new Intent(MainActivity.this,SpeseActivity.class));
     }
-    public void StoricoActivity (View v){
-        startActivity (new Intent(MainActivity.this,StoricoActivity.class));
+    public void NoteActivity (View v){
+        startActivity (new Intent(MainActivity.this,NoteActivity.class));
     }
 
 }
