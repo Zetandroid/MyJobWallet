@@ -1,43 +1,39 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="@string/prova"
-        android:key="pref_key_storage_settings">
-        <Preference
-            android:key="pref_key_sms_delete_limit"
-            android:dependency="pref_key_auto_delete"
-            android:summary="@string/prova_summary"
-            android:title="@string/prova" />
-        <SwitchPreference
-            android:defaultValue="false"
-            android:icon="@drawable/ic_menu_setting"
-            android:key="switch_preference_1"
-            android:title="Switch preference" />
-        <Preference
-            android:key="pref_key_mms_delete_limit"
-            android:dependency="pref_key_auto_delete"
-            android:summary="@string/prova_summary"
-            android:title="@string/prova" />
-    </PreferenceCategory>
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- opens a subscreen of settings -->
+    <PreferenceScreen
+        android:key="button_tema_key"
+        android:title="@string/tema"
+        android:icon="@drawable/ic_impostazioni_tema"
+        android:persistent="false">
+        <ListPreference
+            android:key="button_cambia_tema_key"
+            android:title="@string/cambia_tema"/>
+        <ListPreference
+            android:key="button_cambia_tema_toolbar_key"
+            android:title="@string/cambia_tema_toolbar"/>
 
-    <PreferenceCategory
-        android:title="@string/prova"
-        android:key="pref_key_storage_settings">
-        <CheckBoxPreference
-            android:key="pref_key_auto_delete"
-            android:summary="@string/prova_summary"
-            android:title="@string/prova"
-            android:defaultValue="false"/>
-        <Preference
-            android:key="pref_key_sms_delete_limit"
-            android:icon="@drawable/ic_menu_setting"
-            android:dependency="pref_key_auto_delete"
-            android:summary="@string/prova_summary"
-            android:title="@string/prova" />
-        <Preference
-            android:key="pref_key_mms_delete_limit"
-            android:dependency="pref_key_auto_delete"
-            android:summary="@string/prova_summary"
-            android:title="@string/prova" />
-    </PreferenceCategory>
+    </PreferenceScreen>
+
+
+    <PreferenceScreen
+        android:key="button_notifiche_key"
+        android:title="@string/notifiche"
+        android:icon="@drawable/ic_impostazioni_notifiche"
+        android:persistent="false">
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="button_notifiche_cloud"
+        android:title="@string/cloud"
+        android:icon="@drawable/ic_impostazioni_cloud"
+        android:persistent="false">
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="button_feedback_key"
+        android:title="@string/feedback"
+        android:icon="@drawable/ic_impostazioni_feedback"
+        android:persistent="false">
+    </PreferenceScreen>
 
 </PreferenceScreen>

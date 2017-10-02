@@ -28,8 +28,16 @@
     <string name="text_nome">Nome</string>
 
     <!-- IMPOSTAZIONI -->
-    <string name="prova">prova</string>
-    <string name="prova_summary">prova summary</string>
+
+    <string name="tema">Tema</string>
+    <string name="cambia_tema">imposta il tema Dark</string>
+    <string name="cambia_tema_toolbar">Cambia il colore della ToolBar</string>
+
+    <string name="notifiche">Notifiche</string>
+
+    <string name="cloud">Cloud</string>
+
+    <string name="feedback">Feedback</string>
 
 
 </resources>
