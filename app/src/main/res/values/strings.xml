@@ -26,6 +26,8 @@
 
     <string name="text_email">nome@gmail.com</string>
     <string name="text_nome">Nome</string>
+
+    <!-- IMPOSTAZIONI -->
     <string name="prova">prova</string>
     <string name="prova_summary">prova summary</string>
 
