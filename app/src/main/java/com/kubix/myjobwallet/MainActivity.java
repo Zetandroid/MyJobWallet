@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Turni (Data Varchar(50) Unique, oraEntrata Varchar (50), oraUscita Varchar(50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Controlli (Data Varchar (50) Unique);");
-        db.execSQL("CREATE TABLE IF NOT EXISTS Stipendi (Mese Varchar (50), Importo Varchar (50))");
-        db.execSQL("CREATE TABLE IF NOT EXISTS Note (Testo Varchar (50))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Note (Titolo Varchar (50), Nota Varchar (1000));");
         Toast.makeText(this, "Benvenuto in MyJobWallet", Toast.LENGTH_SHORT).show();
     }
 
