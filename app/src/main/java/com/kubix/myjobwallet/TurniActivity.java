@@ -78,8 +78,6 @@ public class TurniActivity extends AppCompatActivity {
                         hours = hours + 1;
                     }
 
-                    //String ord = getPreferences(MODE_PRIVATE).getString("Ordinarie", "");
-                    //String ordinaria = ord;
                     int oreOrdinarie = 8;
                     if(oreOrdinarie > 0 && hours > oreOrdinarie){
                         Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO"  , Toast.LENGTH_LONG).show();

@@ -7,13 +7,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by mowmo on 02/10/17.
@@ -74,7 +69,7 @@ public class CalendarioActivity extends AppCompatActivity {
         }
     }
 
-    public void inserisciUscitaTurno(View v){
+    public  void inserisciUscitaTurno(View v){
 
         String controllo = "";
 
