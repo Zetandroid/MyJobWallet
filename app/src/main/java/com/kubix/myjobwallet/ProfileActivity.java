@@ -1,14 +1,11 @@
 package com.kubix.myjobwallet;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-/**
- * Created by mowmo on 21/09/17.
- */
 
  public class ProfileActivity extends AppCompatActivity{
 
@@ -50,6 +47,9 @@ import android.widget.Toast;
     public void aggiornaInfoProfilo(View v){
         if(!oreOrdinarieText.getText().toString().equals("") && !pagaOrariaText.getText().toString().equals("") && !pagaStraordinariaText.getText().toString().equals("")){
             MainActivity.db.execSQL("UPDATE InfoProfilo SET OreOrdinarie = '"+oreOrdinarieText.getText().toString()+"', NettoOrario = '"+pagaOrariaText.getText().toString()+"', NettoStraordinario = '"+pagaStraordinariaText.getText().toString()+"' WHERE ID = '0'");
+            VariabiliGlobali.oreOrdinarie = Integer.valueOf(oreOrdinarieText.getText().toString());
+            VariabiliGlobali.nettoOrario = Integer.valueOf(pagaOrariaText.getText().toString());
+            VariabiliGlobali.nettoStraordinario = Integer.valueOf(pagaStraordinariaText.getText().toString());
             Toast.makeText(this, "Info profilo aggiornate con successo.", Toast.LENGTH_LONG).show();
             finish();
         }else{

@@ -14,10 +14,6 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created by mowmo on 26/09/17.
- */
-
 public class OreActivity extends AppCompatActivity{
     DatePicker dataTurno;
     TextView dataScritta;

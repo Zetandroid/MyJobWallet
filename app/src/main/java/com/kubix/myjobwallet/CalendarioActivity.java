@@ -10,16 +10,13 @@ import android.widget.Button;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-/**
- * Created by mowmo on 02/10/17.
- */
-
 public class CalendarioActivity extends AppCompatActivity {
-
+    //DICHIARAZIONE OGGETTI
     Button bottoneEntrata;
     Button bottoneUscita;
     TimePicker oraTurno;
 
+    //DICHIARAZIONE VARIABILE DI RICEVIMENTO DATA TURNO
     public static String thisDate;
 
     //VARIABILI DI CONTROLLO

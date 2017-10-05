@@ -17,10 +17,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by mowmo on 26/09/17.
- */
-
 public class TurniActivity extends AppCompatActivity {
 
     ImageButton eliminaTurno;
@@ -78,7 +74,7 @@ public class TurniActivity extends AppCompatActivity {
                         hours = hours + 1;
                     }
 
-                    int oreOrdinarie = 8;
+                    int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
                     if(oreOrdinarie > 0 && hours > oreOrdinarie){
                         Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO"  , Toast.LENGTH_LONG).show();
                     }else{

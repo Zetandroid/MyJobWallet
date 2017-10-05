@@ -1,16 +1,11 @@
 package com.kubix.myjobwallet;
 
-import android.media.Image;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-/**
- * Created by mowmo on 01/10/17.
- */
 
 public class NoteAggiungiActivity extends AppCompatActivity {
     EditText titoloNota;

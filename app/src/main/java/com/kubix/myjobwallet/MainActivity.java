@@ -1,6 +1,7 @@
 package com.kubix.myjobwallet;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -47,6 +48,26 @@ public class MainActivity extends AppCompatActivity
         }catch (SQLException e){
             //NOTHING
         }
+
+        //TODO INDICIZZA DA DATABASE IN VARIABILI GLOBALI DATI PROFILO SU PAGA ORARIA, STRAORDINARIA E ORE ORDINARIE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT * FROM InfoProfilo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.oreOrdinarie = Integer.valueOf(cr.getString(cr.getColumnIndex("OreOrdinarie")));
+                        VariabiliGlobali.nettoOrario = Integer.valueOf(cr.getString(cr.getColumnIndex("NettoOrario")));
+                        VariabiliGlobali.nettoStraordinario = Integer.valueOf(cr.getString(cr.getColumnIndex("NettoStraordinario")));
+                    }while (cr.moveToNext());
+                }else{
+                    Toast.makeText(getApplicationContext(), "NESSUN TURNO INSERITO", Toast.LENGTH_LONG).show();
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
         Toast.makeText(this, "Benvenuto in MyJobWallet", Toast.LENGTH_SHORT).show();
     }
 
@@ -99,11 +120,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    //TODO Questo evento apre le activity, va modificato il codice a seconda dell'activity da aprire
-    //TODO Ogni activity va aperta creando un metodo come questo.
-    //TODO Poi dopo nell'xml del layout, alla voce android:onclick dell'elemento da cliccare
-    //TODO Ci scrivi apriActivity1
 
     public void OreActivity (View v){
         startActivity (new Intent(MainActivity.this, OreActivity.class));
