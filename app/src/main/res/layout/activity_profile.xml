@@ -7,12 +7,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.kubix.myjobwallet.ProfileActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-
     <TextView
         android:id="@+id/textView"
         android:textAlignment="center"
