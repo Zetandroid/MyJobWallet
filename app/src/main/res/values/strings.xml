@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">MyJobWallet</string>
 
+    <!-- ADMOB -->
+    <string name="adsNativa">ca-app-pub-9460579775308491/9105890252</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -39,6 +42,12 @@
     <string name="cloud">Cloud</string>
 
     <string name="feedback">Feedback</string>
+
+    <!-- BOTTOMBAR CALENDARIO -->
+    <string name="bottom_entrata">Entrata</string>
+    <string name="bottom_uscita">Uscita</string>
+    <string name="bottom_turni">Turni</string>
+
 
 
 </resources>

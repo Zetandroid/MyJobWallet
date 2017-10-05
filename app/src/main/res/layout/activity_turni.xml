@@ -24,23 +24,37 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:onClick="apriCalcoloPaga"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:text="Elaborazione"
+            android:textColor="@color/lightText"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
         <ImageButton
-            android:onClick="eliminaTurno"
             android:id="@+id/bottoneEliminaTurno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_delete"
-            android:layout_below="@+id/gridview1"
-            android:layout_alignEnd="@+id/gridview1" />
-
-        <Button
-            android:id="@+id/bottoneElaborazioni"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/gridview1"
-            android:layout_below="@+id/gridview1"
-            android:onClick="apriCalcoloPaga"
-            android:text="ELABORAZIONI" />
+            android:layout_alignEnd="@+id/gridview1"
+            android:layout_alignTop="@+id/imageView"
+            android:theme="@style/PrimaryButton"
+            android:onClick="eliminaTurno"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
 
     </RelativeLayout>
 </ScrollView>

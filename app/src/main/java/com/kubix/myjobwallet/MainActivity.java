@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,8 +16,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+import com.google.android.gms.ads.VideoController;
+import com.google.android.gms.ads.VideoOptions;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    //TODO ADMOB NATIVA
+    private static String LOG_TAG = "EXAMPLE";
+
+    NativeExpressAdView mAdView;
+    VideoController mVideoController;
 
 
     //TODO VARIABILI DI INDICIZZAZIONE
@@ -35,6 +48,33 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //TODO ADMOB NATIVA
+        mAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        mAdView.setVideoOptions(new VideoOptions.Builder()
+                .setStartMuted(true)
+                .build());
+        mVideoController = mAdView.getVideoController();
+        mVideoController.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
+            @Override
+            public void onVideoEnd() {
+                Log.d(LOG_TAG, "Video playback is finished.");
+                super.onVideoEnd();
+            }
+        });
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                if (mVideoController.hasVideoContent()) {
+                    Log.d(LOG_TAG, "Received an ad that contains a video asset.");
+                } else {
+                    Log.d(LOG_TAG, "Received an ad that does not contain a video asset.");
+                }
+            }
+        });
+
+        mAdView.loadAd(new AdRequest.Builder().build());
+
 
         //TODO INDICIZZARE DATABASE CON QUERY SQL
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);

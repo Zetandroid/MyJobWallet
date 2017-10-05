@@ -2,12 +2,17 @@ package com.kubix.myjobwallet;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import static com.kubix.myjobwallet.R.id.timePicker2;
 
 public class CalendarioActivity extends AppCompatActivity {
     //DICHIARAZIONE OGGETTI
@@ -28,12 +33,35 @@ public class CalendarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendario);
 
+        //TODO BOTTOMBAR
+
+        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+                findViewById(R.id.bottombar_calendario);
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.bottom_entrata:
+                                inserisciEntrataTurno();
+                                break;
+                            case R.id.bottom_uscita:
+                                inserisciUscitaTurno();
+                                break;
+                            case R.id.bottom_turni:
+                                apriStorico();
+                                break;
+                        }
+                        return false;
+                    }
+                });
+
         Toast.makeText(this, VariabiliGlobali.dataTurno, Toast.LENGTH_SHORT).show();
 
         //INDICIZZA COMPONENTI
-        bottoneEntrata = (Button) findViewById(R.id.buttonEntrata);
-        bottoneUscita = (Button) findViewById(R.id.buttonUscita);
-        oraTurno = (TimePicker) findViewById(R.id.timePicker2);
+        //bottoneEntrata = (Button) findViewById(R.id.buttonEntrata);
+        //bottoneUscita = (Button) findViewById(R.id.buttonUscita);
+        //oraTurno = (TimePicker) findViewById(timePicker2);
 
 
         //INDICIZZA DATABASE
@@ -44,7 +72,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
     }
 
-    public void inserisciEntrataTurno(View v){
+    public void inserisciEntrataTurno(){
 
         String oraEntrata = String.valueOf(String.format("%02d:%02d",oraTurno.getHour(), oraTurno.getMinute()));
         oraDiEntrata = oraEntrata;
@@ -65,7 +93,7 @@ public class CalendarioActivity extends AppCompatActivity {
         }
     }
 
-    public  void inserisciUscitaTurno(View v){
+    public  void inserisciUscitaTurno(){
 
         String controllo = "";
 
@@ -121,7 +149,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
     }
 
-    public void apriStorico(View v){
+    public void apriStorico(){
         Intent intent = new Intent(this, TurniActivity.class);
         startActivity(intent);
     }
