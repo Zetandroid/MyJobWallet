@@ -16,8 +16,6 @@ import static com.kubix.myjobwallet.R.id.timePicker2;
 
 public class CalendarioActivity extends AppCompatActivity {
     //DICHIARAZIONE OGGETTI
-    Button bottoneEntrata;
-    Button bottoneUscita;
     TimePicker oraTurno;
 
     //DICHIARAZIONE VARIABILE DI RICEVIMENTO DATA TURNO
@@ -58,10 +56,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
         Toast.makeText(this, VariabiliGlobali.dataTurno, Toast.LENGTH_SHORT).show();
 
-        //INDICIZZA COMPONENTI
-        //bottoneEntrata = (Button) findViewById(R.id.buttonEntrata);
-        //bottoneUscita = (Button) findViewById(R.id.buttonUscita);
-        //oraTurno = (TimePicker) findViewById(timePicker2);
+        oraTurno = (TimePicker) findViewById(timePicker2);
 
 
         //INDICIZZA DATABASE
