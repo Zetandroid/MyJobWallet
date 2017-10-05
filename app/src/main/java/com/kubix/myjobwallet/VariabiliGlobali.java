@@ -10,5 +10,6 @@ public class VariabiliGlobali {
     public static Integer oreOrdinarie;
     public static Integer nettoOrario;
     public static Integer nettoStraordinario;
+    public static Integer calcoloCompletoStipendio;
 
 }

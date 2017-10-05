@@ -33,5 +33,14 @@
             android:layout_below="@+id/gridview1"
             android:layout_alignEnd="@+id/gridview1" />
 
+        <Button
+            android:id="@+id/bottoneElaborazioni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/gridview1"
+            android:layout_below="@+id/gridview1"
+            android:onClick="apriCalcoloPaga"
+            android:text="ELABORAZIONI" />
+
     </RelativeLayout>
 </ScrollView>

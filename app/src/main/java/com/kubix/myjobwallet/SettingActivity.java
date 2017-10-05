@@ -1,5 +1,4 @@
 package com.kubix.myjobwallet;
-
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v7.widget.Toolbar;

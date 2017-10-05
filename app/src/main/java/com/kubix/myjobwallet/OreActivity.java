@@ -1,5 +1,4 @@
 package com.kubix.myjobwallet;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;

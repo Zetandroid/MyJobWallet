@@ -1,6 +1,6 @@
 package com.kubix.myjobwallet;
-
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -25,6 +25,7 @@ public class TurniActivity extends AppCompatActivity {
     String uscitaCalcolo;
     String dataSelezionata;
     int posizioneCorrente;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,5 +160,9 @@ public class TurniActivity extends AppCompatActivity {
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void apriCalcoloPaga (View v){
+        startActivity (new Intent(TurniActivity.this, ElaborazioniActivity.class));
     }
 }

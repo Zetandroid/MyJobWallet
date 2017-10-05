@@ -37,6 +37,8 @@
             android:label="@string/toolbarNoteAggiungi"/>
         <activity android:name=".CalendarioActivity"
             android:label="@string/toolbarCalendario"/>
+        <activity android:name=".ElaborazioniActivity"
+            android:label="@string/tollbarCalcoloPaga"/>
 
     </application>
 

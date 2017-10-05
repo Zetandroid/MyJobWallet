@@ -43,7 +43,7 @@ import android.widget.Toast;
         }
 
     }
-
+      //TODO METODO AGGIORNAMENTO INFO ORE E PAGA
     public void aggiornaInfoProfilo(View v){
         if(!oreOrdinarieText.getText().toString().equals("") && !pagaOrariaText.getText().toString().equals("") && !pagaStraordinariaText.getText().toString().equals("")){
             MainActivity.db.execSQL("UPDATE InfoProfilo SET OreOrdinarie = '"+oreOrdinarieText.getText().toString()+"', NettoOrario = '"+pagaOrariaText.getText().toString()+"', NettoStraordinario = '"+pagaStraordinariaText.getText().toString()+"' WHERE ID = '0'");

@@ -1,5 +1,4 @@
 package com.kubix.myjobwallet;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity
         }catch (SQLException e){
             //NOTHING
         }
+        db.execSQL("CREATE TABLE IF NOT EXISTS Stipendi (Giorno Varchar (50), Mese Varchar (50), Anno Varchar (50), Ammontare Varchar (50));");
 
         //TODO INDICIZZA DA DATABASE IN VARIABILI GLOBALI DATI PROFILO SU PAGA ORARIA, STRAORDINARIA E ORE ORDINARIE
         try {
