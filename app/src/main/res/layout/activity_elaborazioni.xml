@@ -13,10 +13,8 @@
         android:layout_marginRight="8dp"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        android:layout_marginTop="34dp"
-        android:layout_marginStart="34dp"
-        android:layout_below="@+id/spinner"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinner">
 
         <ImageView
             android:id="@+id/immagineCalcoloStraordinari"
@@ -46,8 +44,7 @@
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
         android:layout_alignTop="@+id/cardCalcoloStraordinari"
-        android:layout_toEndOf="@+id/cardCalcoloStraordinari"
-        android:layout_marginStart="22dp">
+        android:layout_alignParentEnd="true">
 
         <ImageView
             android:id="@+id/immagineCalcoloPaga"
