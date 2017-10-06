@@ -2,9 +2,39 @@
 <resources>
 
     <!-- TEMA -->
-    <color name="colorPrimary">#e53935</color>
-    <color name="colorPrimaryDark">#c62828</color>
-    <color name="colorAccent">#ff5252</color>
+    <color name="colorPrimary">#9E9E9E</color>
+    <color name="colorPrimaryDark">#616161</color>
+    <color name="colorAccent">#E0E0E0</color>
+    
+    <!-- TEMA PROFILO -->
+    <color name="colorPrimaryProfilo">#3F51B5</color>
+    <color name="colorPrimaryDarkProfilo">#303F9F</color>
+    <color name="colorAccentProfilo">#536DFE</color>
+
+    <!-- TEMA ORE -->
+    <color name="colorPrimaryOre">#4CAF50</color>
+    <color name="colorPrimaryDarkOre">#388E3C</color>
+    <color name="colorAccentOre">#69F0AE</color>
+
+    <!-- TEMA TURNI -->
+    <color name="colorPrimaryTurni">#2196f3</color>
+    <color name="colorPrimaryDarkTurni">#1976D2</color>
+    <color name="colorAccentTurni">#82B1FF</color>
+
+    <!-- TEMA SPESA -->
+    <color name="colorPrimarySpesa">#F44336</color>
+    <color name="colorPrimaryDarkSpesa">#D32F2F</color>
+    <color name="colorAccentSpesa">#FF5252</color>
+
+    <!-- TEMA MEMO -->
+    <color name="colorPrimaryMemo">#FF9800</color>
+    <color name="colorPrimaryDarkMemo">#F57C00</color>
+    <color name="colorAccentMemo">#ffab40</color>
+
+
+
+
+
 
     <color name="colorBannerHome">#f5f5f5</color>
 

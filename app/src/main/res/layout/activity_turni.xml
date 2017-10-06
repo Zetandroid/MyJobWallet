@@ -29,10 +29,10 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:onClick="apriCalcoloPaga"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@color/colorPrimary" />
+            android:onClick="apriCalcoloPaga"
+            app:srcCompat="@color/colorPrimaryTurni" />
 
         <TextView
             android:id="@+id/textView4"

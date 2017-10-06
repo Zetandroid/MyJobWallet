@@ -6,12 +6,12 @@
 
     <ImageView
         android:id="@+id/tastoSalvaNota"
-        android:onClick="scriviNotaInDB"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@color/colorPrimary" />
+        android:onClick="scriviNotaInDB"
+        app:srcCompat="@color/colorPrimaryMemo" />
 
     <TextView
         android:id="@+id/salvaNota"
@@ -32,7 +32,7 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@color/colorPrimary" />
+        app:srcCompat="@color/colorPrimaryMemo" />
 
     <EditText
         android:id="@+id/titoloNota"

@@ -8,6 +8,41 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- TEMA PROFILO -->
+    <style name="ThemeProfilo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryProfilo</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkProfilo</item>
+        <item name="colorAccent">@color/colorAccentProfilo</item>
+    </style>
+
+    <!-- TEMA ORE -->
+    <style name="ThemeOre" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryOre</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkOre</item>
+        <item name="colorAccent">@color/colorAccentOre</item>
+    </style>
+
+    <!-- TEMA Turni -->
+    <style name="ThemeTurni" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryTurni</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkTurni</item>
+        <item name="colorAccent">@color/colorAccentTurni</item>
+    </style>
+
+    <!-- TEMA SPESA -->
+    <style name="ThemeSpesa" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimarySpesa</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkSpesa</item>
+        <item name="colorAccent">@color/colorAccentSpesa</item>
+    </style>
+
+    <!-- TEMA MEMO -->
+    <style name="ThemeMemo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryMemo</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkMemo</item>
+        <item name="colorAccent">@color/colorAccentMemo</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

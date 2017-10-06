@@ -21,22 +21,38 @@
         </activity>
         <activity android:name=".SettingActivity"
             android:label="@string/toolBarSetting" />
+
         <activity android:name=".ProfileActivity"
-            android:label="@string/toolbarProfile" />
+            android:label="@string/toolbarProfile"
+            android:theme="@style/ThemeProfilo"/>
+
         <activity android:name=".OreActivity"
-            android:label="@string/toolbarOre"/>
+            android:label="@string/toolbarOre"
+        android:theme="@style/ThemeOre"/>
+
         <activity android:name=".TurniActivity"
-            android:label="@string/toolbarTurni"/>
+            android:label="@string/toolbarTurni"
+            android:theme="@style/ThemeTurni"/>
+
         <activity android:name=".SpeseActivity"
-            android:label="@string/toolbarSpese"/>
+            android:label="@string/toolbarSpese"
+            android:theme="@style/ThemeSpesa"/>
+
         <activity android:name=".SpeseAggiungiActivity"
-            android:label="@string/toolbarSpeseAggiungi"/>
+            android:label="@string/toolbarSpeseAggiungi"
+            android:theme="@style/ThemeSpesa"/>
+
         <activity android:name=".NoteActivity"
-            android:label="@string/toolbarNote"/>
+            android:label="@string/toolbarNote"
+            android:theme="@style/ThemeMemo"/>
+
         <activity android:name=".NoteAggiungiActivity"
-            android:label="@string/toolbarNoteAggiungi"/>
+            android:label="@string/toolbarNoteAggiungi"
+            android:theme="@style/ThemeMemo"/>
+
         <activity android:name=".CalendarioActivity"
             android:label="@string/toolbarCalendario"/>
+
         <activity android:name=".ElaborazioniActivity"
             android:label="@string/tollbarCalcoloPaga"/>
 

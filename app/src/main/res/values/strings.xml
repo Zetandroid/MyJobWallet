@@ -43,6 +43,8 @@
 
     <string name="feedback">Feedback</string>
 
+    <string name="premium">Premium</string>
+
     <!-- BOTTOMBAR CALENDARIO -->
     <string name="bottom_entrata">Entrata</string>
     <string name="bottom_uscita">Uscita</string>
