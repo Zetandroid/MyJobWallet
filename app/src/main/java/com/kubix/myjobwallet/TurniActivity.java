@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -36,6 +37,12 @@ public class TurniActivity extends AppCompatActivity {
         ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,li);
         dataAdapter.setDropDownViewResource(R.layout.activity_turni);
         eliminaTurno.setVisibility(View.INVISIBLE);
+
+        //TODO TOOLBAR
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarTurni);
+        setTitle(R.string.toolbarTurni);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        setSupportActionBar(toolbar);
 
         listaTurni.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {

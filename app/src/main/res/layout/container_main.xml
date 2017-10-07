@@ -7,11 +7,19 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbarHome">
 
 
 
@@ -27,8 +35,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             ads:adSize="360x100"
-            ads:adUnitId="@string/adsNativa">
-        </com.google.android.gms.ads.NativeExpressAdView>
+            ads:adUnitId="@string/adsNativa"></com.google.android.gms.ads.NativeExpressAdView>
 
         <LinearLayout
             android:layout_width="match_parent"

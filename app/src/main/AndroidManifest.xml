@@ -54,7 +54,8 @@
             android:label="@string/toolbarCalendario"/>
 
         <activity android:name=".ElaborazioniActivity"
-            android:label="@string/toolbarCalcoloPaga"/>
+            android:label="@string/toolbarCalcoloPaga"
+            android:theme="@style/ThemeTurni"/>
 
         <activity android:name=".PremiumActivity"
             android:label="@string/toolbarPremium"

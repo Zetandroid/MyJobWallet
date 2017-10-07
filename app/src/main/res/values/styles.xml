@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -16,21 +16,21 @@
     </style>
 
     <!-- TEMA ORE -->
-    <style name="ThemeOre" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ThemeOre" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryOre</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkOre</item>
         <item name="colorAccent">@color/colorAccentOre</item>
     </style>
 
     <!-- TEMA Turni -->
-    <style name="ThemeTurni" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ThemeTurni" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryTurni</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTurni</item>
         <item name="colorAccent">@color/colorAccentTurni</item>
     </style>
 
     <!-- TEMA SPESA -->
-    <style name="ThemeSpesa" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ThemeSpesa" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimarySpesa</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkSpesa</item>
         <item name="colorAccent">@color/colorAccentSpesa</item>
@@ -50,11 +50,11 @@
         <item name="colorAccent">@color/colorAccentPremium</item>
     </style>
 
-    <!-- TEMA PREMIUM -->
+    <!-- TEMA IMPOSTAZIONI -->
     <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryPremium</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkPremium</item>
-        <item name="colorAccent">@color/colorAccentPremium</item>
+        <item name="colorPrimary">@color/colorPrimaryImpostazioni</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkImpostazioni</item>
+        <item name="colorAccent">@color/colorAccentImpostazioni</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
