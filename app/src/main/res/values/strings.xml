@@ -20,7 +20,8 @@
     <string name="toolbarNote">Note</string>
     <string name="toolbarNoteAggiungi">Aggiungi Nota</string>
     <string name="toolbarCalendario">Calendario</string>
-    <string name="tollbarCalcoloPaga">CalcoloPaga</string>
+    <string name="toolbarCalcoloPaga">CalcoloPaga</string>
+    <string name="toolbarPremium">Premium</string>
 
     <!-- MENU PROFILO -->
 
@@ -31,15 +32,26 @@
     <string name="text_email">nome@gmail.com</string>
     <string name="text_nome">Nome</string>
 
-    <!-- IMPOSTAZIONI -->
+    <!-- IMPOSTAZIONI TEMA -->
 
     <string name="tema">Tema</string>
     <string name="cambia_tema">imposta il tema Dark</string>
     <string name="cambia_tema_toolbar">Cambia il colore della ToolBar</string>
 
+    <!-- IMPOSTAZIONI NOTIFICHE -->
     <string name="notifiche">Notifiche</string>
 
+    <!-- IMPOSTAZIONI BACKUP -->
+    <string name="backup">Backup e Ripristino</string>
+    <string name="backupDevice">Crea Backup sul Dispositivo</string>
+    <string name="restoreDevice">Ripsistina il Backup dal Dispositivo</string>
+    <string name="backupCloud">Crea il Backup sul Cloud</string>
+    <string name="restoreCloud">Ripristina il Backup dal Cloud</string>
+
+    <!-- IMPOSTAZIONI CLOUD -->
     <string name="cloud">Cloud</string>
+    <string name="cloudDrive">Google Drive</string>
+    <string name="cloudDropBox">DropBox</string>
 
     <string name="feedback">Feedback</string>
 
@@ -50,6 +62,9 @@
     <string name="bottom_uscita">Uscita</string>
     <string name="bottom_turni">Turni</string>
 
+    <!-- BOTTONI LOGIN -->
+    <string name="btn_disconnetti">Disconnetti</string>
+    <string name="btn_recova_accesso">Revoca Accesso</string>
 
 
 </resources>

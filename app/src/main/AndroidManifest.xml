@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingActivity"
-            android:label="@string/toolBarSetting" />
+            android:label="@string/toolBarSetting"
+            android:theme="@style/ThemeImpostazioni"/>
 
         <activity android:name=".ProfileActivity"
             android:label="@string/toolbarProfile"
@@ -43,7 +44,6 @@
             android:theme="@style/ThemeSpesa"/>
 
         <activity android:name=".NoteActivity"
-            android:label="@string/toolbarNote"
             android:theme="@style/ThemeMemo"/>
 
         <activity android:name=".NoteAggiungiActivity"
@@ -54,7 +54,11 @@
             android:label="@string/toolbarCalendario"/>
 
         <activity android:name=".ElaborazioniActivity"
-            android:label="@string/tollbarCalcoloPaga"/>
+            android:label="@string/toolbarCalcoloPaga"/>
+
+        <activity android:name=".PremiumActivity"
+            android:label="@string/toolbarPremium"
+            android:theme="@style/ThemePremium"/>
 
     </application>
 

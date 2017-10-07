@@ -9,7 +9,7 @@
     </style>
 
     <!-- TEMA PROFILO -->
-    <style name="ThemeProfilo" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ThemeProfilo" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryProfilo</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkProfilo</item>
         <item name="colorAccent">@color/colorAccentProfilo</item>
@@ -37,10 +37,24 @@
     </style>
 
     <!-- TEMA MEMO -->
-    <style name="ThemeMemo" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="ThemeMemo" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryMemo</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkMemo</item>
         <item name="colorAccent">@color/colorAccentMemo</item>
+    </style>
+
+    <!-- TEMA PREMIUM -->
+    <style name="ThemePremium" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryPremium</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkPremium</item>
+        <item name="colorAccent">@color/colorAccentPremium</item>
+    </style>
+
+    <!-- TEMA PREMIUM -->
+    <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryPremium</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkPremium</item>
+        <item name="colorAccent">@color/colorAccentPremium</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

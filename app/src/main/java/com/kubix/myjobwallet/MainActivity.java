@@ -149,7 +149,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            startActivity(new Intent(this,ProfileActivity.class));
+            startActivity(new Intent(this, ProfileActivity.class));
+
+        }else if (id == R.id.nav_premium) {
+            startActivity(new Intent(this,PremiumActivity.class));
 
         } else if (id == R.id.nav_setting) {
             startActivity(new Intent(this,SettingActivity.class));

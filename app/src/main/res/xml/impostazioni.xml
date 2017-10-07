@@ -1,5 +1,6 @@
 <PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- opens a subscreen of settings -->
+
+    <!-- TEMA -->
     <PreferenceScreen
         android:key="button_tema_key"
         android:title="@string/tema"
@@ -11,10 +12,10 @@
         <ListPreference
             android:key="button_cambia_tema_toolbar_key"
             android:title="@string/cambia_tema_toolbar"/>
-
     </PreferenceScreen>
 
 
+    <!-- NOTIFICHE -->
     <PreferenceScreen
         android:key="button_notifiche_key"
         android:title="@string/notifiche"
@@ -22,13 +23,47 @@
         android:persistent="false">
     </PreferenceScreen>
 
+
+    <!-- BACKUP E RIPRISTINO -->
     <PreferenceScreen
-        android:key="button_notifiche_cloud"
+        android:key="button_backup_key"
+        android:title="@string/backup"
+        android:icon="@drawable/ic_impostazioni_backup"
+        android:persistent="false">
+
+        <ListPreference
+            android:key="button_backup_device_key"
+            android:title="@string/backupDevice"/>
+        <ListPreference
+            android:key="button_restore-device_key"
+            android:title="@string/restoreDevice"/>
+        <ListPreference
+            android:key="button_backup_cloud_key"
+            android:title="@string/backupCloud"/>
+        <ListPreference
+            android:key="button_restore_cloud_key"
+            android:title="@string/restoreCloud"/>
+    </PreferenceScreen>
+
+
+    <!-- CLOUD -->
+    <PreferenceScreen
+        android:key="button_cloud_key"
         android:title="@string/cloud"
         android:icon="@drawable/ic_impostazioni_cloud"
         android:persistent="false">
+
+        <ListPreference
+            android:key="button_cloud_drive_key"
+            android:title="@string/cloudDrive"/>
+        <ListPreference
+            android:key="button_cloud_dropbox_key"
+            android:title="@string/cloudDropBox"/>
     </PreferenceScreen>
 
+
+
+    <!-- EMAIL -->
     <PreferenceScreen
         android:key="button_feedback_key"
         android:title="@string/feedback"
@@ -36,6 +71,8 @@
         android:persistent="false">
     </PreferenceScreen>
 
+
+    <!-- PREMIUM -->
     <PreferenceScreen
         android:key="button_premium_key"
         android:title="@string/premium"

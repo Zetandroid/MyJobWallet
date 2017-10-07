@@ -2,9 +2,9 @@
 <resources>
 
     <!-- TEMA -->
-    <color name="colorPrimary">#9E9E9E</color>
-    <color name="colorPrimaryDark">#616161</color>
-    <color name="colorAccent">#E0E0E0</color>
+    <color name="colorPrimary">#607D8B</color>
+    <color name="colorPrimaryDark">#455A64</color>
+    <color name="colorAccent">#00E5FF</color>
     
     <!-- TEMA PROFILO -->
     <color name="colorPrimaryProfilo">#3F51B5</color>
@@ -12,7 +12,7 @@
     <color name="colorAccentProfilo">#536DFE</color>
 
     <!-- TEMA ORE -->
-    <color name="colorPrimaryOre">#4CAF50</color>
+    <color name="colorPrimaryOre">#4caf50</color>
     <color name="colorPrimaryDarkOre">#388E3C</color>
     <color name="colorAccentOre">#69F0AE</color>
 
@@ -22,14 +22,19 @@
     <color name="colorAccentTurni">#82B1FF</color>
 
     <!-- TEMA SPESA -->
-    <color name="colorPrimarySpesa">#F44336</color>
+    <color name="colorPrimarySpesa">#f44336</color>
     <color name="colorPrimaryDarkSpesa">#D32F2F</color>
     <color name="colorAccentSpesa">#FF5252</color>
 
     <!-- TEMA MEMO -->
-    <color name="colorPrimaryMemo">#FF9800</color>
+    <color name="colorPrimaryMemo">#ff9800</color>
     <color name="colorPrimaryDarkMemo">#F57C00</color>
     <color name="colorAccentMemo">#ffab40</color>
+
+    <!-- TEMA PREMIUM -->
+    <color name="colorPrimaryPremium">#E91E63</color>
+    <color name="colorPrimaryDarkPremium">#C2185B</color>
+    <color name="colorAccentPremium">#ff4081</color>
 
 
 

@@ -1,6 +1,7 @@
 package com.kubix.myjobwallet;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,6 +21,12 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         corpoNota = (EditText) findViewById(R.id.testoNota);
         aggiungiCopertina = (ImageView) findViewById(R.id.aggiungiCopertina);
         salvaNota = (ImageView) findViewById(R.id.tastoSalvaNota);
+
+        //TODO TOOLBAR
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarAggiungiNota);
+        setTitle(R.string.toolbarNoteAggiungi);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        setSupportActionBar(toolbar);
     }
 
     public void scriviNotaInDB (View v){
