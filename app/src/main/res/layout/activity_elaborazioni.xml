@@ -9,7 +9,6 @@
         android:id="@+id/toolbarElaborazioni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/spinner"
         android:layout_alignParentStart="true"
         android:background="@color/colorPrimaryTurni"
         android:minHeight="?attr/actionBarSize"
