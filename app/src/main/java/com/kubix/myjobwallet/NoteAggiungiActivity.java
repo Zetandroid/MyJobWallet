@@ -25,7 +25,7 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarAggiungiNota);
         setTitle(R.string.toolbarNoteAggiungi);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
     }
 

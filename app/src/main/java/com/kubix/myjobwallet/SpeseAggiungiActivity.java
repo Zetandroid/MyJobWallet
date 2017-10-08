@@ -12,7 +12,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpeseAggiungi);
         setTitle(R.string.toolbarSpeseAggiungi);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
     }
 }

@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:text="Kubix Studio"
-        android:textColor="@color/lightText"
+        android:textColor="@color/testoBianco"
         android:textStyle="bold" />
 
     <ImageView

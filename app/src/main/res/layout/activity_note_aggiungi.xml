@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/aggiungiCopertina"
                 android:layout_centerHorizontal="true"
-                android:background="@color/colorLineText"
+                android:background="@color/lineaTrasparente"
                 android:ems="10"
                 android:hint="TITOLO"
                 android:inputType="textMultiLine"
@@ -52,7 +52,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorIcons" />
+                android:background="@color/iconeLayout" />
 
             <EditText
                 android:id="@+id/testoNota"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/testoTitoloSpesa"
                 android:layout_centerHorizontal="true"
-                android:background="@color/colorLineText"
+                android:background="@color/lineaTrasparente"
                 android:ems="10"
                 android:hint="NOTA"
                 android:inputType="textMultiLine"
@@ -86,7 +86,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:text="Salva"
-        android:textColor="@color/lightText"
+        android:textColor="@color/testoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:text="Aggiungi Immagine"
-        android:textColor="@color/lightText"
+        android:textColor="@color/testoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
 

@@ -1,32 +1,11 @@
 package com.kubix.myjobwallet;
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.auth.api.signin.GoogleSignInResult;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.OptionalPendingResult;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 
 public class ProfileActivity extends AppCompatActivity{
 
@@ -45,7 +24,7 @@ public class ProfileActivity extends AppCompatActivity{
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
         setTitle(R.string.toolbarProfile);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
         //TODO CALCOLO ORA

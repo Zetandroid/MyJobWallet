@@ -6,13 +6,20 @@
     <color name="colorPrimaryDark">#E0E0E0</color>
     <color name="colorAccent">#00BCD4</color>
 
-    <color name="colorIcons">#BDBDBD</color>
-    <color name="colorLineText">#00000000</color>
+    <color name="colorBannerHome">#f5f5f5</color>
+
+    <color name="iconeLayout">#BDBDBD</color>
+    <color name="lineaTrasparente">#00000000</color>
+
+    <color name="testoBianco">#f5f5f5</color>
+    <color name="testoTitolo">#616161</color>
+    <color name="testoSecondario">#9E9E9E</color>
+
     
     <!-- TEMA PROFILO -->
-    <color name="colorPrimaryProfilo">#3F51B5</color>
-    <color name="colorPrimaryDarkProfilo">#303F9F</color>
-    <color name="colorAccentProfilo">#536DFE</color>
+    <color name="colorPrimaryProfilo">#333333</color>
+    <color name="colorPrimaryDarkProfilo">#212121</color>
+    <color name="colorAccentProfilo">#E0E0E0</color>
 
     <!-- TEMA ORE -->
     <color name="colorPrimaryOre">#4caf50</color>
@@ -21,7 +28,7 @@
 
     <!-- TEMA TURNI -->
     <color name="colorPrimaryTurni">#2196f3</color>
-    <color name="colorPrimaryDarkTurni">#1976D2</color>
+    <color name="colorPrimaryDarkTurni">#1976d2</color>
     <color name="colorAccentTurni">#82B1FF</color>
 
     <!-- TEMA SPESA -->
@@ -43,20 +50,6 @@
     <color name="colorPrimaryImpostazioni">#00BCD4</color>
     <color name="colorPrimaryDarkImpostazioni">#0097A7</color>
     <color name="colorAccentImpostazioni">#18FFFF</color>
-
-
-
-
-
-
-    <color name="colorBannerHome">#f5f5f5</color>
-
-    <color name="lightText">#f5f5f5</color>
-    <color name="darkText">#333333</color>
-
-
-
-
 
 
 </resources>

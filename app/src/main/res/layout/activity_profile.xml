@@ -11,8 +11,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="56dp"
-        android:layout_below="@+id/toolbarProfilo">
+        android:layout_below="@+id/toolbarProfilo"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,85 +21,199 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/immagineVerticale"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    app:srcCompat="@color/colorPrimaryProfilo" />
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/imgProfilePic"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/immagine_verticale" />
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginTop="68dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfilePic"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentStart="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="false"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_profile"
+                    app:civ_border_color="@color/colorPrimaryProfilo"
+                    app:civ_border_width="3dp" />
 
-                    <LinearLayout
-                        android:id="@+id/llProfile"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/imgProfilePic"
-                            android:layout_width="96dp"
-                            android:layout_height="96dp"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="24dp"
-                            android:layout_marginTop="24dp"
-                            android:layout_weight="2"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/image_profile"
-                            app:civ_border_color="@color/darkText"
-                            app:civ_border_width="2dp" />
-
-                    </LinearLayout>
-
-
-                </android.support.v7.widget.CardView>
 
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/testoNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingEnd="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Kubix Studio"
+                    android:textAlignment="center"
+                    android:textColor="@color/testoTitolo"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/testoEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    android:text="Email@gmail.com"
+                    android:textAlignment="center"
+                    android:textColor="@color/testoSecondario" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnLoginGoogle"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="4dp"
+                        android:clickable="true"
+                        app:srcCompat="@color/colorPrimarySpesa" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Accedi con Google"
+                        android:textAlignment="center"
+                        android:textColor="@color/testoBianco"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/btnLoginFacebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="4dp"
+                        app:srcCompat="@color/colorPrimaryDarkTurni" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Accedi con Facebook"
+                        android:textAlignment="center"
+                        android:textColor="@color/testoBianco"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/iconeLayout" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView2"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/textView3"
-                    android:layout_alignStart="@+id/textView3"
-                    android:layout_below="@+id/oreOrdinarieText"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:text="PAGA PER ORA"
-                    android:textAlignment="viewStart"
-                    android:textStyle="bold" />
+                    android:layout_height="56dp">
 
-                <EditText
-                    android:id="@+id/oreOrdinarieText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/textView"
-                    android:layout_alignStart="@+id/textView"
-                    android:layout_below="@+id/textView"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:padding="8dp"
-                    android:textAlignment="center" />
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        app:srcCompat="@drawable/ic_spesa_ora" />
+
+                    <EditText
+                        android:id="@+id/oreOrdinarieText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/textView"
+                        android:layout_below="@+id/textView"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="16dp"
+                        android:ems="10"
+                        android:hint="Ore lavorative"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart" />
+                </RelativeLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -109,35 +223,38 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/textView2"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignStart="@+id/textView2"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:text="ORE ORDINARIE"
-                    android:textAlignment="viewStart"
-                    android:textStyle="bold" />
+                    android:layout_height="56dp"
+                    android:layout_weight="1">
 
-                <EditText
-                    android:id="@+id/pagaStraordinariText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/pagaOrariaText"
-                    android:layout_alignStart="@+id/pagaOrariaText"
-                    android:layout_below="@+id/textView3"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:padding="8dp"
-                    android:textAlignment="center" />
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        app:srcCompat="@drawable/ic_spesa_costo" />
+
+                    <EditText
+                        android:id="@+id/pagaStraordinariText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/pagaOrariaText"
+                        android:layout_alignStart="@+id/pagaOrariaText"
+                        android:layout_below="@+id/textView3"
+                        android:layout_centerHorizontal="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Paga Straordinaria"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart" />
+                </RelativeLayout>
+
             </LinearLayout>
 
             <LinearLayout
@@ -147,34 +264,36 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView3"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/pagaOrariaText"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:text="STRAORDINARI"
-                    android:textAlignment="viewStart"
-                    android:textStyle="bold" />
+                    android:layout_height="56dp"
+                    android:layout_weight="1">
 
-                <EditText
-                    android:id="@+id/pagaOrariaText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/oreOrdinarieText"
-                    android:layout_alignStart="@+id/oreOrdinarieText"
-                    android:layout_below="@+id/textView2"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:padding="8dp"
-                    android:textAlignment="center" />
+                    <EditText
+                        android:id="@+id/pagaOrariaText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/oreOrdinarieText"
+                        android:layout_alignStart="@+id/oreOrdinarieText"
+                        android:layout_below="@+id/textView2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Paga Oraria"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        app:srcCompat="@drawable/ic_spesa_costo" />
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -199,7 +318,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
         android:text="Salva"
-        android:textColor="@color/lightText"
+        android:textColor="@color/testoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
 

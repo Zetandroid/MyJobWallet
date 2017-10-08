@@ -55,7 +55,7 @@
                 android:padding="8dp"
                 android:text="Calcolo paga"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/darkText"
+                android:textColor="@color/testoTitolo"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </android.support.v7.widget.CardView>
@@ -87,7 +87,7 @@
                 android:padding="8dp"
                 android:text="Calcolo straordinari"
                 android:textAlignment="viewEnd"
-                android:textColor="@color/darkText"
+                android:textColor="@color/testoTitolo"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </android.support.v7.widget.CardView>

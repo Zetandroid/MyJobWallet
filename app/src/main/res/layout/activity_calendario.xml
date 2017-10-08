@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/colorPrimaryTurni"
-        app:itemIconTint="@color/lightText"
-        app:itemTextColor="@color/lightText"
+        app:itemIconTint="@color/testoBianco"
+        app:itemTextColor="@color/testoBianco"
         app:menu="@menu/bottombar_calendario" />
 
     <android.support.v7.widget.Toolbar

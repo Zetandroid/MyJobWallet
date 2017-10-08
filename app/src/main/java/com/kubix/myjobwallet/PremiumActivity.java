@@ -18,7 +18,7 @@ public class PremiumActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarPremium);
         setTitle(R.string.toolbarPremium);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
     }
 }

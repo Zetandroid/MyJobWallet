@@ -8,8 +8,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -35,7 +33,7 @@ public class CalendarioActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarOrologio);
         setTitle(R.string.toolbarOre);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
         //TODO BOTTOMBAR

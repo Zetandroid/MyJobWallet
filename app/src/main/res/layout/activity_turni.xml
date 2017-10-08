@@ -53,7 +53,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:text="Elaborazione"
-            android:textColor="@color/lightText"
+            android:textColor="@color/testoBianco"
             android:textSize="18sp"
             android:textStyle="bold" />
 
