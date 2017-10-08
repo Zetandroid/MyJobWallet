@@ -17,8 +17,8 @@
 
     
     <!-- TEMA PROFILO -->
-    <color name="colorPrimaryProfilo">#333333</color>
-    <color name="colorPrimaryDarkProfilo">#212121</color>
+    <color name="colorPrimaryProfilo">#222222</color>
+    <color name="colorPrimaryDarkProfilo">#181818</color>
     <color name="colorAccentProfilo">#E0E0E0</color>
 
     <!-- TEMA ORE -->

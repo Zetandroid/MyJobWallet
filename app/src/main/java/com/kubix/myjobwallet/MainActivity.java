@@ -127,25 +127,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //TODO MENU NAVIGATION DRAWER
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    //TODO MENU TOOLBAR
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     //TODO SELEZIONE ICONE NAVIGATION DRAWER
     @SuppressWarnings("StatementWithEmptyBody")

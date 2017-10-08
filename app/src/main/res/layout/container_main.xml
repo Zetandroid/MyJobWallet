@@ -35,7 +35,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             ads:adSize="360x100"
-            ads:adUnitId="@string/adsNativa"></com.google.android.gms.ads.NativeExpressAdView>
+            ads:adUnitId="@string/adsNativa"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -113,8 +113,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="44dp"
                         android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="72dp"
                         android:layout_marginTop="4dp"
                         android:clickable="true"
                         app:srcCompat="@color/colorPrimarySpesa" />
@@ -150,8 +150,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="44dp"
                         android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="72dp"
                         android:layout_marginTop="4dp"
                         app:srcCompat="@color/colorPrimaryDarkTurni" />
 
@@ -202,8 +202,6 @@
                         android:id="@+id/oreOrdinarieText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignEnd="@+id/textView"
-                        android:layout_below="@+id/textView"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="16dp"
@@ -211,7 +209,8 @@
                         android:hint="Ore lavorative"
                         android:inputType="number"
                         android:padding="8dp"
-                        android:textAlignment="viewStart" />
+                        android:textAlignment="viewStart"
+                        android:visibility="visible" />
                 </RelativeLayout>
 
             </LinearLayout>
@@ -242,7 +241,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignEnd="@+id/pagaOrariaText"
                         android:layout_alignStart="@+id/pagaOrariaText"
-                        android:layout_below="@+id/textView3"
                         android:layout_centerHorizontal="false"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="72dp"
@@ -275,7 +273,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignEnd="@+id/oreOrdinarieText"
                         android:layout_alignStart="@+id/oreOrdinarieText"
-                        android:layout_below="@+id/textView2"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="16dp"
