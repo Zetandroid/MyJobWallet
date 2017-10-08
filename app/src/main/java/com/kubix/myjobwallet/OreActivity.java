@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -22,6 +23,12 @@ public class OreActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ore);
+
+        //TODO TOOLBAR
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarOre);
+        setTitle(R.string.toolbarOre);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.lightText));
+        setSupportActionBar(toolbar);
 
         //INDICIZZA COMPONENTI
         dataTurno = (DatePicker) findViewById(R.id.datePicker);

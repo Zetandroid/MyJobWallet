@@ -19,8 +19,10 @@
             android:id="@+id/datePicker"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:isScrollContainer="@bool/bb_bottom_bar_is_portrait_mode"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbarOre"
+            android:layout_alignParentBottom="true" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/floatingAddNote"
@@ -34,6 +36,16 @@
             android:onClick="apriInserimentoOre"
             app:fabSize="normal"
             app:srcCompat="@drawable/ic_matita" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarOre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryOre"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 </ScrollView>

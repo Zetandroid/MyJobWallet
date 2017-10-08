@@ -51,6 +51,7 @@
             android:theme="@style/ThemeMemo"/>
 
         <activity android:name=".CalendarioActivity"
+            android:theme="@style/ThemeTurni"
             android:label="@string/toolbarCalendario"/>
 
         <activity android:name=".ElaborazioniActivity"

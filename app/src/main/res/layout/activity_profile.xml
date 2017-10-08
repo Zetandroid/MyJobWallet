@@ -48,76 +48,13 @@
                             android:layout_width="96dp"
                             android:layout_height="96dp"
                             android:layout_gravity="center"
+                            android:layout_marginBottom="24dp"
                             android:layout_marginTop="24dp"
                             android:layout_weight="2"
                             android:scaleType="centerCrop"
                             android:src="@drawable/image_profile"
                             app:civ_border_color="@color/darkText"
                             app:civ_border_width="2dp" />
-
-                        <TextView
-                            android:id="@+id/txtName"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="2"
-                            android:gravity="center"
-                            android:padding="4dp"
-                            android:textSize="18sp"
-                            tools:text="Nome" />
-
-                        <TextView
-                            android:id="@+id/txtEmail"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginBottom="16dp"
-                            android:gravity="center"
-                            android:padding="4dp"
-                            android:textSize="12sp"
-                            tools:text="Email" />
-
-                        <com.google.android.gms.common.SignInButton
-                            android:id="@+id/btn_sign_in"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="4dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginTop="4dp"
-                            android:layout_weight="2"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/btn_sign_out"
-                                style="?android:attr/borderlessButtonStyle"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_weight="1"
-                                android:text="@string/btn_disconnetti"
-                                android:textSize="12sp"
-                                android:visibility="visible" />
-
-                            <Button
-                                android:id="@+id/btn_revoke_access"
-                                style="?android:attr/borderlessButtonStyle"
-                                android:layout_width="fill_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_weight="1"
-                                android:text="@string/btn_recova_accesso"
-                                android:textSize="12sp"
-                                android:visibility="visible" />
-
-                        </LinearLayout>
 
                     </LinearLayout>
 

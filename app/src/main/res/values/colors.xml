@@ -5,6 +5,9 @@
     <color name="colorPrimary">#F5F5F5</color>
     <color name="colorPrimaryDark">#E0E0E0</color>
     <color name="colorAccent">#00BCD4</color>
+
+    <color name="colorIcons">#BDBDBD</color>
+    <color name="colorLineText">#00000000</color>
     
     <!-- TEMA PROFILO -->
     <color name="colorPrimaryProfilo">#3F51B5</color>

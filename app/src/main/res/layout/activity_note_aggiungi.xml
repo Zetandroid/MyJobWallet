@@ -37,20 +37,7 @@
                 app:srcCompat="@color/colorPrimaryMemo" />
 
             <EditText
-                android:id="@+id/testoNota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/titoloNota"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="NOTA"
-                android:inputType="textMultiLine" />
-
-            <EditText
-                android:id="@+id/titoloNota"
+                android:id="@+id/testoTitoloSpesa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/aggiungiCopertina"
@@ -59,7 +46,28 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="16dp"
                 android:ems="10"
+                android:background="@color/colorLineText"
                 android:hint="TITOLO"
+                android:inputType="textMultiLine" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <EditText
+                android:id="@+id/testoNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/testoTitoloSpesa"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:background="@color/colorLineText"
+                android:hint="NOTA"
                 android:inputType="textMultiLine" />
 
         </LinearLayout>
