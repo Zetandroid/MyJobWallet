@@ -1,15 +1,31 @@
 package com.kubix.myjobwallet;
+import android.app.Activity;
+import android.content.Context;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 public class ProfileActivity extends AppCompatActivity{
 
 
+    //TODO POPUP
+    private Context mContext;
+    private Activity mActivity;
+    private RelativeLayout mRelativeLayout;
+    private Button mButton;
+    private PopupWindow mPopupWindow;
 
     //TODO CALCOLO ORA
     EditText oreOrdinarieText;
@@ -20,6 +36,47 @@ public class ProfileActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        //TODO POPUP
+        mContext = getApplicationContext();
+
+        mActivity = ProfileActivity.this;
+
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.rl);
+        mButton = (Button) findViewById(R.id.btndati);
+
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+
+                View customView = inflater.inflate(R.layout.popup_profilo,null);
+
+                mPopupWindow = new PopupWindow(
+                        customView,
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+
+                );
+
+
+                if(Build.VERSION.SDK_INT>=21){
+                    mPopupWindow.setElevation(0.0f);
+                }
+
+                Button closeButton = (Button) customView.findViewById(R.id.btnChiudi);
+
+                closeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        mPopupWindow.dismiss();
+                    }
+                });
+                mPopupWindow.showAtLocation(mRelativeLayout, Gravity.BOTTOM,0,0);
+            }
+        });
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);

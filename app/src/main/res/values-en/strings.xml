@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyJobWallet</string>
+    <string name="feedback">Feedback</string>
+    <string name="cloudDropBox">DropBox</string>
+    <string name="cloudDrive">Google Drive</string>
+    <string name="cloud">Cloud</string>
+</resources>

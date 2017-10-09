@@ -8,7 +8,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- NOMI IMPOSTAZIONI SU TOOLBAR -->
-    <string name="actionSetting">Altre Impostazioni</string>
 
     <!-- NOMI SU TOOLBAR -->
     <string name="toolBarSetting">Impostazioni</string>
@@ -23,6 +22,27 @@
     <string name="toolbarCalendario">Calendario</string>
     <string name="toolbarCalcoloPaga">CalcoloPaga</string>
     <string name="toolbarPremium">Premium</string>
+
+    <!-- INTRODUZIONE -->
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">Avanti</string>
+    <string name="skip">Salta</string>
+    <string name="start">Vai</string>
+
+    <string name="slide_1_title">xxx</string>
+    <string name="slide_1_desc">xxx</string>
+
+    <string name="slide_2_title">xxxx</string>
+    <string name="slide_2_desc">xxxxxx</string>
+
+    <string name="slide_3_title">xxxxxx</string>
+    <string name="slide_3_desc">xxxxxxx</string>
+
+    <string name="slide_4_title">xxxxxxx</string>
+    <string name="slide_4_desc">xxxxxxx</string>
+
+
 
     <!-- MENU PROFILO -->
 
@@ -54,7 +74,7 @@
     <string name="cloudDrive">Google Drive</string>
     <string name="cloudDropBox">DropBox</string>
 
-    <string name="feedback">Feedback</string>
+    <string name="feedback" translatable="false">Feedback</string>
 
     <string name="premium">Premium</string>
 
