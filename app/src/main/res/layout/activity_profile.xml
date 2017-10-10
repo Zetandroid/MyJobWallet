@@ -9,6 +9,18 @@
     tools:context="com.kubix.myjobwallet.ProfileActivity">
 
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_aggiungi"
+        android:tint="#fff"
+        app:backgroundTint="@color/colorPrimaryProfilo" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -197,29 +209,6 @@
                 android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
                 android:background="@color/iconeLayout" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingBottom="4dp"
-                android:paddingTop="4dp">
-
-                <Button
-                    android:id="@+id/btndati"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="72dp"
-                    android:layout_marginRight="72dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:background="@color/testoBianco"
-                    android:text="Imposta dati"
-                    android:textColor="@color/testoTitolo"
-                    android:theme="@style/PrimaryFlatButton" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

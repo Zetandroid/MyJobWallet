@@ -58,6 +58,13 @@
         <item name="colorAccent">@color/colorAccentImpostazioni</item>
     </style>
 
+    <!-- TEMA ENTRATE -->
+    <style name="ThemeEntrate" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryEntrate</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkEntrate</item>
+        <item name="colorAccent">@color/colorAccentEntrate</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -77,5 +84,13 @@
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
         <item name="colorControlHighlight">@color/testoTitolo</item>
         <item name="colorAccent">@color/testoTitolo</item>
+    </style>
+
+    <!-- ANIMAZIONE FAB -->
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/colorAccent</item>
     </style>
 </resources>

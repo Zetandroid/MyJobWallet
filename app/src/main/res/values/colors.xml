@@ -22,9 +22,14 @@
     <color name="colorAccentProfilo">#E0E0E0</color>
 
     <!-- TEMA ORE -->
-    <color name="colorPrimaryOre">#4caf50</color>
-    <color name="colorPrimaryDarkOre">#388E3C</color>
-    <color name="colorAccentOre">#69F0AE</color>
+    <color name="colorPrimaryOre">#00BCD4</color>
+    <color name="colorPrimaryDarkOre">#0097A7</color>
+    <color name="colorAccentOre">#4DD0E1</color>
+
+    <!-- TEMA ENTRATE -->
+    <color name="colorPrimaryEntrate">#4caf50</color>
+    <color name="colorPrimaryDarkEntrate">#388E3C</color>
+    <color name="colorAccentEntrate">#81C784</color>
 
     <!-- TEMA TURNI -->
     <color name="colorPrimaryTurni">#2196f3</color>

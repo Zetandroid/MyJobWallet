@@ -22,6 +22,8 @@
     <string name="toolbarCalendario">Calendario</string>
     <string name="toolbarCalcoloPaga">CalcoloPaga</string>
     <string name="toolbarPremium">Premium</string>
+    <string name="toolbarEntrate">Entrate</string>
+    <string name="toolbarValuta">Convertitore di Valuta</string>
 
     <!-- INTRODUZIONE -->
 
@@ -86,6 +88,7 @@
     <!-- BOTTONI LOGIN -->
     <string name="btn_disconnetti">Disconnetti</string>
     <string name="btn_recova_accesso">Revoca Accesso</string>
+
 
 
 </resources>

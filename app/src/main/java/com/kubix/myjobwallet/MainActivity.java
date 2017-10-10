@@ -163,5 +163,12 @@ public class MainActivity extends AppCompatActivity
     public void NoteActivity (View v){
         startActivity (new Intent(MainActivity.this,NoteActivity.class));
     }
+    public void EntrateActivity (View v){
+        startActivity (new Intent(MainActivity.this,EntrateActivity.class));
+    }
+    public void ConvertitoreActivity (View v){
+        startActivity (new Intent(MainActivity.this,ConvertitoreActivity.class));
+    }
+
 
 }

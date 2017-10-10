@@ -52,7 +52,7 @@
         android:textSize="20sp" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingAdd"
+        android:id="@+id/fabSpese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

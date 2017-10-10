@@ -203,38 +203,110 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/cardMemo"
+                    android:id="@+id/cardEntrate"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
+                    android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:onClick="NoteActivity"
-                    android:clickable="true">
+                    android:onClick="EntrateActivity">
 
                     <ImageView
-                        android:id="@+id/immagineMemo"
+                        android:id="@+id/immagineEntrate"
                         android:layout_width="wrap_content"
                         android:layout_height="115dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/ic_memo" />
+                        app:srcCompat="@drawable/ic_entrate" />
 
                     <TextView
-                        android:id="@+id/textMemo"
+                        android:id="@+id/textEntrate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center"
                         android:layout_marginBottom="8dp"
                         android:padding="8dp"
-                        android:text="Note"
+                        android:text="Entrate"
                         android:textColor="@color/testoTitolo"
                         android:textStyle="bold" />
 
                 </android.support.v7.widget.CardView>
 
             </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardValuta"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="ConvertitoreActivity">
+
+                <ImageView
+                    android:id="@+id/immagineValuta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="115dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_valuta" />
+
+                <TextView
+                    android:id="@+id/textValuta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:text="Valuta"
+                    android:textColor="@color/testoTitolo"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardMemo"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="NoteActivity">
+
+                <ImageView
+                    android:id="@+id/immagineMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="115dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_memo" />
+
+                <TextView
+                    android:id="@+id/textMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="8dp"
+                    android:padding="8dp"
+                    android:text="Note"
+                    android:textColor="@color/testoTitolo"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

@@ -67,6 +67,15 @@
             android:label="@string/toolbarPremium"
             android:theme="@style/ThemePremium"/>
 
+        <activity android:name=".EntrateActivity"
+            android:label="@string/toolbarPremium"
+            android:theme="@style/ThemeEntrate"/>
+
+        <activity android:name=".ConvertitoreActivity"
+            android:label="@string/toolbarPremium"
+            android:theme="@style/ThemePremium"/>
+
+
     </application>
 
 </manifest>

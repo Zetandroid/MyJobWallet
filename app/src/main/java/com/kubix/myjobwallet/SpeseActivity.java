@@ -1,11 +1,20 @@
 package com.kubix.myjobwallet;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewAnimationUtils;
+import android.view.Window;
+import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -13,10 +22,13 @@ import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 
+import static com.kubix.myjobwallet.R.id.fabSpese;
+
 public class SpeseActivity extends AppCompatActivity{
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
+
 
     NativeExpressAdView mAdView;
     VideoController mVideoController;
@@ -31,6 +43,7 @@ public class SpeseActivity extends AppCompatActivity{
         setTitle(R.string.toolbarSpese);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
+
 
         //TODO ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adView);
@@ -58,7 +71,7 @@ public class SpeseActivity extends AppCompatActivity{
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingAdd);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabSpese);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
