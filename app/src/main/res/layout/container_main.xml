@@ -52,10 +52,11 @@
                 android:padding="8dp">
 
                 <TextView
+                    android:id="@+id/txtSommaEntrate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="1.179,37€"
+                    android:text="0,00 €"
                     android:textColor="@color/colorPrimaryOre"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -75,11 +76,11 @@
                 android:padding="8dp">
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/txtSommaUscite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="100,00 €"
+                    android:text="0,00 €"
                     android:textColor="@color/colorPrimarySpesa"
                     android:textSize="18sp"
                     android:textStyle="bold" />

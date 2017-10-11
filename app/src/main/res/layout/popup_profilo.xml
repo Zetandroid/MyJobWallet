@@ -79,6 +79,13 @@
             android:layout_height="1dp"
             android:background="@color/iconeLayout" />
 
+        <Button
+            android:id="@+id/button2"
+            android:onClick="AggiornaDatiProfilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALVA DATI PROFILO" />
+
 
     </LinearLayout>
 

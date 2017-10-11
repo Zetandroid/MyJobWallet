@@ -15,18 +15,20 @@ import android.view.ViewAnimationUtils;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ProfileActivity extends AppCompatActivity{
 
+    //TODO INDICIZZAZIONE OGGETTI ORA
+    TextView oreOrdinarieText;
+    TextView pagaOrariaText;
+    TextView pagaStraordinariaText;
+    EditText aggiornaOrdinarie;
+    EditText aggiornaPaga;
+    EditText aggiornaPagaStraordinari;
 
-
-    //TODO CALCOLO ORA
-    EditText oreOrdinarieText;
-    EditText pagaOrariaText;
-    EditText pagaStraordinariaText;
-
-    //TODO FAB ANIMAZIONE
+    //TODO INDICIZZAZIONE OGGETTO FAB ANIMAZIONE
     FloatingActionButton fab;
 
     @Override
@@ -34,17 +36,21 @@ public class ProfileActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
         setTitle(R.string.toolbarProfile);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
-        //TODO CALCOLO ORA
-        oreOrdinarieText = (EditText) findViewById(R.id.oreOrdinarieText);
-        pagaOrariaText = (EditText) findViewById(R.id.pagaOrariaText);
-        pagaStraordinariaText = (EditText) findViewById(R.id.pagaStraordinariText);
+        //TODO INDIRIZZAMENTO OGGETTI CALCOLO ORA
+        oreOrdinarieText = (TextView) findViewById(R.id.txtOre);
+        pagaOrariaText = (TextView) findViewById(R.id.txtPagaOraria);
+        pagaStraordinariaText = (TextView) findViewById(R.id.txtStraordinaria);
+
+        aggiornaOrdinarie = (EditText) findViewById(R.id.oreOrdinarieText);
+        aggiornaPaga = (EditText) findViewById(R.id.pagaOrariaText);
+        aggiornaPagaStraordinari = (EditText) findViewById(R.id.pagaStraordinariText);
+
 
         //TODO ANIMAZIONE FAB
         fab = (FloatingActionButton)findViewById(R.id.fab);
@@ -55,13 +61,16 @@ public class ProfileActivity extends AppCompatActivity{
                 showDiag();
             }
         });
+
+        leggiDatiProfilo();
+
     }
 
     private void showDiag() {
 
         final View dialogView = View.inflate(this,R.layout.fab_dialog_profilo,null);
-
         final Dialog dialog = new Dialog(this,R.style.MyAlertDialogStyle);
+
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(dialogView);
 
@@ -89,16 +98,13 @@ public class ProfileActivity extends AppCompatActivity{
                     revealShow(dialogView, false, dialog);
                     return true;
                 }
-
                 return false;
             }
         });
 
-
-
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
         dialog.show();
+
     }
 
     private void revealShow(View dialogView, boolean b, final Dialog dialog) {
@@ -138,9 +144,11 @@ public class ProfileActivity extends AppCompatActivity{
             anim.setDuration(600);
             anim.start();
 
+        }
 
-}
-        Toast.makeText(this, "InfoProfilo", Toast.LENGTH_SHORT).show();
+    }
+
+    public void leggiDatiProfilo(){
 
         //TODO CARICA INFO PROFILO DA DATABASE
         try {
@@ -148,12 +156,12 @@ public class ProfileActivity extends AppCompatActivity{
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{
-                        oreOrdinarieText.setText(cr.getString(cr.getColumnIndex("OreOrdinarie")));
-                        pagaOrariaText.setText(cr.getString(cr.getColumnIndex("NettoOrario")));
-                        pagaStraordinariaText.setText(cr.getString(cr.getColumnIndex("NettoStraordinario")));
+                        oreOrdinarieText.setText(cr.getString(cr.getColumnIndex("OreOrdinarie")).toString());
+                        pagaOrariaText.setText(cr.getString(cr.getColumnIndex("NettoOrario")).toString());
+                        pagaStraordinariaText.setText(cr.getString(cr.getColumnIndex("NettoStraordinario")).toString());
                     }while (cr.moveToNext());
                 }else{
-                    Toast.makeText(getApplicationContext(), "NESSUN TURNO INSERITO", Toast.LENGTH_LONG).show();
+
                 }
             }
             cr.close();
@@ -162,17 +170,23 @@ public class ProfileActivity extends AppCompatActivity{
         }
 
     }
-      //TODO METODO AGGIORNAMENTO INFO ORE E PAGA
-    public void aggiornaInfoProfilo(View v){
-        if(!oreOrdinarieText.getText().toString().equals("") && !pagaOrariaText.getText().toString().equals("") && !pagaStraordinariaText.getText().toString().equals("")){
-            MainActivity.db.execSQL("UPDATE InfoProfilo SET OreOrdinarie = '"+oreOrdinarieText.getText().toString()+"', NettoOrario = '"+pagaOrariaText.getText().toString()+"', NettoStraordinario = '"+pagaStraordinariaText.getText().toString()+"' WHERE ID = '0'");
-            VariabiliGlobali.oreOrdinarie = Integer.valueOf(oreOrdinarieText.getText().toString());
-            VariabiliGlobali.nettoOrario = Integer.valueOf(pagaOrariaText.getText().toString());
-            VariabiliGlobali.nettoStraordinario = Integer.valueOf(pagaStraordinariaText.getText().toString());
+
+    //TODO METODO AGGIORNAMENTO INFO ORE E PAGA
+    public void AggiornaDatiProfilo(View v){
+
+        if(!aggiornaOrdinarie.getText().toString().equals("") && !aggiornaPaga.getText().toString().equals("") && !aggiornaPagaStraordinari.getText().toString().equals("")){
+            MainActivity.db.execSQL("UPDATE InfoProfilo SET OreOrdinarie = '"+aggiornaOrdinarie.getText().toString()+"', NettoOrario = '"+aggiornaPaga.getText().toString()+"', NettoStraordinario = '"+aggiornaPagaStraordinari.getText().toString()+"' WHERE ID = '0'");
+            VariabiliGlobali.oreOrdinarie = Integer.valueOf(aggiornaOrdinarie.getText().toString());
+            VariabiliGlobali.nettoOrario = Integer.valueOf(aggiornaPaga.getText().toString());
+            VariabiliGlobali.nettoStraordinario = Integer.valueOf(aggiornaPagaStraordinari.getText().toString());
             Toast.makeText(this, "Info profilo aggiornate con successo.", Toast.LENGTH_LONG).show();
             finish();
+            oreOrdinarieText.setText(String.valueOf(VariabiliGlobali.oreOrdinarie));
+            pagaOrariaText.setText(String.valueOf(VariabiliGlobali.nettoOrario));
+            pagaStraordinariaText.setText(String.valueOf(VariabiliGlobali.nettoStraordinario));
         }else{
             Toast.makeText(this, "I dati profilo devono essere compilati correttamente.", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

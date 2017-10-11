@@ -18,5 +18,7 @@
     <include
         layout="@layout/popup_profilo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/include" />
+
 </RelativeLayout>
