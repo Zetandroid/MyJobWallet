@@ -19,7 +19,8 @@
         android:layout_marginLeft="72dp"
         android:layout_marginRight="72dp"
         android:background="@color/colorPrimaryProfilo"
-        android:text="Imposta Dati" />
+        android:text="Imposta Dati"
+        android:textColor="@color/testoBianco" />
 
     <ScrollView
         android:layout_width="match_parent"
