@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rl_custom_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#f5f5f5"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:padding="2dp">
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarProfiloDati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbarProfiloDati"
+        android:layout_alignParentStart="true">
 
         <EditText
             android:id="@+id/pagaStraordinariText"
@@ -81,12 +92,16 @@
 
         <Button
             android:id="@+id/button2"
-            android:onClick="AggiornaDatiProfilo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SALVA DATI PROFILO" />
+            android:layout_marginLeft="72dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimarySpesa"
+            android:onClick="AggiornaDatiProfilo"
+            android:text="SALVA DATI PROFILO"
+            android:textColor="@color/testoBianco" />
 
 
     </LinearLayout>
-
 </RelativeLayout>

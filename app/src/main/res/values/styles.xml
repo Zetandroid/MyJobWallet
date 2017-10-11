@@ -37,6 +37,7 @@
         <item name="colorAccent">@color/colorAccentSpesa</item>
     </style>
 
+
     <!-- TEMA MEMO -->
     <style name="ThemeMemo" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryMemo</item>
@@ -52,7 +53,7 @@
     </style>
 
     <!-- TEMA IMPOSTAZIONI -->
-    <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryImpostazioni</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkImpostazioni</item>
         <item name="colorAccent">@color/colorAccentImpostazioni</item>
@@ -86,11 +87,5 @@
         <item name="colorAccent">@color/testoTitolo</item>
     </style>
 
-    <!-- ANIMAZIONE FAB -->
-    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
 
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:windowBackground">@color/colorAccent</item>
-    </style>
 </resources>

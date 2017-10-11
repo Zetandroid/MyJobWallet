@@ -12,7 +12,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -136,13 +135,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            startActivity(new Intent(this, ProfileActivity.class));
+            startActivity(new Intent(this, ProfiloActivity.class));
 
         }else if (id == R.id.nav_premium) {
             startActivity(new Intent(this,PremiumActivity.class));
 
         } else if (id == R.id.nav_setting) {
-            startActivity(new Intent(this,SettingActivity.class));
+            startActivity(new Intent(this,SettingsActivity.class));
 
         }
 

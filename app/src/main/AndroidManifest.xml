@@ -24,11 +24,15 @@
             android:label="@string/toolBarSetting"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name=".SettingActivity"
+        <activity android:name=".ProfiloDatiActivity"
+            android:label="@string/toolbarProfileDati"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".SettingsActivity"
             android:label="@string/toolBarSetting"
             android:theme="@style/ThemeImpostazioni"/>
 
-        <activity android:name=".ProfileActivity"
+        <activity android:name=".ProfiloActivity"
             android:label="@string/toolbarProfile"
             android:theme="@style/ThemeProfilo"/>
 

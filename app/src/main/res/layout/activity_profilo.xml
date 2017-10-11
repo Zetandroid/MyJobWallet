@@ -6,22 +6,20 @@
     android:layout_height="match_parent"
     android:id="@+id/rl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.kubix.myjobwallet.ProfileActivity">
+    tools:context="com.kubix.myjobwallet.ProfiloActivity">
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/bottoneDati"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_aggiungi"
-        android:tint="#fff"
-        app:backgroundTint="@color/colorPrimaryProfilo"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_alignParentBottom="true" />
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:background="@color/colorPrimaryProfilo"
+        android:text="Imposta Dati" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -188,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="24dp"
                 android:background="@color/iconeLayout" />
 
             <LinearLayout
@@ -197,7 +195,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="52dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
