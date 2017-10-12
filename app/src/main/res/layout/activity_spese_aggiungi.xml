@@ -83,6 +83,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp">
 
+                <Spinner
+                    android:id="@+id/prioritaSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:autofillHints="Priorità" />
+
                 <ImageView
                     android:id="@+id/iconaPriorietaSpesa"
                     android:layout_width="24dp"
@@ -120,6 +128,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp">
+
+                <Spinner
+                    android:id="@+id/tagSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp" />
 
                 <ImageView
                     android:id="@+id/iconaTagSpesa"

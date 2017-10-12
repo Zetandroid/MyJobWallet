@@ -9,19 +9,6 @@
     tools:context="com.kubix.myjobwallet.ProfiloActivity">
 
 
-    <Button
-        android:id="@+id/bottoneDati"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginRight="72dp"
-        android:background="@color/colorPrimaryProfilo"
-        android:text="Imposta Dati"
-        android:textColor="@color/testoBianco" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -279,9 +266,22 @@
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="24dp"
                 android:layout_marginTop="24dp"
                 android:background="@color/iconeLayout" />
+
+            <Button
+                android:id="@+id/bottoneDati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="72dp"
+                android:layout_marginRight="72dp"
+                android:background="@color/colorPrimaryProfilo"
+                android:text="Imposta Dati"
+                android:textColor="@color/testoBianco" />
 
         </LinearLayout>
     </ScrollView>
