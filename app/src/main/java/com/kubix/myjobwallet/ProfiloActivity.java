@@ -23,12 +23,10 @@ import android.widget.Toast;
 public class ProfiloActivity extends AppCompatActivity{
 
     //TODO INDICIZZAZIONE OGGETTI ORA
-    TextView oreOrdinarieText;
-    TextView pagaOrariaText;
-    TextView pagaStraordinariaText;
-    EditText aggiornaOrdinarie;
-    EditText aggiornaPaga;
-    EditText aggiornaPagaStraordinari;
+    public static TextView oreOrdinarieText;
+    public static TextView pagaOrariaText;
+    public static TextView pagaStraordinariaText;
+
 
 
     @Override
@@ -58,12 +56,10 @@ public class ProfiloActivity extends AppCompatActivity{
         pagaOrariaText = (TextView) findViewById(R.id.txtPagaOraria);
         pagaStraordinariaText = (TextView) findViewById(R.id.txtStraordinaria);
 
-        aggiornaOrdinarie = (EditText) findViewById(R.id.oreOrdinarieText);
-        aggiornaPaga = (EditText) findViewById(R.id.pagaOrariaText);
-        aggiornaPagaStraordinari = (EditText) findViewById(R.id.pagaStraordinariText);
+        caricaDatiProfilo();
     }
 
-    public void leggiDatiProfilo(){
+    public void caricaDatiProfilo(){
 
         //TODO CARICA INFO PROFILO DA DATABASE
         try {
@@ -85,23 +81,4 @@ public class ProfiloActivity extends AppCompatActivity{
         }
 
     }
-
-    //TODO METODO AGGIORNAMENTO INFO ORE E PAGA
-    public void AggiornaDatiProfilo(View v){
-
-        if(!aggiornaOrdinarie.getText().toString().equals("") && !aggiornaPaga.getText().toString().equals("") && !aggiornaPagaStraordinari.getText().toString().equals("")){
-            MainActivity.db.execSQL("UPDATE InfoProfilo SET OreOrdinarie = '"+aggiornaOrdinarie.getText().toString()+"', NettoOrario = '"+aggiornaPaga.getText().toString()+"', NettoStraordinario = '"+aggiornaPagaStraordinari.getText().toString()+"' WHERE ID = '0'");
-            VariabiliGlobali.oreOrdinarie = Integer.valueOf(aggiornaOrdinarie.getText().toString());
-            VariabiliGlobali.nettoOrario = Integer.valueOf(aggiornaPaga.getText().toString());
-            VariabiliGlobali.nettoStraordinario = Integer.valueOf(aggiornaPagaStraordinari.getText().toString());
-            Toast.makeText(this, "Info profilo aggiornate con successo.", Toast.LENGTH_LONG).show();
-            finish();
-            oreOrdinarieText.setText(String.valueOf(VariabiliGlobali.oreOrdinarie));
-            pagaOrariaText.setText(String.valueOf(VariabiliGlobali.nettoOrario));
-            pagaStraordinariaText.setText(String.valueOf(VariabiliGlobali.nettoStraordinario));
-        }else{
-            Toast.makeText(this, "I dati profilo devono essere compilati correttamente.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
 }
