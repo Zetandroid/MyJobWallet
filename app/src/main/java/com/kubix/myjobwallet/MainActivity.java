@@ -21,6 +21,8 @@ import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 
+import util.EmailActivity;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoTitolo));
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -143,6 +146,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_setting) {
             startActivity(new Intent(this,SettingsActivity.class));
 
+        } else if (id == R.id.nav_email){
+            startActivity(new Intent(this, EmailActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

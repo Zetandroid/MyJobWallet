@@ -25,6 +25,7 @@
     <string name="toolbarEntrate">Entrate</string>
     <string name="toolbarValuta">Convertitore di Valuta</string>
     <string name="toolbarProfileDati">Dati Utente</string>
+    <string name="toolbarEmail">Invia Email</string>
 
     <!-- INTRODUZIONE -->
 
@@ -46,12 +47,7 @@
     <string name="slide_4_desc">xxxxxxx</string>
 
 
-
     <!-- MENU PROFILO -->
-
-    <string name="bottone_disconnetti">Disconnetti</string>
-    <string name="bottone_revoca">Revoca Accesso</string>
-    <string name="loading">Caricamento</string>
 
     <string name="text_email">nome@gmail.com</string>
     <string name="text_nome">Nome</string>
@@ -86,10 +82,11 @@
     <string name="bottom_uscita">Uscita</string>
     <string name="bottom_turni">Turni</string>
 
-    <!-- BOTTONI LOGIN -->
-    <string name="btn_disconnetti">Disconnetti</string>
-    <string name="btn_recova_accesso">Revoca Accesso</string>
-
+    <!-- EMAIL -->
+    <string name="emailTitolo">Invia Email a Kubix Studio</string>
+    <string name="email">studio.kubix@gmail.com</string>
+    <string name="emailOggetto">MyJobWallet</string>
+    <string name="emailTesto">Ciao Kubix Studio....</string>
 
 
 </resources>

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kubix.myjobwallet">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,65 +22,69 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/toolBarSetting"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".ProfiloDatiActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfiloDatiActivity"
             android:label="@string/toolbarProfileDati"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingsActivity"
             android:label="@string/toolBarSetting"
-            android:theme="@style/ThemeImpostazioni"/>
-
-        <activity android:name=".ProfiloActivity"
+            android:theme="@style/ThemeImpostazioni" />
+        <activity
+            android:name=".ProfiloActivity"
             android:label="@string/toolbarProfile"
-            android:theme="@style/ThemeProfilo"/>
-
-        <activity android:name=".OreActivity"
+            android:theme="@style/ThemeProfilo" />
+        <activity
+            android:name=".OreActivity"
             android:label="@string/toolbarOre"
-        android:theme="@style/ThemeOre"/>
-
-        <activity android:name=".TurniActivity"
+            android:theme="@style/ThemeOre" />
+        <activity
+            android:name=".TurniActivity"
             android:label="@string/toolbarTurni"
-            android:theme="@style/ThemeTurni"/>
-
-        <activity android:name=".SpeseActivity"
+            android:theme="@style/ThemeTurni" />
+        <activity
+            android:name=".SpeseActivity"
             android:label="@string/toolbarSpese"
-            android:theme="@style/ThemeSpesa"/>
-
-        <activity android:name=".SpeseAggiungiActivity"
+            android:theme="@style/ThemeSpesa" />
+        <activity
+            android:name=".SpeseAggiungiActivity"
             android:label="@string/toolbarSpeseAggiungi"
-            android:theme="@style/ThemeSpesa"/>
-
-        <activity android:name=".NoteActivity"
-            android:theme="@style/ThemeMemo"/>
-
-        <activity android:name=".NoteAggiungiActivity"
+            android:theme="@style/ThemeSpesa" />
+        <activity
+            android:name=".NoteActivity"
+            android:theme="@style/ThemeMemo" />
+        <activity
+            android:name=".NoteAggiungiActivity"
             android:label="@string/toolbarNoteAggiungi"
-            android:theme="@style/ThemeMemo"/>
-
-        <activity android:name=".CalendarioActivity"
-            android:theme="@style/ThemeTurni"
-            android:label="@string/toolbarCalendario"/>
-
-        <activity android:name=".ElaborazioniActivity"
+            android:theme="@style/ThemeMemo" />
+        <activity
+            android:name=".CalendarioActivity"
+            android:label="@string/toolbarCalendario"
+            android:theme="@style/ThemeTurni" />
+        <activity
+            android:name=".ElaborazioniActivity"
             android:label="@string/toolbarCalcoloPaga"
-            android:theme="@style/ThemeTurni"/>
-
-        <activity android:name=".PremiumActivity"
+            android:theme="@style/ThemeTurni" />
+        <activity
+            android:name=".PremiumActivity"
             android:label="@string/toolbarPremium"
-            android:theme="@style/ThemePremium"/>
-
-        <activity android:name=".EntrateActivity"
+            android:theme="@style/ThemePremium" />
+        <activity
+            android:name=".EntrateActivity"
             android:label="@string/toolbarPremium"
-            android:theme="@style/ThemeEntrate"/>
-
-        <activity android:name=".ConvertitoreActivity"
+            android:theme="@style/ThemeEntrate" />
+        <activity
+            android:name=".ConvertitoreActivity"
             android:label="@string/toolbarPremium"
-            android:theme="@style/ThemePremium"/>
+            android:theme="@style/ThemePremium" />
+
+        <activity android:name="util.EmailActivity"
+            android:label="@string/toolbarEmail"
+            android:theme="@style/ThemeMemo"/>
 
 
     </application>

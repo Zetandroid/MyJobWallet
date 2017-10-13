@@ -17,6 +17,12 @@
             android:textColor="@color/colorAccent"
             android:title="Premium" />
 
+        <item
+            android:id="@+id/nav_email"
+            android:icon="@drawable/ic_menu_email"
+            android:textColor="@color/colorAccent"
+            android:title="Email" />
+
 
    </group>
 

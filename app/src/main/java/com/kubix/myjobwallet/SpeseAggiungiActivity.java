@@ -14,7 +14,6 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
     //TODO VARIABILI DI CLASSE
     private String[] arraySpinnerSpesa;
     private String[] arraySpinnerPriorita;
-    private String[] arrayIcons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
