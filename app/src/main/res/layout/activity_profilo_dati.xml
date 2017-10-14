@@ -144,10 +144,9 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="72dp"
             android:layout_marginTop="72dp"
-            android:background="@color/colorPrimarySpesa"
+            android:theme="@style/Bottone.Rosso"
             android:onClick="AggiornaDatiProfilo"
-            android:text="SALVA DATI PROFILO"
-            android:textColor="@color/testoBianco" />
+            android:text="SALVA DATI PROFILO" />
 
 
     </LinearLayout>

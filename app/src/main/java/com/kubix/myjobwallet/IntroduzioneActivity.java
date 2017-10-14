@@ -20,6 +20,8 @@ import android.widget.TextView;
 
 import util.PrefManager;
 
+import static com.kubix.myjobwallet.R.id.btnLogin;
+
 /**
  * Created by mowmo on 09/10/17.
  */
@@ -37,6 +39,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // Checking for first time launch - before calling setContentView()
         prefManager = new PrefManager(this);
@@ -58,13 +61,17 @@ public class IntroduzioneActivity extends AppCompatActivity {
         btnNext = (Button) findViewById(R.id.btn_next);
 
 
+
+
         // layouts of all welcome sliders
         // add few more layouts if you want
         layouts = new int[]{
                 R.layout.introduzione_slide_1,
                 R.layout.introduzione_slide_2,
                 R.layout.introduzione_slide_3,
-                R.layout.introduzione_slide_4};
+                R.layout.introduzione_slide_4,
+                R.layout.introduzione_slide_5,
+                R.layout.introduzione_slide_6};
 
         // adding bottom dots
         addBottomDots(0);
@@ -162,11 +169,9 @@ public class IntroduzioneActivity extends AppCompatActivity {
      * Making notification bar transparent
      */
     private void changeStatusBarColor() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.TRANSPARENT);
-        }
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.TRANSPARENT);
     }
 
     /**

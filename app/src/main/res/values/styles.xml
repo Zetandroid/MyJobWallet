@@ -90,9 +90,20 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- BOTTONI -->
-    <style name="PrimaryButton" parent="Theme.AppCompat">
-        <item name="colorButtonNormal">@color/colorPrimary</item>
-        <item name="colorControlHighlight">@color/colorAccent</item>
+
+    <style name="Bottone.Rosso" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorPrimarySpesa</item>
+        <item name="android:textColor">@color/coloreBianco</item>
+    </style>
+
+    <style name="Bottone.Blu" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorPrimaryTurni</item>
+        <item name="android:textColor">@color/coloreBianco</item>
+    </style>
+
+    <style name="Bottone.Nero" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorPrimaryProfilo</item>
+        <item name="android:textColor">@color/coloreBianco</item>
     </style>
 
     <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">

@@ -3,12 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccentProfilo">
+    android:background="@color/colorPrimaryValuta">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="72dp">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,19 +17,19 @@
 
             <ImageView
                 android:id="@+id/immagineSlide1"
-                android:layout_width="256dp"
-                android:layout_height="256dp"
+                android:layout_width="144dp"
+                android:layout_height="144dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="16dp"
-                app:srcCompat="@drawable/immagine_slide_1" />
+                app:srcCompat="@drawable/immagine_slide_5" />
 
             <TextView
-                android:id="@+id/testoSlide1"
+                android:id="@+id/testoSlide5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Benvenuto in MyJobWallet. Un progetto di Kubix Studio"
+                android:text="Converti tutte le valute del Mondo"
                 android:textAlignment="center"
                 android:textColor="@color/coloreBianco"
                 android:textSize="18sp"

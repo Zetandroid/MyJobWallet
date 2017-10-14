@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/gridview1"
             android:layout_alignTop="@+id/imageView"
-            android:theme="@style/PrimaryButton"
+            android:theme="@style/Bottone.Rosso"
             android:onClick="eliminaTurno"
             app:srcCompat="@android:drawable/ic_menu_delete" />
 

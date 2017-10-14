@@ -7,6 +7,7 @@
     <color name="colorAccent">#00b0ff</color>
 
     <color name="colorBannerHome">#f5f5f5</color>
+    <color name="coloreBianco">#ffffff</color>
 
     <color name="iconeLayout">#BDBDBD</color>
     <color name="lineaTrasparente">#00000000</color>
@@ -68,23 +69,22 @@
 
     <!-- INTRODUZIONE -->
 
-    <!-- COLORE BACKGROUND-->
-    <color name="bg_screen1">#4caf50</color>
-    <color name="bg_screen2">#2196f3</color>
-    <color name="bg_screen3">#f44336</color>
-    <color name="bg_screen4">#ff9800</color>
 
     <!-- DOTS INATTIVI -->
     <color name="dot_dark_screen1">#50ffffff</color>
     <color name="dot_dark_screen2">#50ffffff</color>
     <color name="dot_dark_screen3">#50ffffff</color>
     <color name="dot_dark_screen4">#50ffffff</color>
+    <color name="dot_dark_screen5">#50ffffff</color>
+    <color name="dot_dark_screen6">#50ffffff</color>
 
     <array name="array_dot_inactive">
         <item>@color/dot_dark_screen1</item>
         <item>@color/dot_dark_screen2</item>
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
+        <item>@color/dot_dark_screen5</item>
+        <item>@color/dot_dark_screen6</item>
     </array>
 
     <!-- DOTS ATTIVI -->
@@ -92,12 +92,16 @@
     <color name="dot_light_screen2">#50000000</color>
     <color name="dot_light_screen3">#50000000</color>
     <color name="dot_light_screen4">#50000000</color>
+    <color name="dot_light_screen5">#50000000</color>
+    <color name="dot_light_screen6">#50000000</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
         <item>@color/dot_light_screen2</item>
         <item>@color/dot_light_screen3</item>
         <item>@color/dot_light_screen4</item>
+        <item>@color/dot_light_screen5</item>
+        <item>@color/dot_light_screen6</item>
     </array>
 
 </resources>

@@ -118,13 +118,11 @@
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="72dp"
                         android:layout_marginTop="4dp"
-                        android:background="@color/colorPrimarySpesa"
                         android:text="Accedi con Google"
                         android:textAllCaps="false"
-                        android:textColor="@color/testoBianco"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:theme="@style/PrimaryFlatButton" />
+                        android:theme="@style/Bottone.Rosso" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -148,13 +146,11 @@
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="72dp"
                         android:layout_marginTop="4dp"
-                        android:background="@color/colorPrimaryTurni"
                         android:text="Accedi con Facebook"
                         android:textAllCaps="false"
-                        android:textColor="@color/testoBianco"
                         android:textSize="16sp"
                         android:textStyle="bold"
-                        android:theme="@style/PrimaryFlatButton" />
+                        android:theme="@style/Bottone.Blu" />
 
                 </RelativeLayout>
 
@@ -279,9 +275,8 @@
                 android:layout_marginBottom="24dp"
                 android:layout_marginLeft="72dp"
                 android:layout_marginRight="72dp"
-                android:background="@color/colorPrimaryProfilo"
-                android:text="Imposta Dati"
-                android:textColor="@color/testoBianco" />
+                android:theme="@style/Bottone.Nero"
+                android:text="Imposta Dati" />
 
         </LinearLayout>
     </ScrollView>
