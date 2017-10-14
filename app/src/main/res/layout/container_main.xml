@@ -119,7 +119,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="115dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/ic_ora" />
+                        app:srcCompat="@drawable/ic_home_ora" />
 
                     <TextView
                         android:id="@+id/textOre"
@@ -161,7 +161,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="115dp"
                         android:layout_gravity="center_horizontal"
-                        ads:srcCompat="@drawable/ic_turni" />
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_home_turni" />
 
                 </android.support.v7.widget.CardView>
 
@@ -190,7 +191,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="115dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/ic_spesa" />
+                        app:srcCompat="@drawable/ic_home_spesa" />
 
                     <TextView
                         android:id="@+id/textSpese"
@@ -221,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="115dp"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/ic_entrate" />
+                        app:srcCompat="@drawable/ic_home_entrate" />
 
                     <TextView
                         android:id="@+id/textEntrate"
@@ -261,7 +262,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="115dp"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_valuta" />
+                    app:srcCompat="@drawable/ic_home_valuta" />
 
                 <TextView
                     android:id="@+id/textValuta"
@@ -292,7 +293,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="115dp"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_memo" />
+                    app:srcCompat="@drawable/ic_home_memo" />
 
                 <TextView
                     android:id="@+id/textMemo"

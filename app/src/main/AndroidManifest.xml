@@ -75,16 +75,16 @@
             android:theme="@style/ThemePremium" />
         <activity
             android:name=".EntrateActivity"
-            android:label="@string/toolbarPremium"
+            android:label="@string/toolbarEntrate"
             android:theme="@style/ThemeEntrate" />
         <activity
             android:name=".ConvertitoreActivity"
-            android:label="@string/toolbarPremium"
-            android:theme="@style/ThemePremium" />
+            android:label="@string/toolbarValuta"
+            android:theme="@style/ThemeValuta" />
 
         <activity android:name="util.EmailActivity"
             android:label="@string/toolbarEmail"
-            android:theme="@style/ThemeMemo"/>
+            android:theme="@style/ThemeEmail."/>
 
 
     </application>

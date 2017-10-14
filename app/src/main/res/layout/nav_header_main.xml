@@ -5,22 +5,46 @@
     android:layout_height="200dp"
     android:background="@color/colorPrimary">
 
-    <TextView
-        android:id="@+id/navTextName"
+    <ImageView
+        android:id="@+id/imageView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:text="Kubix Studio"
-        android:textColor="@color/testoBianco"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageProfile"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/nav_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginTop="48dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_profile"
+            app:civ_border_color="@color/colorPrimaryProfilo"
+            app:civ_border_width="3dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imgProfilePic"
+            android:layout_below="@+id/imgProfilePic"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="Kubix Studio"
+            android:textAlignment="center"
+            android:textColor="@color/testoTitolo"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 </RelativeLayout>

@@ -45,6 +45,20 @@
         <item name="colorAccent">@color/colorAccentMemo</item>
     </style>
 
+    <!-- TEMA EMAIL -->
+    <style name="ThemeEmail." parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryEmail</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryEmail</item>
+        <item name="colorAccent">@color/colorAccentEmail</item>
+    </style>
+
+    <!-- TEMA CONVERTITORE VALUTA -->
+    <style name="ThemeValuta" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryValuta</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkValuta</item>
+        <item name="colorAccent">@color/colorAccentValuta</item>
+    </style>
+
     <!-- TEMA PREMIUM -->
     <style name="ThemePremium" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryPremium</item>

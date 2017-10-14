@@ -51,10 +51,15 @@
     <color name="colorPrimaryDarkEmail">#c68400</color>
     <color name="colorAccentEmail">#ffe54c</color>
 
+    <!--TEMA CONVERTITORE VALUTA -->
+    <color name="colorPrimaryValuta">#E91E63</color>
+    <color name="colorPrimaryDarkValuta">#b0003a</color>
+    <color name="colorAccentValuta">#ff6090</color>
+
     <!-- TEMA PREMIUM -->
-    <color name="colorPrimaryPremium">#E91E63</color>
-    <color name="colorPrimaryDarkPremium">#b0003a</color>
-    <color name="colorAccentPremium">#ff6090</color>
+    <color name="colorPrimaryPremium">#3f51b5</color>
+    <color name="colorPrimaryDarkPremium">#002984</color>
+    <color name="colorAccentPremium">#757de8</color>
 
     <!-- TEMA IMPOSTAZIONI -->
     <color name="colorPrimaryImpostazioni">#607d8b</color>

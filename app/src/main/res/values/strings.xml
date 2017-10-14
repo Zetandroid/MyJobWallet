@@ -87,6 +87,10 @@
     <string name="email">studio.kubix@gmail.com</string>
     <string name="emailOggetto">MyJobWallet</string>
     <string name="emailTesto">Ciao Kubix Studio....</string>
+    <string name="scrivi_email">Scrivi Email</string>
+    <string name="hai_un_problema">Hai un problema?</string>
+    <string name="hai_una_richiesta">Hai una richiesta?</string>
+    <string name="inviaci_una_email">Inviaci una Email!</string>
 
 
 </resources>
