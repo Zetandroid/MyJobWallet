@@ -61,7 +61,7 @@
                     android:layout_marginRight="8dp"
                     android:background="@color/lineaTrasparente"
                     android:ems="10"
-                    android:hint="TITOLO"
+                    android:hint="@string/titolo_spesa"
                     android:inputType="textMultiLine" />
 
                 <ImageView

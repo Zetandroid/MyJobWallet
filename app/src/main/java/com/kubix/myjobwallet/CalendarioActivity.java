@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import util.VariabiliGlobali;
+
 import static com.kubix.myjobwallet.R.id.timePicker2;
 
 public class CalendarioActivity extends AppCompatActivity {
@@ -78,15 +80,15 @@ public class CalendarioActivity extends AppCompatActivity {
         oraDiEntrata = oraEntrata;
 
         try{
-            MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', 'IN SERVIZIO')");
+            MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+getString(R.string.in_servizio));
             MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
-            Toast.makeText(this, "ENTRATA TURNO ESEGUITA CON SUCCESSO", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.entrata_turno, Toast.LENGTH_LONG).show();
 
         }catch (Exception e) {
 
             //PARTE L'ECCEZIONE PERCHE IL CAMPO DATA DEL DB E' SETTATO UNIQUE E QUINDI SE SI INSERISCE UN'ALTRA ENTRATA LO STESSO GIORNO NON LA METTE E DA QUESTO MESSAGGIO SOTTOSTANTE
             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-            builder1.setMessage("TURNAZIONE GIA ESISTENTE PER QUESTA GIORNATA, SE NON LO HAI FATTO: NON DIMENTICARE DI INSERIRE L'USCITA.");
+            builder1.setMessage(R.string.turno_esistente);
             builder1.setCancelable(true);
             builder1.create();
             builder1.show();
@@ -125,13 +127,13 @@ public class CalendarioActivity extends AppCompatActivity {
 
             //EVITA QUESTO MESSAGGIO QUANDO INSERISCI IL RIPOSO
             if(! oraDiEntrata.equals(oraDiUscita)){
-                Toast.makeText(this, "USCITA TURNO ESEGUITA CORRETAMENTE", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.uscita_turno, Toast.LENGTH_LONG).show();
             }
 
 
         }else{
             AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-            builder1.setMessage("PRIMA DI INSERIRE L'USCITA DEVI INSERIRE L'ENTRATA PER LA TURNAZIONE ODIERNA.");
+            builder1.setMessage(R.string.inserire_uscita);
             builder1.setCancelable(true);
             builder1.create();
             builder1.show();
@@ -140,7 +142,7 @@ public class CalendarioActivity extends AppCompatActivity {
         if(oraDiEntrata.equals(oraDiUscita)){
             try{
                 MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO' WHERE Data = '"+thisDate+"';");
-                Toast.makeText(this, "GIORNO DI RIPOSO INSERITO CORRETTAMENTE", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.giorno_riposo, Toast.LENGTH_LONG).show();
             }catch (Exception e){
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
             }

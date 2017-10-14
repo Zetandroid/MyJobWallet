@@ -27,7 +27,9 @@ public class ElaborazioniActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         this.arraySpinner = new String[] {
-                "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"
+                getString(R.string.gennaio), getString(R.string.febbraio), getString(R.string.marzo), getString(R.string.aprile), getString(R.string.maggio),
+                getString(R.string.giugno), getString(R.string.luglio), getString(R.string.agosto), getString(R.string.settembre), getString(R.string.ottobre),
+                getString(R.string.novembre), getString(R.string.dicembre)
         };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, arraySpinner);

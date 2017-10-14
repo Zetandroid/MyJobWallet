@@ -8,6 +8,8 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import util.VariabiliGlobali;
+
 public class OreActivity extends AppCompatActivity{
     DatePicker dataTurno;
     TextView dataScritta;

@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Scrivi le tue Note con Testi e Immagini. Potrai anche inserire una notifica come promemoria"
+                android:text="@string/testoSlide4"
                 android:textAlignment="center"
                 android:textColor="@color/coloreBianco"
                 android:textSize="18sp"

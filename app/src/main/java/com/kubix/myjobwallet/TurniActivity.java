@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import util.VariabiliGlobali;
+
 public class TurniActivity extends AppCompatActivity {
 
     ImageButton eliminaTurno;
@@ -110,7 +112,7 @@ public class TurniActivity extends AppCompatActivity {
 
                     }while (cr.moveToNext());
                 }else{
-                    Toast.makeText(getApplicationContext(), "NESSUN TURNO INSERITO", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.nessun_turno, Toast.LENGTH_LONG).show();
                 }
             }
             cr.close();
@@ -123,37 +125,37 @@ public class TurniActivity extends AppCompatActivity {
         try{
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(true);
-            builder.setTitle("ELIMINA TURNO");
-            builder.setMessage("IL TURNO VERRA' ELIMINATO, PROCEDERE ?");
-            builder.setPositiveButton("SI, ELIMINA",
+            builder.setTitle(R.string.elimina_turno);
+            builder.setMessage(R.string.verra_eliminato);
+            builder.setPositiveButton(R.string.si_elimina,
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog,
                                             int which) {
-                            if (uscitaCalcolo.equals("IN SERVIZIO")) {
+                            if (uscitaCalcolo.equals(getString(R.string.servizio))) {
                                 MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '" + entrataCalcolo + "' AND oraUscita = 'IN SERVIZIO'");
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
                                 dialog.dismiss();
-                                Toast.makeText(TurniActivity.this, "TURNO RIMOSSO CON SUCCESSO", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TurniActivity.this, R.string.turno_rimosso, Toast.LENGTH_SHORT).show();
                                 finish();
-                            }else if (uscitaCalcolo.equals(" RIPOSO")){
+                            }else if (uscitaCalcolo.equals(getString(R.string.riposo))){
                                 MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = 'RIPOSO' AND oraUscita = 'RIPOSO'");
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
                                 dialog.dismiss();
-                                Toast.makeText(TurniActivity.this, "TURNO RIMOSSO CON SUCCESSO", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TurniActivity.this, R.string.rimosso_turno, Toast.LENGTH_SHORT).show();
                                 finish();
                             }else{
                                 MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '"+dataSelezionata+"' AND oraEntrata = '"+entrataCalcolo+"' AND oraUscita = '"+uscitaCalcolo+"'");
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '"+dataSelezionata+"'");
                                 eliminaTurno.setVisibility(View.INVISIBLE);
                                 dialog.dismiss();
-                                Toast.makeText(TurniActivity.this, "TURNO RIMOSSO CON SUCCESSO", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TurniActivity.this, R.string.rimosso_turno, Toast.LENGTH_SHORT).show();
                                 finish();
                             }
 
                         }
                     });
-            builder.setNegativeButton("NON ELIMINARE",
+            builder.setNegativeButton(R.string.non_eliminare,
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog,

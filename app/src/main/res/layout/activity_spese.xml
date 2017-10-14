@@ -30,12 +30,12 @@
             android:orientation="vertical" >
 
             <com.google.android.gms.ads.NativeExpressAdView
-                android:id="@+id/adView"
+                android:id="@+id/adViewSpese"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 ads:adSize="360x100"
-                ads:adUnitId="@string/adsNativa" />
+                ads:adUnitId="@string/adsSpese"/>
         </LinearLayout>
     </ScrollView>
 
@@ -47,7 +47,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:text="Clicca sul pulsante qui sotto per aggiungere una spesa"
+        android:text="@string/Agg_spesa"
         android:textAlignment="center"
         android:textSize="20sp" />
 

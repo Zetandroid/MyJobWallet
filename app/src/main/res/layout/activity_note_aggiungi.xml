@@ -45,7 +45,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
-                android:hint="TITOLO"
+                android:hint="@string/titolo"
                 android:inputType="textMultiLine"
                 android:padding="16dp" />
 
@@ -62,7 +62,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
-                android:hint="NOTA"
+                android:hint="@string/nota"
                 android:inputType="textMultiLine"
                 android:padding="16dp" />
 
@@ -85,7 +85,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:text="Salva"
+        android:text="@string/salva"
         android:textColor="@color/testoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -97,7 +97,7 @@
         android:layout_below="@+id/toolbarAggiungiNota"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:text="Aggiungi Immagine"
+        android:text="@string/aggiungi_immagine"
         android:textColor="@color/testoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />

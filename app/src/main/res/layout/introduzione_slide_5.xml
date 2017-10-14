@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Converti tutte le valute del Mondo"
+                android:text="@string/testoSlide5"
                 android:textAlignment="center"
                 android:textColor="@color/coloreBianco"
                 android:textSize="18sp"

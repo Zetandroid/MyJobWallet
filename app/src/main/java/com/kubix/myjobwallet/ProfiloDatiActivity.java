@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import util.VariabiliGlobali;
+
 /**
  * Created by mowmo on 11/10/17.
  */

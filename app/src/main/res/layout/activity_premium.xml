@@ -57,7 +57,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
                             android:padding="8dp"
-                            android:text="Versione Premium"
+                            android:text="@string/versione_premium"
                             android:textColor="@color/testoTitolo"
                             android:textSize="20sp"
                             android:textStyle="bold" />
@@ -77,7 +77,7 @@
                             android:layout_marginRight="8dp"
                             android:layout_marginTop="8dp"
                             android:padding="8dp"
-                            android:text="- Rimuovi pubblicità"
+                            android:text="@string/rimuovi_pubblicit"
                             android:textColor="@color/testoSecondario"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -89,7 +89,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
                             android:padding="8dp"
-                            android:text="- Calcola stipendio"
+                            android:text="@string/calcola_stipendio"
                             android:textColor="@color/testoSecondario"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -101,7 +101,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
                             android:padding="8dp"
-                            android:text="- Cambia Tema"
+                            android:text="@string/cambia_tema_premium"
                             android:textColor="@color/testoSecondario"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -113,7 +113,7 @@
                             android:layout_marginLeft="8dp"
                             android:layout_marginRight="8dp"
                             android:padding="8dp"
-                            android:text="- Aggiungi Widget"
+                            android:text="@string/aggiungi_widget"
                             android:textColor="@color/testoSecondario"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -139,7 +139,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
                                 android:layout_weight="1"
-                                android:text="Acquista"
+                                android:text="@string/acquista"
                                 android:textColor="@color/colorAccentPremium"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />
@@ -151,7 +151,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="bottom"
                                 android:layout_weight="1"
-                                android:text="Ripristina Acquisto"
+                                android:text="@string/ripristina_acquisto"
                                 android:textColor="@color/colorAccentPremium"
                                 android:textSize="12sp"
                                 android:textStyle="bold" />

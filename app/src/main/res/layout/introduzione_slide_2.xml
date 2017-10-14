@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Calcola il tuo stipendio in modo facile e veloce"
+                android:text="@string/testoSlide2"
                 android:textAlignment="center"
                 android:textColor="@color/coloreBianco"
                 android:textSize="18sp"

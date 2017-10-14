@@ -53,7 +53,7 @@
                 android:layout_weight="0.38"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
-                android:hint="Ore lavorative"
+                android:hint="@string/ore_lavorative"
                 android:inputType="number"
                 android:textAlignment="viewStart"
                 android:visibility="visible" />
@@ -89,7 +89,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
-                android:hint="Paga Oraria"
+                android:hint="@string/paga_oraria"
                 android:inputType="number"
                 android:textAlignment="viewStart" />
         </RelativeLayout>
@@ -125,7 +125,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
-                android:hint="Straordinari"
+                android:hint="@string/straordinari"
                 android:inputType="number"
                 android:textAlignment="viewStart" />
         </RelativeLayout>
@@ -146,7 +146,7 @@
             android:layout_marginTop="72dp"
             android:theme="@style/Bottone.Rosso"
             android:onClick="AggiornaDatiProfilo"
-            android:text="SALVA DATI PROFILO" />
+            android:text="@string/salva_dati_profilo" />
 
 
     </LinearLayout>

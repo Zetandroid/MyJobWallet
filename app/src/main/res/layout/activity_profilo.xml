@@ -70,7 +70,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp"
                     android:paddingTop="4dp"
-                    android:text="Kubix Studio"
+                    android:text="@string/kubix_studio"
                     android:textAlignment="center"
                     android:textColor="@color/testoTitolo"
                     android:textSize="18sp"
@@ -93,7 +93,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp"
                     android:paddingTop="4dp"
-                    android:text="Email@gmail.com"
+                    android:text="@string/email_gmail_com"
                     android:textAlignment="center"
                     android:textColor="@color/testoSecondario" />
             </LinearLayout>
@@ -118,7 +118,7 @@
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="72dp"
                         android:layout_marginTop="4dp"
-                        android:text="Accedi con Google"
+                        android:text="@string/accedi_con_google"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -146,7 +146,7 @@
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="72dp"
                         android:layout_marginTop="4dp"
-                        android:text="Accedi con Facebook"
+                        android:text="@string/accedi_con_facebook"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -276,7 +276,7 @@
                 android:layout_marginLeft="72dp"
                 android:layout_marginRight="72dp"
                 android:theme="@style/Bottone.Nero"
-                android:text="Imposta Dati" />
+                android:text="@string/imposta_dati" />
 
         </LinearLayout>
     </ScrollView>

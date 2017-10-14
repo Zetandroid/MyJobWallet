@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:text="Gestisci tutte le tue entrate/uscite economiche"
+                android:text="@string/testoSlide3"
                 android:textAlignment="center"
                 android:textColor="@color/coloreBianco"
                 android:textSize="18sp"

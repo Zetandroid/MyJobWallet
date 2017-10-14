@@ -2,10 +2,12 @@
     <string name="app_name">MyJobWallet</string>
 
     <!-- ADMOB -->
-    <string name="adsNativa">ca-app-pub-9460579775308491/9105890252</string>
+    <string name="adsHome">ca-app-pub-9460579775308491/9105890252</string>
+    <string name="adsSpese">ca-app-pub-9460579775308491/1775619596</string>
+    <string name="adsNote">ca-app-pub-9460579775308491/9180957587</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Apri navigation drawer</string>
+    <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
     <!-- NOMI IMPOSTAZIONI SU TOOLBAR -->
 
@@ -20,7 +22,7 @@
     <string name="toolbarNote">Note</string>
     <string name="toolbarNoteAggiungi">Aggiungi Nota</string>
     <string name="toolbarCalendario">Calendario</string>
-    <string name="toolbarCalcoloPaga">CalcoloPaga</string>
+    <string name="toolbarCalcoloPaga">Calcolo Paga</string>
     <string name="toolbarPremium">Premium</string>
     <string name="toolbarEntrate">Entrate</string>
     <string name="toolbarValuta">Convertitore di Valuta</string>
@@ -29,7 +31,7 @@
 
     <!-- INTRODUZIONE -->
 
-    <string name="title_activity_welcome">Home Screen</string>
+    <string name="title_activity_welcome">MyJobWallet</string>
     <string name="next">Avanti</string>
     <string name="skip">Salta</string>
     <string name="start">Vai</string>
@@ -38,7 +40,7 @@
 
     <!-- MENU PROFILO -->
 
-    <string name="text_email">nome@gmail.com</string>
+    <string name="text_email">Nome@email.com</string>
     <string name="text_nome">Nome</string>
 
     <!-- IMPOSTAZIONI TEMA -->
@@ -53,7 +55,7 @@
     <!-- IMPOSTAZIONI BACKUP -->
     <string name="backup">Backup e Ripristino</string>
     <string name="backupDevice">Crea Backup sul Dispositivo</string>
-    <string name="restoreDevice">Ripsistina il Backup dal Dispositivo</string>
+    <string name="restoreDevice">Ripristina il Backup dal Dispositivo</string>
     <string name="backupCloud">Crea il Backup sul Cloud</string>
     <string name="restoreCloud">Ripristina il Backup dal Cloud</string>
 
@@ -62,7 +64,7 @@
     <string name="cloudDrive">Google Drive</string>
     <string name="cloudDropBox">DropBox</string>
 
-    <string name="feedback" translatable="false">Feedback</string>
+    <string name="feedback">Feedback</string>
 
     <string name="premium">Premium</string>
 
@@ -80,6 +82,80 @@
     <string name="hai_un_problema">Hai un problema?</string>
     <string name="hai_una_richiesta">Hai una richiesta?</string>
     <string name="inviaci_una_email">Inviaci una Email!</string>
+
+    <string name="testoSlide1">Benvenuto in MyJobWallet. Un progetto di Kubix Studio</string>
+    <string name="testoSlide2">Calcola il tuo stipendio in modo facile e veloce</string>
+    <string name="testoSlide3">Gestisci tutte le tue entrate/uscite economiche</string>
+    <string name="testoSlide4">Scrivi le tue Note con Testi e Immagini. Potrai anche inserire una notifica come promemoria</string>
+    <string name="testoSlide5">Converti tutte le valute del Mondo</string>
+    <string name="calcolo_straordinari">Calcolo straordinari</string>
+    <string name="calcolo_paga">Calcolo paga</string>
+    <string name="Agg_Nota">Clicca sul pulsante qui sotto per aggiungere una Nota</string>
+    <string name="nota">Nota</string>
+    <string name="titolo">Titolo</string>
+    <string name="salva">Salva</string>
+    <string name="aggiungi_immagine">Aggiungi Immagine</string>
+    <string name="versione_premium">Versione Premium</string>
+    <string name="rimuovi_pubblicit">- Rimuovi pubblicità</string>
+    <string name="calcola_stipendio">- Calcola stipendio</string>
+    <string name="cambia_tema_premium">- Cambia Tema</string>
+    <string name="aggiungi_widget">- Aggiungi Widget</string>
+    <string name="acquista">Acquista</string>
+    <string name="ripristina_acquisto">Ripristina Acquisto</string>
+    <string name="kubix_studio">Kubix Studio</string>
+    <string name="email_gmail_com">Email@email.com</string>
+    <string name="accedi_con_google">Accedi con Google</string>
+    <string name="accedi_con_facebook">Accedi con Facebook</string>
+    <string name="imposta_dati">Imposta Dati</string>
+    <string name="ore_lavorative">Ore lavorative</string>
+    <string name="paga_oraria">Paga Oraria</string>
+    <string name="straordinari">Straordinari</string>
+    <string name="salva_dati_profilo">SALVA DATI PROFILO</string>
+    <string name="Agg_spesa">Clicca sul pulsante qui sotto per aggiungere una spesa</string>
+    <string name="titolo_spesa">Titolo</string>
+    <string name="elaborazione">Elaborazione</string>
+    <string name="entrate">Entrate</string>
+    <string name="uscite">Uscite</string>
+    <string name="ore">Ore</string>
+    <string name="turni">Turni</string>
+    <string name="spese">Spese</string>
+    <string name="card_entrata">Entrate</string>
+    <string name="card_note">Note</string>
+    <string name="valuta">Valuta</string>
+
+    <string name="uscita_turno">FATTO</string>
+    <string name="entrata_turno">ENTRATA IMPOSTATA</string>
+    <string name="inserire_uscita">INSERISCI L\'ENTRATA</string>
+    <string name="giorno_riposo">RIPOSO INSERITO</string>
+
+    <string name="in_servizio">IN SERVIZIO</string>
+    <string name="turno_esistente">INSERIRE L\'USCITA</string>
+
+
+
+    <string name="gennaio">Gennaio</string>
+    <string name="febbraio">Febbraio</string>
+    <string name="marzo">Marzo</string>
+    <string name="aprile">Aprile</string>
+    <string name="maggio">Maggio</string>
+    <string name="giugno">Giugno</string>
+    <string name="luglio">Luglio</string>
+    <string name="agosto">Agosto</string>
+    <string name="settembre">Settembre</string>
+    <string name="ottobre">Ottobre</string>
+    <string name="novembre">Novembre</string>
+    <string name="dicembre">Dicembre</string>
+
+
+    <string name="nessun_turno">NESSUN TURNO INSERITO</string>
+    <string name="elimina_turno">ELIMINA TURNO</string>
+    <string name="verra_eliminato">ELIMINARE ?</string>
+    <string name="si_elimina">SI, ELIMINA</string>
+    <string name="servizio">IN SERVIZIO</string>
+    <string name="turno_rimosso">TURNO RIMOSSO CON SUCCESSO</string>
+    <string name="riposo">RIPOSO</string>
+    <string name="rimosso_turno">TURNO RIMOSSO</string>
+    <string name="non_eliminare">NON ELIMINARE</string>
 
 
 </resources>

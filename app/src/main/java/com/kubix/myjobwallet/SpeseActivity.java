@@ -46,7 +46,7 @@ public class SpeseActivity extends AppCompatActivity{
 
 
         //TODO ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        mAdView = (NativeExpressAdView) findViewById(R.id.adViewSpese);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
                 .build());

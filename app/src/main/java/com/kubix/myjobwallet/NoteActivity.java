@@ -37,7 +37,7 @@ public class NoteActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //TODO ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        mAdView = (NativeExpressAdView) findViewById(R.id.adViewNote);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
                 .build());

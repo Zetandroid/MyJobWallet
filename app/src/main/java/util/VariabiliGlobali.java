@@ -1,4 +1,4 @@
-package com.kubix.myjobwallet;
+package util;
 
 public class VariabiliGlobali {
 
