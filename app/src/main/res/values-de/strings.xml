@@ -167,4 +167,5 @@
     <string name="drawer_profilo">Profil</string>
     <string name="drawer_premium">Premium</string>
     <string name="drawer_valuta">Bewerten</string>
+    <string name="toolbarSettings">Einstellungen</string>
 </resources>

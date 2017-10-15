@@ -24,7 +24,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/toolBarSetting"
+            android:label="@string/toolbarSettings"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".profilo.ProfiloDatiActivity"
@@ -32,7 +32,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/toolBarSetting"
+            android:label="@string/toolbarSettings"
             android:theme="@style/ThemeImpostazioni" />
         <activity
             android:name=".profilo.ProfiloActivity"

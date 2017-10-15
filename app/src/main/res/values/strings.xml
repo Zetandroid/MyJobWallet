@@ -13,6 +13,7 @@
 
 
     <!-- NOMI SU TOOLBAR -->
+    <string name="toolbarSettings">Impostazioni</string>
     <string name="toolbarImpostazioni">Impostazioni</string>
     <string name="toolbarProfile">Profilo</string>
     <string name="toolbarOre">Ore</string>
