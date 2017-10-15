@@ -4,7 +4,7 @@
     <!-- TEMA -->
     <color name="colorPrimary">#F5F5F5</color>
     <color name="colorPrimaryDark">#c2c2c2</color>
-    <color name="colorAccent">#00b0ff</color>
+    <color name="colorAccent">#52c7b8</color>
 
     <color name="colorBannerHome">#f5f5f5</color>
     <color name="coloreBianco">#ffffff</color>
@@ -63,9 +63,9 @@
     <color name="colorAccentPremium">#757de8</color>
 
     <!-- TEMA IMPOSTAZIONI -->
-    <color name="colorPrimaryImpostazioni">#607d8b</color>
-    <color name="colorPrimaryDarkImpostazioni">#34515e</color>
-    <color name="colorAccentImpostazioni">#8eacbb</color>
+    <color name="colorPrimaryImpostazioni">#009688</color>
+    <color name="colorPrimaryDarkImpostazioni">#00675b</color>
+    <color name="colorAccentImpostazioni">#52c7b8</color>
 
     <!-- INTRODUZIONE -->
 

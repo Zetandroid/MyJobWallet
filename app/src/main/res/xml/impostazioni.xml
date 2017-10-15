@@ -1,82 +1,28 @@
-<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TEMA -->
-    <PreferenceScreen
-        android:key="button_tema_key"
-        android:title="@string/tema"
-        android:icon="@drawable/ic_impostazioni_tema"
-        android:persistent="false">
-        <ListPreference
-            android:key="button_cambia_tema_key"
-            android:title="@string/cambia_tema"/>
-        <ListPreference
-            android:key="button_cambia_tema_toolbar_key"
-            android:title="@string/cambia_tema_toolbar"/>
-    </PreferenceScreen>
+    <PreferenceCategory
+        android:title="@string/tema">
 
 
-    <!-- NOTIFICHE -->
-    <PreferenceScreen
-        android:key="button_notifiche_key"
-        android:title="@string/notifiche"
-        android:icon="@drawable/ic_impostazioni_notifiche"
-        android:persistent="false">
-    </PreferenceScreen>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="cambia_tema"
+            android:icon="@drawable/ic_impostazioni_tema"
+            android:title="@string/cambia_tema" />
 
+    </PreferenceCategory>
 
-    <!-- BACKUP E RIPRISTINO -->
-    <PreferenceScreen
-        android:key="button_backup_key"
-        android:title="@string/backup"
-        android:icon="@drawable/ic_impostazioni_backup"
-        android:persistent="false">
+    <PreferenceCategory
+        android:title="@string/notifiche">
 
-        <ListPreference
-            android:key="button_backup_device_key"
-            android:title="@string/backupDevice"/>
-        <ListPreference
-            android:key="button_restore-device_key"
-            android:title="@string/restoreDevice"/>
-        <ListPreference
-            android:key="button_backup_cloud_key"
-            android:title="@string/backupCloud"/>
-        <ListPreference
-            android:key="button_restore_cloud_key"
-            android:title="@string/restoreCloud"/>
-    </PreferenceScreen>
+        <CheckBoxPreference
+            android:title="Receive Notifications"
+            android:icon="@drawable/ic_impostazioni_notifiche"
+            android:summary="Want to receive Push Notifications ?"
+            android:key="receiveNotifications"
+            android:defaultValue="true" />
 
+    </PreferenceCategory>
 
-    <!-- CLOUD -->
-    <PreferenceScreen
-        android:key="button_cloud_key"
-        android:title="@string/cloud"
-        android:icon="@drawable/ic_impostazioni_cloud"
-        android:persistent="false">
-
-        <ListPreference
-            android:key="button_cloud_drive_key"
-            android:title="@string/cloudDrive"/>
-        <ListPreference
-            android:key="button_cloud_dropbox_key"
-            android:title="@string/cloudDropBox"/>
-    </PreferenceScreen>
-
-
-
-    <!-- EMAIL -->
-    <PreferenceScreen
-        android:key="button_feedback_key"
-        android:title="@string/feedback"
-        android:icon="@drawable/ic_impostazioni_feedback"
-        android:persistent="false">
-    </PreferenceScreen>
-
-
-    <!-- PREMIUM -->
-    <PreferenceScreen
-        android:key="button_premium_key"
-        android:title="@string/premium"
-        android:icon="@drawable/ic_impostazioni_premium"
-        android:persistent="false">
-    </PreferenceScreen>
 </PreferenceScreen>
