@@ -62,6 +62,8 @@ public class NoteActivity extends AppCompatActivity {
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
+
+        //TODO FAB
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingAddNote);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

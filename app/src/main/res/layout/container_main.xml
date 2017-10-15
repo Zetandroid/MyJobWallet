@@ -66,7 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/entrate" />
+                    android:text="@string/somma_entrate" />
             </LinearLayout>
 
             <LinearLayout
@@ -90,7 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/uscite" />
+                    android:text="@string/somma_uscite" />
             </LinearLayout>
 
         </LinearLayout>
@@ -128,7 +128,7 @@
                         android:layout_gravity="bottom|center"
                         android:layout_marginBottom="8dp"
                         android:padding="8dp"
-                        android:text="@string/ore"
+                        android:text="@string/card_ore"
                         android:textColor="@color/testoTitolo"
                         android:textStyle="bold" />
                 </android.support.v7.widget.CardView>
@@ -152,7 +152,7 @@
                         android:layout_gravity="bottom|center"
                         android:layout_marginBottom="8dp"
                         android:padding="8dp"
-                        android:text="@string/turni"
+                        android:text="@string/card_turni"
                         android:textColor="@color/testoTitolo"
                         android:textStyle="bold" />
 
@@ -200,7 +200,7 @@
                         android:layout_gravity="bottom|center"
                         android:layout_marginBottom="8dp"
                         android:padding="8dp"
-                        android:text="@string/spese"
+                        android:text="@string/card_spese"
                         android:textColor="@color/testoTitolo"
                         android:textStyle="bold" />
                 </android.support.v7.widget.CardView>
@@ -271,7 +271,7 @@
                     android:layout_gravity="bottom|center"
                     android:layout_marginBottom="8dp"
                     android:padding="8dp"
-                    android:text="@string/valuta"
+                    android:text="@string/card_valuta"
                     android:textColor="@color/testoTitolo"
                     android:textStyle="bold" />
             </android.support.v7.widget.CardView>

@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarSpeseAggiungi"
+        android:id="@+id/toolbarEntrataAggiungi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimarySpesa"
+        android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
+
 
     <ImageView
         android:id="@+id/imageBottonSalva"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
-        app:srcCompat="@color/colorPrimarySpesa" />
+        app:srcCompat="@color/colorPrimaryEntrate" />
 
     <TextView
         android:id="@+id/textView6"
@@ -36,8 +38,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarSpeseAggiungi"
-        android:layout_above="@+id/imageBottonSalva">
+        android:layout_above="@+id/imageBottonSalva"
+        android:layout_below="@+id/toolbarEntrataAggiungi">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,7 +86,7 @@
                 android:layout_height="56dp">
 
                 <Spinner
-                    android:id="@+id/prioritaSpinner"
+                    android:id="@+id/prioritaEntrateSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -130,7 +132,7 @@
                 android:layout_height="56dp">
 
                 <Spinner
-                    android:id="@+id/tagSpinner"
+                    android:id="@+id/tagEntrateSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -151,27 +153,6 @@
                 android:layout_marginLeft="72dp"
                 android:background="@color/iconeLayout" />
 
-
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="56dp">
-
-                <ImageView
-                    android:id="@+id/iconaOraSpesa"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_ora" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="72dp"
-                android:background="@color/iconeLayout" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -221,38 +202,7 @@
                 android:layout_marginLeft="72dp"
                 android:background="@color/iconeLayout" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="56dp">
-
-                <Button
-                    android:id="@+id/buttonMappaSpese"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:text="Mappa"
-                    android:textColor="@color/colorPrimarySpesa"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/iconaPosizioneSpesa"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_posizione" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="36dp"
-                android:layout_marginLeft="72dp"
-                android:background="@color/iconeLayout" />
-
         </LinearLayout>
     </ScrollView>
+
 </RelativeLayout>

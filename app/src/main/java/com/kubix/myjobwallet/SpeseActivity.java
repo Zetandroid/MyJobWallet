@@ -28,8 +28,6 @@ public class SpeseActivity extends AppCompatActivity{
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
-
-
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 

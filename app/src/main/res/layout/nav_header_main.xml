@@ -39,7 +39,7 @@
             android:layout_marginRight="16dp"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="Kubix Studio"
+            android:text="@string/nome_profilo"
             android:textAlignment="center"
             android:textColor="@color/testoTitolo"
             android:textSize="16sp"

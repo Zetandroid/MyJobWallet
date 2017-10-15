@@ -86,6 +86,10 @@
             android:label="@string/toolbarEmail"
             android:theme="@style/ThemeEmail."/>
 
+        <activity android:name=".EntrateAggiungiActivity"
+            android:label="@string/toolbarEntrateAggiungi"
+            android:theme="@style/ThemeEntrate"/>
+
 
     </application>
 

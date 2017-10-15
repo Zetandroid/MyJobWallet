@@ -33,10 +33,10 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         try{
            if(!titoloNota.getText().toString().equals("") && !corpoNota.getText().toString().equals("")){
                MainActivity.db.execSQL("INSERT INTO Note (Titolo, Nota) VALUES ('"+titoloNota.getText().toString()+"', '"+corpoNota.getText().toString()+"')");
-               Toast.makeText(this, "Nota inserita correttamente", Toast.LENGTH_SHORT).show();
+               Toast.makeText(this, R.string.nota_inserita, Toast.LENGTH_SHORT).show();
                finish();
            }else{
-               Toast.makeText(this, "Inserire tutti i dati per la nota.", Toast.LENGTH_SHORT).show();
+               Toast.makeText(this, R.string.dati_nota, Toast.LENGTH_SHORT).show();
            }
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

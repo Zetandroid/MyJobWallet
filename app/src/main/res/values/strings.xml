@@ -5,11 +5,12 @@
     <string name="adsHome">ca-app-pub-9460579775308491/9105890252</string>
     <string name="adsSpese">ca-app-pub-9460579775308491/1775619596</string>
     <string name="adsNote">ca-app-pub-9460579775308491/9180957587</string>
+    <string name="adsEntrate">ca-app-pub-9460579775308491/2783193903</string>
+    <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
 
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
-    <!-- NOMI IMPOSTAZIONI SU TOOLBAR -->
 
     <!-- NOMI SU TOOLBAR -->
     <string name="toolBarSetting">Impostazioni</string>
@@ -25,23 +26,11 @@
     <string name="toolbarCalcoloPaga">Calcolo Paga</string>
     <string name="toolbarPremium">Premium</string>
     <string name="toolbarEntrate">Entrate</string>
+    <string name="toolbarEntrateAggiungi">Aggiungi Entrata</string>
     <string name="toolbarValuta">Convertitore di Valuta</string>
     <string name="toolbarProfileDati">Dati Utente</string>
     <string name="toolbarEmail">Invia Email</string>
 
-    <!-- INTRODUZIONE -->
-
-    <string name="title_activity_welcome">MyJobWallet</string>
-    <string name="next">Avanti</string>
-    <string name="skip">Salta</string>
-    <string name="start">Vai</string>
-
-
-
-    <!-- MENU PROFILO -->
-
-    <string name="text_email">Nome@email.com</string>
-    <string name="text_nome">Nome</string>
 
     <!-- IMPOSTAZIONI TEMA -->
 
@@ -73,7 +62,21 @@
     <string name="bottom_uscita">Uscita</string>
     <string name="bottom_turni">Turni</string>
 
-    <!-- EMAIL -->
+
+
+    <!-- INTRODUZIONE -->
+    <string name="title_activity_welcome">MyJobWallet</string>
+    <string name="next">Avanti</string>
+    <string name="skip">Salta</string>
+    <string name="start">Vai</string>
+    <string name="testoSlide1">Benvenuto in MyJobWallet. Un progetto di Kubix Studio</string>
+    <string name="testoSlide2">Calcola il tuo stipendio in modo facile e veloce</string>
+    <string name="testoSlide3">Gestisci tutte le tue entrate/uscite economiche</string>
+    <string name="testoSlide4">Scrivi le tue Note con Testi e Immagini. Potrai anche inserire una notifica come promemoria</string>
+    <string name="testoSlide5">Converti tutte le valute del Mondo</string>
+
+
+    <!-- MENU EMAIL -->
     <string name="emailTitolo">Invia Email a Kubix Studio</string>
     <string name="email">studio.kubix@gmail.com</string>
     <string name="emailOggetto">MyJobWallet</string>
@@ -83,27 +86,27 @@
     <string name="hai_una_richiesta">Hai una richiesta?</string>
     <string name="inviaci_una_email">Inviaci una Email!</string>
 
-    <string name="testoSlide1">Benvenuto in MyJobWallet. Un progetto di Kubix Studio</string>
-    <string name="testoSlide2">Calcola il tuo stipendio in modo facile e veloce</string>
-    <string name="testoSlide3">Gestisci tutte le tue entrate/uscite economiche</string>
-    <string name="testoSlide4">Scrivi le tue Note con Testi e Immagini. Potrai anche inserire una notifica come promemoria</string>
-    <string name="testoSlide5">Converti tutte le valute del Mondo</string>
-    <string name="calcolo_straordinari">Calcolo straordinari</string>
-    <string name="calcolo_paga">Calcolo paga</string>
-    <string name="Agg_Nota">Clicca sul pulsante qui sotto per aggiungere una Nota</string>
+    <!-- MENU NOTE -->
+    <string name="aggiungi_nota">Clicca sul pulsante qui sotto per aggiungere una Nota</string>
     <string name="nota">Nota</string>
     <string name="titolo">Titolo</string>
     <string name="salva">Salva</string>
     <string name="aggiungi_immagine">Aggiungi Immagine</string>
+    <string name="nota_inserita">Nota inserita correttamente</string>
+    <string name="dati_nota">Inserire tutti i dati per la nota.</string>
+
+    <!-- MENU PREMIUM -->
     <string name="versione_premium">Versione Premium</string>
-    <string name="rimuovi_pubblicit">- Rimuovi pubblicità</string>
+    <string name="rimuovi_pubblicita">- Rimuovi pubblicità</string>
     <string name="calcola_stipendio">- Calcola stipendio</string>
     <string name="cambia_tema_premium">- Cambia Tema</string>
     <string name="aggiungi_widget">- Aggiungi Widget</string>
     <string name="acquista">Acquista</string>
     <string name="ripristina_acquisto">Ripristina Acquisto</string>
-    <string name="kubix_studio">Kubix Studio</string>
-    <string name="email_gmail_com">Email@email.com</string>
+
+    <!-- MENU PROFILO -->
+    <string name="nome_profilo">Kubix Studio</string>
+    <string name="email_profilo">Email@email.com</string>
     <string name="accedi_con_google">Accedi con Google</string>
     <string name="accedi_con_facebook">Accedi con Facebook</string>
     <string name="imposta_dati">Imposta Dati</string>
@@ -111,28 +114,75 @@
     <string name="paga_oraria">Paga Oraria</string>
     <string name="straordinari">Straordinari</string>
     <string name="salva_dati_profilo">SALVA DATI PROFILO</string>
-    <string name="Agg_spesa">Clicca sul pulsante qui sotto per aggiungere una spesa</string>
+
+
+    <!-- MENU SPESE -->
+    <string name="testo_aggiungi_spesa">Clicca sul pulsante qui sotto per aggiungere una spesa</string>
     <string name="titolo_spesa">Titolo</string>
-    <string name="elaborazione">Elaborazione</string>
-    <string name="entrate">Entrate</string>
-    <string name="uscite">Uscite</string>
-    <string name="ore">Ore</string>
-    <string name="turni">Turni</string>
-    <string name="spese">Spese</string>
+
+    <!-- MENU ENTRATE -->
+    <string name="testo_aggiungi_entrata">Clicca il pulsante qui sotto per aggiungere una Entrta</string>
+
+    <!-- HOME -->
+    <string name="card_ore">Ore</string>
+    <string name="card_turni">Turni</string>
+    <string name="card_spese">Spese</string>
     <string name="card_entrata">Entrate</string>
     <string name="card_note">Note</string>
-    <string name="valuta">Valuta</string>
+    <string name="card_valuta">Valuta</string>
+    <string name="somma_entrate">Entrate</string>
+    <string name="somma_uscite">Uscite</string>
 
-    <string name="uscita_turno">FATTO</string>
-    <string name="entrata_turno">ENTRATA IMPOSTATA</string>
+    <!-- GENERALE -->
+    <string name="uscita_turno">USCITA INSERITA</string>
+    <string name="entrata_turno">ENTRATA INSERITA</string>
     <string name="inserire_uscita">INSERISCI L\'ENTRATA</string>
     <string name="giorno_riposo">RIPOSO INSERITO</string>
+
+    <string name="elaborazione">Elaborazione</string>
+
+    <string name="calcolo_straordinari">Calcolo straordinari</string>
+    <string name="calcolo_paga">Calcolo paga</string>
+
 
     <string name="in_servizio">IN SERVIZIO</string>
     <string name="turno_esistente">INSERIRE L\'USCITA</string>
 
+    <string name="nessun_turno">NESSUN TURNO INSERITO</string>
+    <string name="elimina_turno">ELIMINA TURNO</string>
+    <string name="verra_eliminato">ELIMINARE?</string>
+    <string name="si_elimina">SI, ELIMINA</string>
+    <string name="servizio">IN SERVIZIO</string>
+    <string name="turno_rimosso">TURNO RIMOSSO CON SUCCESSO</string>
+    <string name="riposo">RIPOSO</string>
+    <string name="rimosso_turno">TURNO RIMOSSO</string>
+    <string name="non_eliminare">NON ELIMINARE</string>
 
+    <!-- SPINNER PEIORITA -->
+    <string name="bassa">Bassa</string>
+    <string name="media">Media</string>
+    <string name="alta">Alta</string>
 
+    <!-- SPINNER ENTRATE -->
+    <string name="bonifico">Bonifico</string>
+    <string name="assegno">Assegno</string>
+    <string name="vincita">Vincita</string>
+    <string name="regalo">Regalo</string>
+    <string name="beni">Beni</string>
+    <string name="rimborsi">Rimborsi</string>
+    <string name="vendite">Vendite</string>
+
+    <!-- SPINNER SPESE -->
+    <string name="casa">Casa</string>
+    <string name="trasporti">Trasporti</string>
+    <string name="auto">Auto</string>
+    <string name="carburante">Carburante</string>
+    <string name="bollette">Bollette</string>
+    <string name="shopping">Shopping</string>
+    <string name="ciboBevande"><![CDATA[Cibo & Bevande]]></string>
+    <string name="svago">Svago</string>
+
+    <!-- SPINNER MESI -->
     <string name="gennaio">Gennaio</string>
     <string name="febbraio">Febbraio</string>
     <string name="marzo">Marzo</string>
@@ -146,16 +196,6 @@
     <string name="novembre">Novembre</string>
     <string name="dicembre">Dicembre</string>
 
-
-    <string name="nessun_turno">NESSUN TURNO INSERITO</string>
-    <string name="elimina_turno">ELIMINA TURNO</string>
-    <string name="verra_eliminato">ELIMINARE ?</string>
-    <string name="si_elimina">SI, ELIMINA</string>
-    <string name="servizio">IN SERVIZIO</string>
-    <string name="turno_rimosso">TURNO RIMOSSO CON SUCCESSO</string>
-    <string name="riposo">RIPOSO</string>
-    <string name="rimosso_turno">TURNO RIMOSSO</string>
-    <string name="non_eliminare">NON ELIMINARE</string>
 
 
 </resources>

@@ -6,12 +6,19 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.NativeExpressAdView;
+import com.google.android.gms.ads.VideoController;
+import com.google.android.gms.ads.VideoOptions;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -21,6 +28,12 @@ import java.util.List;
 import util.VariabiliGlobali;
 
 public class TurniActivity extends AppCompatActivity {
+
+    //TODO ADMOB NATIVA
+    private static String LOG_TAG = "EXAMPLE";
+
+    NativeExpressAdView mAdView;
+    VideoController mVideoController;
 
     ImageButton eliminaTurno;
     GridView listaTurni;
@@ -39,6 +52,32 @@ public class TurniActivity extends AppCompatActivity {
         ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,li);
         dataAdapter.setDropDownViewResource(R.layout.activity_turni);
         eliminaTurno.setVisibility(View.INVISIBLE);
+
+        //TODO ADMOB NATIVA
+        mAdView = (NativeExpressAdView) findViewById(R.id.adViewTurni);
+        mAdView.setVideoOptions(new VideoOptions.Builder()
+                .setStartMuted(true)
+                .build());
+        mVideoController = mAdView.getVideoController();
+        mVideoController.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
+            @Override
+            public void onVideoEnd() {
+                Log.d(LOG_TAG, "Video playback is finished.");
+                super.onVideoEnd();
+            }
+        });
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                if (mVideoController.hasVideoContent()) {
+                    Log.d(LOG_TAG, "Received an ad that contains a video asset.");
+                } else {
+                    Log.d(LOG_TAG, "Received an ad that does not contain a video asset.");
+                }
+            }
+        });
+
+        mAdView.loadAd(new AdRequest.Builder().build());
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarTurni);

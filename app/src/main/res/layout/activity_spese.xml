@@ -36,6 +36,7 @@
                 android:layout_centerHorizontal="true"
                 ads:adSize="360x132"
                 ads:adUnitId="@string/adsSpese"/>
+
         </LinearLayout>
     </ScrollView>
 
@@ -47,7 +48,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:text="@string/Agg_spesa"
+        android:text="@string/testo_aggiungi_spesa"
         android:textAlignment="center"
         android:textSize="20sp" />
 
