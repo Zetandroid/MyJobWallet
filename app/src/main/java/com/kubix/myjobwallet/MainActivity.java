@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,9 +21,16 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
+import com.kubix.myjobwallet.calendario.OreActivity;
+import com.kubix.myjobwallet.calendario.TurniActivity;
+import com.kubix.myjobwallet.entrate.EntrateActivity;
+import com.kubix.myjobwallet.note.NoteActivity;
+import com.kubix.myjobwallet.profilo.ProfiloActivity;
+import com.kubix.myjobwallet.spese.SpeseActivity;
 
-import util.EmailActivity;
-import util.VariabiliGlobali;
+import com.kubix.myjobwallet.utility.EmailActivity;
+import com.kubix.myjobwallet.utility.PremiumActivity;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -141,20 +149,25 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_profile) {
             startActivity(new Intent(this, ProfiloActivity.class));
 
-        }else if (id == R.id.nav_premium) {
-            startActivity(new Intent(this,PremiumActivity.class));
+        } else if (id == R.id.nav_premium) {
+            startActivity(new Intent(this, PremiumActivity.class));
 
         } else if (id == R.id.nav_setting) {
             startActivity(new Intent(this,SettingsActivity.class));
 
         } else if (id == R.id.nav_email){
             startActivity(new Intent(this, EmailActivity.class));
+
+        } else if (id == R.id.nav_valuta){
+            startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.kubix.myjobwallet&ah=Is2oYzVlAaRsq8sYhuOqZ0UACUc&hl=it")));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 
     public void OreActivity (View v){
         startActivity (new Intent(MainActivity.this, OreActivity.class));

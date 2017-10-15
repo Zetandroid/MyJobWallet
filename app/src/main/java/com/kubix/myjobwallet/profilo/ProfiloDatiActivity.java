@@ -1,4 +1,4 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.profilo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import util.VariabiliGlobali;
+import com.kubix.myjobwallet.MainActivity;
+import com.kubix.myjobwallet.R;
+
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 /**
  * Created by mowmo on 11/10/17.

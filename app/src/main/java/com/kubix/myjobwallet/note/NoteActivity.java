@@ -1,50 +1,40 @@
-package com.kubix.myjobwallet;
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.app.Dialog;
-import android.content.DialogInterface;
+package com.kubix.myjobwallet.note;
 import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewAnimationUtils;
-import android.view.Window;
-import android.widget.ImageView;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
+import com.kubix.myjobwallet.R;
 
-import static com.kubix.myjobwallet.R.id.fabSpese;
-
-public class SpeseActivity extends AppCompatActivity{
+public class NoteActivity extends AppCompatActivity {
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
+
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spese);
+        setContentView(R.layout.activity_note);
 
         //TODO TOOLBAR
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
-        setTitle(R.string.toolbarSpese);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
+        setTitle(R.string.toolbarNote);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
-
         //TODO ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adViewSpese);
+        mAdView = (NativeExpressAdView) findViewById(R.id.adViewNote);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
                 .build());
@@ -69,11 +59,13 @@ public class SpeseActivity extends AppCompatActivity{
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabSpese);
+
+        //TODO FAB
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingAddNote);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity (new Intent(SpeseActivity.this,SpeseAggiungiActivity.class));
+                startActivity (new Intent(NoteActivity.this,NoteAggiungiActivity.class));
 
             }
         });

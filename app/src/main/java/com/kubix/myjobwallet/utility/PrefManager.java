@@ -1,4 +1,4 @@
-package util;
+package com.kubix.myjobwallet.utility;
 
 import android.content.Context;
 import android.content.SharedPreferences;

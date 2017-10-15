@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<resources>
+    <!-- ADMOB -->
+    <string name="adsHome">ca-app-pub-9460579775308491/9105890252</string>
+    <string name="adsSpese">ca-app-pub-9460579775308491/1775619596</string>
+    <string name="adsNote">ca-app-pub-9460579775308491/9180957587</string>
+    <string name="adsEntrate">ca-app-pub-9460579775308491/2783193903</string>
+    <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
+
+    <string name="app_name">MyJobWallet</string>
+    <string name="navigation_drawer_open">Öffne Navigation Drawer</string>
+    <string name="navigation_drawer_close">Schließe Navigation Drawer</string>
+    <!-- NOMI SU TOOLBAR -->
+    <string name="toolbarProfile">Profil</string>
+    <string name="toolbarOre">"Stunden"</string>
+    <string name="toolbarTurni">Runden</string>
+    <string name="toolbarElaborazioni">Verarbeitungen</string>
+    <string name="toolbarSpese">Kosten</string>
+    <string name="toolbarSpeseAggiungi">Kosten hinzufügen</string>
+    <string name="toolbarNote">Notizen</string>
+    <string name="toolbarNoteAggiungi">Notiz hinzufügen</string>
+    <string name="toolbarCalendario">Kalender</string>
+    <string name="toolbarCalcoloPaga">Kalkulationslohn</string>
+    <string name="toolbarPremium">Premium</string>
+    <string name="toolbarEntrate">Einnahmen</string>
+    <string name="toolbarEntrateAggiungi">Einnahmen hinzufügen</string>
+    <string name="toolbarValuta">Währungs-Umrechner</string>
+    <string name="toolbarProfileDati">Nutzer-Daten</string>
+    <string name="toolbarEmail">E-Mail senden</string>
+    <!-- IMPOSTAZIONI TEMA -->
+    <string name="tema">Thema</string>
+    <string name="cambia_tema">Dunkles Thema einstellen</string>
+    <string name="cambia_tema_toolbar">Toolbar-Farbe ändern</string>
+    <!-- IMPOSTAZIONI NOTIFICHE -->
+    <string name="notifiche">Benachrichtigung</string>
+    <!-- IMPOSTAZIONI BACKUP -->
+    <string name="backup">Sichern &amp; Wiederherstellen</string>
+    <string name="backupDevice">Sicherung auf Gerät erstellten</string>
+    <string name="restoreDevice">Sicherung auf Gerät wiederherstellen</string>
+    <string name="backupCloud">Sicherung in Cloud erstellen</string>
+    <string name="restoreCloud">Sicherung in Cloud wiederherzustellen</string>
+    <!-- IMPOSTAZIONI CLOUD -->
+    <string name="cloud">Cloud</string>
+    <string name="cloudDrive">Google Drive</string>
+    <string name="cloudDropBox">Dropbox</string>
+    <string name="feedback">Feedback</string>
+    <string name="premium">Premium</string>
+    <!-- BOTTOMBAR CALENDARIO -->
+    <string name="bottom_entrata">Einnahmen</string>
+    <string name="bottom_uscita">Kosten</string>
+    <string name="bottom_turni">Runden</string>
+    <!-- INTRODUZIONE -->
+    <string name="title_activity_welcome">MyJobWallet</string>
+    <string name="next">Weiter</string>
+    <string name="skip">Überspringen</string>
+    <string name="start">Los</string>
+    <string name="testoSlide1">Willkommen bei MyJobWallet, einem Projekt von Kubix Studio.</string>
+    <string name="testoSlide2">Berechene deinen Lohn einfach und schnell</string>
+    <string name="testoSlide3">Verwalte all deine Einnahmen/Einnahmequellen</string>
+    <string name="testoSlide4">Mache Notizen mit Texten und Bildern. Du kannst auch eine Benachrichtigung als Erinnerung einstellen.</string>
+    <string name="testoSlide5">Konvertiere alle Währungen der Welt</string>
+    <!-- MENU EMAIL -->
+    <string name="emailTitolo">Sende eine E-Mail an Kubix Studio</string>
+    <string name="email">studio.kubix@gmail.com</string>
+    <string name="emailOggetto">MyJobWallet</string>
+    <string name="emailTesto">Hi Kubix Studio</string>
+    <string name="scrivi_email">Schreibe E-Mail</string>
+    <string name="hai_un_problema">Probleme?</string>
+    <string name="hai_una_richiesta">Hast du einen Vorschlag?</string>
+    <string name="inviaci_una_email">Sende uns eine Mail!</string>
+    <!-- MENU NOTE -->
+    <string name="aggiungi_nota">Drücke auf den Knopf unten, um eine Notiz hinzuzufügen</string>
+    <string name="nota">Notiz</string>
+    <string name="titolo">Titel</string>
+    <string name="salva">Speichern</string>
+    <string name="aggiungi_immagine">Bild hinzufügen</string>
+    <string name="nota_inserita">Füge Notiz korrekt hinzu</string>
+    <string name="dati_nota">Gib alle Daten für die Notiz an</string>
+    <!-- MENU PREMIUM -->
+    <string name="versione_premium">Premium-Version</string>
+    <string name="rimuovi_pubblicita">Entferne Werbung</string>
+    <string name="calcola_stipendio">Berechne Gehalt</string>
+    <string name="cambia_tema_premium">Ändere Thema</string>
+    <string name="aggiungi_widget">Füge Widget hinzu</string>
+    <string name="acquista">Kaufen</string>
+    <string name="ripristina_acquisto">Einkauf wiederherstellen</string>
+    <!-- MENU PROFILO -->
+    <string name="nome_profilo">Kubix Studio</string>
+    <string name="email_profilo">email@email.com</string>
+    <string name="accedi_con_google">Einloggen mit Google</string>
+    <string name="accedi_con_facebook">Einloggen mit Facebook</string>
+    <string name="imposta_dati">Daten einstellen</string>
+    <string name="ore_lavorative">Arbeits-Stunden</string>
+    <string name="paga_oraria">Stundenlohn</string>
+    <string name="straordinari">Überstunden</string>
+    <string name="salva_dati_profilo">Speichere Profil-Daten</string>
+    <!-- MENU SPESE -->
+    <string name="testo_aggiungi_spesa">Drücke den Knopf unten, um Kosten hinzuzufügen</string>
+    <string name="titolo_spesa">Titel</string>
+    <!-- MENU ENTRATE -->
+    <string name="testo_aggiungi_entrata">Drücke den Knopf unten, um Einnahmen hinzuzufügen</string>
+    <!-- HOME -->
+    <string name="card_ore">Stunden</string>
+    <string name="card_turni">Runden</string>
+    <string name="card_spese">Kosten</string>
+    <string name="card_entrata">Einnahmen</string>
+    <string name="card_note">Notizen</string>
+    <string name="card_valuta">Währung</string>
+    <string name="somma_entrate">Einnahmen</string>
+    <string name="somma_uscite">Kosten</string>
+    <!-- GENERALE -->
+    <string name="uscita_turno">Kosten hinzufügen</string>
+    <string name="entrata_turno">Einnahmen hinzugefügt</string>
+    <string name="inserire_uscita">Einnahmen einsetzen</string>
+    <string name="giorno_riposo">Pause</string>
+    <string name="elaborazione">Verarbeite</string>
+    <string name="calcolo_straordinari">Überstunden-Berechnung</string>
+    <string name="calcolo_paga">Lohn-Berechnung</string>
+    <string name="in_servizio">Ungewiss</string>
+    <string name="turno_esistente">Kosten hinzufügen</string>
+    <string name="nessun_turno">Nicht gerundet</string>
+    <string name="elimina_turno">Rundung entfernen</string>
+    <string name="verra_eliminato">Entfernen?</string>
+    <string name="si_elimina">Ja, entfernen</string>
+    <string name="servizio">Ungewiss</string>
+    <string name="turno_rimosso">Rundung erfolgreich entfernt</string>
+    <string name="riposo">Pause</string>
+    <string name="rimosso_turno">Pause entfernt</string>
+    <string name="non_eliminare">Nicht entfernen</string>
+    <!-- SPINNER PEIORITA -->
+    <string name="bassa">Niedrig</string>
+    <string name="media">Mitte</string>
+    <string name="alta">Hoch</string>
+    <!-- SPINNER ENTRATE -->
+    <string name="bonifico">Übertragen</string>
+    <string name="assegno">Überprüfen</string>
+    <string name="vincita">Gewinnen</string>
+    <string name="regalo">Geschenk</string>
+    <string name="beni">Waren</string>
+    <string name="rimborsi">Rückerstattungen</string>
+    <string name="vendite">Verkäufe</string>
+    <!-- SPINNER SPESE -->
+    <string name="casa">Zuhause</string>
+    <string name="trasporti">Transport</string>
+    <string name="auto">Auto</string>
+    <string name="carburante">Kraftstoff</string>
+    <string name="bollette">Rechnungen</string>
+    <string name="shopping">Einkäufe</string>
+    <string name="ciboBevande"><![CDATA[Lebensmittel & Getränke]]></string>
+    <string name="svago">Freizeit</string>
+    <!-- SPINNER MESI -->
+    <string name="gennaio">Januar</string>
+    <string name="febbraio">Februar</string>
+    <string name="marzo">März</string>
+    <string name="aprile">April</string>
+    <string name="maggio">Mai</string>
+    <string name="giugno">Juni</string>
+    <string name="luglio">Juli</string>
+    <string name="agosto">August</string>
+    <string name="settembre">September</string>
+    <string name="ottobre">Oktober</string>
+    <string name="novembre">November</string>
+    <string name="dicembre">Dezember</string>
+    <string name="toolbarImpostazioni">Einstellungen</string>
+    <string name="drawer_email">Email</string>
+    <string name="drawer_impostazioni">Einstellungen</string>
+    <string name="drawer_profilo">Profil</string>
+    <string name="drawer_premium">Premium</string>
+    <string name="drawer_valuta">Bewerten</string>
+</resources>

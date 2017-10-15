@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/rl"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.kubix.myjobwallet.ProfiloActivity">
+    tools:context="com.kubix.myjobwallet.profilo.ProfiloActivity">
 
 
     <ScrollView

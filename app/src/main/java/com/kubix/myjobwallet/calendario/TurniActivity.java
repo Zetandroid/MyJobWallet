@@ -1,4 +1,4 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.calendario;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
@@ -19,13 +19,15 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
+import com.kubix.myjobwallet.MainActivity;
+import com.kubix.myjobwallet.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import util.VariabiliGlobali;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class TurniActivity extends AppCompatActivity {
 
@@ -137,7 +139,7 @@ public class TurniActivity extends AppCompatActivity {
         });
 
         try {
-            Cursor cr=MainActivity.db.rawQuery("SELECT * FROM Turni",null);
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Turni",null);
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{

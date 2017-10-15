@@ -13,7 +13,7 @@
 
 
     <!-- NOMI SU TOOLBAR -->
-    <string name="toolBarSetting">Impostazioni</string>
+    <string name="toolbarImpostazioni">Impostazioni</string>
     <string name="toolbarProfile">Profilo</string>
     <string name="toolbarOre">Ore</string>
     <string name="toolbarTurni">Turni</string>
@@ -196,6 +196,12 @@
     <string name="novembre">Novembre</string>
     <string name="dicembre">Dicembre</string>
 
+    <!-- DRAWER MENU -->
+    <string name="drawer_valuta">Valuta App</string>
+    <string name="drawer_impostazioni">Impostazioni</string>
+    <string name="drawer_premium">Premium</string>
+    <string name="drawer_profilo">Profilo</string>
+    <string name="drawer_email">Email</string>
 
 
 </resources>

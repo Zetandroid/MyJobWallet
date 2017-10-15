@@ -1,10 +1,12 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.calendario;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.kubix.myjobwallet.R;
 
 public class ElaborazioniActivity extends AppCompatActivity {
 

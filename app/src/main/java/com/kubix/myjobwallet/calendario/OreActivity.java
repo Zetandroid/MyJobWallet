@@ -1,4 +1,4 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.calendario;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,9 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import util.VariabiliGlobali;
+import com.kubix.myjobwallet.R;
+
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class OreActivity extends AppCompatActivity{
     DatePicker dataTurno;

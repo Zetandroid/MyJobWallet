@@ -7,21 +7,21 @@
 
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_menu_profilo"
+            android:icon="@drawable/ic_drawer_profilo"
             android:textColor="@color/colorAccent"
-            android:title="Profilo" />
+            android:title="@string/drawer_profilo" />
 
         <item
             android:id="@+id/nav_premium"
-            android:icon="@drawable/ic_menu_premium"
+            android:icon="@drawable/ic_drawer_premium"
             android:textColor="@color/colorAccent"
-            android:title="Premium" />
+            android:title="@string/drawer_premium" />
 
         <item
             android:id="@+id/nav_email"
-            android:icon="@drawable/ic_menu_email"
+            android:icon="@drawable/ic_drawer_email"
             android:textColor="@color/colorAccent"
-            android:title="Email" />
+            android:title="@string/drawer_email" />
 
 
    </group>
@@ -32,9 +32,15 @@
 
         <item
             android:id="@+id/nav_setting"
-            android:icon="@drawable/ic_menu_setting"
+            android:icon="@drawable/ic_drawer_setting"
             android:textColor="@color/colorAccent"
-            android:title="Impostazioni" />
+            android:title="@string/drawer_impostazioni" />
+
+        <item
+            android:id="@+id/nav_valuta"
+            android:icon="@drawable/ic_drawer_valuta"
+            android:textColor="@color/colorAccent"
+            android:title="@string/drawer_valuta" />
 
     </group>
 

@@ -1,24 +1,16 @@
-package com.kubix.myjobwallet;
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.app.Dialog;
-import android.content.DialogInterface;
+package com.kubix.myjobwallet.profilo;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.ViewAnimationUtils;
-import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.kubix.myjobwallet.MainActivity;
+import com.kubix.myjobwallet.R;
 
 public class ProfiloActivity extends AppCompatActivity{
 
@@ -63,7 +55,7 @@ public class ProfiloActivity extends AppCompatActivity{
 
         //TODO CARICA INFO PROFILO DA DATABASE
         try {
-            Cursor cr=MainActivity.db.rawQuery("SELECT * FROM InfoProfilo",null);
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM InfoProfilo",null);
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{

@@ -1,43 +1,46 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.entrate;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
+import com.kubix.myjobwallet.R;
 
-import java.util.ArrayList;
+/**
+ * Created by mowmo on 10/10/17.
+ */
 
-public class NoteActivity extends AppCompatActivity {
+public class EntrateActivity extends AppCompatActivity {
 
     //TODO ADMOB NATIVA
-    private static String LOG_TAG = "EXAMPLE";
-
+    private static String LOG_TAG = "ENTRATE";
     NativeExpressAdView mAdView;
     VideoController mVideoController;
+
+    FloatingActionButton fab;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_note);
+        setContentView(R.layout.activity_entrate);
 
         //TODO TOOLBAR
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
-        setTitle(R.string.toolbarNote);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEntrate);
+        setTitle(R.string.toolbarEntrate);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
         //TODO ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adViewNote);
+        mAdView = (NativeExpressAdView) findViewById(R.id.adViewEntrate);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
                 .build());
@@ -64,13 +67,16 @@ public class NoteActivity extends AppCompatActivity {
 
 
         //TODO FAB
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingAddNote);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabEntrata);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity (new Intent(NoteActivity.this,NoteAggiungiActivity.class));
+                startActivity (new Intent(EntrateActivity.this,EntrateAggiungiActivity.class));
 
             }
         });
+
+
     }
 }
+

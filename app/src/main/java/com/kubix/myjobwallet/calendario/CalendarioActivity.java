@@ -1,4 +1,4 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.calendario;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -11,7 +11,10 @@ import android.view.MenuItem;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import util.VariabiliGlobali;
+import com.kubix.myjobwallet.MainActivity;
+import com.kubix.myjobwallet.R;
+
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import static com.kubix.myjobwallet.R.id.timePicker2;
 

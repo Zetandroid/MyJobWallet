@@ -1,8 +1,10 @@
-package com.kubix.myjobwallet;
+package com.kubix.myjobwallet.utility;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.kubix.myjobwallet.R;
 
 /**
  * Created by mowmo on 07/10/17.
