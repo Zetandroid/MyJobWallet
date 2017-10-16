@@ -8,6 +8,8 @@
     <string name="adsEntrate">ca-app-pub-9460579775308491/2783193903</string>
     <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
 
+    <string name="adsInterstitial">ca-app-pub-9460579775308491/9042311077</string>
+
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
@@ -31,32 +33,8 @@
     <string name="toolbarValuta">Convertitore di Valuta</string>
     <string name="toolbarProfileDati">Dati Utente</string>
     <string name="toolbarEmail">Invia Email</string>
+    <string name="toolbarInfo">Staf Kubix Studio</string>
 
-
-    <!-- IMPOSTAZIONI TEMA -->
-
-    <string name="tema">Tema</string>
-    <string name="cambia_tema">imposta il tema Dark</string>
-    <string name="cambia_tema_toolbar">Cambia il colore della ToolBar</string>
-
-    <!-- IMPOSTAZIONI NOTIFICHE -->
-    <string name="notifiche">Notifiche</string>
-
-    <!-- IMPOSTAZIONI BACKUP -->
-    <string name="backup">Backup e Ripristino</string>
-    <string name="backupDevice">Crea Backup sul Dispositivo</string>
-    <string name="restoreDevice">Ripristina il Backup dal Dispositivo</string>
-    <string name="backupCloud">Crea il Backup sul Cloud</string>
-    <string name="restoreCloud">Ripristina il Backup dal Cloud</string>
-
-    <!-- IMPOSTAZIONI CLOUD -->
-    <string name="cloud">Cloud</string>
-    <string name="cloudDrive">Google Drive</string>
-    <string name="cloudDropBox">DropBox</string>
-
-    <string name="feedback">Feedback</string>
-
-    <string name="premium">Premium</string>
 
     <!-- BOTTOMBAR CALENDARIO -->
     <string name="bottom_entrata">Entrata</string>
@@ -203,6 +181,32 @@
     <string name="drawer_premium">Premium</string>
     <string name="drawer_profilo">Profilo</string>
     <string name="drawer_email">Email</string>
+    <string name="drawer_googleplus">Kubix su Google+</string>
+
+    <!-- IMPOSTAZIONI -->
+    <string name="tema_titolo_tema">Tema</string>
+
+    <string name="tema_titolo_dark_tema">Tema Dark</string>
+    <string name="tema_sommario_tema">Cambia dal tema Light al tema Dark</string>
+
+    <string name="tema_titolo_cambia_tema">Cambia Tema</string>
+    <string name="tema_sommario_icone_tema">Cambia le Icone del Tema</string>
+
+    <string name="notifica_titolo_notifiche">Notifiche</string>
+    <string name="notifica_titolo_note">Note</string>
+    <string name="notifica_sommario_note">Ricevi una notifica per le Note</string>
+    <string name="notifica_titolo_spese">Spese</string>
+    <string name="notifica_sommario_spese">Ricevi una notifiche per le Spese</string>
+    <string name="notifica_titolo_suono">Imposta suoneria</string>
+    <string name="notifica_titolo_vibrazione">Vibrazione</string>
+    <string name="notifica_sommario_vibrazione">Attiva o disattiva la Vibrazione</string>
+    <string name="info_titolo_info">Info</string>
+    <string name="backup_title_backup">Backup</string>
+    <string name="backup_titolo_salva">Crea Backup</string>
+    <string name="backup_sommario_salva">Salva il Backup nel Dispositivo</string>
+    <string name="backup_titolo_carica">Carica Backup</string>
+    <string name="backup_sommario_carica">Carica il Backup dal Dispositivo</string>
+
 
 
 </resources>

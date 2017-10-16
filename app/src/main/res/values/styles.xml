@@ -117,6 +117,12 @@
         <item name="colorAccent">@color/testoTitolo</item>
     </style>
 
+    <style name="BottoneFlatRosso" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="colorControlHighlight">@color/colorPrimarySpesa</item>
+        <item name="colorAccent">@color/coloreBianco</item>
+    </style>
+
 
 
 </resources>

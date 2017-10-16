@@ -90,6 +90,9 @@
             android:label="@string/toolbarEntrateAggiungi"
             android:theme="@style/ThemeEntrate"/>
 
+        <activity android:name=".utility.InfoActivity"
+            android:theme="@style/ThemeProfilo"/>
+
 
 
     </application>

@@ -1,28 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <PreferenceCategory
-        android:title="@string/tema">
-
+<PreferenceScreen  xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- opens a subscreen of settings -->
+    <PreferenceScreen
+        android:key="tema_key"
+        android:icon="@drawable/ic_impostazioni_tema"
+        android:title="@string/tema_titolo_tema"
+        android:persistent="false">
 
         <SwitchPreference
             android:defaultValue="false"
-            android:key="cambia_tema"
-            android:icon="@drawable/ic_impostazioni_tema"
-            android:title="@string/cambia_tema" />
+            android:key="tema_dark_key"
+            android:title="@string/tema_titolo_dark_tema"
+            android:summary="@string/tema_sommario_tema"/>
 
-    </PreferenceCategory>
+        <Preference
+            android:key="cambia_tema_key"
+            android:title="@string/tema_titolo_cambia_tema"
+            android:summary="@string/tema_sommario_icone_tema"/>
 
-    <PreferenceCategory
-        android:title="@string/notifiche">
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="notifica_key"
+        android:icon="@drawable/ic_impostazioni_notifica"
+        android:title="@string/notifica_titolo_notifiche"
+        android:persistent="false">
+
 
         <CheckBoxPreference
-            android:title="Receive Notifications"
-            android:icon="@drawable/ic_impostazioni_notifiche"
-            android:summary="Want to receive Push Notifications ?"
-            android:key="receiveNotifications"
-            android:defaultValue="true" />
+            android:defaultValue="false"
+            android:key="notifica_memo_key"
+            android:title="@string/notifica_titolo_note"
+            android:summary="@string/notifica_sommario_note"/>
 
-    </PreferenceCategory>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="notifica_spesa_key"
+            android:title="@string/notifica_titolo_spese"
+            android:summary="@string/notifica_sommario_spese"/>
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="notifica_vibrazione_key"
+            android:title="@string/notifica_titolo_vibrazione"
+            android:summary="@string/notifica_sommario_vibrazione"/>
+
+        <RingtonePreference
+            android:defaultValue="true"
+            android:key="suono_notifica_key"
+            android:title="@string/notifica_titolo_suono" />
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="backup_key"
+        android:icon="@drawable/ic_impostazioni_backup"
+        android:title="@string/backup_title_backup"
+        android:persistent="false">
+
+        <PreferenceScreen
+            android:key="crea_backup_key"
+            android:title="@string/backup_titolo_salva"
+            android:summary="@string/backup_sommario_salva"/>
+
+        <PreferenceScreen
+            android:key="carica_backup_key"
+            android:title="@string/backup_titolo_carica"
+            android:summary="@string/backup_sommario_carica"/>
+
+    </PreferenceScreen>
+
+
+
+    <PreferenceScreen
+        android:key="impostazioni_info_key"
+        android:icon="@drawable/ic_impostazioni_info"
+        android:title="@string/info_titolo_info"
+        android:persistent="false">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.kubix.myjobwallet"
+            android:targetClass="com.kubix.myjobwallet.utility.InfoActivity"/>
+
+        </PreferenceScreen>
+
 
 </PreferenceScreen>

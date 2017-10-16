@@ -2,6 +2,8 @@ package com.kubix.myjobwallet.fragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.preference.CheckBoxPreference;
+import android.preference.Preference;
 import android.preference.PreferenceFragment;
 
 import com.kubix.myjobwallet.R;
@@ -16,5 +18,6 @@ public class SettingPreferenceFragment extends PreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.impostazioni);
+
     }
 }

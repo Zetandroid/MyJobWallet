@@ -1,9 +1,13 @@
 package com.kubix.myjobwallet;
 
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.preference.CheckBoxPreference;
+import android.preference.Preference;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.CheckBox;
 
 import com.kubix.myjobwallet.fragment.SettingPreferenceFragment;
 
@@ -39,6 +43,8 @@ public class SettingsActivity extends AppCompatActivity {
         });
         getFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new SettingPreferenceFragment()).commit();
+
+
     }
 
 }

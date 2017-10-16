@@ -28,24 +28,6 @@
     <string name="toolbarValuta">Currency converter</string>
     <string name="toolbarProfileDati">User data</string>
     <string name="toolbarEmail">Submit email</string>
-    <!-- IMPOSTAZIONI TEMA -->
-    <string name="tema">Theme</string>
-    <string name="cambia_tema">Set dark theme</string>
-    <string name="cambia_tema_toolbar">Change toolbar color</string>
-    <!-- IMPOSTAZIONI NOTIFICHE -->
-    <string name="notifiche">Notification</string>
-    <!-- IMPOSTAZIONI BACKUP -->
-    <string name="backup">Backup &amp; Restore</string>
-    <string name="backupDevice">Create backup on device</string>
-    <string name="restoreDevice">Restore backup in device</string>
-    <string name="backupCloud">Create Cloud backup</string>
-    <string name="restoreCloud">Restore backup from cloud</string>
-    <!-- IMPOSTAZIONI CLOUD -->
-    <string name="cloud">Cloud</string>
-    <string name="cloudDrive">Google drive</string>
-    <string name="cloudDropBox">DropBox</string>
-    <string name="feedback">Feedback</string>
-    <string name="premium">Premium</string>
     <!-- BOTTOMBAR CALENDARIO -->
     <string name="bottom_entrata">Revenue</string>
     <string name="bottom_uscita">Expenses</string>

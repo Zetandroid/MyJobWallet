@@ -42,6 +42,12 @@
             android:textColor="@color/colorAccent"
             android:title="@string/drawer_valuta" />
 
+        <item
+            android:id="@+id/nav_plus"
+            android:icon="@drawable/ic_drawer_googleplus"
+            android:textColor="@color/colorAccent"
+            android:title="@string/drawer_googleplus" />
+
     </group>
 
 </menu>

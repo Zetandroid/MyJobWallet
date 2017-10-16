@@ -27,24 +27,6 @@
     <string name="toolbarValuta">Währungs-Umrechner</string>
     <string name="toolbarProfileDati">Nutzer-Daten</string>
     <string name="toolbarEmail">E-Mail senden</string>
-    <!-- IMPOSTAZIONI TEMA -->
-    <string name="tema">Thema</string>
-    <string name="cambia_tema">Dunkles Thema einstellen</string>
-    <string name="cambia_tema_toolbar">Toolbar-Farbe ändern</string>
-    <!-- IMPOSTAZIONI NOTIFICHE -->
-    <string name="notifiche">Benachrichtigung</string>
-    <!-- IMPOSTAZIONI BACKUP -->
-    <string name="backup">Sichern &amp; Wiederherstellen</string>
-    <string name="backupDevice">Sicherung auf Gerät erstellten</string>
-    <string name="restoreDevice">Sicherung auf Gerät wiederherstellen</string>
-    <string name="backupCloud">Sicherung in Cloud erstellen</string>
-    <string name="restoreCloud">Sicherung in Cloud wiederherzustellen</string>
-    <!-- IMPOSTAZIONI CLOUD -->
-    <string name="cloud">Cloud</string>
-    <string name="cloudDrive">Google Drive</string>
-    <string name="cloudDropBox">Dropbox</string>
-    <string name="feedback">Feedback</string>
-    <string name="premium">Premium</string>
     <!-- BOTTOMBAR CALENDARIO -->
     <string name="bottom_entrata">Einnahmen</string>
     <string name="bottom_uscita">Kosten</string>

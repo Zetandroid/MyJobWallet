@@ -9,12 +9,17 @@ import android.view.View;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.R;
 
 public class NoteActivity extends AppCompatActivity {
+
+    //TODO ADS INTERSTITIAL
+    private String TAG = NoteActivity.class.getSimpleName();
+    InterstitialAd mInterstitialAd;
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -26,6 +31,30 @@ public class NoteActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
+
+        mInterstitialAd = new InterstitialAd(this);
+
+        //TODO ID
+        mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        //TODO CARICAMENTO ADS
+        mInterstitialAd.loadAd(adRequest);
+
+        mInterstitialAd.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                showInterstitial();
+            }
+        });
+    }
+
+    private void showInterstitial() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
