@@ -28,10 +28,12 @@
     <string name="toolbarValuta">Currency converter</string>
     <string name="toolbarProfileDati">User data</string>
     <string name="toolbarEmail">Submit email</string>
+
     <!-- BOTTOMBAR CALENDARIO -->
     <string name="bottom_entrata">Revenue</string>
     <string name="bottom_uscita">Expenses</string>
     <string name="bottom_turni">Rounds</string>
+
     <!-- INTRODUZIONE -->
     <string name="title_activity_welcome">MyJobWallet</string>
     <string name="next">Next</string>
@@ -42,6 +44,7 @@
     <string name="testoSlide3">Manage all your revenue / revenue streams</string>
     <string name="testoSlide4">Write your notes with texts and images. You can also enter a notification as a reminder</string>
     <string name="testoSlide5">Convert all the currencies of the world</string>
+
     <!-- MENU EMAIL -->
     <string name="emailTitolo">Send mail to Kubix Studio</string>
     <string name="email">studio.kubix@gmail.com</string>
@@ -51,6 +54,7 @@
     <string name="hai_un_problema">In trouble?</string>
     <string name="hai_una_richiesta">Do you have a request?</string>
     <string name="inviaci_una_email">Send us a mail!</string>
+
     <!-- MENU NOTE -->
     <string name="aggiungi_nota">Click the button below to add a note</string>
     <string name="nota">Note</string>
@@ -59,6 +63,7 @@
     <string name="aggiungi_immagine">Add image</string>
     <string name="nota_inserita">Note add correctly</string>
     <string name="dati_nota">Enter all the data for the note</string>
+
     <!-- MENU PREMIUM -->
     <string name="versione_premium">Premium Version</string>
     <string name="rimuovi_pubblicita">Remove ads</string>
@@ -67,6 +72,7 @@
     <string name="aggiungi_widget">Add widget</string>
     <string name="acquista">Buy</string>
     <string name="ripristina_acquisto">Restore purchase</string>
+
     <!-- MENU PROFILO -->
     <string name="nome_profilo">Kubix Studio</string>
     <string name="email_profilo">email@email.com</string>
@@ -77,11 +83,14 @@
     <string name="paga_oraria">Hourly wage</string>
     <string name="straordinari">overtime</string>
     <string name="salva_dati_profilo">Save profilo data</string>
+
     <!-- MENU SPESE -->
     <string name="testo_aggiungi_spesa">Click on the button below to add an expense</string>
     <string name="titolo_spesa">Title</string>
+
     <!-- MENU ENTRATE -->
     <string name="testo_aggiungi_entrata">Click the button below to add a revenue</string>
+
     <!-- HOME -->
     <string name="card_ore">Hours</string>
     <string name="card_turni">Rounds</string>
@@ -91,6 +100,7 @@
     <string name="card_valuta">Currency</string>
     <string name="somma_entrate">Revenues</string>
     <string name="somma_uscite">Expenses</string>
+
     <!-- GENERALE -->
     <string name="uscita_turno">Expense added</string>
     <string name="entrata_turno">Revenue added</string>
@@ -110,10 +120,12 @@
     <string name="riposo">Rest</string>
     <string name="rimosso_turno">Rest removed</string>
     <string name="non_eliminare">Don\'t remove</string>
+
     <!-- SPINNER PEIORITA -->
     <string name="bassa">Low</string>
     <string name="media">Mid</string>
     <string name="alta">High</string>
+
     <!-- SPINNER ENTRATE -->
     <string name="bonifico">Transfer</string>
     <string name="assegno">Check</string>
@@ -122,6 +134,7 @@
     <string name="beni">Goods</string>
     <string name="rimborsi">Refunds</string>
     <string name="vendite">Sales</string>
+
     <!-- SPINNER SPESE -->
     <string name="casa">Home</string>
     <string name="trasporti">Transportation</string>
@@ -131,6 +144,7 @@
     <string name="shopping">Shopping</string>
     <string name="ciboBevande"><![CDATA[Food & Beverage]]></string>
     <string name="svago">Leisure</string>
+
     <!-- SPINNER MESI -->
     <string name="gennaio">January</string>
     <string name="febbraio">February</string>

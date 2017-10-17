@@ -83,7 +83,7 @@ public class CalendarioActivity extends AppCompatActivity {
         oraDiEntrata = oraEntrata;
 
         try{
-            MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+getString(R.string.in_servizio));
+            MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', '"+getString(R.string.in_servizio)+"')");
             MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
             Toast.makeText(this, R.string.entrata_turno, Toast.LENGTH_LONG).show();
 
@@ -144,7 +144,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
         if(oraDiEntrata.equals(oraDiUscita)){
             try{
-                MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO' WHERE Data = '"+thisDate+"';");
+                MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = '"+getString(R.string.riposo)+"', oraUscita = '"+getString(R.string.riposo)+"' WHERE Data = '"+thisDate+"';");
                 Toast.makeText(this, R.string.giorno_riposo, Toast.LENGTH_LONG).show();
             }catch (Exception e){
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();

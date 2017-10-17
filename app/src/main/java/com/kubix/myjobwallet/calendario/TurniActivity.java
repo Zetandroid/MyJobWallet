@@ -163,6 +163,7 @@ public class TurniActivity extends AppCompatActivity {
     }
 
     public void eliminaTurno(View v){
+
         try{
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setCancelable(true);
@@ -173,14 +174,14 @@ public class TurniActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog,
                                             int which) {
-                            if (uscitaCalcolo.equals(getString(R.string.servizio))) {
-                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '" + entrataCalcolo + "' AND oraUscita = 'IN SERVIZIO'");
+                            if (uscitaCalcolo.equals(getString(R.string.in_servizio))) {
+                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '" + entrataCalcolo + "' AND oraUscita = '"+getString(R.string.in_servizio)+"'");
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
                                 dialog.dismiss();
                                 Toast.makeText(TurniActivity.this, R.string.turno_rimosso, Toast.LENGTH_SHORT).show();
                                 finish();
                             }else if (uscitaCalcolo.equals(getString(R.string.riposo))){
-                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = 'RIPOSO' AND oraUscita = 'RIPOSO'");
+                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '"+getString(R.string.riposo)+"' AND oraUscita = '"+getString(R.string.riposo)+"'");
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
                                 dialog.dismiss();
                                 Toast.makeText(TurniActivity.this, R.string.rimosso_turno, Toast.LENGTH_SHORT).show();
@@ -190,7 +191,7 @@ public class TurniActivity extends AppCompatActivity {
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '"+dataSelezionata+"'");
                                 eliminaTurno.setVisibility(View.INVISIBLE);
                                 dialog.dismiss();
-                                Toast.makeText(TurniActivity.this, R.string.rimosso_turno, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TurniActivity.this, R.string.turno_rimosso, Toast.LENGTH_SHORT).show();
                                 finish();
                             }
 
