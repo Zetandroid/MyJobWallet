@@ -112,6 +112,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp">
 
+                <EditText
+                    android:id="@+id/testoPrezzoEntrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:ems="10"
+                    android:background="@color/lineaTrasparente"
+                    android:inputType="number"
+                    android:text="89,00 €" />
+
                 <ImageView
                     android:id="@+id/iconaCostoSpesa"
                     android:layout_width="24dp"
@@ -159,6 +170,17 @@
                 android:layout_height="56dp">
 
                 <EditText
+                    android:id="@+id/testoDataEntrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:background="@color/lineaTrasparente"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:text="17/12/2017" />
+
+                <EditText
                     android:id="@+id/impostaDataSpese"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,6 +208,17 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp">
+
+                <EditText
+                    android:id="@+id/promemoriaEntrata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:background="@color/lineaTrasparente"
+                    android:text="13:48" />
 
                 <ImageView
                     android:id="@+id/iconaNotificaSpesa"

@@ -44,28 +44,6 @@
             android:background="@color/colorBannerHome"
             android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textRimanenza"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="0,00 €"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimaryMemo"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Rimanenza"
-                    android:textAlignment="center" />
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
