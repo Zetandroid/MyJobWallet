@@ -1,19 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
+    <ScrollView
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarOrologio"
+        android:layout_marginBottom="72dp">
 
-    <TimePicker
-        android:id="@+id/timePicker2"
-        android:timePickerMode="spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TimePicker
+                android:id="@+id/timePicker2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbarOrologio"
+                android:layout_centerHorizontal="true"
+                android:background="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:timePickerMode="spinner"
+                tools:ignore="ObsoleteLayoutParam" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorBannerHome"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/OraEntrata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="07:00 am"
+                        android:textColor="@color/testoTitolo"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/txtOraEntrata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Entrata inserita"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/OraUscita"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="17:14 pm"
+                        android:textColor="@color/testoTitolo"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/txtOraUscita"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Uscita inserita"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/testoTitolo" />
+
+            <TextView
+                android:id="@+id/infoImpostaOra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="24dp"
+                android:padding="4dp"
+                android:text="Imposta l'ora di entrata e clicca sul pulsante &quot;Entrata&quot; qui sotto. Fai la stessa cosa con l'orario di uscita!"
+                android:textAlignment="center"
+                android:textColor="@color/testoSecondario"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottombar_calendario"
@@ -34,4 +135,5 @@
         android:background="@color/colorPrimaryTurni"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
+
 </RelativeLayout>
