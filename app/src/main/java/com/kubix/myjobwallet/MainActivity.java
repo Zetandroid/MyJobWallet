@@ -1,4 +1,5 @@
 package com.kubix.myjobwallet;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-
     //TODO VARIABILI DI INDICIZZAZIONE
     public static SQLiteDatabase db;
 
@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
 
         //TODO ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adView);
@@ -104,7 +102,7 @@ public class MainActivity extends AppCompatActivity
         }catch (SQLException e){
             //NOTHING
         }
-        db.execSQL("CREATE TABLE IF NOT EXISTS Stipendi (Giorno Varchar (50), Mese Varchar (50), Anno Varchar (50), Ammontare Varchar (50));");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Entrate (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Tag Varchar (50));");
 
         //TODO INDICIZZA DA DATABASE IN VARIABILI GLOBALI DATI PROFILO SU PAGA ORARIA, STRAORDINARIA E ORE ORDINARIE
         try {
@@ -138,7 +136,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
     //TODO SELEZIONE ICONE NAVIGATION DRAWER
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -170,8 +167,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
-
     public void OreActivity (View v){
         startActivity (new Intent(MainActivity.this, OreActivity.class));
     }
@@ -190,6 +185,5 @@ public class MainActivity extends AppCompatActivity
     public void ConvertitoreActivity (View v){
         startActivity (new Intent(MainActivity.this,ConvertitoreActivity.class));
     }
-
 
 }

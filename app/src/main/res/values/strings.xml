@@ -101,7 +101,9 @@
 
     <!-- MENU ENTRATE -->
     <string name="testo_aggiungi_entrata">Clicca il pulsante qui sotto per aggiungere una Entrta</string>
-
+    <string name="entrataAggiunta">Entrata aggiunta correttamente.</string>
+    <string name="compilareDatiEntrata">Compilare tutti i dati per inserire questa entrata</string>
+    <string name="noEntrateAggiunte">Nessuna entrata aggiunta</string>
     <!-- HOME -->
     <string name="card_ore">Ore</string>
     <string name="card_turni">Turni</string>

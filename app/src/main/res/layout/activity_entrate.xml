@@ -6,17 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/testo_aggiungi_entrata"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabEntrata"
         android:layout_width="wrap_content"
@@ -55,6 +44,11 @@
                 android:layout_centerHorizontal="true"
                 ads:adSize="360x132"
                 ads:adUnitId="@string/adsEntrate" />
+
+            <GridView
+                android:id="@+id/listaEntrate"
+                android:layout_width="match_parent"
+                android:layout_height="288dp" />
 
         </LinearLayout>
     </ScrollView>

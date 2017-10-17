@@ -20,7 +20,7 @@ public class NoteAggiungiActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_aggiungi);
-        titoloNota = (EditText) findViewById(R.id.testoTitoloSpesa);
+        titoloNota = (EditText) findViewById(R.id.testoTitoloEntrata);
         corpoNota = (EditText) findViewById(R.id.testoNota);
         aggiungiCopertina = (ImageView) findViewById(R.id.aggiungiCopertina);
         salvaNota = (ImageView) findViewById(R.id.tastoSalvaNota);

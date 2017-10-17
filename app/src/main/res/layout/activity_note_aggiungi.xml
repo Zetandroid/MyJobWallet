@@ -38,7 +38,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/testoTitoloSpesa"
+                android:id="@+id/testoTitoloEntrata"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/aggiungiCopertina"
@@ -58,7 +58,7 @@
                 android:id="@+id/testoNota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/testoTitoloSpesa"
+                android:layout_below="@+id/testoTitoloEntrata"
                 android:layout_centerHorizontal="true"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"

@@ -90,6 +90,9 @@
 
     <!-- MENU ENTRATE -->
     <string name="testo_aggiungi_entrata">Click the button below to add a revenue</string>
+    <string name="entrataAggiunta">Revenue added</string>
+    <string name="compilareDatiEntrata">Compile all data to add this revenue</string>
+    <string name="noEntrateAggiunte">No revenue added</string>
 
     <!-- HOME -->
     <string name="card_ore">Hours</string>
