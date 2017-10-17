@@ -15,7 +15,8 @@
         android:theme="?attr/actionBarTheme" />
 
     <ImageView
-        android:id="@+id/imageBottonSalva"
+        android:id="@+id/imageBottonSalvaSpesa"
+        android:onClick="inserisciUscitaMonetaria"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
@@ -37,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbarSpeseAggiungi"
-        android:layout_above="@+id/imageBottonSalva">
+        android:layout_above="@+id/imageBottonSalvaSpesa">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +54,7 @@
                 android:layout_height="56dp">
 
                 <EditText
-                    android:id="@+id/testoTitoloEntrata"
+                    android:id="@+id/testoTitoloSpesa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -118,8 +119,8 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/lineaTrasparente"
                     android:ems="10"
-                    android:inputType="number"
-                    android:text="100,00 € " />
+                    android:hint="Cifra"
+                    android:inputType="number" />
 
                 <ImageView
                     android:id="@+id/iconaCostoSpesa"
@@ -174,15 +175,15 @@
                 android:layout_height="56dp">
 
                 <EditText
-                    android:id="@+id/dataSpesa"
+                    android:id="@+id/testoDataSpesa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="72dp"
                     android:background="@color/lineaTrasparente"
                     android:ems="10"
-                    android:inputType="date"
-                    android:text="15/10/2017" />
+                    android:hint="Data"
+                    android:inputType="date" />
 
                 <ImageView
                     android:id="@+id/iconaDataSpesa"
@@ -204,15 +205,15 @@
                 android:layout_height="56dp">
 
                 <EditText
-                    android:id="@+id/promemoriaSpesa"
+                    android:id="@+id/testoPromemoriaSpesa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="72dp"
                     android:background="@color/lineaTrasparente"
                     android:ems="10"
-                    android:inputType="time"
-                    android:text="18:04" />
+                    android:hint="Ora"
+                    android:inputType="time" />
 
                 <ImageView
                     android:id="@+id/iconaNotificaSpesa"
@@ -231,7 +232,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp">
+                android:layout_height="56dp"
+                android:visibility="invisible">
 
                 <Button
                     android:id="@+id/buttonMappaSpese"

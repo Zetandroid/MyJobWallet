@@ -98,7 +98,9 @@
     <!-- MENU SPESE -->
     <string name="testo_aggiungi_spesa">Clicca sul pulsante qui sotto per aggiungere una spesa</string>
     <string name="titolo_spesa">Titolo</string>
-
+    <string name="spesaAggiunta">Spesa aggiunta correttamente.</string>
+    <string name="compilareDatiSpesa">Compilare tutti i dati per inserire questa spesa</string>
+    <string name="noSpeseAggiunte">Nessuna spesa aggiunta</string>
     <!-- MENU ENTRATE -->
     <string name="testo_aggiungi_entrata">Clicca il pulsante qui sotto per aggiungere una Entrta</string>
     <string name="entrataAggiunta">Entrata aggiunta correttamente.</string>

@@ -37,20 +37,13 @@
                 ads:adSize="360x132"
                 ads:adUnitId="@string/adsSpese"/>
 
+            <GridView
+                android:id="@+id/listaSpese"
+                android:layout_width="match_parent"
+                android:layout_height="288dp" />
+
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/infoSpese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/testo_aggiungi_spesa"
-        android:textAlignment="center"
-        android:textSize="20sp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabSpese"

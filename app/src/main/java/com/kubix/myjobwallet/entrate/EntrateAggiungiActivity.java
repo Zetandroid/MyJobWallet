@@ -59,7 +59,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, arraySpinnerPriorita);
         Priorita.setAdapter(adapter1);
 
-        titoloEntrata = (EditText) findViewById(R.id.testoTitoloEntrata);
+        titoloEntrata = (EditText) findViewById(R.id.testoTitoloSpesa);
         valoreEntrata = (EditText) findViewById(R.id.testoPrezzoEntrate);
         dataEntrata = (EditText) findViewById(R.id.testoDataEntrate);
         oraEntrata = (EditText) findViewById(R.id.testoPromemoriaEntrata);
@@ -67,12 +67,15 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
 
     public void inserisciEntrataMonetaria(View v){
         if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("") && ! dataEntrata.getText().toString().equals("") && ! oraEntrata.getText().toString().equals("")){
-            MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Tag) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+TagEntrate.getSelectedItem().toString()+"')");
+            MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"')");
             Toast.makeText(this, getString(R.string.entrataAggiunta), Toast.LENGTH_SHORT).show();
             titoloEntrata.setText("");
             valoreEntrata.setText("");
             dataEntrata.setText("");
             oraEntrata.setText("");
+
+            //EVENTO CALCOLO PER HOME PAGE ENTRATE
+
         }else{
             Toast.makeText(this, getString(R.string.compilareDatiEntrata), Toast.LENGTH_SHORT).show();
         }

@@ -87,6 +87,9 @@
     <!-- MENU SPESE -->
     <string name="testo_aggiungi_spesa">Click on the button below to add an expense</string>
     <string name="titolo_spesa">Title</string>
+    <string name="spesaAggiunta">Expanse added</string>
+    <string name="compilareDatiSpesa">Compile all data to insert this expense</string>
+    <string name="noSpeseAggiunte">No expenses added</string>
 
     <!-- MENU ENTRATE -->
     <string name="testo_aggiungi_entrata">Click the button below to add a revenue</string>
