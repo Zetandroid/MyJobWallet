@@ -87,6 +87,16 @@ public class EntrateActivity extends AppCompatActivity {
             }
         });
 
+        leggiEntrate();
+    }
+
+    @Override
+    public void onRestart(){
+        super.onRestart();
+        leggiEntrate();
+    }
+
+    public void leggiEntrate(){
         listaEntrate=(GridView)findViewById(R.id.listaEntrate);
         List<String> li=new ArrayList<>();
         ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,li);
