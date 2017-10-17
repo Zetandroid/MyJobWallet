@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            ads:adSize="360x100"
+            ads:adSize="360x132"
             ads:adUnitId="@string/adsHome"/>
 
 
