@@ -16,7 +16,7 @@ import com.kubix.myjobwallet.R;
 
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
-import static com.kubix.myjobwallet.R.id.timePicker2;
+//import static com.kubix.myjobwallet.R.id.timePicker2;
 
 public class CalendarioActivity extends AppCompatActivity {
     //DICHIARAZIONE OGGETTI
@@ -50,10 +50,10 @@ public class CalendarioActivity extends AppCompatActivity {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
-                            case R.id.bottom_entrata:
+                            case R.id.bottoneEntrata:
                                 inserisciEntrataTurno();
                                 break;
-                            case R.id.bottom_uscita:
+                            case R.id.bottoneUscita:
                                 inserisciUscitaTurno();
                                 break;
                             case R.id.bottom_turni:
@@ -66,7 +66,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
         Toast.makeText(this, VariabiliGlobali.dataTurno, Toast.LENGTH_SHORT).show();
 
-        oraTurno = (TimePicker) findViewById(timePicker2);
+        //oraTurno = (TimePicker) findViewById(timePicker2);
 
 
         //INDICIZZA DATABASE
