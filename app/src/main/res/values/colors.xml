@@ -11,6 +11,7 @@
 
     <color name="iconeLayout">#BDBDBD</color>
     <color name="lineaTrasparente">#00000000</color>
+    <color name="neroTrasparente">#40000000</color>
 
     <color name="testoBianco">#f5f5f5</color>
     <color name="testoTitolo">#616161</color>

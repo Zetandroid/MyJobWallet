@@ -34,13 +34,15 @@
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_drawer_setting"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_impostazioni" />
+            android:title="@string/drawer_impostazioni"
+            android:visible="false" />
 
         <item
             android:id="@+id/nav_valuta"
             android:icon="@drawable/ic_drawer_valuta"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_valuta" />
+            android:title="@string/drawer_valuta"
+            android:visible="false" />
 
         <item
             android:id="@+id/nav_plus"
