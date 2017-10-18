@@ -7,12 +7,9 @@
     <string name="adsNote">ca-app-pub-9460579775308491/9180957587</string>
     <string name="adsEntrate">ca-app-pub-9460579775308491/2783193903</string>
     <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
-
     <string name="adsInterstitial">ca-app-pub-9460579775308491/9042311077</string>
-
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
-
 
     <!-- NOMI SU TOOLBAR -->
     <string name="toolbarSettings">Impostazioni</string>
@@ -35,14 +32,6 @@
     <string name="toolbarEmail">Invia Email</string>
     <string name="toolbarInfo">Staf Kubix Studio</string>
 
-
-    <!-- BOTTOMBAR CALENDARIO -->
-    <string name="bottom_entrata">Entrata</string>
-    <string name="bottom_uscita">Uscita</string>
-    <string name="bottom_turni">Turni</string>
-
-
-
     <!-- INTRODUZIONE -->
     <string name="title_activity_welcome">MyJobWallet</string>
     <string name="next">Avanti</string>
@@ -53,7 +42,6 @@
     <string name="testoSlide3">Gestisci tutte le tue entrate/uscite economiche</string>
     <string name="testoSlide4">Scrivi le tue Note con Testi e Immagini. Potrai anche inserire una notifica come promemoria</string>
     <string name="testoSlide5">Converti tutte le valute del Mondo</string>
-
 
     <!-- MENU EMAIL -->
     <string name="emailTitolo">Invia Email a Kubix Studio</string>
@@ -94,18 +82,19 @@
     <string name="straordinari">Straordinari</string>
     <string name="salva_dati_profilo">SALVA DATI PROFILO</string>
 
-
     <!-- MENU SPESE -->
     <string name="testo_aggiungi_spesa">Clicca sul pulsante qui sotto per aggiungere una spesa</string>
     <string name="titolo_spesa">Titolo</string>
     <string name="spesaAggiunta">Spesa aggiunta correttamente.</string>
     <string name="compilareDatiSpesa">Compilare tutti i dati per inserire questa spesa</string>
     <string name="noSpeseAggiunte">Nessuna spesa aggiunta</string>
+
     <!-- MENU ENTRATE -->
     <string name="testo_aggiungi_entrata">Clicca il pulsante qui sotto per aggiungere una Entrta</string>
     <string name="entrataAggiunta">Entrata aggiunta correttamente.</string>
     <string name="compilareDatiEntrata">Compilare tutti i dati per inserire questa entrata</string>
     <string name="noEntrateAggiunte">Nessuna entrata aggiunta</string>
+
     <!-- HOME -->
     <string name="card_ore">Ore</string>
     <string name="card_turni">Turni</string>
@@ -117,20 +106,16 @@
     <string name="somma_uscite">Uscite</string>
 
     <!-- GENERALE -->
+    <string name="funzioneConAggiornamento">Questa funzione verrà implementata con i prossimi aggiornamenti</string>
     <string name="uscita_turno">USCITA INSERITA</string>
     <string name="entrata_turno">ENTRATA INSERITA</string>
     <string name="inserire_uscita">INSERISCI L\'ENTRATA</string>
     <string name="giorno_riposo">RIPOSO INSERITO</string>
-
     <string name="elaborazione">Elaborazione</string>
-
     <string name="calcolo_straordinari">Calcolo straordinari</string>
     <string name="calcolo_paga">Calcolo paga</string>
-
-
     <string name="in_servizio">IN SERVIZIO</string>
     <string name="turno_esistente">INSERIRE L\'USCITA</string>
-
     <string name="nessun_turno">NESSUN TURNO INSERITO</string>
     <string name="elimina_turno">ELIMINA TURNO</string>
     <string name="verra_eliminato">ELIMINARE?</string>
@@ -140,6 +125,7 @@
     <string name="riposo">RIPOSO</string>
     <string name="rimosso_turno">TURNO RIMOSSO</string>
     <string name="non_eliminare">NON ELIMINARE</string>
+    <string name="rimuoviRiposo">RIPOSO ELIMINATO CON SUCCESSO</string>
 
     <!-- SPINNER PEIORITA -->
     <string name="bassa">Bassa</string>
@@ -189,13 +175,10 @@
 
     <!-- IMPOSTAZIONI -->
     <string name="tema_titolo_tema">Tema</string>
-
     <string name="tema_titolo_dark_tema">Tema Dark</string>
     <string name="tema_sommario_tema">Cambia dal tema Light al tema Dark</string>
-
     <string name="tema_titolo_cambia_tema">Cambia Tema</string>
     <string name="tema_sommario_icone_tema">Cambia le Icone del Tema</string>
-
     <string name="notifica_titolo_notifiche">Notifiche</string>
     <string name="notifica_titolo_note">Note</string>
     <string name="notifica_sommario_note">Ricevi una notifica per le Note</string>
@@ -210,7 +193,5 @@
     <string name="backup_sommario_salva">Salva il Backup nel Dispositivo</string>
     <string name="backup_titolo_carica">Carica Backup</string>
     <string name="backup_sommario_carica">Carica il Backup dal Dispositivo</string>
-
-
 
 </resources>

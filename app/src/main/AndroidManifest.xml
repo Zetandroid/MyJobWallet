@@ -39,10 +39,6 @@
             android:label="@string/toolbarProfile"
             android:theme="@style/ThemeProfilo" />
         <activity
-            android:name=".calendario.OreActivity"
-            android:label="@string/toolbarOre"
-            android:theme="@style/ThemeOre" />
-        <activity
             android:name=".calendario.TurniActivity"
             android:label="@string/toolbarTurni"
             android:theme="@style/ThemeTurni" />

@@ -22,7 +22,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
-import com.kubix.myjobwallet.calendario.OreActivity;
+import com.kubix.myjobwallet.calendario.CalendarioActivity;
 import com.kubix.myjobwallet.calendario.TurniActivity;
 import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.note.NoteActivity;
@@ -124,7 +124,6 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
-        Toast.makeText(this, "Benvenuto in MyJobWallet", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -169,7 +168,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void OreActivity (View v){
-        startActivity (new Intent(MainActivity.this, OreActivity.class));
+        startActivity (new Intent(MainActivity.this, CalendarioActivity.class));
     }
     public void TurniActivity (View v){
         startActivity (new Intent(MainActivity.this,TurniActivity.class));
@@ -178,13 +177,15 @@ public class MainActivity extends AppCompatActivity
         startActivity (new Intent(MainActivity.this,SpeseActivity.class));
     }
     public void NoteActivity (View v){
-        startActivity (new Intent(MainActivity.this,NoteActivity.class));
+        //startActivity (new Intent(MainActivity.this,NoteActivity.class));
+        Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
     }
     public void EntrateActivity (View v){
         startActivity (new Intent(MainActivity.this,EntrateActivity.class));
     }
     public void ConvertitoreActivity (View v){
-        startActivity (new Intent(MainActivity.this,ConvertitoreActivity.class));
+        //startActivity (new Intent(MainActivity.this,ConvertitoreActivity.class));
+        Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
     }
 
 }

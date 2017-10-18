@@ -1,6 +1,9 @@
 package com.kubix.myjobwallet.calendario;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.icu.text.SimpleDateFormat;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,6 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -17,11 +23,13 @@ import com.kubix.myjobwallet.R;
 
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
-//import static com.kubix.myjobwallet.R.id.timePicker2;
+import java.util.Date;
 
 public class CalendarioActivity extends AppCompatActivity {
     //DICHIARAZIONE OGGETTI
-    TimePicker oraTurno;
+    EditText inserisciEntrata;
+    EditText inserisciUscita;
+    CalendarView dataTurno;
 
     //DICHIARAZIONE VARIABILE DI RICEVIMENTO DATA TURNO
     public static String thisDate;
@@ -29,7 +37,6 @@ public class CalendarioActivity extends AppCompatActivity {
     //VARIABILI DI CONTROLLO
     String oraDiEntrata;
     String oraDiUscita;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,10 +49,10 @@ public class CalendarioActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
-        Toast.makeText(this, VariabiliGlobali.dataTurno, Toast.LENGTH_SHORT).show();
-
-        //oraTurno = (TimePicker) findViewById(timePicker);
-
+        //INDICIZZA OGETTI
+        dataTurno = (CalendarView) findViewById(R.id.calendarView);
+        inserisciEntrata = (EditText) findViewById(R.id.editTextOraEntrata);
+        inserisciUscita = (EditText) findViewById(R.id.editTextOraUscita);
 
         //INDICIZZA DATABASE
         MainActivity.db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
@@ -55,84 +62,192 @@ public class CalendarioActivity extends AppCompatActivity {
 
     }
 
+
+
     public void inserisciEntrataTurno(View v){
 
-        String oraEntrata = String.valueOf(String.format("%02d:%02d",oraTurno.getHour(), oraTurno.getMinute()));
-        oraDiEntrata = oraEntrata;
+        if (! inserisciEntrata.getText().toString().equals("")){
 
-        try{
-            MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', '"+getString(R.string.in_servizio)+"')");
-            MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
-            Toast.makeText(this, R.string.entrata_turno, Toast.LENGTH_LONG).show();
+            dataTurno.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
 
-        }catch (Exception e) {
+                @Override
+                public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                    //PRELEVA DATA ODIERNA
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                    String thisDate = sdf.format(new Date(dataTurno.getDate()));
+                    Toast.makeText(CalendarioActivity.this, thisDate, Toast.LENGTH_SHORT).show();
+                }
+            });
 
-            //PARTE L'ECCEZIONE PERCHE IL CAMPO DATA DEL DB E' SETTATO UNIQUE E QUINDI SE SI INSERISCE UN'ALTRA ENTRATA LO STESSO GIORNO NON LA METTE E DA QUESTO MESSAGGIO SOTTOSTANTE
-            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-            builder1.setMessage(R.string.turno_esistente);
-            builder1.setCancelable(true);
-            builder1.create();
-            builder1.show();
-        }
-    }
 
-    public  void inserisciUscitaTurno(View v){
 
-        String controllo = "";
+            String oraEntrata = String.valueOf(String.format(inserisciEntrata.getText().toString()));
+            oraDiEntrata = oraEntrata;
 
-        try{
+            try{
+                MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', 'IN SERVIZIO')");
+                MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
+                Toast.makeText(this, "ENTRATA TURNO ESEGUITA CON SUCCESSO", Toast.LENGTH_LONG).show();
 
-            Cursor cs = MainActivity.db.rawQuery("SELECT * FROM Controlli WHERE Data = '"+thisDate+"'", null);
-            if (cs.getCount() > 0) {
-                cs.moveToFirst();
-                controllo = cs.getString(0);
+            }catch (Exception e) {
+
+                //PARTE L'ECCEZIONE PERCHE IL CAMPO DATA DEL DB E' SETTATO UNIQUE E QUINDI SE SI INSERISCE UN'ALTRA ENTRATA LO STESSO GIORNO NON LA METTE E DA QUESTO MESSAGGIO SOTTOSTANTE
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+                builder1.setMessage("TURNAZIONE GIA ESISTENTE PER QUESTA GIORNATA, SE NON LO HAI FATTO: NON DIMENTICARE DI INSERIRE L'USCITA.");
+                builder1.setCancelable(true);
+                builder1.create();
+                builder1.show();
             }
 
-        }catch (Exception e){
-
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, getString(R.string.compilaDatiPerInserimentoTurno), Toast.LENGTH_SHORT).show();
         }
 
-        if(controllo != ""){
+    }
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                String oraUscita = String.valueOf(String.format("%02d:%02d" ,oraTurno.getHour(), oraTurno.getMinute()));
-                oraDiUscita = oraUscita;
+    public void inserisciUscitaTurno(View v){
 
+        if (! inserisciUscita.getText().toString().equals("")){
+            //PRELEVA DATA ODIERNA
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            String thisDate = sdf.format(new Date(dataTurno.getDate()));
+
+            String controllo = "";
+
+            try{
+
+                Cursor cs = MainActivity.db.rawQuery("SELECT * FROM Controlli WHERE Data = '"+thisDate+"'", null);
+                if (cs.getCount() > 0) {
+                    cs.moveToFirst();
+                    controllo = cs.getString(0);
+                }
+
+            }catch (Exception e){
+
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+            if(controllo != ""){
+
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                    String oraUscita = String.valueOf(String.format(inserisciUscita.getText().toString()));
+                    oraDiUscita = oraUscita;
+
+                    try{
+                        MainActivity.db.execSQL("UPDATE Turni SET oraUscita = '"+oraUscita+"' WHERE Data = '"+thisDate+"';");
+                    }catch (Exception e){
+                        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                //EVITA QUESTO MESSAGGIO QUANDO INSERISCI IL RIPOSO
+                if(! oraDiEntrata.equals(oraDiUscita)){
+                    Toast.makeText(this, "USCITA TURNO ESEGUITA CORRETAMENTE", Toast.LENGTH_LONG).show();
+                }
+
+
+            }else{
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
+                builder1.setMessage("PRIMA DI INSERIRE L'USCITA DEVI INSERIRE L'ENTRATA PER LA TURNAZIONE ODIERNA.");
+                builder1.setCancelable(true);
+                builder1.create();
+                builder1.show();
+            }
+
+            if(oraDiEntrata.equals(oraDiUscita)){
                 try{
-                    MainActivity.db.execSQL("UPDATE Turni SET oraUscita = '"+oraUscita+"' WHERE Data = '"+thisDate+"';");
+                    MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO' WHERE Data = '"+thisDate+"';");
+                    Toast.makeText(this, "GIORNO DI RIPOSO INSERITO CORRETTAMENTE", Toast.LENGTH_LONG).show();
                 }catch (Exception e){
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
 
-            //EVITA QUESTO MESSAGGIO QUANDO INSERISCI IL RIPOSO
-            if(! oraDiEntrata.equals(oraDiUscita)){
-                Toast.makeText(this, R.string.uscita_turno, Toast.LENGTH_LONG).show();
-            }
-
-
         }else{
-            AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-            builder1.setMessage(R.string.inserire_uscita);
-            builder1.setCancelable(true);
-            builder1.create();
-            builder1.show();
-        }
 
-        if(oraDiEntrata.equals(oraDiUscita)){
-            try{
-                MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = '"+getString(R.string.riposo)+"', oraUscita = '"+getString(R.string.riposo)+"' WHERE Data = '"+thisDate+"';");
-                Toast.makeText(this, R.string.giorno_riposo, Toast.LENGTH_LONG).show();
-            }catch (Exception e){
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
-            }
-
+            Toast.makeText(this, getString(R.string.compilaDatiPerInserimentoTurno), Toast.LENGTH_SHORT).show();
         }
 
     }
 
-    public void apriStorico(){
+
+    public void dialogTimePickerClickEntrata(View v){
+
+        Calendar mcurrentTime = Calendar.getInstance();
+        int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+        int minute = mcurrentTime.get(Calendar.MINUTE);
+
+        TimePickerDialog mTimePicker;
+        mTimePicker = new TimePickerDialog(CalendarioActivity.this, new TimePickerDialog.OnTimeSetListener() {
+
+            @Override
+            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                String selezioneOra;
+                String selezioneMinuti;
+
+                if (String.valueOf(selectedHour).length() == 1 && String.valueOf(selectedMinute).length() == 1){
+                    selezioneOra = "0" + selectedHour;
+                    selezioneMinuti = "0" +selectedMinute;
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }else if(String.valueOf(selectedHour).length() == 1){
+                    selezioneOra = "0" + selectedHour;
+                    selezioneMinuti = String.valueOf(selectedMinute);
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }else if (String.valueOf(selectedMinute).length() == 1){
+                    selezioneOra = String.valueOf(selectedHour);
+                    selezioneMinuti = "0" + selectedMinute;
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }else{
+                    selezioneOra = String.valueOf(selectedHour);
+                    selezioneMinuti = String.valueOf(selectedMinute);
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }
+
+            }
+
+        }, hour, minute, true);
+        mTimePicker.setTitle(getString(R.string.imposta_entrata));
+        mTimePicker.show();
+    }
+
+    public void dialogTimePickerClickUscita(View v){
+
+        Calendar mcurrentTime = Calendar.getInstance();
+        int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+        int minute = mcurrentTime.get(Calendar.MINUTE);
+
+        TimePickerDialog mTimePicker;
+
+        mTimePicker = new TimePickerDialog(CalendarioActivity.this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                String selezioneOra;
+                String selezioneMinuti;
+                if (String.valueOf(selectedHour).length() == 1 && String.valueOf(selectedMinute).length() == 1){
+                    selezioneOra = "0" + selectedHour;
+                    selezioneMinuti = "0" +selectedMinute;
+                    inserisciUscita.setText(selezioneOra + ":" + selezioneMinuti);
+                }else if(String.valueOf(selectedHour).length() == 1){
+                    selezioneOra = "0" + selectedHour;
+                    selezioneMinuti = String.valueOf(selectedMinute);
+                    inserisciUscita.setText(selezioneOra + ":" + selezioneMinuti);
+                }else if (String.valueOf(selectedMinute).length() == 1){
+                    selezioneOra = String.valueOf(selectedHour);
+                    selezioneMinuti = "0" + selectedMinute;
+                    inserisciUscita.setText(selezioneOra + ":" + selezioneMinuti);
+                }else{
+                    selezioneOra = String.valueOf(selectedHour);
+                    selezioneMinuti = String.valueOf(selectedMinute);
+                    inserisciUscita.setText(selezioneOra + ":" + selezioneMinuti);
+                }
+
+            }
+        }, hour, minute, true);
+        mTimePicker.setTitle(getString(R.string.imposta_uscita));
+        mTimePicker.show();
+    }
+
+    public void apriStorico(View v){
         Intent intent = new Intent(this, TurniActivity.class);
         startActivity(intent);
     }

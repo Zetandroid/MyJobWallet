@@ -15,7 +15,8 @@
             android:id="@+id/nav_premium"
             android:icon="@drawable/ic_drawer_premium"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_premium" />
+            android:title="@string/drawer_premium"
+            android:visible="false" />
 
         <item
             android:id="@+id/nav_email"

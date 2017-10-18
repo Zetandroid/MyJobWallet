@@ -60,6 +60,9 @@
 
                 <EditText
                     android:id="@+id/editTextOraEntrata"
+                    android:onClick="dialogTimePickerClickEntrata"
+                    android:editable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -71,6 +74,7 @@
 
                 <Button
                     android:id="@+id/bottoneEntrata"
+                    android:onClick="inserisciEntrataTurno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -93,6 +97,9 @@
 
                 <EditText
                     android:id="@+id/editTextOraUscita"
+                    android:onClick="dialogTimePickerClickUscita"
+                    android:editable="false"
+                    android:focusable="false"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -104,6 +111,7 @@
 
                 <Button
                     android:id="@+id/bottoneUscita"
+                    android:onClick="inserisciUscitaTurno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"

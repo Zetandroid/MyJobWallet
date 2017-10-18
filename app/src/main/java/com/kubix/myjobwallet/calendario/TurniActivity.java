@@ -184,7 +184,7 @@ public class TurniActivity extends AppCompatActivity {
                                 MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '"+getString(R.string.riposo)+"' AND oraUscita = '"+getString(R.string.riposo)+"'");
                                 MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
                                 dialog.dismiss();
-                                Toast.makeText(TurniActivity.this, R.string.rimosso_turno, Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TurniActivity.this, R.string.rimuoviRiposo, Toast.LENGTH_SHORT).show();
                                 finish();
                             }else{
                                 MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '"+dataSelezionata+"' AND oraEntrata = '"+entrataCalcolo+"' AND oraUscita = '"+uscitaCalcolo+"'");

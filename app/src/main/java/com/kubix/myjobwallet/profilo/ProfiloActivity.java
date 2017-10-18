@@ -51,6 +51,12 @@ public class ProfiloActivity extends AppCompatActivity{
         caricaDatiProfilo();
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        caricaDatiProfilo();
+    }
+
     public void caricaDatiProfilo(){
 
         //TODO CARICA INFO PROFILO DA DATABASE
@@ -72,5 +78,10 @@ public class ProfiloActivity extends AppCompatActivity{
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    //EVENTO TEMPORANEO
+    public void alertAggiornamento(View v){
+        Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
     }
 }
