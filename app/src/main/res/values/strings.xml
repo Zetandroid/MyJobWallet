@@ -194,4 +194,10 @@
     <string name="backup_titolo_carica">Carica Backup</string>
     <string name="backup_sommario_carica">Carica il Backup dal Dispositivo</string>
 
+
+
+    <string name="compilaDatiPerInserimentoTurno">Compila dati</string>
+    <string name="imposta_entrata">Imposta Entrata</string>
+    <string name="imposta_uscita">Imposta Uscita</string>
+
 </resources>
