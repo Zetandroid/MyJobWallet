@@ -94,16 +94,6 @@
 
     </ScrollView>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottombar_calendario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/colorPrimaryTurni"
-        app:itemIconTint="@color/testoBianco"
-        app:itemTextColor="@color/testoBianco"
-        app:menu="@menu/bottombar_calendario" />
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarOrologio"
         android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -41,32 +42,9 @@ public class CalendarioActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
-        //TODO BOTTOMBAR
-
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
-                findViewById(R.id.bottombar_calendario);
-        bottomNavigationView.setOnNavigationItemSelectedListener(
-                new BottomNavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.bottoneEntrata:
-                                inserisciEntrataTurno();
-                                break;
-                            case R.id.bottoneUscita:
-                                inserisciUscitaTurno();
-                                break;
-                            case R.id.bottom_turni:
-                                apriStorico();
-                                break;
-                        }
-                        return false;
-                    }
-                });
-
         Toast.makeText(this, VariabiliGlobali.dataTurno, Toast.LENGTH_SHORT).show();
 
-        //oraTurno = (TimePicker) findViewById(timePicker2);
+        //oraTurno = (TimePicker) findViewById(timePicker);
 
 
         //INDICIZZA DATABASE
@@ -77,7 +55,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
     }
 
-    public void inserisciEntrataTurno(){
+    public void inserisciEntrataTurno(View v){
 
         String oraEntrata = String.valueOf(String.format("%02d:%02d",oraTurno.getHour(), oraTurno.getMinute()));
         oraDiEntrata = oraEntrata;
@@ -98,7 +76,7 @@ public class CalendarioActivity extends AppCompatActivity {
         }
     }
 
-    public  void inserisciUscitaTurno(){
+    public  void inserisciUscitaTurno(View v){
 
         String controllo = "";
 
