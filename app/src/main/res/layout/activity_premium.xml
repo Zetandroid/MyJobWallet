@@ -28,7 +28,8 @@
             android:text="@string/acquista"
             android:textColor="@color/coloreBianco"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
 
         <Button
             android:id="@+id/buttonRipristana"
@@ -41,7 +42,8 @@
             android:text="@string/ripristina_acquisto"
             android:textColor="@color/coloreBianco"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
 
