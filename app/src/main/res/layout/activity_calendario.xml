@@ -74,13 +74,13 @@
 
                 <Button
                     android:id="@+id/bottoneEntrata"
-                    android:onClick="inserisciEntrataTurno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="8dp"
-                    android:text="Imposta"
+                    android:onClick="inserisciEntrataTurno"
+                    android:text="@string/salva"
                     android:theme="@style/Bottone.Blu" />
 
 
@@ -111,13 +111,13 @@
 
                 <Button
                     android:id="@+id/bottoneUscita"
-                    android:onClick="inserisciUscitaTurno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="8dp"
-                    android:text="Imposta"
+                    android:onClick="inserisciUscitaTurno"
+                    android:text="@string/salva"
                     android:theme="@style/Bottone.Blu" />
 
 

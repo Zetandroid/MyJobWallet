@@ -2,7 +2,7 @@
     <string name="app_name">MyJobWallet</string>
 
     <!-- ADMOB -->
-    <string name="adsHome">ca-app-pub-9460579775308491/9601637711</string>
+    <string name="adsHome">ca-app-pub-9460579775308491/5030131024</string>
     <string name="adsSpese">ca-app-pub-9460579775308491/1775619596</string>
     <string name="adsNote">ca-app-pub-9460579775308491/9180957587</string>
     <string name="adsEntrate">ca-app-pub-9460579775308491/2783193903</string>
@@ -80,6 +80,7 @@
     <string name="ore_lavorative">Ore lavorative</string>
     <string name="paga_oraria">Paga Oraria</string>
     <string name="straordinari">Straordinari</string>
+    <string name="valutaMondiale">Valuta</string>
     <string name="salva_dati_profilo">SALVA DATI PROFILO</string>
 
     <!-- MENU SPESE -->

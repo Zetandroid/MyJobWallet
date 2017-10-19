@@ -164,12 +164,6 @@
                 android:background="@color/iconeLayout" />
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="72dp"
-                android:background="@color/iconeLayout" />
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="56dp">

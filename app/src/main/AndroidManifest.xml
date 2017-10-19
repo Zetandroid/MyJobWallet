@@ -36,8 +36,8 @@
             android:theme="@style/ThemeImpostazioni" />
         <activity
             android:name=".profilo.ProfiloActivity"
-            android:label="@string/toolbarProfile"
-            android:theme="@style/ThemeProfilo" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/toolbarProfile" />
         <activity
             android:name=".calendario.TurniActivity"
             android:label="@string/toolbarTurni"
@@ -91,7 +91,6 @@
 
         <activity android:name=".utility.InfoActivity"
             android:theme="@style/ThemeProfilo"/>
-
 
 
     </application>

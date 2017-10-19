@@ -32,7 +32,7 @@ public class EmailActivity extends AppCompatActivity{
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
-        findViewById(R.id.bottoneEmail).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.fabInviaEmail).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendFeedback();

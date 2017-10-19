@@ -2,9 +2,48 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_premium"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/buttonAcquista"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1"
+            android:text="@string/acquista"
+            android:textColor="@color/coloreBianco"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonRipristana"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:text="@string/ripristina_acquisto"
+            android:textColor="@color/coloreBianco"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarPremium"
@@ -19,7 +58,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarPremium">
+        android:layout_below="@+id/toolbarPremium"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,145 +69,63 @@
             android:orientation="vertical"
             tools:ignore="ScrollViewSize">
 
-            <RelativeLayout
+            <ImageView
+                android:id="@+id/imageView12"
                 android:layout_width="match_parent"
-                android:layout_height="604dp"
-                tools:ignore="UselessParent">
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:contentDescription=""
+                app:srcCompat="@drawable/immagine_premium"
+                tools:ignore="ContentDescription" />
 
-                <ImageView
-                    android:id="@+id/imagePremium"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    app:srcCompat="@color/colorPrimaryPremium"
-                    tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="@string/rimuovi_pubblicita"
+                android:textColor="@color/coloreBianco"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <android.support.v7.widget.CardView
-                    android:id="@+id/caerPremium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginTop="56dp">
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:text="@string/calcola_stipendio"
+                android:textColor="@color/coloreBianco"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:text="@string/cambia_tema_premium"
+                android:textColor="@color/coloreBianco"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/titolo"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:padding="8dp"
-                            android:text="@string/versione_premium"
-                            android:textColor="@color/testoTitolo"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="200dp"
-                            android:layout_height="200dp"
-                            android:layout_gravity="center"
-                            app:srcCompat="@drawable/immagine_premium" />
-
-                        <TextView
-                            android:id="@+id/textLinea1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginTop="8dp"
-                            android:padding="8dp"
-                            android:text="@string/rimuovi_pubblicita"
-                            android:textColor="@color/testoSecondario"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textLinea2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:padding="8dp"
-                            android:text="@string/calcola_stipendio"
-                            android:textColor="@color/testoSecondario"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textLinea3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:padding="8dp"
-                            android:text="@string/cambia_tema_premium"
-                            android:textColor="@color/testoSecondario"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/textLinea4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:padding="8dp"
-                            android:text="@string/aggiungi_widget"
-                            android:textColor="@color/testoSecondario"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="16dp"
-                            android:background="@color/iconeLayout" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginTop="8dp"
-                            android:orientation="horizontal">
-
-
-                            <Button
-                                android:id="@+id/buttonAcquista"
-                                style="?android:attr/borderlessButtonStyle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:layout_weight="1"
-                                android:text="@string/acquista"
-                                android:textColor="@color/colorAccentPremium"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                            <Button
-                                android:id="@+id/buttonRipristana"
-                                style="?android:attr/borderlessButtonStyle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:layout_weight="1"
-                                android:text="@string/ripristina_acquisto"
-                                android:textColor="@color/colorAccentPremium"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:text="@string/aggiungi_widget"
+                android:textColor="@color/coloreBianco"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

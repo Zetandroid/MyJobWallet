@@ -29,7 +29,7 @@ public class ProfiloActivity extends AppCompatActivity{
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
         setTitle(R.string.toolbarProfile);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.testoTitolo));
         setSupportActionBar(toolbar);
 
         //TODO BOTTONE DATI

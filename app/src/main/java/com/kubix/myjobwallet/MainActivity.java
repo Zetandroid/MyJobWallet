@@ -15,6 +15,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -30,11 +32,32 @@ import com.kubix.myjobwallet.profilo.ProfiloActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 
 import com.kubix.myjobwallet.utility.EmailActivity;
+import com.kubix.myjobwallet.utility.HomeGridAdapter;
 import com.kubix.myjobwallet.utility.PremiumActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    GridView grid;
+    String[] web = {
+
+            "Ore",
+            "Turni",
+            "Spese",
+            "Uscite",
+            "Valute",
+            "Memo"
+    };
+
+    int[] imageId = {
+            R.drawable.ic_home_ora,
+            R.drawable.ic_home_turni,
+            R.drawable.ic_home_spesa,
+            R.drawable.ic_home_entrate,
+            R.drawable.ic_home_valuta,
+            R.drawable.ic_home_memo
+    };
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -90,6 +113,36 @@ public class MainActivity extends AppCompatActivity
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
+        //TODO GRIGLIA
+        HomeGridAdapter adapter = new HomeGridAdapter(MainActivity.this, web, imageId);
+        grid=(GridView)findViewById(R.id.grid);
+        grid.setAdapter(adapter);
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                                        @Override
+                                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                            if (position == 0) {
+                                                Intent intent = new Intent(MainActivity.this, CalendarioActivity.class);
+                                                startActivity(intent);
+                                            } else if (position == 1) {
+                                                Intent intent = new Intent(MainActivity.this, TurniActivity.class);
+                                                startActivity(intent);
+                                            } else if (position == 2) {
+                                                Intent intent = new Intent(MainActivity.this, SpeseActivity.class);
+                                                startActivity(intent);
+                                            } else if (position == 3) {
+                                                Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
+                                                startActivity(intent);
+                                            } else if (position == 4) {
+                                                Intent intent = new Intent(MainActivity.this, ConvertitoreActivity.class);
+                                                startActivity(intent);
+                                            } else if (position == 5) {
+                                                Intent intent = new Intent(MainActivity.this, NoteActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        }
+                                    });
 
         //TODO INDICIZZARE DATABASE CON QUERY SQL
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
@@ -167,25 +220,5 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void OreActivity (View v){
-        startActivity (new Intent(MainActivity.this, CalendarioActivity.class));
-    }
-    public void TurniActivity (View v){
-        startActivity (new Intent(MainActivity.this,TurniActivity.class));
-    }
-    public void SpeseActivity (View V){
-        startActivity (new Intent(MainActivity.this,SpeseActivity.class));
-    }
-    public void NoteActivity (View v){
-        //startActivity (new Intent(MainActivity.this,NoteActivity.class));
-        Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
-    }
-    public void EntrateActivity (View v){
-        startActivity (new Intent(MainActivity.this,EntrateActivity.class));
-    }
-    public void ConvertitoreActivity (View v){
-        //startActivity (new Intent(MainActivity.this,ConvertitoreActivity.class));
-        Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
-    }
 
 }

@@ -4,276 +4,276 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rl"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/background_profilo"
+    android:orientation="vertical"
     tools:context="com.kubix.myjobwallet.profilo.ProfiloActivity">
-
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarProfilo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true">
+        android:layout_below="@+id/toolbarProfilo">
 
         <LinearLayout
-            android:id="@+id/linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardProfilo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/immagineVerticale"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignBottom="@+id/imgProfilePic"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/immagine_verticale"
-                    tools:ignore="ContentDescription" />
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/imgProfilePic"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_alignParentBottom="false"
-                    android:layout_alignParentStart="false"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="false"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/image_profile"
-                    app:civ_border_color="@color/colorPrimaryProfilo"
-                    app:civ_border_width="3dp" />
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:id="@+id/lineareNome"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/testoNome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:paddingBottom="4dp"
-                    android:paddingEnd="4dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:paddingTop="4dp"
-                    android:text="@string/nome_profilo"
-                    android:textAlignment="center"
-                    android:textColor="@color/testoTitolo"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lineareEmail"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/testoEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:gravity="center"
-                    android:paddingBottom="4dp"
-                    android:paddingLeft="4dp"
-                    android:paddingRight="4dp"
-                    android:paddingTop="4dp"
-                    android:text="@string/email_profilo"
-                    android:textAlignment="center"
-                    android:textColor="@color/testoSecondario" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lineareBottoniLogin"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingBottom="4dp"
-                android:paddingTop="4dp">
-
+                android:layout_height="250dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/btnLoginGoogle"
-                        android:onClick="alertAggiornamento"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="72dp"
-                        android:layout_marginRight="72dp"
-                        android:layout_marginTop="4dp"
-                        android:text="@string/accedi_con_google"
-                        android:textAllCaps="false"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:theme="@style/Bottone.Rosso" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgProfilePic"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="false"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_profile"
+                        app:civ_border_color="@color/colorPrimaryProfilo"
+                        app:civ_border_width="2dp" />
 
                     <Button
-                        android:id="@+id/btnLoginFacebook"
-                        android:onClick="alertAggiornamento"
-                        android:layout_width="match_parent"
+                        android:id="@+id/bottoneRevoca"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="72dp"
-                        android:layout_marginRight="72dp"
-                        android:layout_marginTop="4dp"
-                        android:text="@string/accedi_con_facebook"
-                        android:textAllCaps="false"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:theme="@style/Bottone.Blu" />
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="8dp"
+                        android:text="Revoca Accesso"
+                        android:textColor="@color/colorPrimarySpesa"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
 
+                    <Button
+                        android:id="@+id/bottoneDisconnetti"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="8dp"
+                        android:text="Disconnetti"
+                        android:textColor="@color/colorPrimarySpesa"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/nomeProfilo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgProfilePic"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/nome_profilo"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/emailProfilo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nomeProfilo"
+                        android:layout_centerHorizontal="true"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:text="@string/email_profilo" />
                 </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
-            </LinearLayout>
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@color/iconeLayout" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="16dp"
-                android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                tools:ignore="InefficientWeight">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    tools:ignore="NestedWeights">
-
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:contentDescription=""
-                        android:padding="4dp"
-                        app:srcCompat="@drawable/ic_profilo_ore"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@+id/txtOre"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="4dp"
-                        android:textAlignment="center"
-                        android:textColor="@color/testoTitolo" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="4dp"
-                        app:srcCompat="@drawable/ic_profilo_ordinaria"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@+id/txtPagaOraria"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="4dp"
-                        android:textAlignment="center"
-                        android:textColor="@color/testoTitolo" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imageView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:contentDescription=""
-                        android:padding="4dp"
-                        app:srcCompat="@drawable/ic_profilo_straordinari"
-                        tools:ignore="ContentDescription" />
-
-                    <TextView
-                        android:id="@+id/txtStraordinaria"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="4dp"
-                        android:textAlignment="center"
-                        android:textColor="@color/testoTitolo" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/bottoneDati"
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardProfiloDati"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginRight="72dp"
-                android:text="@string/imposta_dati"
-                android:theme="@style/Bottone.Nero" />
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        tools:ignore="InefficientWeight">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="NestedWeights">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription=""
+                                android:padding="4dp"
+                                app:srcCompat="@drawable/ic_profilo_ore"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/txtOre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/testoTitolo" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                app:srcCompat="@drawable/ic_profilo_ordinaria"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/txtPagaOraria"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/testoTitolo" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:contentDescription=""
+                                android:padding="4dp"
+                                app:srcCompat="@drawable/ic_profilo_straordinari"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:id="@+id/txtStraordinaria"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/testoTitolo" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/iconeLayout" />
+
+                    <Button
+                        android:id="@+id/bottoneDati"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="72dp"
+                        android:layout_weight="1"
+                        android:text="@string/imposta_dati"
+                        android:textColor="@color/testoTitolo"
+                        android:theme="@style/Bottone.Nero" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardSocial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/bottoneLoginGoogle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginRight="36dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/accedi_con_google"
+                        android:textSize="14sp"
+                        android:theme="@style/Bottone.Rosso" />
+
+                    <Button
+                        android:id="@+id/bottoneLoginFacebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginRight="36dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/accedi_con_facebook"
+                        android:textSize="14sp"
+                        android:theme="@style/Bottone.Blu" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
-
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarProfilo"
@@ -284,6 +284,5 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
-
 
 </RelativeLayout>
