@@ -77,7 +77,7 @@
                 android:layout_height="220dp"
                 android:layout_gravity="center"
                 android:contentDescription=""
-                app:srcCompat="@drawable/immagine_premium"
+                app:srcCompat="@drawable/ic_premium"
                 tools:ignore="ContentDescription" />
 
             <TextView

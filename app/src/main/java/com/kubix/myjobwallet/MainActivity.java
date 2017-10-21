@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity
             "Ore",
             "Turni",
             "Spese",
-            "Uscite",
+            "Entrate",
             "Valute",
             "Memo"
     };

@@ -101,13 +101,12 @@
                                 android:textColor="@color/colorPrimarySpesa"
                                 android:textSize="12sp"
                                 android:theme="@style/BottoneFlatRosso"
-                                tools:ignore="DuplicateIds" />
+                                tools:ignore="DuplicateIds,ObsoleteLayoutParam" />
 
                             <Button
                                 android:id="@+id/twitterMorgan"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/googleUno"
                                 android:layout_marginStart="8dp"
                                 android:layout_toEndOf="@+id/googleUno"
                                 android:layout_weight="1"
@@ -115,7 +114,8 @@
                                 android:textAlignment="viewStart"
                                 android:textColor="@color/colorPrimarySpesa"
                                 android:textSize="12sp"
-                                android:theme="@style/BottoneFlatRosso" />
+                                android:theme="@style/BottoneFlatRosso"
+                                tools:ignore="ObsoleteLayoutParam" />
 
                         </LinearLayout>
 
@@ -200,13 +200,12 @@
                                 android:textColor="@color/colorPrimarySpesa"
                                 android:textSize="12sp"
                                 android:theme="@style/BottoneFlatRosso"
-                                tools:ignore="DuplicateIds" />
+                                tools:ignore="DuplicateIds,ObsoleteLayoutParam" />
 
                             <Button
                                 android:id="@+id/twitterAlessio"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignTop="@+id/googleUno"
                                 android:layout_marginStart="8dp"
                                 android:layout_toEndOf="@+id/googleUno"
                                 android:layout_weight="1"

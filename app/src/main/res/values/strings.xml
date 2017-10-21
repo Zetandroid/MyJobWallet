@@ -72,7 +72,7 @@
     <string name="ripristina_acquisto">Ripristina Acquisto</string>
 
     <!-- MENU PROFILO -->
-    <string name="nome_profilo">Kubix Studio</string>
+    <string name="nome_profilo">Nome</string>
     <string name="email_profilo">Email@email.com</string>
     <string name="accedi_con_google">Accedi con Google</string>
     <string name="accedi_con_facebook">Accedi con Facebook</string>

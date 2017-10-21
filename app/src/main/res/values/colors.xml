@@ -29,14 +29,14 @@
     <color name="colorAccentOre">#62efff</color>
 
     <!-- TEMA ENTRATE -->
-    <color name="colorPrimaryEntrate">#4caf50</color>
-    <color name="colorPrimaryDarkEntrate">#087f23</color>
-    <color name="colorAccentEntrate">#80e27e</color>
+    <color name="colorPrimaryEntrate">#4CAF50</color>
+    <color name="colorPrimaryDarkEntrate">#1B5E20</color>
+    <color name="colorAccentEntrate">#81C784</color>
 
     <!-- TEMA TURNI -->
-    <color name="colorPrimaryTurni">#2196f3</color>
-    <color name="colorPrimaryDarkTurni">#0069c0</color>
-    <color name="colorAccentTurni">#6ec6ff</color>
+    <color name="colorPrimaryTurni">#2196F3</color>
+    <color name="colorPrimaryDarkTurni">#1565C0</color>
+    <color name="colorAccentTurni">#64B5F6</color>
 
     <!-- TEMA SPESA -->
     <color name="colorPrimarySpesa">#f44336</color>
@@ -44,9 +44,9 @@
     <color name="colorAccentSpesa">#ff7961</color>
 
     <!-- TEMA MEMO -->
-    <color name="colorPrimaryMemo">#ff9100</color>
-    <color name="colorPrimaryDarkMemo">#c56200</color>
-    <color name="colorAccentMemo">#ffc246</color>
+    <color name="colorPrimaryMemo">#FF9800</color>
+    <color name="colorPrimaryDarkMemo">#EF6C00</color>
+    <color name="colorAccentMemo">#FFB74D</color>
 
     <!-- TEMA EMAIL -->
     <color name="colorPrimaryEmail">#03A9F4</color>
@@ -59,9 +59,9 @@
     <color name="colorAccentValuta">#ff6090</color>
 
     <!-- TEMA PREMIUM -->
-    <color name="colorPrimaryPremium">#3f51b5</color>
-    <color name="colorPrimaryDarkPremium">#002984</color>
-    <color name="colorAccentPremium">#757de8</color>
+    <color name="colorPrimaryPremium">#D32F2F</color>
+    <color name="colorPrimaryDarkPremium">#B71C1C</color>
+    <color name="colorAccentPremium">#9C27B0</color>
 
     <!-- TEMA IMPOSTAZIONI -->
     <color name="colorPrimaryImpostazioni">#009688</color>

@@ -23,7 +23,9 @@
                 android:id="@+id/grid_image"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:scaleType="centerCrop">
+                android:scaleType="centerCrop"
+                android:contentDescription=""
+                tools:ignore="ContentDescription">
             </ImageView>
 
             <TextView
@@ -33,9 +35,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:textAlignment="center"
-                android:textSize="18sp"
-                android:textStyle="bold">
-            </TextView>
+                android:textSize="14sp"></TextView>
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
