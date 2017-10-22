@@ -57,29 +57,51 @@ public class CalendarioActivity extends AppCompatActivity {
         //INDICIZZA DATABASE
         MainActivity.db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
 
-        //ASSEGNAZIONE DATI,
-        thisDate = VariabiliGlobali.dataTurno;
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        thisDate = sdf.format(new Date(dataTurno.getDate()));
+        Toast.makeText(this, thisDate, Toast.LENGTH_SHORT).show();
+
+        //LISTNER CLICK CALENDARIO
+        dataTurno.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                //PRELEVA DATA CLICCATA
+
+                int d = dayOfMonth;
+                int m = month + 1;
+                int y = year;
+
+                if(m < 10){
+                    thisDate =String.valueOf(d + "/" + "0"+m + "/" + y);
+                }else{
+                    thisDate =String.valueOf(d + "/" + m + "/" + y);
+                }
+
+                if(d < 10){
+                    thisDate =String.valueOf("0"+d + "/" +m + "/" + y);
+                }else{
+                    thisDate =String.valueOf(d + "/" +m + "/" + y);
+                }
+
+                if(d < 10 && m <10){
+                    thisDate =String.valueOf("0"+d + "/" +"0" +m + "/" + y);
+                }else{
+                    thisDate =String.valueOf(d + "/" +m + "/" + y);
+                }
+
+                if (d<10 && m >9){
+                    thisDate =String.valueOf("0"+d + "/" +m + "/" + y);
+                }
+
+            }
+        });
 
     }
-
-
 
     public void inserisciEntrataTurno(View v){
 
         if (! inserisciEntrata.getText().toString().equals("")){
-
-            dataTurno.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-
-                @Override
-                public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                    //PRELEVA DATA ODIERNA
-                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                    String thisDate = sdf.format(new Date(dataTurno.getDate()));
-                    Toast.makeText(CalendarioActivity.this, thisDate, Toast.LENGTH_SHORT).show();
-                }
-            });
-
-
 
             String oraEntrata = String.valueOf(String.format(inserisciEntrata.getText().toString()));
             oraDiEntrata = oraEntrata;
@@ -88,6 +110,9 @@ public class CalendarioActivity extends AppCompatActivity {
                 MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', 'IN SERVIZIO')");
                 MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
                 Toast.makeText(this, "ENTRATA TURNO ESEGUITA CON SUCCESSO", Toast.LENGTH_LONG).show();
+
+                inserisciEntrata.setText("");
+                inserisciUscita.setText("");
 
             }catch (Exception e) {
 
@@ -108,9 +133,6 @@ public class CalendarioActivity extends AppCompatActivity {
     public void inserisciUscitaTurno(View v){
 
         if (! inserisciUscita.getText().toString().equals("")){
-            //PRELEVA DATA ODIERNA
-            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            String thisDate = sdf.format(new Date(dataTurno.getDate()));
 
             String controllo = "";
 
@@ -143,6 +165,8 @@ public class CalendarioActivity extends AppCompatActivity {
                 //EVITA QUESTO MESSAGGIO QUANDO INSERISCI IL RIPOSO
                 if(! oraDiEntrata.equals(oraDiUscita)){
                     Toast.makeText(this, "USCITA TURNO ESEGUITA CORRETAMENTE", Toast.LENGTH_LONG).show();
+                    inserisciEntrata.setText("");
+                    inserisciUscita.setText("");
                 }
 
 
@@ -158,13 +182,14 @@ public class CalendarioActivity extends AppCompatActivity {
                 try{
                     MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO' WHERE Data = '"+thisDate+"';");
                     Toast.makeText(this, "GIORNO DI RIPOSO INSERITO CORRETTAMENTE", Toast.LENGTH_LONG).show();
+                    inserisciEntrata.setText("");
+                    inserisciUscita.setText("");
                 }catch (Exception e){
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
 
         }else{
-
             Toast.makeText(this, getString(R.string.compilaDatiPerInserimentoTurno), Toast.LENGTH_SHORT).show();
         }
 

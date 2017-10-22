@@ -95,8 +95,9 @@ public class TurniActivity extends AppCompatActivity {
                 try {
                     //CALCOLA ORE LAVORATE TURNO SELEZIONATO
                     dataSelezionata = arg0.getItemAtPosition(position).toString().substring(0,10);
-                    entrataCalcolo = arg0.getItemAtPosition(position).toString().substring(20, 25).replace(" ", "");
+                    entrataCalcolo = arg0.getItemAtPosition(position).toString().substring(20, 25);
                     uscitaCalcolo = arg0.getItemAtPosition(position).toString().substring(35);
+                    Toast.makeText(TurniActivity.this, uscitaCalcolo, Toast.LENGTH_SHORT).show();
                     posizioneCorrente = position;
                     SimpleDateFormat fmt = new SimpleDateFormat("HH:mm");
                     fmt.setLenient(false);
@@ -139,7 +140,7 @@ public class TurniActivity extends AppCompatActivity {
         });
 
         try {
-            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Turni",null);
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Turni ORDER BY Data",null);
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{
@@ -194,9 +195,9 @@ public class TurniActivity extends AppCompatActivity {
                                 Toast.makeText(TurniActivity.this, R.string.turno_rimosso, Toast.LENGTH_SHORT).show();
                                 finish();
                             }
-
                         }
                     });
+
             builder.setNegativeButton(R.string.non_eliminare,
                     new DialogInterface.OnClickListener() {
                         @Override
