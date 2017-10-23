@@ -33,22 +33,22 @@
     <!-- TEMA ENTRATE -->
     <color name="colorPrimaryEntrate">#4CAF50</color>
     <color name="colorPrimaryDarkEntrate">#2E7D32</color>
-    <color name="colorAccentEntrate">#81C784</color>
+    <color name="colorAccentEntrate">#00E676</color>
 
     <!-- TEMA TURNI -->
-    <color name="colorPrimaryTurni">#26A69A</color>
-    <color name="colorPrimaryDarkTurni">#009688</color>
-    <color name="colorAccentTurni">#80CBC4</color>
+    <color name="colorPrimaryTurni">#009688</color>
+    <color name="colorPrimaryDarkTurni">#00695C</color>
+    <color name="colorAccentTurni">#4DB6AC</color>
 
     <!-- TEMA SPESA -->
-    <color name="colorPrimarySpesa">#f44336</color>
-    <color name="colorPrimaryDarkSpesa">#ba000d</color>
+    <color name="colorPrimarySpesa">#F44336</color>
+    <color name="colorPrimaryDarkSpesa">#C62828</color>
     <color name="colorAccentSpesa">#ff7961</color>
 
     <!-- TEMA MEMO -->
     <color name="colorPrimaryMemo">#FF9800</color>
     <color name="colorPrimaryDarkMemo">#EF6C00</color>
-    <color name="colorAccentMemo">#FFB74D</color>
+    <color name="colorAccentMemo">#FFCC80</color>
 
     <!-- TEMA EMAIL -->
     <color name="colorPrimaryEmail">#03A9F4</color>
