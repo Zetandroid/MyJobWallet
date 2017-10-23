@@ -26,22 +26,25 @@
             android:name=".MainActivity"
             android:label="@string/toolbarSettings"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".profilo.ProfiloDatiActivity"
-            android:label="@string/toolbarProfileDati"
-            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- IMPOSTAZIONI -->
         <activity
             android:name=".SettingsActivity"
             android:label="@string/toolbarSettings"
             android:theme="@style/ThemeImpostazioni" />
+
+        <!-- PROFILO -->
         <activity
             android:name=".profilo.ProfiloActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/toolbarProfile" />
+
         <activity
-            android:name=".calendario.TurniActivity"
-            android:label="@string/toolbarTurni"
-            android:theme="@style/ThemeTurni" />
+            android:name=".profilo.ProfiloDatiActivity"
+            android:label="@string/toolbarProfileDati"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- SPESA -->
         <activity
             android:name=".spese.SpeseActivity"
             android:label="@string/toolbarSpese"
@@ -51,6 +54,8 @@
             android:label="@string/toolbarSpeseAggiungi"
             android:windowSoftInputMode="stateHidden"
             android:theme="@style/ThemeSpesa" />
+
+        <!-- MEMO -->
         <activity
             android:name=".note.NoteActivity"
             android:theme="@style/ThemeMemo" />
@@ -59,36 +64,53 @@
             android:windowSoftInputMode="stateHidden"
             android:label="@string/toolbarNoteAggiungi"
             android:theme="@style/ThemeMemo" />
+
+        <!-- CALENDARIO/ORE -->
         <activity
             android:name=".calendario.CalendarioActivity"
             android:label="@string/toolbarCalendario"
-            android:theme="@style/ThemeTurni" />
+            android:theme="@style/ThemeOre" />
+
+        <!-- TURNI -->
         <activity
             android:name=".calendario.ElaborazioniActivity"
             android:label="@string/toolbarCalcoloPaga"
             android:theme="@style/ThemeTurni" />
+
+        <activity
+            android:name=".calendario.TurniActivity"
+            android:label="@string/toolbarTurni"
+            android:theme="@style/ThemeTurni" />
+
+        <!-- PREMIUM -->
         <activity
             android:name="com.kubix.myjobwallet.utility.PremiumActivity"
             android:label="@string/toolbarPremium"
             android:theme="@style/ThemePremium" />
+
+        <!-- ENTRATE -->
         <activity
             android:name=".entrate.EntrateActivity"
             android:label="@string/toolbarEntrate"
             android:theme="@style/ThemeEntrate" />
-        <activity
-            android:name=".ConvertitoreActivity"
-            android:label="@string/toolbarValuta"
-            android:theme="@style/ThemeValuta" />
-
-        <activity android:name="com.kubix.myjobwallet.utility.EmailActivity"
-            android:label="@string/toolbarEmail"
-            android:theme="@style/ThemeEmail."/>
 
         <activity android:name=".entrate.EntrateAggiungiActivity"
             android:windowSoftInputMode="stateHidden"
             android:label="@string/toolbarEntrateAggiungi"
             android:theme="@style/ThemeEntrate"/>
 
+        <!-- CONVERTITORE -->
+        <activity
+            android:name=".ConvertitoreActivity"
+            android:label="@string/toolbarValuta"
+            android:theme="@style/ThemeValuta" />
+
+        <!-- EMAIL -->
+        <activity android:name="com.kubix.myjobwallet.utility.EmailActivity"
+            android:label="@string/toolbarEmail"
+            android:theme="@style/ThemeEmail."/>
+
+        <!-- INFO STAFF -->
         <activity android:name=".utility.InfoActivity"
             android:theme="@style/ThemeProfilo"/>
 

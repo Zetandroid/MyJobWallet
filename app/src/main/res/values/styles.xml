@@ -23,7 +23,7 @@
         <item name="colorAccent">@color/colorAccentOre</item>
     </style>
 
-    <!-- TEMA Turni -->
+    <!-- TEMA TURNI -->
     <style name="ThemeTurni" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimaryTurni</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkTurni</item>

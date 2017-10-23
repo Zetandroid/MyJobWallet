@@ -4,7 +4,7 @@
     <!-- TEMA -->
     <color name="colorPrimary">#F5F5F5</color>
     <color name="colorPrimaryDark">#c2c2c2</color>
-    <color name="colorAccent">#52c7b8</color>
+    <color name="colorAccent">#2196F3</color>
 
     <color name="colorBannerHome">#f5f5f5</color>
     <color name="coloreBianco">#ffffff</color>
@@ -26,19 +26,19 @@
     <color name="colorAccentProfilo">#484848</color>
 
     <!-- TEMA ORE -->
-    <color name="colorPrimaryOre">#00897b</color>
-    <color name="colorPrimaryDarkOre">#008ba3</color>
-    <color name="colorAccentOre">#62efff</color>
+    <color name="colorPrimaryOre">#2196F3</color>
+    <color name="colorPrimaryDarkOre">#1565C0</color>
+    <color name="colorAccentOre">#64B5F6</color>
 
     <!-- TEMA ENTRATE -->
     <color name="colorPrimaryEntrate">#4CAF50</color>
-    <color name="colorPrimaryDarkEntrate">#1B5E20</color>
+    <color name="colorPrimaryDarkEntrate">#2E7D32</color>
     <color name="colorAccentEntrate">#81C784</color>
 
     <!-- TEMA TURNI -->
-    <color name="colorPrimaryTurni">#2196F3</color>
-    <color name="colorPrimaryDarkTurni">#1565C0</color>
-    <color name="colorAccentTurni">#64B5F6</color>
+    <color name="colorPrimaryTurni">#26A69A</color>
+    <color name="colorPrimaryDarkTurni">#009688</color>
+    <color name="colorAccentTurni">#80CBC4</color>
 
     <!-- TEMA SPESA -->
     <color name="colorPrimarySpesa">#f44336</color>

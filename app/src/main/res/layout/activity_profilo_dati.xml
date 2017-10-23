@@ -196,9 +196,11 @@
                 android:layout_marginLeft="72dp"
                 android:layout_marginRight="72dp"
                 android:layout_marginTop="72dp"
+                android:background="@drawable/bottone_google_plus"
                 android:onClick="AggiornaDatiProfilo"
+                android:stateListAnimator="@null"
                 android:text="@string/salva_dati_profilo"
-                android:theme="@style/Bottone.Rosso" />
+                android:textColor="@color/coloreBianco" />
 
 
         </LinearLayout>
