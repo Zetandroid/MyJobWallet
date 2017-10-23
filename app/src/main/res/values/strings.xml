@@ -201,4 +201,7 @@
     <string name="imposta_entrata">Imposta Entrata</string>
     <string name="imposta_uscita">Imposta Uscita</string>
 
+    <string name="nonRevocare">Non Revocare</string>
+    <string name="nonChiudere">Non chiudere Sessione</string>
+
 </resources>

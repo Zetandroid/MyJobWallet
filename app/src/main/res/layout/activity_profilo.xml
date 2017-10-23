@@ -21,80 +21,95 @@
             <android.support.v7.widget.CardView
                 android:id="@+id/cardProfilo"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/imgProfilePic"
                         android:layout_width="96dp"
                         android:layout_height="96dp"
-                        android:layout_alignParentBottom="false"
                         android:layout_alignParentStart="false"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="false"
-                        android:layout_marginBottom="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/ic_profilo"
                         app:civ_border_color="@color/testoTitolo"
-                        app:civ_border_width="2dp" />
+                        app:civ_border_width="2dp"
+                        tools:ignore="ObsoleteLayoutParam" />
 
-                    <Button
-                        android:id="@+id/bottoneRevoca"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="8dp"
-                        android:text="Revoca Accesso"
-                        android:textColor="@color/colorPrimarySpesa"
-                        android:textSize="12sp"
-                        android:visibility="visible" />
-
-                    <Button
-                        android:id="@+id/bottoneDisconnetti"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="8dp"
-                        android:text="Disconnetti"
-                        android:textColor="@color/colorPrimarySpesa"
-                        android:textSize="12sp" />
+                        android:layout_marginRight="8dp"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="8dp"
+                        android:text="Utente"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        tools:ignore="ObsoleteLayoutParam" />
 
                     <TextView
-                        android:id="@+id/nomeProfilo"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/imgProfilePic"
+                        android:layout_below="@+id/txtName"
                         android:layout_centerHorizontal="true"
-                        android:paddingBottom="4dp"
-                        android:paddingLeft="4dp"
-                        android:paddingRight="4dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:paddingBottom="8dp"
                         android:paddingTop="4dp"
-                        android:text="@string/nome_profilo"
-                        android:textStyle="bold" />
+                        android:text="Email"
+                        android:textAlignment="center"
+                        tools:ignore="ObsoleteLayoutParam" />
 
-                    <TextView
-                        android:id="@+id/emailProfilo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/nomeProfilo"
-                        android:layout_centerHorizontal="true"
-                        android:paddingBottom="4dp"
-                        android:paddingLeft="4dp"
-                        android:paddingRight="4dp"
-                        android:paddingTop="4dp"
-                        android:text="@string/email_profilo" />
-                </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rlProfilo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/bottoneRevoca"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="8dp"
+                            android:text="Revoca Accesso"
+                            android:textColor="@color/colorPrimarySpesa"
+                            android:textSize="12sp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/bottoneDisconnetti"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="8dp"
+                            android:text="Disconnetti"
+                            android:textColor="@color/colorPrimarySpesa"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -226,7 +241,8 @@
                         android:layout_weight="1"
                         android:text="@string/imposta_dati"
                         android:textColor="@color/testoTitolo"
-                        android:theme="@style/Bottone.Nero" />
+                        android:theme="@style/Bottone.Nero"
+                        tools:ignore="ObsoleteLayoutParam" />
 
                 </LinearLayout>
 
@@ -242,33 +258,32 @@
                 android:layout_marginTop="8dp">
 
                 <LinearLayout
+                    android:id="@+id/cardLogin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <Button
+                    <com.google.android.gms.common.SignInButton
                         android:id="@+id/bottoneLoginGoogle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="36dp"
-                        android:layout_marginRight="36dp"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/accedi_con_google"
-                        android:textSize="14sp"
-                        android:theme="@style/Bottone.Rosso" />
+                        android:layout_marginLeft="72dp"
+                        android:layout_marginRight="72dp"
+                        android:layout_marginTop="16dp"></com.google.android.gms.common.SignInButton>
 
                     <Button
                         android:id="@+id/bottoneLoginFacebook"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="16dp"
                         android:layout_marginLeft="36dp"
                         android:layout_marginRight="36dp"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bottone_facebook"
+                        android:stateListAnimator="@null"
                         android:text="@string/accedi_con_facebook"
-                        android:textSize="14sp"
-                        android:theme="@style/Bottone.Blu" />
+                        android:textColor="@color/coloreBianco"
+                        android:textSize="14sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 

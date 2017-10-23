@@ -34,8 +34,7 @@
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_drawer_setting"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_impostazioni"
-            android:visible="false" />
+            android:title="@string/drawer_impostazioni" />
 
         <item
             android:id="@+id/nav_valuta"
