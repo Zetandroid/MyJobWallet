@@ -7,6 +7,7 @@ import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -26,6 +27,7 @@ import com.kubix.myjobwallet.utility.VariabiliGlobali;
 import java.util.Date;
 
 public class CalendarioActivity extends AppCompatActivity {
+
     //DICHIARAZIONE OGGETTI
     EditText inserisciEntrata;
     EditText inserisciUscita;
@@ -59,7 +61,6 @@ public class CalendarioActivity extends AppCompatActivity {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         thisDate = sdf.format(new Date(dataTurno.getDate()));
-        Toast.makeText(this, thisDate, Toast.LENGTH_SHORT).show();
 
         //LISTNER CLICK CALENDARIO
         dataTurno.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -109,7 +110,7 @@ public class CalendarioActivity extends AppCompatActivity {
             try{
                 MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', 'IN SERVIZIO')");
                 MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
-                Toast.makeText(this, "ENTRATA TURNO ESEGUITA CON SUCCESSO", Toast.LENGTH_LONG).show();
+                Snackbar.make(v, "Entrata impostata", Snackbar.LENGTH_LONG).show();
 
             }catch (Exception e) {
 
@@ -122,7 +123,7 @@ public class CalendarioActivity extends AppCompatActivity {
             }
 
         }else{
-            Toast.makeText(this, getString(R.string.compilaDatiPerInserimentoTurno), Toast.LENGTH_SHORT).show();
+            Snackbar.make(v, getString(R.string.compilaDatiPerInserimentoTurno), Snackbar.LENGTH_LONG).show();
         }
 
     }
@@ -161,7 +162,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
                 //EVITA QUESTO MESSAGGIO QUANDO INSERISCI IL RIPOSO
                 if(! oraDiEntrata.equals(oraDiUscita)){
-                    Toast.makeText(this, "USCITA TURNO ESEGUITA CORRETAMENTE", Toast.LENGTH_LONG).show();
+                    Snackbar.make(v, "Uscita impostata", Snackbar.LENGTH_LONG).show();
                     inserisciEntrata.setText("");
                     inserisciUscita.setText("");
                 }
@@ -187,7 +188,7 @@ public class CalendarioActivity extends AppCompatActivity {
             }
 
         }else{
-            Toast.makeText(this, getString(R.string.compilaDatiPerInserimentoTurno), Toast.LENGTH_SHORT).show();
+            Snackbar.make(v, getString(R.string.compilaDatiPerInserimentoTurno), Snackbar.LENGTH_LONG).show();
         }
 
     }
