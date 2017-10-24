@@ -1,11 +1,15 @@
 package com.kubix.myjobwallet;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -18,7 +22,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -31,6 +35,9 @@ import com.kubix.myjobwallet.calendario.TurniActivity;
 import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.note.NoteActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
+import com.kubix.myjobwallet.recyclerHome.CustomAdapter;
+import com.kubix.myjobwallet.recyclerHome.DataModel;
+import com.kubix.myjobwallet.recyclerHome.MyData;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 
 import com.kubix.myjobwallet.utility.EmailActivity;
@@ -38,11 +45,12 @@ import com.kubix.myjobwallet.utility.HomeGridAdapter;
 import com.kubix.myjobwallet.utility.PremiumActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     GridView grid;
-    ListView list;
     String[] web = {
 
             "Ore",
@@ -62,6 +70,14 @@ public class MainActivity extends AppCompatActivity
             R.drawable.ic_home_memo
     };
 
+    //TODO RECYCLERVIEW
+    //private static RecyclerView.Adapter adapter;
+    //private RecyclerView.LayoutManager layoutManager;
+    //private static RecyclerView recyclerView;
+    //private static ArrayList<DataModel> data;
+    //public static View.OnClickListener myOnClickListener;
+    //private static ArrayList<Integer> removedItems;
+
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
 
@@ -75,6 +91,77 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //TODO RECYCLERVIEW
+       //myOnClickListener = new MyOnClickListener(this);
+
+        // recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+        //recyclerView.setHasFixedSize(true);
+
+        //layoutManager = new LinearLayoutManager(this);
+        //recyclerView.setLayoutManager(layoutManager);
+        //recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        //data = new ArrayList<DataModel>();
+        //for (int i = 0; i < MyData.nameArray.length; i++) {
+            //data.add(new DataModel(
+                    //MyData.nameArray[i],
+                    //MyData.versionArray[i],
+                    //MyData.id_[i],
+                    //MyData.drawableArray[i]
+            //));
+        //}
+
+        //removedItems = new ArrayList<Integer>();
+
+        //adapter = new CustomAdapter(data);
+        //recyclerView.setAdapter(adapter);
+    //}
+
+
+    //private static class MyOnClickListener implements View.OnClickListener {
+
+        //private final Context context;
+
+        //private MyOnClickListener(Context context) {
+           // this.context = context;
+        //}
+
+        //@Override
+        //public void onClick(View v) {
+            //removeItem(v);
+        //}
+
+        //private void removeItem(View v) {
+            //int selectedItemPosition = recyclerView.getChildPosition(v);
+            //RecyclerView.ViewHolder viewHolder
+                   // = recyclerView.findViewHolderForPosition(selectedItemPosition);
+            //TextView textViewName
+                    //= (TextView) viewHolder.itemView.findViewById(R.id.textViewName);
+           // String selectedName = (String) textViewName.getText();
+           // int selectedItemId = -1;
+           // for (int i = 0; i < MyData.nameArray.length; i++) {
+               // if (selectedName.equals(MyData.nameArray[i])) {
+                 //   selectedItemId = MyData.id_[i];
+               // }
+           // }
+            //removedItems.add(selectedItemId);
+           // data.remove(selectedItemPosition);
+           // adapter.notifyItemRemoved(selectedItemPosition);
+       // }
+   // }
+
+   // private void addRemovedItemToList() {
+       // int addItemAtListPosition = 3;
+        //data.add(addItemAtListPosition, new DataModel(
+               // MyData.nameArray[removedItems.get(0)],
+               // MyData.versionArray[removedItems.get(0)],
+               // MyData.id_[removedItems.get(0)],
+              //  MyData.drawableArray[removedItems.get(0)]
+       // ));
+       // adapter.notifyItemInserted(addItemAtListPosition);
+        //removedItems.remove(0);
+
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
