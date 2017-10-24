@@ -50,6 +50,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    TextView sommaEntrate;
+    TextView sommaUscite;
     GridView grid;
     String[] web = {
 
@@ -91,6 +93,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        sommaEntrate = (TextView) findViewById(R.id.txtSommaEntrate);
+        sommaUscite = (TextView) findViewById(R.id.txtSommaUscite);
 
         //TODO RECYCLERVIEW
        //myOnClickListener = new MyOnClickListener(this);
@@ -268,6 +273,8 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
+        contiEntrateBarraSpese();
+
     }
 
     //TODO TOOLBAR MENU DESTRA
@@ -327,6 +334,34 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        contiEntrateBarraSpese();
+    }
+
+    public void contiEntrateBarraSpese(){
+
+        //SOMMA ENTRATE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Entrate",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaEntrate = cr.getInt(0);
+                        sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
+                        if (VariabiliGlobali.sommaEntrate == 0){
+                            sommaEntrate.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
 

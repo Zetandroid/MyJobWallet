@@ -1,13 +1,17 @@
 package com.kubix.myjobwallet.entrate;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -20,6 +24,8 @@ import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +44,10 @@ public class EntrateActivity extends AppCompatActivity {
     VideoController mVideoController;
 
     FloatingActionButton fab;
+
+    String dataEntrata;
+    String titoloEntrata;
+    String cifraEntrata;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,6 +98,19 @@ public class EntrateActivity extends AppCompatActivity {
         });
 
         leggiEntrate();
+
+        listaEntrate.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+
+                //PRELEVA DATI ENTRATA
+                dataEntrata = arg0.getItemAtPosition(position).toString().substring(0,10);
+                titoloEntrata = arg0.getItemAtPosition(position).toString().substring(20, 25).replace(" ","");
+                cifraEntrata = arg0.getItemAtPosition(position).toString().substring(30).replace(" ", "");
+                eliminaEntrate();
+            }
+        });
     }
 
     @Override
@@ -121,6 +144,37 @@ public class EntrateActivity extends AppCompatActivity {
                 }
             }
             cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void eliminaEntrate(){
+        try{
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setCancelable(true);
+            builder.setTitle("ELIMINA ENTRATA");
+            builder.setMessage("Questa entrata sarà eliminata dal database, procedere?");
+            builder.setPositiveButton(R.string.si_elimina,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                                MainActivity.db.execSQL("DELETE FROM Entrate WHERE Data = '"+dataEntrata+"' AND Titolo = '"+titoloEntrata+"' AND Cifra = '"+cifraEntrata+"'");
+                                dialog.dismiss();
+                                finish();
+                        }
+                    });
+
+            builder.setNegativeButton(R.string.non_eliminare,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog,
+                                            int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            AlertDialog alert = builder.create();
+            alert.show();
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
