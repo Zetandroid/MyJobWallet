@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -29,7 +30,7 @@ import java.util.List;
 
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
-public class TurniActivity extends AppCompatActivity {
+public class TurniActivity extends AppCompatActivity  {
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -37,21 +38,22 @@ public class TurniActivity extends AppCompatActivity {
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-    ImageButton eliminaTurno;
+    Button eliminaTurno;
     GridView listaTurni;
     String entrataCalcolo;
     String uscitaCalcolo;
     String dataSelezionata;
     int posizioneCorrente;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turni);
-        eliminaTurno = (ImageButton)findViewById(R.id.bottoneEliminaTurno);
-        listaTurni=(GridView)findViewById(R.id.gridview1);
-        List<String> li=new ArrayList<>();
-        ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,li);
+        eliminaTurno = (Button) findViewById(R.id.bottoneEliminaTurno);
+        listaTurni = (GridView) findViewById(R.id.gridview1);
+        List<String> li = new ArrayList<>();
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, li);
         dataAdapter.setDropDownViewResource(R.layout.activity_turni);
         eliminaTurno.setVisibility(View.INVISIBLE);
 
@@ -86,6 +88,8 @@ public class TurniActivity extends AppCompatActivity {
         setTitle(R.string.toolbarTurni);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
+
+
 
         listaTurni.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {

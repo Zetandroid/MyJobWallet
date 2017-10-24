@@ -200,8 +200,6 @@
     <string name="compilaDatiPerInserimentoTurno">Compila dati</string>
     <string name="imposta_entrata">Imposta Entrata</string>
     <string name="imposta_uscita">Imposta Uscita</string>
-
-    <string name="nonRevocare">Non Revocare</string>
-    <string name="nonChiudere">Non chiudere Sessione</string>
+    <string name="cambia_layout_home">Cambia Layout</string>
 
 </resources>

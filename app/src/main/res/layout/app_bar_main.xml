@@ -13,7 +13,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <include
-        layout="@layout/container_main_griglia">
+        layout="@layout/container_main">
 
 
     </include>

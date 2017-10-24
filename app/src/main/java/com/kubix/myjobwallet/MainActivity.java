@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     GridView grid;
+    ListView list;
     String[] web = {
 
             "Ore",
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity
         setTitle(R.string.app_name);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoTitolo));
         setSupportActionBar(toolbar);
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -119,30 +123,30 @@ public class MainActivity extends AppCompatActivity
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-                                        @Override
-                                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                                            if (position == 0) {
-                                                Intent intent = new Intent(MainActivity.this, CalendarioActivity.class);
-                                                startActivity(intent);
-                                            } else if (position == 1) {
-                                                Intent intent = new Intent(MainActivity.this, TurniActivity.class);
-                                                startActivity(intent);
-                                            } else if (position == 2) {
-                                                Intent intent = new Intent(MainActivity.this, SpeseActivity.class);
-                                                startActivity(intent);
-                                            } else if (position == 3) {
-                                                Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
-                                                startActivity(intent);
-                                            } else if (position == 4) {
-                                                Intent intent = new Intent(MainActivity.this, ConvertitoreActivity.class);
-                                                startActivity(intent);
-                                            } else if (position == 5) {
-                                                Intent intent = new Intent(MainActivity.this, NoteActivity.class);
-                                                startActivity(intent);
-                                            }
-                                        }
-                                    });
+                if (position == 0) {
+                    Intent intent = new Intent(MainActivity.this, CalendarioActivity.class);
+                    startActivity(intent);
+                } else if (position == 1) {
+                    Intent intent = new Intent(MainActivity.this, TurniActivity.class);
+                    startActivity(intent);
+                } else if (position == 2) {
+                    Intent intent = new Intent(MainActivity.this, SpeseActivity.class);
+                    startActivity(intent);
+                } else if (position == 3) {
+                    Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
+                    startActivity(intent);
+                } else if (position == 4) {
+                    Intent intent = new Intent(MainActivity.this, ConvertitoreActivity.class);
+                    startActivity(intent);
+                } else if (position == 5) {
+                    Intent intent = new Intent(MainActivity.this, NoteActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         //TODO INDICIZZARE DATABASE CON QUERY SQL
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
@@ -178,6 +182,24 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+
+    //TODO TOOLBAR MENU DESTRA
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar_destra, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_layout) {
+            setContentView(R.layout.container_main_griglia);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public void onBackPressed() {

@@ -114,7 +114,6 @@
         <activity android:name=".utility.InfoActivity"
             android:theme="@style/ThemeProfilo"/>
 
-
     </application>
 
 </manifest>
