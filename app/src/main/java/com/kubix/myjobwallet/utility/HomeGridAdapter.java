@@ -10,10 +10,6 @@ import android.widget.TextView;
 
 import com.kubix.myjobwallet.R;
 
-/**
- * Created by mowmo on 19/10/17.
- */
-
 public class HomeGridAdapter extends BaseAdapter {
 
     private Context mContext;

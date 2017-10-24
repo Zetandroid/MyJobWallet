@@ -1,4 +1,5 @@
 package com.kubix.myjobwallet.spese;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -87,6 +88,7 @@ public class SpeseActivity extends AppCompatActivity{
         super.onRestart();
         leggiSpese();
     }
+
     public void leggiSpese(){
         listaSpese=(GridView)findViewById(R.id.listaSpese);
         List<String> li=new ArrayList<>();
@@ -116,4 +118,5 @@ public class SpeseActivity extends AppCompatActivity{
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
 }

@@ -4,10 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-/**
- * Created by mowmo on 10/10/17.
- */
-
 public class ConvertitoreActivity extends AppCompatActivity{
 
     @Override
@@ -21,4 +17,5 @@ public class ConvertitoreActivity extends AppCompatActivity{
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
     }
+
 }

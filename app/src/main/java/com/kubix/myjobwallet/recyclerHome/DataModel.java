@@ -1,9 +1,5 @@
 package com.kubix.myjobwallet.recyclerHome;
 
-/**
- * Created by mowmo on 24/10/17.
- */
-
 public class DataModel {
 
     String name;
@@ -18,11 +14,9 @@ public class DataModel {
         this.image=image;
     }
 
-
     public String getName() {
         return name;
     }
-
 
     public String getVersion() {
         return version;

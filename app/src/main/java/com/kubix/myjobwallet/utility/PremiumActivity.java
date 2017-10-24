@@ -6,10 +6,6 @@ import android.support.v7.widget.Toolbar;
 
 import com.kubix.myjobwallet.R;
 
-/**
- * Created by mowmo on 07/10/17.
- */
-
 public class PremiumActivity extends AppCompatActivity {
 
     @Override
@@ -22,5 +18,6 @@ public class PremiumActivity extends AppCompatActivity {
         setTitle(R.string.toolbarPremium);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
+
     }
 }

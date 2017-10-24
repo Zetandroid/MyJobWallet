@@ -12,10 +12,6 @@ import com.kubix.myjobwallet.R;
 
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
-/**
- * Created by mowmo on 11/10/17.
- */
-
 public class ProfiloDatiActivity extends AppCompatActivity {
 
     EditText aggiornaOrdinarie;
@@ -52,4 +48,5 @@ public class ProfiloDatiActivity extends AppCompatActivity {
             Toast.makeText(this, "I dati profilo devono essere compilati correttamente.", Toast.LENGTH_SHORT).show();
         }
     }
+
 }

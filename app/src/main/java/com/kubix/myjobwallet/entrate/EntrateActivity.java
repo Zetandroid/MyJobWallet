@@ -29,10 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by mowmo on 10/10/17.
- */
-
 public class EntrateActivity extends AppCompatActivity {
 
     //TODO INDICIZZA OGGETTI
@@ -141,6 +137,7 @@ public class EntrateActivity extends AppCompatActivity {
                     }while (cr.moveToNext());
                 }else{
                     Toast.makeText(getApplicationContext(), R.string.noEntrateAggiunte, Toast.LENGTH_LONG).show();
+
                 }
             }
             cr.close();

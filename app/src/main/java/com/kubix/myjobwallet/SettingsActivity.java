@@ -13,10 +13,6 @@ import com.kubix.myjobwallet.fragment.SettingPreferenceFragment;
 
 import static com.kubix.myjobwallet.R.id.toolbarSetting;
 
-/**
- * Created by mowmo on 11/10/17.
- */
-
 public class SettingsActivity extends AppCompatActivity {
 
     Toolbar toolbar;

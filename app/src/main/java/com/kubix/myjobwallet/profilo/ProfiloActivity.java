@@ -1,4 +1,5 @@
 package com.kubix.myjobwallet.profilo;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -27,15 +28,12 @@ import com.google.android.gms.common.api.Status;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
-
-
 public class ProfiloActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
     //TODO INDICIZZAZIONE OGGETTI ORA
     public static TextView oreOrdinarieText;
     public static TextView pagaOrariaText;
     public static TextView pagaStraordinariaText;
-
 
     //TODO LOGIN GOOGLE
     private ProfiloActivity mContext;
@@ -44,8 +42,6 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
     private GoogleApiClient mGoogleApiClient;
     private ProgressDialog mProgressDialog;
     private TextView txtName, txtEmail;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -159,9 +155,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
     }
 
-
     //TODO LOGIN GOOGLE
-    // [START onActivityResult]
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -196,7 +190,6 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
-
     private void signOut() {
         Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(
                 new ResultCallback<Status>() {
@@ -249,6 +242,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
             findViewById(R.id.bottoneRevoca).setVisibility(View.GONE);
         }
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

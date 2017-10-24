@@ -1,4 +1,5 @@
 package com.kubix.myjobwallet.calendario;
+
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -100,6 +101,45 @@ public class CalendarioActivity extends AppCompatActivity {
 
     }
 
+    public void dialogTimePickerClickEntrata(View v){
+
+        Calendar mcurrentTime = Calendar.getInstance();
+        int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+        int minute = mcurrentTime.get(Calendar.MINUTE);
+
+        TimePickerDialog mTimePicker;
+        mTimePicker = new TimePickerDialog(CalendarioActivity.this, new TimePickerDialog.OnTimeSetListener() {
+
+            @Override
+            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                String selezioneOra;
+                String selezioneMinuti;
+
+                if (String.valueOf(selectedHour).length() == 1 && String.valueOf(selectedMinute).length() == 1){
+                    selezioneOra = "0" + selectedHour;
+                    selezioneMinuti = "0" +selectedMinute;
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }else if(String.valueOf(selectedHour).length() == 1){
+                    selezioneOra = "0" + selectedHour;
+                    selezioneMinuti = String.valueOf(selectedMinute);
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }else if (String.valueOf(selectedMinute).length() == 1){
+                    selezioneOra = String.valueOf(selectedHour);
+                    selezioneMinuti = "0" + selectedMinute;
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }else{
+                    selezioneOra = String.valueOf(selectedHour);
+                    selezioneMinuti = String.valueOf(selectedMinute);
+                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
+                }
+
+            }
+
+        }, hour, minute, true);
+        mTimePicker.setTitle(getString(R.string.imposta_entrata));
+        mTimePicker.show();
+    }
+
     public void inserisciEntrataTurno(View v){
 
         if (! inserisciEntrata.getText().toString().equals("")){
@@ -191,46 +231,6 @@ public class CalendarioActivity extends AppCompatActivity {
             Snackbar.make(v, getString(R.string.compilaDatiPerInserimentoTurno), Snackbar.LENGTH_LONG).show();
         }
 
-    }
-
-
-    public void dialogTimePickerClickEntrata(View v){
-
-        Calendar mcurrentTime = Calendar.getInstance();
-        int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
-        int minute = mcurrentTime.get(Calendar.MINUTE);
-
-        TimePickerDialog mTimePicker;
-        mTimePicker = new TimePickerDialog(CalendarioActivity.this, new TimePickerDialog.OnTimeSetListener() {
-
-            @Override
-            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                String selezioneOra;
-                String selezioneMinuti;
-
-                if (String.valueOf(selectedHour).length() == 1 && String.valueOf(selectedMinute).length() == 1){
-                    selezioneOra = "0" + selectedHour;
-                    selezioneMinuti = "0" +selectedMinute;
-                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
-                }else if(String.valueOf(selectedHour).length() == 1){
-                    selezioneOra = "0" + selectedHour;
-                    selezioneMinuti = String.valueOf(selectedMinute);
-                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
-                }else if (String.valueOf(selectedMinute).length() == 1){
-                    selezioneOra = String.valueOf(selectedHour);
-                    selezioneMinuti = "0" + selectedMinute;
-                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
-                }else{
-                    selezioneOra = String.valueOf(selectedHour);
-                    selezioneMinuti = String.valueOf(selectedMinute);
-                    inserisciEntrata.setText(selezioneOra + ":" + selezioneMinuti);
-                }
-
-            }
-
-        }, hour, minute, true);
-        mTimePicker.setTitle(getString(R.string.imposta_entrata));
-        mTimePicker.show();
     }
 
     public void dialogTimePickerClickUscita(View v){

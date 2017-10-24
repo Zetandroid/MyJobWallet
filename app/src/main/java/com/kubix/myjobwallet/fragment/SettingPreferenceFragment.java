@@ -8,10 +8,6 @@ import android.preference.PreferenceFragment;
 
 import com.kubix.myjobwallet.R;
 
-/**
- * Created by mowmo on 15/10/17.
- */
-
 public class SettingPreferenceFragment extends PreferenceFragment {
 
     @Override
@@ -20,4 +16,5 @@ public class SettingPreferenceFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.impostazioni);
 
     }
+
 }

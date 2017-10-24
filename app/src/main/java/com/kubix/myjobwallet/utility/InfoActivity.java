@@ -12,10 +12,6 @@ import com.kubix.myjobwallet.R;
 
 import static com.google.android.gms.R.id.button;
 
-/**
- * Created by mowmo on 16/10/17.
- */
-
 public class InfoActivity extends AppCompatActivity {
 
     @Override
@@ -60,4 +56,5 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
     }
+
 }

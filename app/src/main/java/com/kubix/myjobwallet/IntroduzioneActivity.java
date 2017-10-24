@@ -20,12 +20,6 @@ import android.widget.TextView;
 
 import com.kubix.myjobwallet.utility.PrefManager;
 
-
-
-/**
- * Created by mowmo on 09/10/17.
- */
-
 public class IntroduzioneActivity extends AppCompatActivity {
 
     private ViewPager viewPager;
@@ -209,5 +203,6 @@ public class IntroduzioneActivity extends AppCompatActivity {
             container.removeView(view);
         }
     }
+
 }
 

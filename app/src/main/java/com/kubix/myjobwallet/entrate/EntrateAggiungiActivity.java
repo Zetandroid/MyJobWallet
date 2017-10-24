@@ -12,10 +12,6 @@ import android.widget.Toast;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
-/**
- * Created by mowmo on 15/10/17.
- */
-
 public class EntrateAggiungiActivity extends AppCompatActivity {
 
     //TODO INDICIZZA OGGETTI
@@ -29,7 +25,6 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
     //TODO VARIABILI DI CLASSE
     private String[] arraySpinnerEntrata;
     private String[] arraySpinnerPriorita;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

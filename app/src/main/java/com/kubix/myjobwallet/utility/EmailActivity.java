@@ -10,10 +10,6 @@ import android.widget.EditText;
 
 import com.kubix.myjobwallet.R;
 
-/**
- * Created by mowmo on 13/10/17.
- */
-
 public class EmailActivity extends AppCompatActivity{
 
     private AutoCompleteTextView mEmailView;
@@ -40,8 +36,7 @@ public class EmailActivity extends AppCompatActivity{
         });
     }
 
-
-    //Start a new activity for sending a feedback email
+    //AVVIA IL PANNELLO DI SCELTA PER EMAIL
     private void sendFeedback() {
         final Intent _Intent = new Intent(android.content.Intent.ACTION_SEND);
         _Intent.setType("text/html");

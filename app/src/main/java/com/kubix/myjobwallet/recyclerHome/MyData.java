@@ -2,10 +2,6 @@ package com.kubix.myjobwallet.recyclerHome;
 
 import com.kubix.myjobwallet.R;
 
-/**
- * Created by mowmo on 24/10/17.
- */
-
 public class MyData {
 
     public static String[] nameArray = {"Cupcake", "Donut", "Eclair", "Froyo", "Gingerbread", "Honeycomb", "Ice Cream Sandwich","JellyBean", "Kitkat", "Lollipop", "Marshmallow"};

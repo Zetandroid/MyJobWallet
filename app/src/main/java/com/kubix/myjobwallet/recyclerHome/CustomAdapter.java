@@ -12,10 +12,6 @@ import com.kubix.myjobwallet.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by mowmo on 24/10/17.
- */
-
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private ArrayList<DataModel> dataSet;
@@ -49,7 +45,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         MyViewHolder myViewHolder = new MyViewHolder(view);
         return myViewHolder;
     }
-
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
 

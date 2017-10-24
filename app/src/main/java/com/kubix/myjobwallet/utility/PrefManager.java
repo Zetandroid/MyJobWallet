@@ -3,16 +3,13 @@ package com.kubix.myjobwallet.utility;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/**
- * Created by mowmo on 09/10/17.
- */
-
 public class PrefManager {
+
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     Context _context;
 
-    // shared pref mode
+    // PER LE SHARED PREFERENCES DELLA INTRO
     int PRIVATE_MODE = 0;
 
     // Shared preferences file name

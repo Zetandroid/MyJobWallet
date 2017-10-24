@@ -1,4 +1,5 @@
 package com.kubix.myjobwallet.note;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,6 +12,7 @@ import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
 public class NoteAggiungiActivity extends AppCompatActivity {
+
     EditText titoloNota;
     EditText corpoNota;
     ImageView aggiungiCopertina;

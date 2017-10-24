@@ -1,5 +1,9 @@
 package com.kubix.myjobwallet;
 
+//QUESTO SOFTWARE E' STATO INTERAMENTE SVILUPPATO DA KUBIX STUDIO, TUTTI I DIRITTI SONO RISERVATI,
+//SOLAMENTE LA SUDDETTA AZIENDA HA LA POSSIBILITA' DI MODIFICARE, AGGIORNARE, MODIFICARE E
+//DISTRIBUIRE L'APPLICATIVO.
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -86,7 +90,7 @@ public class MainActivity extends AppCompatActivity
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-    //TODO VARIABILI DI INDICIZZAZIONE
+    //TODO DICHIARA DATABASE
     public static SQLiteDatabase db;
 
     @Override
@@ -283,6 +287,7 @@ public class MainActivity extends AppCompatActivity
         getMenuInflater().inflate(R.menu.menu_toolbar_destra, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -294,7 +299,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
+    //TODO EVENTO TASTO INDIETRO
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -363,6 +368,5 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-
 
 }
