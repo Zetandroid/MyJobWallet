@@ -39,9 +39,6 @@ import com.kubix.myjobwallet.calendario.TurniActivity;
 import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.note.NoteActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
-import com.kubix.myjobwallet.recyclerHome.CustomAdapter;
-import com.kubix.myjobwallet.recyclerHome.DataModel;
-import com.kubix.myjobwallet.recyclerHome.MyData;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 
 import com.kubix.myjobwallet.utility.EmailActivity;
@@ -76,13 +73,7 @@ public class MainActivity extends AppCompatActivity
             R.drawable.ic_home_memo
     };
 
-    //TODO RECYCLERVIEW
-    //private static RecyclerView.Adapter adapter;
-    //private RecyclerView.LayoutManager layoutManager;
-    //private static RecyclerView recyclerView;
-    //private static ArrayList<DataModel> data;
-    //public static View.OnClickListener myOnClickListener;
-    //private static ArrayList<Integer> removedItems;
+
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -100,76 +91,6 @@ public class MainActivity extends AppCompatActivity
 
         sommaEntrate = (TextView) findViewById(R.id.txtSommaEntrate);
         sommaUscite = (TextView) findViewById(R.id.txtSommaUscite);
-
-        //TODO RECYCLERVIEW
-       //myOnClickListener = new MyOnClickListener(this);
-
-        // recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
-        //recyclerView.setHasFixedSize(true);
-
-        //layoutManager = new LinearLayoutManager(this);
-        //recyclerView.setLayoutManager(layoutManager);
-        //recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-        //data = new ArrayList<DataModel>();
-        //for (int i = 0; i < MyData.nameArray.length; i++) {
-            //data.add(new DataModel(
-                    //MyData.nameArray[i],
-                    //MyData.versionArray[i],
-                    //MyData.id_[i],
-                    //MyData.drawableArray[i]
-            //));
-        //}
-
-        //removedItems = new ArrayList<Integer>();
-
-        //adapter = new CustomAdapter(data);
-        //recyclerView.setAdapter(adapter);
-    //}
-
-
-    //private static class MyOnClickListener implements View.OnClickListener {
-
-        //private final Context context;
-
-        //private MyOnClickListener(Context context) {
-           // this.context = context;
-        //}
-
-        //@Override
-        //public void onClick(View v) {
-            //removeItem(v);
-        //}
-
-        //private void removeItem(View v) {
-            //int selectedItemPosition = recyclerView.getChildPosition(v);
-            //RecyclerView.ViewHolder viewHolder
-                   // = recyclerView.findViewHolderForPosition(selectedItemPosition);
-            //TextView textViewName
-                    //= (TextView) viewHolder.itemView.findViewById(R.id.textViewName);
-           // String selectedName = (String) textViewName.getText();
-           // int selectedItemId = -1;
-           // for (int i = 0; i < MyData.nameArray.length; i++) {
-               // if (selectedName.equals(MyData.nameArray[i])) {
-                 //   selectedItemId = MyData.id_[i];
-               // }
-           // }
-            //removedItems.add(selectedItemId);
-           // data.remove(selectedItemPosition);
-           // adapter.notifyItemRemoved(selectedItemPosition);
-       // }
-   // }
-
-   // private void addRemovedItemToList() {
-       // int addItemAtListPosition = 3;
-        //data.add(addItemAtListPosition, new DataModel(
-               // MyData.nameArray[removedItems.get(0)],
-               // MyData.versionArray[removedItems.get(0)],
-               // MyData.id_[removedItems.get(0)],
-              //  MyData.drawableArray[removedItems.get(0)]
-       // ));
-       // adapter.notifyItemInserted(addItemAtListPosition);
-        //removedItems.remove(0);
 
 
         //TODO TOOLBAR
