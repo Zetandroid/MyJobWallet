@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -27,6 +28,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.fragment.BottomSheetFragment;
 
 public class ProfiloActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
@@ -43,10 +45,24 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
     private ProgressDialog mProgressDialog;
     private TextView txtName, txtEmail;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilo);
+
+        //TODO BOTTOM SHEET
+        View showModalBottomSheet = findViewById(R.id.bottom_sheet);
+        showModalBottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Initializing a bottom sheet
+                BottomSheetDialogFragment bottomSheetDialogFragment = new BottomSheetFragment();
+
+                //show it
+                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+            }
+        });
 
         //TODO LOGIN
         mContext = ProfiloActivity.this;
