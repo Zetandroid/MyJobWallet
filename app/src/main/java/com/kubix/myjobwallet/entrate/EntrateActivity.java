@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -23,6 +24,7 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.fragment.BtnSheetEntrateFragment;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -81,6 +83,19 @@ public class EntrateActivity extends AppCompatActivity {
         });
 
         mAdView.loadAd(new AdRequest.Builder().build());
+
+        //TODO BOTTOM SHEET
+        View showModalBottomSheet = findViewById(R.id.btn_sheet);
+        showModalBottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Initializing a bottom sheet
+                BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetEntrateFragment();
+
+                //show it
+                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+            }
+        });
 
 
         //TODO FAB

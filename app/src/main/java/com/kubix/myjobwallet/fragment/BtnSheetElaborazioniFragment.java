@@ -8,16 +8,17 @@ import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.CoordinatorLayout;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.kubix.myjobwallet.R;
 
-import static java.security.AccessController.getContext;
-
 /**
- * Created by mowmo on 25/10/17.
+ * Created by mowmo on 26/10/17.
  */
 
-public class BottomSheetFragment extends BottomSheetDialogFragment {
+public class BtnSheetElaborazioniFragment extends BottomSheetDialogFragment {
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
     @Override
     public void setupDialog(Dialog dialog, int style) {
         super.setupDialog(dialog, style);
-        View contentView = View.inflate(getContext(), R.layout.bottom_sheet_profilo, null);
+        View contentView = View.inflate(getContext(), R.layout.bottom_sheet_elaborazioni, null);
         dialog.setContentView(contentView);
         CoordinatorLayout.LayoutParams layoutParams =
                 (CoordinatorLayout.LayoutParams) ((View) contentView.getParent()).getLayoutParams();
@@ -51,3 +52,4 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
         }
     }
 }
+

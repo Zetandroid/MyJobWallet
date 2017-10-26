@@ -1,6 +1,7 @@
 package com.kubix.myjobwallet.entrate;
 
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.fragment.BtnSheetEntrateFragment;
 
 public class EntrateAggiungiActivity extends AppCompatActivity {
 
@@ -24,7 +26,6 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
 
     //TODO VARIABILI DI CLASSE
     private String[] arraySpinnerEntrata;
-    private String[] arraySpinnerPriorita;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,20 +40,12 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
 
         //TODO SPINNER
         TagEntrate = (Spinner) findViewById(R.id.testoTagEntrateSpinner);
-        Priorita = (Spinner) findViewById(R.id.testoPrioritaEntrateSpinner);
 
         this.arraySpinnerEntrata = new String[]{
                 getString(R.string.bonifico),getString(R.string.assegno),getString(R.string.vincita),getString(R.string.regalo),getString(R.string.beni),
-                getString(R.string.rimborsi),getString(R.string.vendite)
+                getString(R.string.rimborsi),getString(R.string.vendite),getString(R.string.altro)
         };
 
-        this.arraySpinnerPriorita = new String[]{getString(R.string.bassa),getString(R.string.media),getString(R.string.alta)};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinnerEntrata);
-        TagEntrate.setAdapter(adapter);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinnerPriorita);
-        Priorita.setAdapter(adapter1);
 
         titoloEntrata = (EditText) findViewById(R.id.testoTitoloSpesa);
         valoreEntrata = (EditText) findViewById(R.id.testoPrezzoEntrate);

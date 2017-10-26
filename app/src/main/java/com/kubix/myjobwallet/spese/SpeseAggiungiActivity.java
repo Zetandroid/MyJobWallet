@@ -16,7 +16,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
     //TODO INDICIZZA OGGETTI
     Spinner TagSpese;
-    Spinner Priorita;
+
     EditText titoloSpesa;
     EditText cifraSpesa;
     EditText dataSpesa;
@@ -24,7 +24,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
     //TODO VARIABILI DI CLASSE
     private String[] arraySpinnerSpesa;
-    private String[] arraySpinnerPriorita;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
         //TODO SPINNER
         TagSpese = (Spinner) findViewById(R.id.tagSpinner);
-        Priorita = (Spinner) findViewById(R.id.prioritaSpinner);
+
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpeseAggiungi);
@@ -43,19 +43,14 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
         this.arraySpinnerSpesa = new String[]{
                 getString(R.string.casa),getString(R.string.trasporti),getString(R.string.auto),getString(R.string.carburante),
-                getString(R.string.bollette),getString(R.string.shopping),getString(R.string.ciboBevande),getString(R.string.svago)
+                getString(R.string.bollette),getString(R.string.shopping),getString(R.string.ciboBevande),getString(R.string.svago),getString(R.string.viaggi),getString(R.string.altro)
         };
-        this.arraySpinnerPriorita = new String[]{getString(R.string.bassa),getString(R.string.media),getString(R.string.alta)};
-
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, arraySpinnerSpesa);
         TagSpese.setAdapter(adapter);
 
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, arraySpinnerPriorita);
-        Priorita.setAdapter(adapter1);
 
         titoloSpesa = (EditText) findViewById(R.id.testoTitoloSpesa);
         cifraSpesa = (EditText) findViewById(R.id.testoPrezzoSpesa);

@@ -6,13 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        ads:srcCompat="@color/colorPrimaryEntrate" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabEntrata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginEnd="32dp"
         android:clickable="true"
         app:backgroundTint="@color/colorAccentEntrate"
@@ -52,6 +59,14 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/btn_sheet"
+        android:layout_width="32dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="32dp"
+        ads:srcCompat="@drawable/ic_btn_sheet_categoria" />
 
 
 </RelativeLayout>

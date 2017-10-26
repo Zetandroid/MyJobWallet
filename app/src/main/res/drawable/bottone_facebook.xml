@@ -29,7 +29,7 @@
 
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/colorPrimaryTurni" />
+            <solid android:color="@color/colorPrimaryOre" />
             <corners android:radius="90dp" />
             <stroke
                 android:width="0dp"

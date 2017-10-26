@@ -142,6 +142,9 @@
     <string name="rimborsi">Rimborsi</string>
     <string name="vendite">Vendite</string>
 
+    <string name="seleziona_categoria">Seleziona la categoria da visualizzare</string>
+    <string name="tutto">Tutte le categorie</string>
+
     <!-- SPINNER SPESE -->
     <string name="casa">Casa</string>
     <string name="trasporti">Trasporti</string>
@@ -151,6 +154,9 @@
     <string name="shopping">Shopping</string>
     <string name="ciboBevande"><![CDATA[Cibo & Bevande]]></string>
     <string name="svago">Svago</string>
+    <string name="viaggi">Viaggi</string>
+    <string name="altro">Altro</string>
+
 
     <!-- SPINNER MESI -->
     <string name="gennaio">Gennaio</string>
@@ -201,5 +207,6 @@
     <string name="imposta_entrata">Imposta Entrata</string>
     <string name="imposta_uscita">Imposta Uscita</string>
     <string name="cambia_layout_home">Cambia Layout</string>
+
 
 </resources>

@@ -41,12 +41,12 @@
     <color name="colorAccentTurni">#4DB6AC</color>
 
     <!-- TEMA SPESA -->
-    <color name="colorPrimarySpesa">#F44336</color>
+    <color name="colorPrimarySpesa">#f44336</color>
     <color name="colorPrimaryDarkSpesa">#C62828</color>
     <color name="colorAccentSpesa">#ff7961</color>
 
     <!-- TEMA MEMO -->
-    <color name="colorPrimaryMemo">#FF9800</color>
+    <color name="colorPrimaryMemo">#ff9800</color>
     <color name="colorPrimaryDarkMemo">#EF6C00</color>
     <color name="colorAccentMemo">#FFCC80</color>
 
@@ -61,7 +61,7 @@
     <color name="colorAccentValuta">#ff6090</color>
 
     <!-- TEMA PREMIUM -->
-    <color name="colorPrimaryPremium">#D32F2F</color>
+    <color name="colorPrimaryPremium">#d32f2f</color>
     <color name="colorPrimaryDarkPremium">#B71C1C</color>
     <color name="colorAccentPremium">#9C27B0</color>
 

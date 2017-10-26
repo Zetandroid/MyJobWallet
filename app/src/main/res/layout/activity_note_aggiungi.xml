@@ -23,7 +23,9 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@color/colorPrimaryMemo" />
+        app:srcCompat="@color/colorPrimaryMemo"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +35,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="vertical">
 
@@ -41,8 +43,6 @@
                 android:id="@+id/testoTitoloSpesa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/aggiungiCopertina"
-                android:layout_centerHorizontal="true"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
                 android:hint="@string/titolo"
@@ -58,8 +58,6 @@
                 android:id="@+id/testoNota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/testoTitoloSpesa"
-                android:layout_centerHorizontal="true"
                 android:background="@color/lineaTrasparente"
                 android:ems="10"
                 android:hint="@string/nota"
@@ -72,19 +70,21 @@
     <ImageView
         android:id="@+id/tastoSalvaNota"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="scriviNotaInDB"
-        app:srcCompat="@color/colorPrimaryMemo" />
+        app:srcCompat="@color/colorPrimaryMemo"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textSalvaNota"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="@string/salva"
         android:textColor="@color/testoBianco"
         android:textSize="18sp"

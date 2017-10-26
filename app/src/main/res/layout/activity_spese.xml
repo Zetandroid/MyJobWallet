@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        ads:srcCompat="@color/colorPrimarySpesa"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarSpese"
@@ -33,14 +43,14 @@
                 android:id="@+id/adViewSpese"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 ads:adSize="360x132"
                 ads:adUnitId="@string/adsSpese"/>
 
             <GridView
                 android:id="@+id/listaSpese"
                 android:layout_width="match_parent"
-                android:layout_height="288dp" />
+                android:layout_height="288dp"
+                tools:ignore="NestedScrolling" />
 
         </LinearLayout>
     </ScrollView>
@@ -51,11 +61,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginEnd="32dp"
         android:clickable="true"
         app:backgroundTint="@color/colorAccentSpesa"
         app:fabSize="normal"
-        app:srcCompat="@drawable/ic_aggiungi" />
+        app:srcCompat="@drawable/ic_aggiungi"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="32dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="48dp"
+        ads:srcCompat="@drawable/ic_btn_sheet_categoria" />
 
 </RelativeLayout>

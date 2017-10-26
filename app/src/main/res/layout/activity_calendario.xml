@@ -10,22 +10,24 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:onClick="apriStorico"
-        app:srcCompat="@color/colorPrimaryOre" />
+        app:srcCompat="@color/colorPrimaryOre"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/bottoneElencoTurni"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:gravity="center"
         android:text="Elenco Turni"
         android:textColor="@color/coloreBianco"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <ScrollView
         style="@android:style/Widget.DeviceDefault.Light.ScrollView"
@@ -66,7 +68,8 @@
                     android:focusable="false"
                     android:hint="Inserisci Entrata"
                     android:inputType="time"
-                    android:onClick="dialogTimePickerClickEntrata" />
+                    android:onClick="dialogTimePickerClickEntrata"
+                    tools:ignore="Deprecated,HardcodedText" />
 
                 <Button
                     android:id="@+id/bottoneEntrata"
@@ -79,7 +82,8 @@
                     android:onClick="inserisciEntrataTurno"
                     android:stateListAnimator="@null"
                     android:text="@string/salva"
-                    android:textColor="@color/coloreBianco" />
+                    android:textColor="@color/coloreBianco"
+                    tools:ignore="RelativeOverlap" />
 
 
             </RelativeLayout>
@@ -101,12 +105,12 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
                     android:background="@color/lineaTrasparente"
-                    android:editable="false"
                     android:ems="10"
                     android:focusable="false"
                     android:hint="Inserisci Uscita"
                     android:inputType="time"
-                    android:onClick="dialogTimePickerClickUscita" />
+                    android:onClick="dialogTimePickerClickUscita"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/bottoneUscita"
@@ -115,11 +119,12 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/bottone_google_plus"
+                    android:background="@drawable/bottone_facebook"
                     android:onClick="inserisciUscitaTurno"
                     android:stateListAnimator="@null"
                     android:text="@string/salva"
-                    android:textColor="@color/coloreBianco" />
+                    android:textColor="@color/coloreBianco"
+                    tools:ignore="RelativeOverlap" />
             </RelativeLayout>
 
             <View

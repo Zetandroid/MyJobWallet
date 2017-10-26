@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#f5f5f5"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@color/colorPrimaryEntrate"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/txtTitoloEntrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="72dp"
+                    android:padding="4dp"
+                    android:text="Titolo"
+                    android:textAlignment="textStart"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/testoTitolo"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/iconaTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:srcCompat="@drawable/ic_btnsheet_entrate_beni"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/txtEntrata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="72dp"
+                    android:padding="4dp"
+                    android:text="200,00 €"
+                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textColor="@color/testoTitolo"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@color/colorPrimaryEntrate"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:id="@+id/imgNotificaEntrata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    app:srcCompat="@drawable/ic_icona_notifica"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/txtPromemoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:padding="4dp"
+                    android:text="17:10"
+                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textColor="@color/testoTitolo"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@color/colorPrimaryEntrate"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/txtDataEntrata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:padding="4dp"
+                    android:text="15 Ottobre 2017"
+                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textColor="@color/testoTitolo"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="5dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@color/colorPrimaryEntrate"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

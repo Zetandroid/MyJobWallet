@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -31,6 +33,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.kubix.myjobwallet.fragment.BtnSheetElaborazioniFragment;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class TurniActivity extends AppCompatActivity  {
@@ -41,8 +44,8 @@ public class TurniActivity extends AppCompatActivity  {
     VideoController mVideoController;
 
     //INDICIZZA OGGETTI E VARIABILI
-    Button eliminaTurno;
-    Button sviluppaTurno;
+    ImageView eliminaTurno;
+    ImageView sviluppaTurno;
     GridView listaTurni;
     String entrataCalcolo;
     String uscitaCalcolo;
@@ -55,14 +58,26 @@ public class TurniActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turni);
-        eliminaTurno = (Button) findViewById(R.id.bottoneEliminaTurno);
-        sviluppaTurno = (Button) findViewById(R.id.bottoneSviluppaTurno);
+        eliminaTurno = (ImageView) findViewById(R.id.bottoneEliminaTurno);
+        sviluppaTurno = (ImageView) findViewById(R.id.bottoneSviluppaTurno);
         listaTurni = (GridView) findViewById(R.id.gridview1);
         List<String> li = new ArrayList<>();
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, li);
         dataAdapter.setDropDownViewResource(R.layout.activity_turni);
         eliminaTurno.setVisibility(View.INVISIBLE);
         sviluppaTurno.setVisibility(View.INVISIBLE);
+
+        //TODO BOTTOM SHEET
+        View showModalBottomSheet = findViewById(R.id.bottom_sheet);
+        showModalBottomSheet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Initializing a bottom sheet
+                BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetElaborazioniFragment();
+                //show it
+                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+            }
+        });
 
         //TODO ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewTurni);
