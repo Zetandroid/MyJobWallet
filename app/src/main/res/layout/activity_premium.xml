@@ -18,7 +18,8 @@
 
 
         <Button
-            android:id="@+id/buttonAcquista"
+            android:id="@+id/btnAcquista"
+            android:onClick="bottoneAcquista"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="bottom"
@@ -36,7 +37,7 @@
             tools:ignore="RtlHardcoded" />
 
         <Button
-            android:id="@+id/buttonRipristana"
+            android:id="@+id/btnRipristana"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="bottom"

@@ -1,17 +1,49 @@
 package com.kubix.myjobwallet.utility;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
+import com.kubix.myjobwallet.BuildConfig;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.util.IabHelper;
+import com.kubix.myjobwallet.util.IabResult;
+import com.kubix.myjobwallet.util.Inventory;
+import com.kubix.myjobwallet.util.Purchase;
+import com.kubix.myjobwallet.util.Security;
+
+import java.security.PublicKey;
 
 public class PremiumActivity extends AppCompatActivity {
+
+
+
+    private static final String TAG = "com.kubix.myjobwallet";
+    IabHelper mHelper;
+    private static final String ITEM_SKU ="com.kubix.myjobwallet.pro" ;
+
+
+
+    private Button bottoneRipristina;
+    private Button bottoneAcquista;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium);
+    }
+
+    protected void onStart() {
+        super.onStart();
+        bottoneAcquista = (Button) findViewById(R.id.btnAcquista);
+        bottoneRipristina = (Button) findViewById(R.id.btnRipristana);
+        bottoneRipristina.setEnabled(false);
+
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarPremium);
@@ -19,5 +51,110 @@ public class PremiumActivity extends AppCompatActivity {
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
+        String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9EzTDIwPWeQUYYAjvPsutoXF1m+HvH5QO4jEjJkeFKvcNYVt99nTjJbT+DZ/AEpoLPhkFaFiUasFOdN2L262GJxg9Iz4bFXeYswievQ8afvWqsjkLNcuuHKnE8ZFTf/jlHkXsce1VsHsmRL8a1l7iJ/B93nS7aZb8wpIB8k54561diPLxS1pEUTxPTBjxPyQNb3XYmmMFJpJaowAPSG2smleZePka+I0FfLHufvGbOUcbGN239m9IPESHcgs20Mudx6mK0BzD77kBHgDNz6jutuqgP/UYEM2TXZf6+CVoO6/QOqeP3SNE3zNn68pUwfXbjKjCSDoEJZLI8I7OzrvwIDAQAB";
+
+        mHelper = new IabHelper(this, base64EncodedPublicKey);
+
+        mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
+            public void onIabSetupFinished(IabResult result) {
+                if (!result.isSuccess()) {
+                    Log.d(TAG, "In-app Billing setup failed: " + result);
+                } else {
+                    Log.d(TAG, "In-app Billing is set up OK");
+                }
+            }
+        });
+
+
     }
+
+        public void bottoneAcquista(View view) {
+            mHelper.launchPurchaseFlow(this, ITEM_SKU, 10001,
+                    mPurchaseFinishedListener, "mypurchasetoken");
+        }
+
+        protected void onActivityResult(int requestCode, int resultCode,
+        Intent data)
+        {
+            if (!mHelper.handleActivityResult(requestCode,
+                    resultCode, data)) {
+                super.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+
+    IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener
+            = new IabHelper.OnIabPurchaseFinishedListener() {
+        public void onIabPurchaseFinished(IabResult result,
+                                          Purchase purchase)
+        {
+            if (result.isFailure()) {
+                // Handle error
+                return;
+            }
+            else if (purchase.getSku().equals(ITEM_SKU)) {
+                consumeItem();
+                bottoneAcquista.setEnabled(false);
+                
+            }
+
+        }
+
+        public void consumeItem() {
+            mHelper.queryInventoryAsync(mReceivedInventoryListener);
+        }
+
+        IabHelper.QueryInventoryFinishedListener mReceivedInventoryListener
+                = new IabHelper.QueryInventoryFinishedListener() {
+            public void onQueryInventoryFinished(IabResult result,
+                                                 Inventory inventory) {
+
+
+                if (result.isFailure()) {
+                    // Handle failure
+                } else {
+                    mHelper.consumeAsync(inventory.getPurchase(ITEM_SKU),
+                            mConsumeFinishedListener);
+                }
+            }
+        };
+
+        IabHelper.OnConsumeFinishedListener mConsumeFinishedListener =
+                new IabHelper.OnConsumeFinishedListener() {
+                    public void onConsumeFinished(Purchase purchase,
+                                                  IabResult result) {
+
+                        if (result.isSuccess()) {
+                            bottoneRipristina.setEnabled(true);
+                        } else {
+                            // handle error
+                        }
+                    }
+                };
+
+        @Override
+        public void onDestroy() {
+            mPurchaseFinishedListener.onDestroy();
+            if (mHelper != null) mHelper.dispose();
+            mHelper = null;
+        }
+    };
+
+    public static boolean verifyPurchase(String base64PublicKey,
+                                         String signedData, String signature) {
+        if (TextUtils.isEmpty(signedData) ||
+                TextUtils.isEmpty(base64PublicKey) ||
+                TextUtils.isEmpty(signature)) {
+            Log.e(TAG, "Purchase verification failed: missing data.");
+            if (BuildConfig.DEBUG) {
+                return true;
+            }
+            return false;
+        }
+
+        PublicKey key = Security.generatePublicKey(base64PublicKey);
+        return Security.verify(key, signedData, signature);
+    }
+    
 }
+
+
