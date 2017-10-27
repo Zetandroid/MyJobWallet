@@ -69,9 +69,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbarPremium"
-        android:layout_marginBottom="124dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp">
+        android:layout_marginBottom="140dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,8 +80,9 @@
             <ImageView
                 android:id="@+id/imageView12"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="224dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="24dp"
                 android:contentDescription=""
                 app:srcCompat="@drawable/ic_premium"
                 tools:ignore="ContentDescription" />
@@ -97,9 +96,10 @@
                 android:layout_marginTop="8dp"
                 android:padding="8dp"
                 android:text="@string/rimuovi_pubblicita"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
                 android:textColor="@color/coloreBianco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -109,9 +109,10 @@
                 android:layout_marginRight="8dp"
                 android:padding="8dp"
                 android:text="@string/calcola_stipendio"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
                 android:textColor="@color/coloreBianco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -121,9 +122,10 @@
                 android:layout_marginRight="8dp"
                 android:padding="8dp"
                 android:text="@string/cambia_tema_premium"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
                 android:textColor="@color/coloreBianco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -133,9 +135,10 @@
                 android:layout_marginRight="8dp"
                 android:padding="8dp"
                 android:text="@string/aggiungi_widget"
+                android:textAlignment="center"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
                 android:textColor="@color/coloreBianco"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>

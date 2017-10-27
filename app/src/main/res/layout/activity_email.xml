@@ -39,9 +39,9 @@
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
+                android:layout_height="224dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="72dp"
+                android:layout_marginTop="24dp"
                 app:srcCompat="@drawable/ic_email"
                 tools:ignore="ContentDescription" />
 
@@ -55,9 +55,8 @@
                 android:layout_marginTop="24dp"
                 android:text="@string/hai_un_problema"
                 android:textAlignment="center"
-                android:textColor="@color/testoBianco"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                android:textColor="@color/coloreBianco" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -69,9 +68,8 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/hai_una_richiesta"
                 android:textAlignment="center"
-                android:textColor="@color/testoBianco"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                android:textColor="@color/coloreBianco" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -83,9 +81,8 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/inviaci_una_email"
                 android:textAlignment="center"
-                android:textColor="@color/testoBianco"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                android:textColor="@color/coloreBianco" />
 
         </LinearLayout>
     </ScrollView>
