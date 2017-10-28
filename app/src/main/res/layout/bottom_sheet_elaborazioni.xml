@@ -11,7 +11,10 @@
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
-        android:text="Elaborazioni" />
+        android:text="Elaborazioni"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        android:textColor="@color/testoTitolo"
+        android:textSize="14sp" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -23,12 +26,12 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btn_sheet_stipendio" />
@@ -43,16 +46,16 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="Calcolo Stipendio"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/testoTitolo"
-            android:textSize="16sp" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp">
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp">
 
         <Button
             android:id="@+id/btnCalcoloStraordinari"
@@ -63,15 +66,14 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="Calcolo Straordinari"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="@color/testoTitolo"
-            android:textSize="16sp" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btn_sheet_straordinari" />

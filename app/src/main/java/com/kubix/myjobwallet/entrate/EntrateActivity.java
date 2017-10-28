@@ -6,12 +6,13 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
@@ -26,12 +27,15 @@ import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.fragment.BtnSheetEntrateFragment;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EntrateActivity extends AppCompatActivity {
+public class EntrateActivity extends AppCompatActivity implements View.OnClickListener {
+
+    //TODO FAB
+    private Boolean isFabOpen = false;
+    private FloatingActionButton fab, fab1, fab2;
+    private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
     //TODO INDICIZZA OGGETTI
     GridView listaEntrate;
@@ -41,7 +45,6 @@ public class EntrateActivity extends AppCompatActivity {
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-    FloatingActionButton fab;
 
     String dataEntrata;
     String titoloEntrata;
@@ -84,29 +87,61 @@ public class EntrateActivity extends AppCompatActivity {
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        //TODO BOTTOM SHEET
-        View showModalBottomSheet = findViewById(R.id.btn_sheet);
-        showModalBottomSheet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Initializing a bottom sheet
+
+        //TODO FAB MENU
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab_apri = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_apri);
+        fab_chiudi = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_chiudi);
+        fab_ruota_avanti = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_avanti);
+        fab_ruota_indietro = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_indietro);
+        fab.setOnClickListener(this);
+        fab1.setOnClickListener(this);
+        fab2.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.fab:
+                animateFAB();
+                break;
+            case R.id.fab1:
                 BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetEntrateFragment();
-
-                //show it
                 bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
-            }
-        });
+                break;
+            case R.id.fab2:
+                startActivity(new Intent(this, EntrateAggiungiActivity.class));
+                break;
+        }
+    }
 
+    public void animateFAB() {
 
-        //TODO FAB
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabEntrata);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity (new Intent(EntrateActivity.this,EntrateAggiungiActivity.class));
+        if (isFabOpen) {
 
-            }
-        });
+            fab.startAnimation(fab_ruota_indietro);
+            fab1.startAnimation(fab_chiudi);
+            fab2.startAnimation(fab_chiudi);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            isFabOpen = false;
+            Log.d("Raj", "close");
+
+        } else {
+
+            fab.startAnimation(fab_ruota_avanti);
+            fab1.startAnimation(fab_apri);
+            fab2.startAnimation(fab_apri);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            isFabOpen = true;
+            Log.d("Raj", "open");
+
+        }
 
         leggiEntrate();
 

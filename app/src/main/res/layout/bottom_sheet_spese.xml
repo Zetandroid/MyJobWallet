@@ -11,16 +11,19 @@
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
-        android:text="@string/seleziona_categoria" />
+        android:text="@string/seleziona_categoria"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        android:textColor="@color/testoTitolo"
+        android:textSize="14sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_casa" />
@@ -34,18 +37,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/casa"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_trasporti" />
@@ -59,18 +63,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/trasporti"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_auto" />
@@ -84,18 +89,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/auto"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_carburante" />
@@ -109,18 +115,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/carburante"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_bollette" />
@@ -134,18 +141,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/bollette"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_shopping" />
@@ -159,21 +167,24 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/shopping"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_centerVertical="true"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginLeft="16dp"
-            app:srcCompat="@drawable/ic_btnsheet_spese_cibo" />
+            app:srcCompat="@drawable/ic_btnsheet_spese_cibo"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp" />
 
         <Button
             android:id="@+id/btnTagCiboBevande"
@@ -184,18 +195,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/ciboBevande"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_svago" />
@@ -209,18 +221,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/svago"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_viaggi" />
@@ -234,18 +247,19 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/viaggi"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_altro" />
@@ -259,8 +273,9 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/altro"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <View
@@ -270,12 +285,13 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp">
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp">
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
             app:srcCompat="@drawable/ic_btnsheet_spese_tutte" />
@@ -289,8 +305,9 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/tutto"
-            android:textAlignment="textStart"
-            android:textColor="@color/testoTitolo" />
+            android:textAlignment="viewStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textSize="14sp" />
     </RelativeLayout>
 
 </LinearLayout>

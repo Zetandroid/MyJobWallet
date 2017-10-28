@@ -34,24 +34,12 @@
                 ads:adUnitId="@string/adsNote"/>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/listaNote"
+                android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="473dp" />
 
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/infoSpese"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:text="@string/aggiungi_nota"
-        android:textAlignment="center"
-        android:textSize="20sp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingAddNote"
@@ -62,6 +50,7 @@
         android:layout_marginBottom="24dp"
         android:layout_marginRight="24dp"
         android:clickable="true"
+        android:layout_gravity="bottom|right"
         app:backgroundTint="@color/colorAccentMemo"
         app:fabSize="normal"
         app:srcCompat="@drawable/ic_matita" />

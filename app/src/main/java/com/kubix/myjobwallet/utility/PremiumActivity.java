@@ -25,8 +25,7 @@ public class PremiumActivity extends AppCompatActivity {
 
     private static final String TAG = "com.kubix.myjobwallet";
     IabHelper mHelper;
-    private static final String ITEM_SKU ="com.kubix.myjobwallet.pro" ;
-
+    static final String ITEM_SKU ="com.kubix.myjobwallet.pro" ;
 
 
     private Button bottoneRipristina;
@@ -42,7 +41,7 @@ public class PremiumActivity extends AppCompatActivity {
         super.onStart();
         bottoneAcquista = (Button) findViewById(R.id.btnAcquista);
         bottoneRipristina = (Button) findViewById(R.id.btnRipristana);
-        bottoneRipristina.setEnabled(false);
+        bottoneRipristina.setEnabled(true);
 
 
         //TODO TOOLBAR
@@ -70,7 +69,7 @@ public class PremiumActivity extends AppCompatActivity {
 
         public void bottoneAcquista(View view) {
             mHelper.launchPurchaseFlow(this, ITEM_SKU, 10001,
-                    mPurchaseFinishedListener, "mypurchasetoken");
+                    mPurchaseFinishedListener, "com.kubix.myjobwallet.pro");
         }
 
         protected void onActivityResult(int requestCode, int resultCode,

@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -25,7 +27,12 @@ import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpeseActivity extends AppCompatActivity{
+public class SpeseActivity extends AppCompatActivity implements View.OnClickListener {
+
+    //TODO FAB
+    private Boolean isFabOpen = false;
+    private FloatingActionButton fab, fab1, fab2;
+    private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
     //TODO INDICIZZA OGGETTI
     GridView listaSpese;
@@ -40,25 +47,11 @@ public class SpeseActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spese);
 
-
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
         setTitle(R.string.toolbarSpese);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
-
-        //TODO BOTTOMSHEET
-        View showModalBottomSheet = findViewById(R.id.bottom_sheet);
-        showModalBottomSheet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetSpeseFragment();
-
-                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
-            }
-        });
-
 
         //TODO ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewSpese);
@@ -86,17 +79,63 @@ public class SpeseActivity extends AppCompatActivity{
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabSpese);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity (new Intent(SpeseActivity.this,SpeseAggiungiActivity.class));
+        //TODO FAB MENU
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab_apri = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_apri);
+        fab_chiudi = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_chiudi);
+        fab_ruota_avanti = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_avanti);
+        fab_ruota_indietro = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_indietro);
+        fab.setOnClickListener(this);
+        fab1.setOnClickListener(this);
+        fab2.setOnClickListener(this);
 
-            }
-        });
-
-        leggiSpese();
     }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.fab:
+                animateFAB();
+                break;
+            case R.id.fab1:
+                BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetSpeseFragment();
+                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+                break;
+            case R.id.fab2:
+                startActivity(new Intent(this, SpeseAggiungiActivity.class));
+                break;
+        }
+    }
+
+    public void animateFAB() {
+
+        if (isFabOpen) {
+
+            fab.startAnimation(fab_ruota_indietro);
+            fab1.startAnimation(fab_chiudi);
+            fab2.startAnimation(fab_chiudi);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            isFabOpen = false;
+            Log.d("Raj", "close");
+
+        } else {
+
+            fab.startAnimation(fab_ruota_avanti);
+            fab1.startAnimation(fab_apri);
+            fab2.startAnimation(fab_apri);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            isFabOpen = true;
+            Log.d("Raj", "open");
+
+        }
+
+    leggiSpese();
+}
 
     @Override
     public void onRestart(){

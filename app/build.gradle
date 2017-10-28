@@ -7,8 +7,8 @@ android {
         applicationId "com.kubix.myjobwallet"
         minSdkVersion 24
         targetSdkVersion 26
-        versionCode 14
-        versionName "0.1.4"
+        versionCode 15
+        versionName "0.1.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -52,6 +52,9 @@ dependencies {
 
     //SERVE PER CARICARE IMMAGINI PROFILO
     compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
 
 
     testCompile 'junit:junit:4.12'

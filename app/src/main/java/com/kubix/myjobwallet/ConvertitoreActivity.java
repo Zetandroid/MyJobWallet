@@ -6,6 +6,9 @@ import android.support.v7.widget.Toolbar;
 
 public class ConvertitoreActivity extends AppCompatActivity{
 
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +19,8 @@ public class ConvertitoreActivity extends AppCompatActivity{
         setTitle(R.string.toolbarValuta);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
+
+
     }
 
 }
