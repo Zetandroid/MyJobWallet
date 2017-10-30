@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <!-- TEMA -->
     <PreferenceCategory android:title="Temi">
 
+        <SwitchPreference
+            android:title="Tema Dark"
+            android:summary="Cambia il tema Light con quello Dark"/>
+
     </PreferenceCategory>
 
+    <!-- NOTIFICHE -->
     <PreferenceCategory android:title="Notifiche">
+        <RingtonePreference
+            android:title="Tono notifica"
+            android:summary="Imposta il tono delle Notifiche"/>
+        <CheckBoxPreference
+            android:title="Notifica Memo"
+            android:summary="Imposta un promemoria per le Note"/>
+        <CheckBoxPreference
+            android:title="Notifica Spese"
+            android:summary="Imposta un promemoria per le Spese"/>
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="BackUp">
-
+    <!-- BACKUP -->
+    <PreferenceCategory  android:title="BackUp">
+        <Preference
+            android:title="Crea BackUp"
+            android:summary="Salva il BackUp sul tuo Dispositivo"/>
+        <Preference
+            android:title="Carica BackUp"
+            android:summary="Carica il BackUp dal tuo Dispositivo"/>
     </PreferenceCategory>
 
+    <!-- DATA E CACHE -->
+    <PreferenceCategory android:title="Dati e Cache">
+        <Preference
+            android:title="Cancella Dati e Cache"/>
+    </PreferenceCategory>
+
+    <!-- ABOUT -->
     <PreferenceCategory android:title="About">
 
+        <Preference
+            android:title="Kubix Studio">
+            <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="com.kubix.myjobwallet"
+            android:targetClass="com.kubix.myjobwallet.utility.InfoActivity"/>
+        </Preference>
     </PreferenceCategory>
 
 </PreferenceScreen>

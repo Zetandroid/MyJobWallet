@@ -8,18 +8,20 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/imgSlide2"
                 android:layout_width="match_parent"
-                android:layout_height="192dp"
+                android:layout_height="144dp"
                 app:srcCompat="@drawable/immagine_slide_2"
                 tools:ignore="ContentDescription" />
 
@@ -29,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="48dp"
                 android:padding="8dp"
                 android:text="@string/testoSlide2"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
