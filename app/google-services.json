@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "771912042701-1amfe5jm24pse9sjk2fsj5vqtrhrfdjp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kubix.myjobwallet",
+            "certificate_hash": "f7f194e90b61d9dbe6b1e606a9cc9830541b4fb8"
+          }
+        },
+        {
           "client_id": "771912042701-ir6ght3nhedcec1olvn2bn66l05og7fd.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771912042701-ir6ght3nhedcec1olvn2bn66l05og7fd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

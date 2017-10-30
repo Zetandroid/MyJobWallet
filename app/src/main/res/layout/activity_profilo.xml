@@ -269,22 +269,18 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="72dp"
                         android:layout_marginRight="72dp"
-                        android:layout_marginTop="16dp">
-                    </com.google.android.gms.common.SignInButton>
+                        android:layout_marginTop="16dp" />
 
-                    <Button
-                        android:id="@+id/bottoneLoginFacebook"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginBottom="16dp"
-                        android:layout_marginLeft="36dp"
-                        android:layout_marginRight="36dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/bottone_facebook"
-                        android:stateListAnimator="@null"
-                        android:text="@string/accedi_con_facebook"
-                        android:textColor="@color/coloreBianco"
-                        android:textSize="14sp" />
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp" />
+
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 

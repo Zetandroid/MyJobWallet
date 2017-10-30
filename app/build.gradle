@@ -7,8 +7,8 @@ android {
         applicationId "com.kubix.myjobwallet"
         minSdkVersion 24
         targetSdkVersion 26
-        versionCode 15
-        versionName "0.1.5"
+        versionCode 16
+        versionName "0.1.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -24,6 +24,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
+        // Include all the Twitter APIs
+        compile 'com.twitter.sdk.android:twitter:3.1.1'
+        // (Optional) Monetize using mopub
+        compile 'com.twitter.sdk.android:twitter-mopub:3.1.1'
     })
 
 
@@ -42,7 +46,10 @@ dependencies {
 
     compile 'com.google.android.gms:play-services-auth:11.4.0'
 
-    compile 'com.jakewharton:butterknife:8.8.0'
+    compile 'com.twitter.sdk.android:twitter-core:3.1.1'
+    compile 'com.twitter.sdk.android:tweet-ui:3.1.1'
+    compile 'com.twitter.sdk.android:tweet-composer:3.1.1'
+    compile 'com.twitter.sdk.android:twitter-mopub:3.1.1'
 
     // Glide
     compile 'com.github.bumptech.glide:glide:3.7.0'
@@ -55,9 +62,11 @@ dependencies {
 
     compile 'com.squareup.picasso:picasso:2.5.2'
 
-
+    compile 'com.facebook.android:facebook-login:[4,5)'
 
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:support-annotations:25.3.1'
 }
 apply plugin: 'com.google.gms.google-services'
+
+

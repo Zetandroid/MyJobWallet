@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -19,45 +20,119 @@ import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
 public class NoteActivity extends AppCompatActivity {
 
     // LISTA RECYCLER VIEW
-    ArrayList<String> titoloNote = new ArrayList<>(Arrays.asList("Titolo1", "Titolo2", "Titolo3", "Titolo4", "Titolo5", "Titolo6", "Titolo7"));
+    private List<Note> noteList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private CustomAdapter mAdapter;
 
-    //TODO ADS INTERSTITIAL
+    //INTERSTITIAL
     private String TAG = NoteActivity.class.getSimpleName();
     InterstitialAd mInterstitialAd;
 
-    //TODO ADMOB NATIVA
+    //ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
     NativeExpressAdView mAdView;
     VideoController mVideoController;
+
+    //FAB DISSOLVENZA
+    private FloatingActionButton mFloatingActionButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
-        //ID DEL RECYCLER
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        //LAYOUT LINEARE VERTICALE
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        //CHIAMATA ADAPTER PER INVIARE RIFERIMENTI
-        CustomAdapter customAdapter = new CustomAdapter(NoteActivity.this, titoloNote);
-        recyclerView.setAdapter(customAdapter);
+        //RECYCLER VIEW
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        //FAB DISSOLVENZA
+        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.floatingAddNote);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy > 0 && mFloatingActionButton.getVisibility() == View.VISIBLE) {
+                    mFloatingActionButton.hide();
+                } else if (dy < 0 && mFloatingActionButton.getVisibility() != View.VISIBLE) {
+                    mFloatingActionButton.show();
+                }
+            }
+        });
+
+        mAdapter = new CustomAdapter(noteList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
+
+        notaData();
+    }
+
+    private void notaData() {
+        Note note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        note = new Note ("Titolo", "Nota");
+        noteList.add(note);
+
+        mAdapter.notifyDataSetChanged();
 
         mInterstitialAd = new InterstitialAd(this);
 
-        //TODO ID
+
+
+        //ID INTERSTITIAL
         mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
 
         AdRequest adRequest = new AdRequest.Builder()
                 .build();
 
-        //TODO CARICAMENTO ADS
+        //CARICAMENTO INTERSTITIAL
         mInterstitialAd.loadAd(adRequest);
 
         mInterstitialAd.setAdListener(new AdListener() {
@@ -73,13 +148,13 @@ public class NoteActivity extends AppCompatActivity {
         }
 
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
         setTitle(R.string.toolbarNote);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
         setSupportActionBar(toolbar);
 
-        //TODO ADMOB NATIVA
+        //ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewNote);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
@@ -106,7 +181,7 @@ public class NoteActivity extends AppCompatActivity {
         mAdView.loadAd(new AdRequest.Builder().build());
 
 
-        //TODO FAB
+        //FAB
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingAddNote);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

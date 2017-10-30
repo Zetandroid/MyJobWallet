@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -30,12 +29,12 @@ import com.kubix.myjobwallet.R;
 
 public class ProfiloActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
 
-    //TODO INDICIZZAZIONE OGGETTI ORA
+    //INDICIZZAZIONE OGGETTI ORA
     public static TextView oreOrdinarieText;
     public static TextView pagaOrariaText;
     public static TextView pagaStraordinariaText;
 
-    //TODO LOGIN GOOGLE
+    //LOGIN GOOGLE
     private ProfiloActivity mContext;
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -49,8 +48,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilo);
 
-
-        //TODO LOGIN
+        //LOGIN GOOGLE
         mContext = ProfiloActivity.this;
         txtName = (TextView) findViewById(R.id.txtName);
         txtEmail = (TextView) findViewById(R.id.txtEmail);
@@ -98,13 +96,13 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         }
 
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
         setTitle(R.string.toolbarProfile);
         toolbar.setTitleTextColor(getResources().getColor(R.color.testoTitolo));
         setSupportActionBar(toolbar);
 
-        //TODO BOTTONE DATI
+        //BOTTONE DATI
         Button button = (Button) findViewById(R.id.bottoneDati);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +113,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         });
 
 
-        //TODO INDIRIZZAMENTO OGGETTI CALCOLO ORA
+        //INDIRIZZAMENTO OGGETTI CALCOLO ORA
         oreOrdinarieText = (TextView) findViewById(R.id.txtOre);
         pagaOrariaText = (TextView) findViewById(R.id.txtPagaOraria);
         pagaStraordinariaText = (TextView) findViewById(R.id.txtStraordinaria);
@@ -131,7 +129,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
 
     public void caricaDatiProfilo(){
 
-        //TODO CARICA INFO PROFILO DA DATABASE
+        //CARICA INFO PROFILO DA DATABASE
         try {
             Cursor cr= MainActivity.db.rawQuery("SELECT * FROM InfoProfilo",null);
             if(cr!=null){
@@ -157,7 +155,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
     }
 
-    //TODO LOGIN GOOGLE
+    //LOGIN GOOGLE
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

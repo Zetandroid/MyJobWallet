@@ -67,7 +67,7 @@
     </style>
 
     <!-- TEMA IMPOSTAZIONI -->
-    <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimaryImpostazioni</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkImpostazioni</item>
         <item name="colorAccent">@color/colorAccentImpostazioni</item>
@@ -123,11 +123,6 @@
         <item name="colorAccent">@color/coloreBianco</item>
     </style>
 
-
-
-
-
-    
 
 
 </resources>

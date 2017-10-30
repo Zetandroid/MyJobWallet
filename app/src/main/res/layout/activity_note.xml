@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -15,44 +16,51 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_below="@+id/toolbarNote">
 
-        <LinearLayout
+        <com.google.android.gms.ads.NativeExpressAdView
+            android:id="@+id/adViewNote"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_centerHorizontal="true"
+            ads:adSize="360x132"
+            ads:adUnitId="@string/adsNote"
+            tools:ignore="ObsoleteLayoutParam" />
 
-            <com.google.android.gms.ads.NativeExpressAdView
-                android:id="@+id/adViewNote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                ads:adSize="360x132"
-                ads:adUnitId="@string/adsNote"/>
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="ObsoleteLayoutParam">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="473dp" />
+                android:layout_height="match_parent"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
-        </LinearLayout>
-    </ScrollView>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floatingAddNote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="24dp"
-        android:layout_marginRight="24dp"
-        android:clickable="true"
-        android:layout_gravity="bottom|right"
-        app:backgroundTint="@color/colorAccentMemo"
-        app:fabSize="normal"
-        app:srcCompat="@drawable/ic_matita" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingAddNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="24dp"
+                android:layout_marginRight="24dp"
+                android:clickable="true"
+                app:backgroundTint="@color/colorPrimaryMemo"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_matita" />
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

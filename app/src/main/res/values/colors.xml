@@ -62,7 +62,7 @@
 
     <!-- TEMA PREMIUM -->
     <color name="colorPrimaryPremium">#E91E63</color>
-    <color name="colorPrimaryDarkPremium">#E91E63</color>
+    <color name="colorPrimaryDarkPremium">#e91e63</color>
     <color name="colorAccentPremium">#9C27B0</color>
 
     <!-- TEMA IMPOSTAZIONI -->
