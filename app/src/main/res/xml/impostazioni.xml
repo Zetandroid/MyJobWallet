@@ -5,4 +5,16 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="Notifiche">
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="BackUp">
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About">
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
