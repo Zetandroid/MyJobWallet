@@ -25,7 +25,7 @@ public class ElaborazioniActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarElaborazioni);
         setTitle(R.string.toolbarElaborazioni);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         this.arraySpinner = new String[] {

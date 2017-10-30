@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -26,7 +27,8 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             ads:adSize="360x100"
-            ads:adUnitId="@string/adsHome" />
+            ads:adUnitId="@string/adsHome"
+            tools:ignore="ObsoleteLayoutParam" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +51,8 @@
                     android:text="0,00 €"
                     android:textColor="@color/colorPrimaryEntrate"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -73,7 +76,8 @@
                     android:text="0,00 €"
                     android:textColor="@color/colorPrimarySpesa"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/textView9"

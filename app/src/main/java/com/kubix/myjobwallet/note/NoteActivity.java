@@ -151,7 +151,7 @@ public class NoteActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
         setTitle(R.string.toolbarNote);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         //ADMOB NATIVA

@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoTitolo));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoNero));
         setSupportActionBar(toolbar);
 
 

@@ -14,7 +14,7 @@
         android:paddingTop="8dp"
         android:text="@string/seleziona_categoria"
         android:textAppearance="@android:style/TextAppearance.Material.Title"
-        android:textColor="@color/testoTitolo"
+        android:textColor="@color/coloreTestoNero"
         android:textSize="14sp" />
 
     <RelativeLayout
@@ -230,7 +230,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/iconeLayout" />
+        android:background="@color/coloreIcone" />
 
     <RelativeLayout
         android:layout_width="match_parent"

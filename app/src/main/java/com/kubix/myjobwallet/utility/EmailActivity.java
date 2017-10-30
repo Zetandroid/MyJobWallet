@@ -25,7 +25,7 @@ public class EmailActivity extends AppCompatActivity{
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEmail);
         setTitle(R.string.toolbarEmail);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         findViewById(R.id.fabInviaEmail).setOnClickListener(new View.OnClickListener() {

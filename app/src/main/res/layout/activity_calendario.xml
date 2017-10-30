@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="Elenco Turni"
-        android:textColor="@color/coloreBianco"
+        android:textColor="@color/coloreTestoBianco"
         android:textSize="18sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
@@ -49,7 +49,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
-                    android:background="@color/lineaTrasparente"
+                    android:background="@color/coloreLineaTrasparente"
                     android:editable="false"
                     android:ems="10"
                     android:focusable="false"
@@ -82,7 +82,7 @@
                     android:onClick="inserisciEntrataTurno"
                     android:stateListAnimator="@null"
                     android:text="@string/salva"
-                    android:textColor="@color/coloreBianco"
+                    android:textColor="@color/coloreTestoBianco"
                     tools:ignore="RelativeOverlap" />
 
 
@@ -91,7 +91,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
-                    android:background="@color/lineaTrasparente"
+                    android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:focusable="false"
                     android:hint="Inserisci Uscita"
@@ -123,14 +123,14 @@
                     android:onClick="inserisciUscitaTurno"
                     android:stateListAnimator="@null"
                     android:text="@string/salva"
-                    android:textColor="@color/coloreBianco"
+                    android:textColor="@color/coloreTestoBianco"
                     tools:ignore="RelativeOverlap" />
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
         </LinearLayout>
 

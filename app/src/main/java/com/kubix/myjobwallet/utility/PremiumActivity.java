@@ -47,7 +47,7 @@ public class PremiumActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarPremium);
         setTitle(R.string.toolbarPremium);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9EzTDIwPWeQUYYAjvPsutoXF1m+HvH5QO4jEjJkeFKvcNYVt99nTjJbT+DZ/AEpoLPhkFaFiUasFOdN2L262GJxg9Iz4bFXeYswievQ8afvWqsjkLNcuuHKnE8ZFTf/jlHkXsce1VsHsmRL8a1l7iJ/B93nS7aZb8wpIB8k54561diPLxS1pEUTxPTBjxPyQNb3XYmmMFJpJaowAPSG2smleZePka+I0FfLHufvGbOUcbGN239m9IPESHcgs20Mudx6mK0BzD77kBHgDNz6jutuqgP/UYEM2TXZf6+CVoO6/QOqeP3SNE3zNn68pUwfXbjKjCSDoEJZLI8I7OzrvwIDAQAB";

@@ -50,7 +50,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
         setTitle(R.string.toolbarSpese);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         //TODO ADMOB NATIVA

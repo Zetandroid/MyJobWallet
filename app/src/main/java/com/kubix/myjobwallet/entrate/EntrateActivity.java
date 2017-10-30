@@ -58,7 +58,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEntrate);
         setTitle(R.string.toolbarEntrate);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         //TODO ADMOB NATIVA

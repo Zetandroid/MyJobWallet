@@ -10,8 +10,6 @@ import android.widget.Button;
 
 import com.kubix.myjobwallet.R;
 
-import static com.google.android.gms.R.id.button;
-
 public class InfoActivity extends AppCompatActivity {
 
     @Override
@@ -22,7 +20,7 @@ public class InfoActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarInfo);
         setTitle(R.string.toolbarInfo);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         Button googleMorgan = (Button) findViewById(R.id.googleMorgan);

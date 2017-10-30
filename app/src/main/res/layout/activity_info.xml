@@ -81,7 +81,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/iconeLayout" />
+                            android:background="@color/coloreIcone" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_immagine_alessio"
-                            app:civ_border_color="@color/testoTitolo"
+                            app:civ_border_color="@color/coloreTestoNero"
                             app:civ_border_width="2dp" />
 
                         <TextView
@@ -180,7 +180,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/iconeLayout" />
+                            android:background="@color/coloreIcone" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"

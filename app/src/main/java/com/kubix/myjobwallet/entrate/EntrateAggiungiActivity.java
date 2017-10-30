@@ -1,18 +1,15 @@
 package com.kubix.myjobwallet.entrate;
 
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.fragment.BtnSheetEntrateFragment;
 
 public class EntrateAggiungiActivity extends AppCompatActivity {
 
@@ -35,7 +32,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEntrataAggiungi);
         setTitle(R.string.toolbarEntrateAggiungi);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         //TODO SPINNER

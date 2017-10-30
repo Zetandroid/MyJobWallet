@@ -44,7 +44,7 @@
                         android:layout_marginTop="16dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/ic_profilo"
-                        app:civ_border_color="@color/testoTitolo"
+                        app:civ_border_color="@color/coloreTestoNero"
                         app:civ_border_width="2dp"
                         tools:ignore="ObsoleteLayoutParam" />
 
@@ -164,7 +164,7 @@
                                 android:layout_weight="1"
                                 android:padding="4dp"
                                 android:textAlignment="center"
-                                android:textColor="@color/testoTitolo" />
+                                android:textColor="@color/coloreTestoNero" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -191,7 +191,7 @@
                                 android:layout_weight="1"
                                 android:padding="4dp"
                                 android:textAlignment="center"
-                                android:textColor="@color/testoTitolo" />
+                                android:textColor="@color/coloreTestoNero" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -219,7 +219,7 @@
                                 android:layout_weight="1"
                                 android:padding="4dp"
                                 android:textAlignment="center"
-                                android:textColor="@color/testoTitolo" />
+                                android:textColor="@color/coloreTestoNero" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -228,7 +228,7 @@
                         android:id="@+id/view1"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="@color/iconeLayout" />
+                        android:background="@color/coloreIcone" />
 
                     <Button
                         android:id="@+id/bottoneDati"
@@ -240,7 +240,7 @@
                         android:layout_marginRight="72dp"
                         android:layout_weight="1"
                         android:text="@string/imposta_dati"
-                        android:textColor="@color/testoTitolo"
+                        android:textColor="@color/coloreTestoNero"
                         android:theme="@style/Bottone.Nero"
                         tools:ignore="ObsoleteLayoutParam" />
 

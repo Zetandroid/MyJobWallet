@@ -17,7 +17,7 @@ public class ConvertitoreActivity extends AppCompatActivity{
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarValuta);
         setTitle(R.string.toolbarValuta);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
 

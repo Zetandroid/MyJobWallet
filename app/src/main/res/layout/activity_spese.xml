@@ -89,7 +89,8 @@
         android:src="@drawable/ic_menu_home"
         app:backgroundTint="@color/colorPrimarySpesa"
         app:elevation="6dp"
-        app:pressedTranslationZ="12dp" />
+        app:pressedTranslationZ="12dp"
+        tools:ignore="RelativeOverlap" />
 
 
 

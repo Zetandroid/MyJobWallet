@@ -1,7 +1,7 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+    <!-- TEMA LIGHT -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -93,34 +93,34 @@
 
     <style name="Bottone.Rosso" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/colorPrimarySpesa</item>
-        <item name="android:textColor">@color/coloreBianco</item>
+        <item name="android:textColor">@color/coloreTestoBianco</item>
     </style>
 
     <style name="Bottone.Blu" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/colorPrimaryTurni</item>
-        <item name="android:textColor">@color/coloreBianco</item>
+        <item name="android:textColor">@color/coloreTestoBianco</item>
     </style>
 
     <style name="Bottone.Nero" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/colorPrimaryProfilo</item>
-        <item name="android:textColor">@color/coloreBianco</item>
+        <item name="android:textColor">@color/coloreTestoBianco</item>
     </style>
 
     <style name="Bottone.Giallo" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/colorPrimaryEmail</item>
-        <item name="android:textColor">@color/testoTitolo</item>
+        <item name="android:textColor">@color/coloreTestoNero</item>
     </style>
 
     <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
-        <item name="colorControlHighlight">@color/testoTitolo</item>
-        <item name="colorAccent">@color/testoTitolo</item>
+        <item name="colorControlHighlight">@color/coloreTestoNero</item>
+        <item name="colorAccent">@color/coloreTestoNero</item>
     </style>
 
     <style name="BottoneFlatRosso" parent="Theme.AppCompat.Light">
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
         <item name="colorControlHighlight">@color/colorPrimarySpesa</item>
-        <item name="colorAccent">@color/coloreBianco</item>
+        <item name="colorAccent">@color/coloreTestoBianco</item>
     </style>
 
 

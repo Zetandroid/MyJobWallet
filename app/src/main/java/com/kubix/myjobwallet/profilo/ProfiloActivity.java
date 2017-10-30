@@ -99,7 +99,7 @@ public class ProfiloActivity extends AppCompatActivity implements GoogleApiClien
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
         setTitle(R.string.toolbarProfile);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoTitolo));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoNero));
         setSupportActionBar(toolbar);
 
         //BOTTONE DATI

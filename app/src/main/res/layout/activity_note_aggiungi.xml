@@ -43,7 +43,7 @@
                 android:id="@+id/testoTitoloSpesa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lineaTrasparente"
+                android:background="@color/coloreLineaTrasparente"
                 android:ems="10"
                 android:hint="@string/titolo"
                 android:inputType="textMultiLine"
@@ -52,13 +52,13 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
             <EditText
                 android:id="@+id/testoNota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/lineaTrasparente"
+                android:background="@color/coloreLineaTrasparente"
                 android:ems="10"
                 android:hint="@string/nota"
                 android:inputType="textMultiLine"
@@ -86,7 +86,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="@string/salva"
-        android:textColor="@color/testoBianco"
+        android:textColor="@color/coloreTestoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:text="@string/aggiungi_immagine"
-        android:textColor="@color/testoBianco"
+        android:textColor="@color/coloreTestoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
 

@@ -13,9 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -108,7 +106,7 @@ public class TurniActivity extends AppCompatActivity  {
         //TODO TOOLBAR
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarTurni);
         setTitle(R.string.toolbarTurni);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         listaTurni.setOnItemClickListener(new AdapterView.OnItemClickListener()

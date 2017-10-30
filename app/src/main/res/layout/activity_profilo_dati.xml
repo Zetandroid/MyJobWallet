@@ -57,7 +57,7 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_weight="0.38"
-                    android:background="@color/lineaTrasparente"
+                    android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="@string/ore_lavorative"
                     android:inputType="number"
@@ -70,7 +70,7 @@
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                     android:layout_marginLeft="72dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/lineaTrasparente"
+                    android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="@string/paga_oraria"
                     android:inputType="number"
@@ -104,7 +104,7 @@
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -129,7 +129,7 @@
                     android:layout_marginLeft="72dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/lineaTrasparente"
+                    android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="@string/straordinari"
                     android:inputType="number"
@@ -140,7 +140,7 @@
                 android:id="@+id/view3"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
 
             <RelativeLayout
@@ -175,7 +175,7 @@
                     android:layout_marginLeft="72dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/lineaTrasparente"
+                    android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="@string/valutaMondiale"
                     android:inputType="number"
@@ -186,7 +186,7 @@
                 android:id="@+id/view4"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/iconeLayout" />
+                android:background="@color/coloreIcone" />
 
             <Button
                 android:id="@+id/button2"
@@ -200,7 +200,7 @@
                 android:onClick="AggiornaDatiProfilo"
                 android:stateListAnimator="@null"
                 android:text="@string/salva_dati_profilo"
-                android:textColor="@color/coloreBianco" />
+                android:textColor="@color/coloreTestoBianco" />
 
 
         </LinearLayout>

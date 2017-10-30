@@ -38,7 +38,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpeseAggiungi);
         setTitle(R.string.toolbarSpeseAggiungi);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.testoBianco));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         this.arraySpinnerSpesa = new String[]{
