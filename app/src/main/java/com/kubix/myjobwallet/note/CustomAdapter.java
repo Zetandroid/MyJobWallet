@@ -34,9 +34,6 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
                 .inflate(R.layout.custom_lista_note, parent, false);
         return new MyViewHolder(itemView);
     }
-    public void onClick(View view, final int position) {
-        final Note note = noteList.get(position);
-    }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
@@ -49,6 +46,8 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     public int getItemCount() {
         return noteList.size();
     }
+
+
 }
 
 
