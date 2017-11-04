@@ -1,22 +1,13 @@
 package com.kubix.myjobwallet.note;
 
-import android.content.DialogInterface;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
 import java.util.List;
-
-/**
- * Created by mowmo on 28/10/17.
- */
 
 class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 

@@ -1,9 +1,5 @@
 package com.kubix.myjobwallet.note;
 
-/**
- * Created by mowmo on 29/10/17.
- */
-
 public class Note {
     private String titolo, note;
 
