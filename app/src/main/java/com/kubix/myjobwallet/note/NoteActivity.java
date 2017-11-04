@@ -1,6 +1,7 @@
 package com.kubix.myjobwallet.note;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -17,6 +21,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
+import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
 import java.util.ArrayList;
@@ -72,53 +77,29 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void notaData() {
-        Note note = new Note ("Titolo", "Nota");
-        noteList.add(note);
 
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
+        try {
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Note",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
 
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
+                        String campoTitolo=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCorpo=cr.getString(cr.getColumnIndex("Nota"));
+                        Note note = new Note (campoTitolo, campoCorpo);
+                        noteList.add(note);
 
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
 
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
+                    }while (cr.moveToNext());
+                }else{
+                    Toast.makeText(getApplicationContext(), R.string.noEntrateAggiunte, Toast.LENGTH_LONG).show();
 
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
-
-        note = new Note ("Titolo", "Nota");
-        noteList.add(note);
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
         mAdapter.notifyDataSetChanged();
 

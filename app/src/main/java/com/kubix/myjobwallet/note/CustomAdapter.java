@@ -1,11 +1,15 @@
 package com.kubix.myjobwallet.note;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
 import java.util.List;
@@ -39,10 +43,8 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
                 .inflate(R.layout.custom_lista_note, parent, false);
         return new MyViewHolder(itemView);
     }
-    public void onClick(View view, int position) {
-        Note note = noteList.get(position);
-
-
+    public void onClick(View view, final int position) {
+        final Note note = noteList.get(position);
     }
 
     @Override
