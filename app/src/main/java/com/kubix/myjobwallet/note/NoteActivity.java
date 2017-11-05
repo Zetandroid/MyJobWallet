@@ -11,6 +11,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -79,45 +80,42 @@ public class NoteActivity extends AppCompatActivity {
                 final Note movie = noteList.get(position);
                 Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
 
-                //ELIMINA NOTE
-                try{
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                    builder.setCancelable(true);
-                    builder.setTitle("ELIMINA NOTA");
-                    builder.setMessage("Questa nota sarà eliminata dal database, procedere?");
-                    builder.setPositiveButton(R.string.si_elimina,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    MainActivity.db.execSQL("DELETE FROM Note WHERE Titolo = '"+movie.getTitolo()+"' AND Nota = '"+movie.getNote()+"'");
-                                    dialog.dismiss();
-                                    finish();
-                                }
-                            });
-
-                    builder.setNegativeButton(R.string.non_eliminare,
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog,
-                                                    int which) {
-                                    dialog.dismiss();
-                                }
-                            });
-                    AlertDialog alert = builder.create();
-                    alert.show();
-                }catch (Exception e){
-                    Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
             }
-
-
 
             @Override
             public void onLongClick(View view, int position) {
-
+                final Note movie = noteList.get(position);
+                MainActivity.db.execSQL("DELETE FROM Note WHERE Titolo = '"+movie.getTitolo()+"' AND Nota = '"+movie.getNote()+"'");
+                noteList.remove(position);
+                mAdapter.notifyItemRemoved(position);
+                notaData();
             }
         }));
 
+        mInterstitialAd = new InterstitialAd(this);
+
+
+
+        //ID INTERSTITIAL
+        mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+
+        //CARICAMENTO INTERSTITIAL
+        mInterstitialAd.loadAd(adRequest);
+        mInterstitialAd.setAdListener(new AdListener() {
+            public void onAdLoaded() {
+                showInterstitial();
+            }
+        });
+
+        notaData();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
         notaData();
     }
 
@@ -147,32 +145,12 @@ public class NoteActivity extends AppCompatActivity {
         }
 
         mAdapter.notifyDataSetChanged();
-
-        mInterstitialAd = new InterstitialAd(this);
-
-
-
-        //ID INTERSTITIAL
-        mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
-
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-
-        //CARICAMENTO INTERSTITIAL
-        mInterstitialAd.loadAd(adRequest);
-
-        mInterstitialAd.setAdListener(new AdListener() {
-            public void onAdLoaded() {
-                showInterstitial();
-            }
-        });
     }
 
     private void showInterstitial() {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
         }
-
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
