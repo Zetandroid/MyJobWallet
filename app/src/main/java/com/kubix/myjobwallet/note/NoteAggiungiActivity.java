@@ -1,13 +1,13 @@
 package com.kubix.myjobwallet.note;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
@@ -38,13 +38,15 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         try{
            if(!titoloNota.getText().toString().equals("") && !corpoNota.getText().toString().equals("")){
                MainActivity.db.execSQL("INSERT INTO Note (Titolo, Nota) VALUES ('"+titoloNota.getText().toString()+"', '"+corpoNota.getText().toString()+"')");
-               Toast.makeText(this, R.string.nota_inserita, Toast.LENGTH_SHORT).show();
-               finish();
+               titoloNota.setText("");
+               corpoNota.setText("");
+               Snackbar.make(v, getString(R.string.nota_inserita), Snackbar.LENGTH_LONG).show();
            }else{
-               Toast.makeText(this, R.string.dati_nota, Toast.LENGTH_SHORT).show();
+               Snackbar.make(v, getString(R.string.dati_nota), Snackbar.LENGTH_LONG).show();
            }
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
 }

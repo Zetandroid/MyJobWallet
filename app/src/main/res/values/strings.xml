@@ -68,6 +68,7 @@
     <string name="aggiungi_immagine">Aggiungi Immagine</string>
     <string name="nota_inserita">Nota inserita correttamente</string>
     <string name="dati_nota">Inserire tutti i dati per la nota.</string>
+    <string name="nessunaNota">Inserisci subito una nota cliccando il pulsante.</string>
 
     <!-- MENU PREMIUM -->
     <string name="versione_premium">Versione Premium</string>
