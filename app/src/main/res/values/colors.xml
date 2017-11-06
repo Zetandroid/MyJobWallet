@@ -52,7 +52,7 @@
     <!-- TEMA MEMO -->
     <color name="colorPrimaryMemo">#ff9800</color>
     <color name="colorPrimaryDarkMemo">#EF6C00</color>
-    <color name="colorAccentMemo">#FFCC80</color>
+    <color name="colorAccentMemo">#ffcc80</color>
 
     <!-- TEMA EMAIL -->
     <color name="colorPrimaryEmail">#03A9F4</color>
