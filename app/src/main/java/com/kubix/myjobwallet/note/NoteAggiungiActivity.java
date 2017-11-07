@@ -34,19 +34,18 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    public void scriviNotaInDB (View v){
-        try{
-           if(!titoloNota.getText().toString().equals("") && !corpoNota.getText().toString().equals("")){
-               MainActivity.db.execSQL("INSERT INTO Note (Titolo, Nota) VALUES ('"+titoloNota.getText().toString()+"', '"+corpoNota.getText().toString()+"')");
-               titoloNota.setText("");
-               corpoNota.setText("");
-               Snackbar.make(v, getString(R.string.nota_inserita), Snackbar.LENGTH_LONG).show();
-           }else{
-               Snackbar.make(v, getString(R.string.dati_nota), Snackbar.LENGTH_LONG).show();
-           }
-        }catch (Exception e){
+    public void scriviNotaInDB(View v) {
+        try {
+            if (!titoloNota.getText().toString().equals("") && !corpoNota.getText().toString().equals("")) {
+                MainActivity.db.execSQL("INSERT INTO Note (Titolo, Nota) VALUES ('" + titoloNota.getText().toString() + "', '" + corpoNota.getText().toString() + "')");
+                titoloNota.setText("");
+                corpoNota.setText("");
+                Snackbar.make(v, getString(R.string.nota_inserita), Snackbar.LENGTH_LONG).show();
+            } else {
+                Snackbar.make(v, getString(R.string.dati_nota), Snackbar.LENGTH_LONG).show();
+            }
+        } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-
 }

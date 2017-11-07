@@ -30,12 +30,14 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 ads:adSize="360x132"
-                ads:adUnitId="@string/adsEntrate" />
+                ads:adUnitId="@string/adsEntrate">
 
-            <GridView
+            </com.google.android.gms.ads.NativeExpressAdView>
+
+            <android.support.v7.widget.RecyclerView
                 android:id="@+id/listaEntrate"
                 android:layout_width="match_parent"
-                android:layout_height="288dp" />
+                android:layout_height="321dp" />
 
         </LinearLayout>
     </ScrollView>
