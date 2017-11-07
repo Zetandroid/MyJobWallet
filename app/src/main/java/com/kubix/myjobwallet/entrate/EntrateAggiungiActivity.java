@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -42,6 +43,12 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
                 getString(R.string.bonifico),getString(R.string.assegno),getString(R.string.vincita),getString(R.string.regalo),getString(R.string.beni),
                 getString(R.string.rimborsi),getString(R.string.vendite),getString(R.string.altro)
         };
+
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, arraySpinnerEntrata);
+        TagEntrate.setAdapter(adapter);
+
 
 
         titoloEntrata = (EditText) findViewById(R.id.testoTitoloSpesa);

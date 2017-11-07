@@ -49,7 +49,8 @@
         <!-- IMPOSTAZIONI -->
         <activity
             android:name=".setting.SettingsActivity"
-            android:label="@string/toolbarSettings" />
+            android:label="@string/toolbarSettings"
+            android:theme="@style/ThemeImpostazioni"/>
 
         <!-- PROFILO -->
         <activity

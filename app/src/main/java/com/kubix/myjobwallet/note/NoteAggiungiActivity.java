@@ -32,6 +32,8 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         setTitle(R.string.toolbarNoteAggiungi);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+
+
     }
 
     public void scriviNotaInDB(View v) {
