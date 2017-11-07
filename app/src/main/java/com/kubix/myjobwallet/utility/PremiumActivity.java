@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
 import com.kubix.myjobwallet.BuildConfig;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.util.IabHelper;
@@ -21,12 +20,9 @@ import java.security.PublicKey;
 
 public class PremiumActivity extends AppCompatActivity {
 
-
-
     private static final String TAG = "com.kubix.myjobwallet";
     IabHelper mHelper;
     static final String ITEM_SKU ="com.kubix.myjobwallet.pro" ;
-
 
     private Button bottoneRipristina;
     private Button bottoneAcquista;
@@ -43,8 +39,7 @@ public class PremiumActivity extends AppCompatActivity {
         bottoneRipristina = (Button) findViewById(R.id.btnRipristana);
         bottoneRipristina.setEnabled(true);
 
-
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarPremium);
         setTitle(R.string.toolbarPremium);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
@@ -53,7 +48,6 @@ public class PremiumActivity extends AppCompatActivity {
         String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9EzTDIwPWeQUYYAjvPsutoXF1m+HvH5QO4jEjJkeFKvcNYVt99nTjJbT+DZ/AEpoLPhkFaFiUasFOdN2L262GJxg9Iz4bFXeYswievQ8afvWqsjkLNcuuHKnE8ZFTf/jlHkXsce1VsHsmRL8a1l7iJ/B93nS7aZb8wpIB8k54561diPLxS1pEUTxPTBjxPyQNb3XYmmMFJpJaowAPSG2smleZePka+I0FfLHufvGbOUcbGN239m9IPESHcgs20Mudx6mK0BzD77kBHgDNz6jutuqgP/UYEM2TXZf6+CVoO6/QOqeP3SNE3zNn68pUwfXbjKjCSDoEJZLI8I7OzrvwIDAQAB";
 
         mHelper = new IabHelper(this, base64EncodedPublicKey);
-
         mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
             public void onIabSetupFinished(IabResult result) {
                 if (!result.isSuccess()) {

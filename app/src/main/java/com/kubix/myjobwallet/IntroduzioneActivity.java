@@ -22,6 +22,7 @@ import com.kubix.myjobwallet.utility.PrefManager;
 
 public class IntroduzioneActivity extends AppCompatActivity {
 
+    //INDICIZZAZIONI
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
@@ -53,9 +54,6 @@ public class IntroduzioneActivity extends AppCompatActivity {
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
-
-
-
 
         // layouts of all welcome sliders
         // add few more layouts if you want
@@ -195,7 +193,6 @@ public class IntroduzioneActivity extends AppCompatActivity {
         public boolean isViewFromObject(View view, Object obj) {
             return view == obj;
         }
-
 
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {

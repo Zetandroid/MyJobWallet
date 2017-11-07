@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-
 import com.kubix.myjobwallet.R;
 
 public class InfoActivity extends AppCompatActivity {
@@ -17,12 +16,13 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarInfo);
         setTitle(R.string.toolbarInfo);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
+        //INDICIZZAZIONE OGGETTI
         Button googleMorgan = (Button) findViewById(R.id.googleMorgan);
         Button twitterMorgan = (Button) findViewById(R.id.twitterMorgan);
         Button googlelessio = (Button) findViewById(R.id.googleAlessio);
@@ -34,6 +34,7 @@ public class InfoActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/u/0/+MOWMO")));
             }
         });
+
         twitterMorgan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +48,7 @@ public class InfoActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://plus.google.com/u/0/108762755836299160559")));
             }
         });
+
         twitterAlessio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

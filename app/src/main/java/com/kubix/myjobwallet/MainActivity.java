@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
 
     TextView sommaEntrate;
     TextView sommaUscite;
+
     GridView grid;
     String[] web = {
 
@@ -69,13 +70,13 @@ public class MainActivity extends AppCompatActivity
 
 
 
-    //TODO ADMOB NATIVA
+    //ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
 
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-    //TODO DICHIARA DATABASE
+    //DICHIARA DATABASE
     public static SQLiteDatabase db;
 
     @Override
@@ -83,18 +84,17 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //INDICIZZAZIONE OGGETTI
         sommaEntrate = (TextView) findViewById(R.id.txtSommaEntrate);
         sommaUscite = (TextView) findViewById(R.id.txtSommaUscite);
 
-
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoNero));
         setSupportActionBar(toolbar);
 
-
+        //NAVIGATION DRAWER
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //TODO ADMOB NATIVA
+        //ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adView);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        //TODO GRIGLIA
+        //GRIGLIA
         HomeGridAdapter adapter = new HomeGridAdapter(MainActivity.this, web, imageId);
         grid=(GridView)findViewById(R.id.grid);
         grid.setAdapter(adapter);
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        //TODO INDICIZZARE DATABASE CON QUERY SQL
+        //INDICIZZARE DATABASE CON QUERY SQL
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Turni (Data Varchar(50) Unique, oraEntrata Varchar (50), oraUscita Varchar(50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Controlli (Data Varchar (50) Unique);");
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity
         db.execSQL("CREATE TABLE IF NOT EXISTS Entrate (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Ora Varchar(50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Uscite (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Ora Varchar (50));");
 
-        //TODO INDICIZZA DA DATABASE IN VARIABILI GLOBALI DATI PROFILO SU PAGA ORARIA, STRAORDINARIA E ORE ORDINARIE
+        //INDICIZZA DA DATABASE IN VARIABILI GLOBALI DATI PROFILO SU PAGA ORARIA, STRAORDINARIA E ORE ORDINARIE
         try {
             Cursor cr=MainActivity.db.rawQuery("SELECT * FROM InfoProfilo",null);
             if(cr!=null){
@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    //TODO TOOLBAR MENU DESTRA
+    //TOOLBAR MENU DESTRA
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar_destra, menu);
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    //TODO EVENTO TASTO INDIETRO
+    //EVENTO TASTO INDIETRO
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //TODO SELEZIONE ICONE NAVIGATION DRAWER
+    //SELEZIONE ICONE NAVIGATION DRAWER
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {

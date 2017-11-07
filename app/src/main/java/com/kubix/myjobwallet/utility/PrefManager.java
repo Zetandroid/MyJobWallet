@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 
 public class PrefManager {
 
+    //INDICIZZAZIONE
     SharedPreferences pref;
     SharedPreferences.Editor editor;
     Context _context;
