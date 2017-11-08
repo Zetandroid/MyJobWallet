@@ -201,5 +201,42 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+
+    //EVENTI BOTTOMSHEET ENTRATE
+    public void clickBottomSheetEntrateBonifico(View v){
+        Toast.makeText(this, "Bonifico", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateAssegno(View v){
+        Toast.makeText(this, "Assegno", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateVincite(View v){
+        Toast.makeText(this, "Vincite", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateRegalo(View v){
+        Toast.makeText(this, "Regalo", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateBeni(View v){
+        Toast.makeText(this, "Beni", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateRimborsi(View v){
+        Toast.makeText(this, "Rimborsi", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateVendita(View v){
+        Toast.makeText(this, "Vendita", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateAltro(View v){
+        Toast.makeText(this, "Altro", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetEntrateTutteLeCategorie(View v){
+        Toast.makeText(this, "Tutte le categorie", Toast.LENGTH_SHORT).show();
+    }
 }
 

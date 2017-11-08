@@ -38,7 +38,6 @@ public class BtnSheetEntrateFragment extends BottomSheetDialogFragment {
         }
     };
 
-
     @SuppressLint("RestrictedApi")
     @Override
     public void setupDialog(Dialog dialog, int style) {
@@ -52,14 +51,4 @@ public class BtnSheetEntrateFragment extends BottomSheetDialogFragment {
             ((BottomSheetBehavior) behavior).setBottomSheetCallback(mBottomSheetBehaviorCallback);
         }
     }
-
-    public void buttonClick(View v) {
-        switch(v.getId()) {
-            case R.id.btnTagBonifico:
-                Toast.makeText(getActivity(),"Text!",Toast.LENGTH_SHORT).show();
-                break;
-        }
-    }
-
 }
-
