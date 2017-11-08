@@ -1,5 +1,6 @@
 package com.kubix.myjobwallet.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -39,6 +40,7 @@ public class BtnSheetElaborazioniFragment extends BottomSheetDialogFragment {
         }
     };
 
+    @SuppressLint("RestrictedApi")
     @Override
     public void setupDialog(Dialog dialog, int style) {
         super.setupDialog(dialog, style);

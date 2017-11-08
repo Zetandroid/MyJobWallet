@@ -41,8 +41,8 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
         TagEntrate = (Spinner) findViewById(R.id.testoTagEntrateSpinner);
 
         this.arraySpinnerEntrata = new String[]{
-                getString(R.string.bonifico),getString(R.string.assegno),getString(R.string.vincita),getString(R.string.regalo),getString(R.string.beni),
-                getString(R.string.rimborsi),getString(R.string.vendite),getString(R.string.altro)
+                getString(R.string.bonifico), getString(R.string.assegno), getString(R.string.vincita), getString(R.string.regalo), getString(R.string.beni),
+                getString(R.string.rimborsi), getString(R.string.vendite), getString(R.string.altro)
         };
 
 

@@ -1,5 +1,6 @@
 package com.kubix.myjobwallet.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,6 +9,7 @@ import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.CoordinatorLayout;
 import android.view.View;
+import android.widget.Toast;
 
 import com.kubix.myjobwallet.R;
 
@@ -36,6 +38,8 @@ public class BtnSheetEntrateFragment extends BottomSheetDialogFragment {
         }
     };
 
+
+    @SuppressLint("RestrictedApi")
     @Override
     public void setupDialog(Dialog dialog, int style) {
         super.setupDialog(dialog, style);
@@ -48,5 +52,14 @@ public class BtnSheetEntrateFragment extends BottomSheetDialogFragment {
             ((BottomSheetBehavior) behavior).setBottomSheetCallback(mBottomSheetBehaviorCallback);
         }
     }
+
+    public void buttonClick(View v) {
+        switch(v.getId()) {
+            case R.id.btnTagBonifico:
+                Toast.makeText(getActivity(),"Text!",Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
 }
 
