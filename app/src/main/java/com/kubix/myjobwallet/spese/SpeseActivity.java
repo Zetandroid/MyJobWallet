@@ -15,7 +15,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -26,7 +25,6 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.entrate.*;
 import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
 
 import java.util.ArrayList;
@@ -206,4 +204,50 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
+    //EVENTI BOTTOMSHEET ENTRATE
+    public void clickBottomSheetSpeseCasa(View v){
+        Toast.makeText(this, "Casa", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseTrasporti(View v){
+        Toast.makeText(this, "Trasporti", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseAuto(View v){
+        Toast.makeText(this, "Auto", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseCarburante(View v){
+        Toast.makeText(this, "Carburante", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseBollette(View v){
+        Toast.makeText(this, "Bollette", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseShopping(View v){
+        Toast.makeText(this, "Shopping", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseCibo(View v){
+        Toast.makeText(this, "Cibo & Bevande", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseSvago(View v){
+        Toast.makeText(this, "Svago", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseViaggi(View v){
+        Toast.makeText(this, "Viaggi", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseAltro(View v){
+        Toast.makeText(this, "Altro", Toast.LENGTH_SHORT).show();
+    }
+
+    public void clickBottomSheetSpeseTutte(View v){
+        Toast.makeText(this, "Tutte le categorie", Toast.LENGTH_SHORT).show();
+    }
+
 }

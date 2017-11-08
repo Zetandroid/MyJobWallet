@@ -37,6 +37,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/casa"
+            android:onClick="clickBottomSheetSpeseCasa"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -63,6 +64,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/trasporti"
+            android:onClick="clickBottomSheetSpeseTrasporti"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -89,6 +91,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/auto"
+            android:onClick="clickBottomSheetSpeseAuto"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -115,6 +118,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/carburante"
+            android:onClick="clickBottomSheetSpeseCarburante"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -141,6 +145,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/bollette"
+            android:onClick="clickBottomSheetSpeseBollette"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -167,6 +172,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/shopping"
+            android:onClick="clickBottomSheetSpeseShopping"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -195,6 +201,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/ciboBevande"
+            android:onClick="clickBottomSheetSpeseCibo"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -221,6 +228,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/svago"
+            android:onClick="clickBottomSheetSpeseSvago"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -247,6 +255,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/viaggi"
+            android:onClick="clickBottomSheetSpeseViaggi"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -273,6 +282,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/altro"
+            android:onClick="clickBottomSheetSpeseAltro"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
@@ -305,6 +315,7 @@
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
             android:text="@string/tutto"
+            android:onClick="clickBottomSheetSpeseTutte"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
             android:textSize="14sp" />
