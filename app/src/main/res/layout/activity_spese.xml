@@ -31,11 +31,10 @@
             ads:adSize="360x132"
             ads:adUnitId="@string/adsSpese" />
 
-        <GridView
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/listaSpese"
             android:layout_width="match_parent"
-            android:layout_height="474dp"
-            tools:ignore="NestedScrolling" />
+            android:layout_height="373dp" />
 
     </LinearLayout>
 

@@ -5,7 +5,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -22,6 +26,7 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.entrate.*;
 import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
 
 import java.util.ArrayList;
@@ -29,15 +34,20 @@ import java.util.List;
 
 public class SpeseActivity extends AppCompatActivity implements View.OnClickListener {
 
-    //TODO FAB
+    //FAB
     private Boolean isFabOpen = false;
     private FloatingActionButton fab, fab1, fab2;
     private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
-    //TODO INDICIZZA OGGETTI
+    // LISTA RECYCLER VIEW
+    private List<Uscite> usciteList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private com.kubix.myjobwallet.spese.CustomAdapter mAdapter;
+
+    //INDICIZZA OGGETTI
     GridView listaSpese;
 
-    //TODO ADMOB NATIVA
+    //ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
     NativeExpressAdView mAdView;
     VideoController mVideoController;
@@ -46,6 +56,33 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spese);
+
+        //INDICIZZA
+        recyclerView = (RecyclerView) findViewById(R.id.listaSpese);
+
+        //SETTAGGI RECYCLER VIEW
+        mAdapter = new com.kubix.myjobwallet.spese.CustomAdapter(usciteList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
+        recyclerView.addOnItemTouchListener(new com.kubix.myjobwallet.spese.RecyclerTouchListener(getApplicationContext(), recyclerView, new com.kubix.myjobwallet.spese.RecyclerTouchListener.ClickListener() {
+
+            //EVENTI DI CLICK DEL FOTTUTO RECYCLER
+            @Override
+            public void onClick(View view, int position) {
+                //final Uscite movie = entrateList.get(position);
+                //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+                final Uscite movie = usciteList.get(position);
+                MainActivity.db.execSQL("DELETE FROM Uscite WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getUscita()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataUscita()+"'");
+                usciteList.remove(position);
+                mAdapter.notifyItemRemoved(position);
+            }
+        }));
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
@@ -91,6 +128,8 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         fab1.setOnClickListener(this);
         fab2.setOnClickListener(this);
 
+        caricaEntrate();
+
     }
 
     @Override
@@ -133,44 +172,38 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
             Log.d("Raj", "open");
 
         }
-
-    leggiSpese();
 }
 
     @Override
     public void onRestart(){
         super.onRestart();
-        leggiSpese();
+        caricaEntrate();
     }
 
-    public void leggiSpese(){
-        listaSpese=(GridView)findViewById(R.id.listaSpese);
-        List<String> li=new ArrayList<>();
-        ArrayAdapter<String> dataAdapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_spinner_item,li);
-        dataAdapter.setDropDownViewResource(R.layout.activity_entrate);
-
+    public void caricaEntrate(){
+        //CARICA NOTE IN LISTA
         try {
-            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite ORDER BY Data",null);
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite ORDER BY Titolo",null);
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{
-
-                        String campoData=cr.getString(cr.getColumnIndex("Data"));
-                        String campoTitolo=cr.getString(cr.getColumnIndex("Titolo"));
-                        String campoCifra=cr.getString(cr.getColumnIndex("Cifra"));
-
-                        li.add(campoData + "          " + campoTitolo + "          " + campoCifra);
-                        listaSpese.setAdapter(dataAdapter);
-
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else{
-                    Toast.makeText(getApplicationContext(), R.string.noSpeseAggiunte, Toast.LENGTH_LONG).show();
-                }
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
             }
             cr.close();
+
         }catch (Exception e){
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-
 }

@@ -1,6 +1,7 @@
 package com.kubix.myjobwallet.spese;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -60,8 +61,8 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
     public void inserisciUscitaMonetaria(View v){
         if(! titoloSpesa.getText().toString().equals("") && ! cifraSpesa.getText().toString().equals("") && ! dataSpesa.getText().toString().equals("") && ! oraSpesa.getText().toString().equals("")){
-            MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"')");
-            Toast.makeText(this, getString(R.string.spesaAggiunta), Toast.LENGTH_SHORT).show();
+            MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra, Ora) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"', '"+oraSpesa.getText().toString()+"')");
+            Snackbar.make(v, getString(R.string.spesaAggiunta), Snackbar.LENGTH_LONG).show();
             titoloSpesa.setText("");
             cifraSpesa.setText("");
             dataSpesa.setText("");

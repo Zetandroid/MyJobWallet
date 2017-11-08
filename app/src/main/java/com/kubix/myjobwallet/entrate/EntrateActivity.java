@@ -63,7 +63,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
             //EVENTI DI CLICK DEL FOTTUTO RECYCLER
             @Override
             public void onClick(View view, int position) {
-                //final Entrate movie = entrateList.get(position);
+                //final Uscite movie = entrateList.get(position);
                 //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
@@ -175,7 +175,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     public void caricaEntrate(){
-        //CARICA NOTE IN LISTA
+        //CARICA ENTRATE IN RECYCLER
         try {
             entrateList.clear();
             mAdapter.notifyDataSetChanged();

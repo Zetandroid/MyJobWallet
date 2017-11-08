@@ -1,6 +1,7 @@
 package com.kubix.myjobwallet.entrate;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -60,7 +61,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
     public void inserisciEntrataMonetaria(View v){
         if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("") && ! dataEntrata.getText().toString().equals("") && ! oraEntrata.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Ora) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+oraEntrata.getText().toString()+"')");
-            Toast.makeText(this, getString(R.string.entrataAggiunta), Toast.LENGTH_SHORT).show();
+            Snackbar.make(v, getString(R.string.entrataAggiunta), Snackbar.LENGTH_LONG).show();
             titoloEntrata.setText("");
             valoreEntrata.setText("");
             dataEntrata.setText("");

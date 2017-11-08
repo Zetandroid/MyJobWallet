@@ -283,6 +283,33 @@ public class MainActivity extends AppCompatActivity
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
+        //SOMMA USCITE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Uscite",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaUscite = cr.getInt(0);
+                        sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " €");
+                        if (VariabiliGlobali.sommaUscite == 0){
+                            sommaUscite.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        Integer calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
+        sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " €");
+
+        if(calcoloDelCazzo == 0){
+            sommaUscite.setText("0,00 €");
+            sommaEntrate.setText("0,00 €");
+        }
     }
 
 }
