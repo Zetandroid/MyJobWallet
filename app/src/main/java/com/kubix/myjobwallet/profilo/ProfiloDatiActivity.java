@@ -26,7 +26,7 @@ public class ProfiloDatiActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfiloDati);
         setTitle(R.string.toolbarProfileDati);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoNero));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         aggiornaOrdinarie = (EditText) findViewById(R.id.oreOrdinarieText);
