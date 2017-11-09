@@ -63,14 +63,14 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
             //EVENTI DI CLICK DEL FOTTUTO RECYCLER
             @Override
             public void onClick(View view, int position) {
-                //final Uscite movie = entrateList.get(position);
+                //final Entrate movie = entrateList.get(position);
                 //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onLongClick(View view, int position) {
                 final Entrate movie = entrateList.get(position);
-                MainActivity.db.execSQL("DELETE FROM Entrate WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getEntrata()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataEntrata()+"'");
+                MainActivity.db.execSQL("DELETE FROM Entrate WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getEntrata()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataEntrata()+"' AND Categoria = '"+movie.getCategoria()+"'");
                 entrateList.remove(position);
                 mAdapter.notifyItemRemoved(position);
             }
@@ -185,9 +185,10 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                     do{
                         String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
                         String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
                         String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
                         String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
-                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata);
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
@@ -204,39 +205,255 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
 
     //EVENTI BOTTOMSHEET ENTRATE
     public void clickBottomSheetEntrateBonifico(View v){
-        Toast.makeText(this, "Bonifico", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE BONIFICO IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Bonifico' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateAssegno(View v){
-        Toast.makeText(this, "Assegno", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE ASSEGNO IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Assegno' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateVincite(View v){
-        Toast.makeText(this, "Vincite", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE VINCITA IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Vincita' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateRegalo(View v){
-        Toast.makeText(this, "Regalo", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE REGALO IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Regalo' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateBeni(View v){
-        Toast.makeText(this, "Beni", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE BENI IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Beni' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateRimborsi(View v){
-        Toast.makeText(this, "Rimborsi", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE RIMBORSI IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Rimborsi' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateVendita(View v){
-        Toast.makeText(this, "Vendita", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE VENDITA IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Vendite' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateAltro(View v){
-        Toast.makeText(this, "Altro", Toast.LENGTH_SHORT).show();
+        //CARICA ENTRATE ALTRO IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate WHERE Categoria = 'Altro' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetEntrateTutteLeCategorie(View v){
-        Toast.makeText(this, "Tutte le categorie", Toast.LENGTH_SHORT).show();
+        //CARICA TUTTE LE ENTRATE IN RECYCLER
+        try {
+            entrateList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Entrate ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloEntrata=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraEntrata=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaEntrata=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataEntrata= cr.getString(cr.getColumnIndex("Data"));
+                        Entrate entrate = new Entrate (campoTitoloEntrata, campoCifraEntrata, campoPromemoria,campoDataEntrata, campoCategoriaEntrata);
+                        entrateList.add(entrate);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noEntrateAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 }
 

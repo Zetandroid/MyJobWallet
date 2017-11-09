@@ -1,14 +1,16 @@
 package com.kubix.myjobwallet.entrate;
 
 public class Entrate {
-    private String titolo, entrata, promemoria, dataEntrata;
+    private String titolo, entrata, categoria, promemoria, dataEntrata;
 
     public Entrate(String s) {
+
     }
 
-    public Entrate(String titolo, String entrata, String promemoria, String dataEntrata) {
+    public Entrate(String titolo, String entrata, String promemoria, String dataEntrata, String categoria) {
         this.titolo = titolo;
         this.entrata = entrata;
+        this.categoria = categoria;
         this.promemoria = promemoria;
         this.dataEntrata = dataEntrata;
     }
@@ -20,12 +22,18 @@ public class Entrate {
         this.titolo = name;
     }
 
-
     public String getEntrata() {
         return entrata;
     }
     public void setEntrata(String genre) {
         this.entrata = genre;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(String categ) {
+        this.categoria = categ;
     }
 
     public String getPromemoria() {
@@ -41,9 +49,5 @@ public class Entrate {
     public void setDataEntrata(String datenr) {
         this.dataEntrata = datenr;
     }
-
-
-
-
 }
 

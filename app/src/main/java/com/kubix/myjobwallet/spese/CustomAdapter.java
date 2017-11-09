@@ -5,15 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.kubix.myjobwallet.R;
-
 import java.util.List;
 
 class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private List<Uscite> usciteList;
-
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView titolo, uscita, promemoria, dataUscita;
 
@@ -25,7 +22,6 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             dataUscita = (TextView) view.findViewById(R.id.txtDataSpesa);
         }
     }
-
 
     CustomAdapter(List<Uscite> moviesList) {
         this.usciteList = moviesList;
@@ -42,7 +38,7 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Uscite uscite = usciteList.get(position);
         holder.titolo.setText(uscite.getTitolo());
-        holder.uscita.setText(uscite.getUscita());
+        holder.uscita.setText(uscite.getUscita() + " €");
         holder.promemoria.setText(uscite.getPromemoria());
         holder.dataUscita.setText(uscite.getDataUscita());
     }
@@ -51,7 +47,6 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     public int getItemCount() {
         return usciteList.size();
     }
-
 
 }
 

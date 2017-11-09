@@ -60,7 +60,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
 
     public void inserisciEntrataMonetaria(View v){
         if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("") && ! dataEntrata.getText().toString().equals("") && ! oraEntrata.getText().toString().equals("")){
-            MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Ora) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+oraEntrata.getText().toString()+"')");
+            MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Categoria, Ora) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+TagEntrate.getSelectedItem().toString()+"', '"+oraEntrata.getText().toString()+"')");
             Snackbar.make(v, getString(R.string.entrataAggiunta), Snackbar.LENGTH_LONG).show();
             titoloEntrata.setText("");
             valoreEntrata.setText("");
