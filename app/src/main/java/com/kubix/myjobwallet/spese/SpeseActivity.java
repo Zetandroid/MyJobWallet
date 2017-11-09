@@ -17,7 +17,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.GridView;
 import android.widget.Toast;
-
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -26,7 +25,6 @@ import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,19 +74,19 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onLongClick(View view, int position) {
                 final Uscite movie = usciteList.get(position);
-                MainActivity.db.execSQL("DELETE FROM Uscite WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getUscita()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataUscita()+"'");
+                MainActivity.db.execSQL("DELETE FROM Uscite WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getUscita()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataUscita()+"' AND Categoria = '"+movie.getCategoriaUscita()+"'");
                 usciteList.remove(position);
                 mAdapter.notifyItemRemoved(position);
             }
         }));
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
         setTitle(R.string.toolbarSpese);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
-        //TODO ADMOB NATIVA
+        //ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewSpese);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
@@ -114,7 +112,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        //TODO FAB MENU
+        //FAB MENU
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
         fab2 = (FloatingActionButton) findViewById(R.id.fab2);
@@ -130,6 +128,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    //ON CLICK DEL FAB
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -138,10 +137,12 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                 animateFAB();
                 break;
             case R.id.fab1:
+                animateFAB();
                 BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetSpeseFragment();
                 bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
                 break;
             case R.id.fab2:
+                animateFAB();
                 startActivity(new Intent(this, SpeseAggiungiActivity.class));
                 break;
         }
@@ -191,9 +192,10 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                     do{
                         String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
                         String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
                         String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
                         String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
-                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa);
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
@@ -209,47 +211,311 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
 
     //EVENTI BOTTOMSHEET ENTRATE
     public void clickBottomSheetSpeseCasa(View v){
-        Toast.makeText(this, "Casa", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE CASA IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Casa' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseTrasporti(View v){
-        Toast.makeText(this, "Trasporti", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE TRASPORTI IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Trasporti' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseAuto(View v){
-        Toast.makeText(this, "Auto", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE AUTO IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Auto' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseCarburante(View v){
-        Toast.makeText(this, "Carburante", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE CARBURANTE IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Carburante' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseBollette(View v){
-        Toast.makeText(this, "Bollette", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE BOLLETTE IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Bollette' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseShopping(View v){
-        Toast.makeText(this, "Shopping", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE SHOPPING IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Shopping' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseCibo(View v){
-        Toast.makeText(this, "Cibo & Bevande", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE CIBO E BEVANDE IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Cibo & Bevande' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseSvago(View v){
-        Toast.makeText(this, "Svago", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE SVAGO IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Svago' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseViaggi(View v){
-        Toast.makeText(this, "Viaggi", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE VIAGGI IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Viaggi' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseAltro(View v){
-        Toast.makeText(this, "Altro", Toast.LENGTH_SHORT).show();
+        //CARICA SPESE ALTRO IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite WHERE Categoria = 'Altro' ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void clickBottomSheetSpeseTutte(View v){
-        Toast.makeText(this, "Tutte le categorie", Toast.LENGTH_SHORT).show();
+        //CARICA TUTTE LE SPESE IN LISTA
+        try {
+            usciteList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Uscite ORDER BY Titolo",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        String campoTitoloSpesa=cr.getString(cr.getColumnIndex("Titolo"));
+                        String campoCifraSpesa=cr.getString(cr.getColumnIndex("Cifra"));
+                        String campoCategoriaSpesa=cr.getString(cr.getColumnIndex("Categoria"));
+                        String campoPromemoria = cr.getString(cr.getColumnIndex("Ora"));
+                        String campoDataSpesa= cr.getString(cr.getColumnIndex("Data"));
+                        Uscite uscite = new Uscite (campoTitoloSpesa, campoCifraSpesa, campoPromemoria,campoDataSpesa, campoCategoriaSpesa);
+                        usciteList.add(uscite);
+                        mAdapter.notifyDataSetChanged();
+                    }while (cr.moveToNext());
+                }else
+                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+            }
+            cr.close();
+
+        }catch (Exception e){
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

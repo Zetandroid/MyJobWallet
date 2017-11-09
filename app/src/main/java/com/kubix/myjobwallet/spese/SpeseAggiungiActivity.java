@@ -15,28 +15,26 @@ import com.kubix.myjobwallet.R;
 
 public class SpeseAggiungiActivity extends AppCompatActivity {
 
-    //TODO INDICIZZA OGGETTI
+    //INDICIZZA OGGETTI
     Spinner TagSpese;
-
     EditText titoloSpesa;
     EditText cifraSpesa;
     EditText dataSpesa;
     EditText oraSpesa;
 
-    //TODO VARIABILI DI CLASSE
+    //VARIABILI DI CLASSE
     private String[] arraySpinnerSpesa;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spese_aggiungi);
 
-        //TODO SPINNER
+        //SPINNER
         TagSpese = (Spinner) findViewById(R.id.tagSpinner);
 
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpeseAggiungi);
         setTitle(R.string.toolbarSpeseAggiungi);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
@@ -61,17 +59,15 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
     public void inserisciUscitaMonetaria(View v){
         if(! titoloSpesa.getText().toString().equals("") && ! cifraSpesa.getText().toString().equals("") && ! dataSpesa.getText().toString().equals("") && ! oraSpesa.getText().toString().equals("")){
-            MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra, Ora) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"', '"+oraSpesa.getText().toString()+"')");
+            MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra, Categoria, Ora) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"', '"+TagSpese.getSelectedItem().toString()+"', '"+oraSpesa.getText().toString()+"')");
             Snackbar.make(v, getString(R.string.spesaAggiunta), Snackbar.LENGTH_LONG).show();
             titoloSpesa.setText("");
             cifraSpesa.setText("");
             dataSpesa.setText("");
             oraSpesa.setText("");
 
-            //EVENTO CALCOLO PER HOME PAGE SPESE
-
         }else{
-            Toast.makeText(this, getString(R.string.compilareDatiSpesa), Toast.LENGTH_SHORT).show();
+            Snackbar.make(v, getString(R.string.compilareDatiSpesa), Snackbar.LENGTH_LONG).show();
         }
     }
 }

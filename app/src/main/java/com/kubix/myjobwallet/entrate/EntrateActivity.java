@@ -108,7 +108,6 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-
         //FAB MENU
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
@@ -125,6 +124,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
+    //ON CLICK DEL FAB
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -133,10 +133,12 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                 animateFAB();
                 break;
             case R.id.fab1:
+                animateFAB();
                 BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetEntrateFragment();
                 bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
                 break;
             case R.id.fab2:
+                animateFAB();
                 startActivity(new Intent(this, EntrateAggiungiActivity.class));
                 break;
         }

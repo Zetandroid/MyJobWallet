@@ -15,15 +15,14 @@ import com.kubix.myjobwallet.R;
 
 public class EntrateAggiungiActivity extends AppCompatActivity {
 
-    //TODO INDICIZZA OGGETTI
+    //INDICIZZA OGGETTI
     EditText titoloEntrata;
-    Spinner Priorita;
     EditText valoreEntrata;
     Spinner TagEntrate;
     EditText dataEntrata;
     EditText oraEntrata;
 
-    //TODO VARIABILI DI CLASSE
+    //VARIABILI DI CLASSE
     private String[] arraySpinnerEntrata;
 
     @Override
@@ -31,13 +30,13 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrate_aggiungi);
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEntrataAggiungi);
         setTitle(R.string.toolbarEntrateAggiungi);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
-        //TODO SPINNER
+        //SPINNER
         TagEntrate = (Spinner) findViewById(R.id.testoTagEntrateSpinner);
 
         this.arraySpinnerEntrata = new String[]{
@@ -67,10 +66,8 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
             dataEntrata.setText("");
             oraEntrata.setText("");
 
-            //EVENTO CALCOLO PER HOME PAGE ENTRATE
-
         }else{
-            Toast.makeText(this, getString(R.string.compilareDatiEntrata), Toast.LENGTH_SHORT).show();
+            Snackbar.make(v, getString(R.string.compilareDatiEntrata), Snackbar.LENGTH_LONG).show();
         }
     }
 }
