@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_slide_5">
+    android:background="@color/colorPrimaryValuta">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/immagineSlide1"
+                android:id="@+id/immagineSlide5"
                 android:layout_width="match_parent"
                 android:layout_height="144dp"
                 android:layout_gravity="center"

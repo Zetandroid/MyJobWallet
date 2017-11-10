@@ -10,11 +10,6 @@
     <string name="adsInterstitial">ca-app-pub-9460579775308491/9042311077</string>
 
 
-    <!-- LOGIN FACEBOOK -->
-    <string name="facebook_app_id">1769392333363717</string>
-    <string name="fb_login_protocol_scheme">fb1769392333363717</string>
-
-
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 

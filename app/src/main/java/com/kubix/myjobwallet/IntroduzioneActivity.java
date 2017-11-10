@@ -62,7 +62,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
                 R.layout.introduzione_slide_2,
                 R.layout.introduzione_slide_3,
                 R.layout.introduzione_slide_4,
-                R.layout.introduzione_slide_5,};
+                R.layout.introduzione_slide_5};
 
         // adding bottom dots
         addBottomDots(0);

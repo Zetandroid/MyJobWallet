@@ -47,7 +47,8 @@
         <!-- SPESA -->
         <activity
             android:name=".spese.SpeseActivity"
-            android:label="@string/toolbarSpese" />
+            android:label="@string/toolbarSpese"
+            android:theme="@style/ThemeSpesa"/>
 
         <activity
             android:name=".spese.SpeseAggiungiActivity"
