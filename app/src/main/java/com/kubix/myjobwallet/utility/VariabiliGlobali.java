@@ -12,7 +12,7 @@ public class VariabiliGlobali {
     public static Integer calcoloCompletoStipendio;
 
     //INERENTI A HOME PAGE
-    public static Integer sommaEntrate;
-    public static Integer sommaUscite;
+    public static Double sommaEntrate;
+    public static Double sommaUscite;
 
 }

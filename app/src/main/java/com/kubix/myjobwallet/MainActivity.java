@@ -270,7 +270,7 @@ public class MainActivity extends AppCompatActivity
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{
-                        VariabiliGlobali.sommaEntrate = cr.getInt(0);
+                        VariabiliGlobali.sommaEntrate = cr.getDouble(0);
                         sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
                         if (VariabiliGlobali.sommaEntrate == 0){
                             sommaEntrate.setText("0,00 €");
@@ -289,7 +289,7 @@ public class MainActivity extends AppCompatActivity
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{
-                        VariabiliGlobali.sommaUscite = cr.getInt(0);
+                        VariabiliGlobali.sommaUscite = cr.getDouble(0);
                         sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " €");
                         if (VariabiliGlobali.sommaUscite == 0){
                             sommaUscite.setText("0,00 €");
@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
-        Integer calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
+        Double calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
         sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " €");
 
         if(calcoloDelCazzo == 0){

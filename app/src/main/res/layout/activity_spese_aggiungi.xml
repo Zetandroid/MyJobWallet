@@ -94,7 +94,7 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Cifra"
-                    android:inputType="number" />
+                    android:inputType="numberDecimal" />
 
                 <ImageView
                     android:id="@+id/iconaCostoSpesa"
