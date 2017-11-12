@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
             "Turni",
             "Spese",
             "Entrate",
-            "Valute",
+            "Riepilogo",
             "Memo"
     };
 
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity
                     Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
                     startActivity(intent);
                 } else if (position == 4) {
-                    Intent intent = new Intent(MainActivity.this, ConvertitoreActivity.class);
+                    Intent intent = new Intent(MainActivity.this, RiepilogoActivity.class);
                     startActivity(intent);
                 } else if (position == 5) {
                     Intent intent = new Intent(MainActivity.this, NoteActivity.class);

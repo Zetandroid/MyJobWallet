@@ -102,7 +102,7 @@
 
         <!-- CONVERTITORE -->
         <activity
-            android:name=".ConvertitoreActivity"
+            android:name=".RiepilogoActivity"
             android:label="@string/toolbarValuta"
             android:theme="@style/ThemeValuta" />
 

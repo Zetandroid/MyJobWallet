@@ -6,8 +6,9 @@
     <PreferenceCategory android:title="Temi">
 
         <SwitchPreference
-            android:title="Tema Dark"
-            android:summary="Cambia il tema Light con quello Dark"/>
+            android:key="temaDark"
+            android:summary="Cambia il tema Light con quello Dark"
+            android:title="Tema Dark" />
 
     </PreferenceCategory>
 
