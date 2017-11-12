@@ -123,6 +123,19 @@
         <item name="colorAccent">@color/coloreTestoBianco</item>
     </style>
 
+    <!-- TOOLBAR -->
+
+    <style name="ToolbarEstesa" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/coloreTestoBianco</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ToolbarContratta" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/coloreTestoBianco</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 
 
 </resources>

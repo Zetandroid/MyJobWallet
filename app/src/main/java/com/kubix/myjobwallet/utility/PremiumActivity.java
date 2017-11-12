@@ -51,9 +51,9 @@ public class PremiumActivity extends AppCompatActivity {
         mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
             public void onIabSetupFinished(IabResult result) {
                 if (!result.isSuccess()) {
-                    Log.d(TAG, "In-app Billing setup failed: " + result);
+                    Log.d(TAG, "Acquisto fallito!" + result);
                 } else {
-                    Log.d(TAG, "In-app Billing is set up OK");
+                    Log.d(TAG, "Acquisto avvenuto con successo!");
                 }
             }
         });

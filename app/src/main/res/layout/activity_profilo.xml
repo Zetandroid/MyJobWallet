@@ -16,6 +16,8 @@
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
+            app:expandedTitleTextAppearance="@style/ToolbarEstesa"
+            app:collapsedTitleTextAppearance="@style/ToolbarContratta"
             app:toolbarId="@+id/toolbarProfilo">
 
 
@@ -88,11 +90,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/coloreIcone" />
+                    android:background="@color/coloreNeroTrasparente" />
 
+
+                <TextView
+                    android:id="@+id/textDataProfilo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:text="Ottobre 2017"
+                    android:textColor="@color/coloreTestoNero"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <GridLayout
                     android:layout_width="wrap_content"

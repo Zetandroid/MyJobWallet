@@ -16,8 +16,6 @@ import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
-import org.w3c.dom.Text;
-
 public class ProfiloActivity extends AppCompatActivity {
 
     //INDICIZZAZIONE OGGETTI ORA
@@ -40,7 +38,6 @@ public class ProfiloActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilo);
-
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
