@@ -32,7 +32,7 @@
     <string name="toolbarValuta">Riepilogo</string>
     <string name="toolbarProfileDati">Dati Utente</string>
     <string name="toolbarEmail">Invia Email</string>
-    <string name="toolbarInfo">Staf Kubix Studio</string>
+    <string name="toolbarInfo">Staff Kubix Studio</string>
 
     <!-- INTRODUZIONE -->
     <string name="title_activity_welcome">MyJobWallet</string>
