@@ -1,11 +1,14 @@
 package com.kubix.myjobwallet.spese;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -72,11 +75,32 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
             }
 
             @Override
-            public void onLongClick(View view, int position) {
-                final Uscite movie = usciteList.get(position);
-                MainActivity.db.execSQL("DELETE FROM Uscite WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getUscita()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataUscita()+"' AND Categoria = '"+movie.getCategoriaUscita()+"'");
-                usciteList.remove(position);
-                mAdapter.notifyItemRemoved(position);
+            public void onLongClick(View view, final int position) {
+
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(SpeseActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(SpeseActivity.this);
+                }
+                builder.setTitle("ELIMINA SPESA")
+                        .setMessage("VUOI ELIMINARE VERAMENTE QUESTA SPESA?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ELIMINAZIONE
+                                final Uscite movie = usciteList.get(position);
+                                MainActivity.db.execSQL("DELETE FROM Uscite WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getUscita()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataUscita()+"' AND Categoria = '"+movie.getCategoriaUscita()+"'");
+                                usciteList.remove(position);
+                                mAdapter.notifyItemRemoved(position);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // NOTHING
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         }));
 

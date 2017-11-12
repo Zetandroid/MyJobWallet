@@ -111,11 +111,6 @@
             android:label="@string/toolbarEmail"
             android:theme="@style/ThemeEmail."/>
 
-        <!-- FACEBOOK -->
-        <activity android:name="com.kubix.myjobwallet.profilo.FacebookLogin"
-            android:label="@string/toolbarEmail"
-            android:theme="@style/ThemeEmail."/>
-
         <!-- INFO STAFF -->
         <activity android:name=".utility.InfoActivity"
             android:theme="@style/ThemeProfilo"/>

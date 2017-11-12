@@ -14,6 +14,9 @@ import android.widget.Toast;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
+
+import org.w3c.dom.Text;
 
 public class ProfiloActivity extends AppCompatActivity {
 
@@ -21,6 +24,8 @@ public class ProfiloActivity extends AppCompatActivity {
     public static TextView oreOrdinarieText;
     public static TextView pagaOrariaText;
     public static TextView pagaStraordinariaText;
+    public static TextView sommaEntrate;
+    public static TextView sommaUscite;
 
     //LOGIN GOOGLE
     private ProfiloActivity mContext;
@@ -59,12 +64,18 @@ public class ProfiloActivity extends AppCompatActivity {
         pagaOrariaText = (TextView) findViewById(R.id.txtPagaOraria);
         pagaStraordinariaText = (TextView) findViewById(R.id.txtStraordinaria);
 
+        //INDICIZZO OGGETTI CALCOLI VARI
+        sommaEntrate = (TextView) findViewById(R.id.txtEntrateCard1);
+        sommaUscite = (TextView) findViewById(R.id.txtSpeseCard1);
+
+        contiEntrateBarraSpese();
         caricaDatiProfilo();
     }
 
     @Override
     public void onResume(){
         super.onResume();
+        contiEntrateBarraSpese();
         caricaDatiProfilo();
     }
 
@@ -94,6 +105,55 @@ public class ProfiloActivity extends AppCompatActivity {
     //EVENTO TEMPORANEO
     public void alertAggiornamento(View v){
         Toast.makeText(this, getString(R.string.funzioneConAggiornamento), Toast.LENGTH_SHORT).show();
+    }
+
+    public void contiEntrateBarraSpese(){
+
+        //SOMMA ENTRATE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Entrate",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaEntrate = cr.getDouble(0);
+                        sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
+                        if (VariabiliGlobali.sommaEntrate == 0){
+                            sommaEntrate.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        //SOMMA USCITE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Uscite",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaUscite = cr.getDouble(0);
+                        sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " €");
+                        if (VariabiliGlobali.sommaUscite == 0){
+                            sommaUscite.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        Double calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
+        sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " €");
+
+        if(calcoloDelCazzo == 0){
+            sommaUscite.setText("0,00 €");
+            sommaEntrate.setText("0,00 €");
+        }
     }
 
 }
