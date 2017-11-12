@@ -22,7 +22,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <TextView
                     android:id="@+id/txtTitoloSpesa"
@@ -52,7 +52,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <TextView
                     android:id="@+id/txtSpesa"
@@ -72,7 +72,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <ImageView
                     android:id="@+id/imgNotificaSpese"
@@ -100,7 +100,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <TextView
                     android:id="@+id/txtDataSpesa"

@@ -22,7 +22,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <TextView
                     android:id="@+id/txtTitoloEntrate"
@@ -52,7 +52,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <TextView
                     android:id="@+id/txtEntrata"
@@ -71,7 +71,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <ImageView
                     android:id="@+id/imgNotificaEntrata"
@@ -99,7 +99,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="36dp">
 
                 <TextView
                     android:id="@+id/txtDataEntrata"
