@@ -24,6 +24,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -76,10 +77,13 @@ public class MainActivity extends AppCompatActivity
     //DICHIARA DATABASE
     public static SQLiteDatabase db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);

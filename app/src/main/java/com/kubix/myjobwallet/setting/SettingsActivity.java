@@ -3,11 +3,14 @@ package com.kubix.myjobwallet.setting;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.view.MenuItem;
+import android.widget.Switch;
 
 import com.kubix.myjobwallet.R;
 
 public class SettingsActivity extends AppCompatPreferenceActivity {
     private static final String TAG = SettingsActivity.class.getSimpleName();
+
+    private Switch switchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

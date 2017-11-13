@@ -604,17 +604,18 @@
 
                             <Button
                                 android:id="@+id/bottoneDati"
-                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
+                                android:layout_height="42dp"
                                 android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="16dp"
                                 android:layout_marginLeft="72dp"
                                 android:layout_marginRight="72dp"
+                                android:layout_marginTop="16dp"
                                 android:layout_weight="1"
+                                android:background="@drawable/bottone_google_plus"
                                 android:text="IMPOSTA DATI"
-                                android:textColor="@color/colorPrimarySpesa"
+                                android:textColor="@color/coloreTestoBianco"
                                 android:textStyle="bold"
-                                android:theme="@style/Bottone.Nero"
                                 tools:ignore="ObsoleteLayoutParam" />
 
                         </LinearLayout>
