@@ -1,10 +1,13 @@
 package com.kubix.myjobwallet.note;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,6 +24,9 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.spese.SpeseActivity;
+import com.kubix.myjobwallet.spese.Uscite;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -116,6 +122,7 @@ public class NoteActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener() {
 
+            //LISTNER RECYCLER VIEW
             @Override
             public void onClick(View view, int position) {
                 //final Note movie = noteList.get(position);
@@ -123,11 +130,31 @@ public class NoteActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onLongClick(View view, int position) {
-                final Note movie = noteList.get(position);
-                MainActivity.db.execSQL("DELETE FROM Note WHERE Titolo = '"+movie.getTitolo()+"' AND Nota = '"+movie.getNote()+"'");
-                noteList.remove(position);
-                mAdapter.notifyItemRemoved(position);
+            public void onLongClick(View view, final int position) {
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(NoteActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(NoteActivity.this);
+                }
+                builder.setTitle("ELIMINA NOTA")
+                        .setMessage("VUOI ELIMINARE VERAMENTE QUESTA NOTA?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ELIMINAZIONE
+                                final Note movie = noteList.get(position);
+                                MainActivity.db.execSQL("DELETE FROM Note WHERE Titolo = '"+movie.getTitolo()+"' AND Nota = '"+movie.getNote()+"'");
+                                noteList.remove(position);
+                                mAdapter.notifyItemRemoved(position);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // NOTHING
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
             }
         }));
 
