@@ -61,7 +61,7 @@
                     android:layout_weight="0.38"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="@string/ore_lavorative"
+                    android:hint="ORE ORDINARIE"
                     android:inputType="number"
                     android:textAlignment="viewStart"
                     android:visibility="visible" />
@@ -97,7 +97,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="@string/paga_oraria"
+                    android:hint="PAGA ORARIA ORDINARIA"
                     android:inputType="number"
                     android:textAlignment="viewStart" />
             </RelativeLayout>
@@ -133,7 +133,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="@string/straordinari"
+                    android:hint="PAGA ORARIA STRAORDINARIA"
                     android:inputType="number"
                     android:textAlignment="viewStart" />
             </RelativeLayout>
@@ -179,7 +179,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="@string/valutaMondiale"
+                    android:hint="VALUTA"
                     android:inputType="number"
                     android:textAlignment="viewStart" />
             </RelativeLayout>
@@ -201,7 +201,7 @@
                 android:background="@drawable/bottone_google_plus"
                 android:onClick="AggiornaDatiProfilo"
                 android:stateListAnimator="@null"
-                android:text="@string/salva_dati_profilo"
+                android:text="SALVA DATI PROFILO"
                 android:textColor="@color/coloreTestoBianco" />
 
 

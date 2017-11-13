@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/coloreLineaTrasparente"
                 android:ems="10"
-                android:hint="@string/titolo"
+                android:hint="TITOLO NOTA"
                 android:inputType="textMultiLine"
                 android:padding="16dp" />
 
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/coloreLineaTrasparente"
                 android:ems="10"
-                android:hint="@string/nota"
+                android:hint="Scrivi qui la tua nota..."
                 android:inputType="textMultiLine"
                 android:padding="16dp" />
 
@@ -85,19 +85,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:text="@string/salva"
-        android:textColor="@color/coloreTestoBianco"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/testoAggiungiImmagine"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarAggiungiNota"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="@string/aggiungi_immagine"
+        android:text="SALVA NOTA"
         android:textColor="@color/coloreTestoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />

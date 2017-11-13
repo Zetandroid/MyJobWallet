@@ -138,7 +138,7 @@ public class CalendarioActivity extends AppCompatActivity {
             }
 
         }, hour, minute, true);
-        mTimePicker.setTitle(getString(R.string.imposta_entrata));
+        mTimePicker.setTitle("Imposta Entrata");
         mTimePicker.show();
     }
 
@@ -146,13 +146,13 @@ public class CalendarioActivity extends AppCompatActivity {
         if(! inserisciEntrata.getText().toString().equals("") && ! inserisciUscita.getText().toString().equals("")){
             //INSERISCI TURNO
             MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"')");
-            Toast.makeText(this, getString(R.string.turnoInserito), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "TURNO INSERITO CON SUCCESSO", Toast.LENGTH_SHORT).show();
             finish();
 
             //EFFETTUA CALCOLI SU ORE ORDINARIE / STRAORDINARIE EFFETTUATE (Da programmare causa sonno abnorme)
 
         }else{
-            Snackbar.make(v, getString(R.string.compilaDatiPerInserimentoTurno), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "COMPILA I DATI PER INSERIRE IL TURNO", Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -194,7 +194,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
             }
         }, hour, minute, true);
-        mTimePicker.setTitle(getString(R.string.imposta_uscita));
+        mTimePicker.setTitle("Imposta Uscita");
         mTimePicker.show();
     }
 

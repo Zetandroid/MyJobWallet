@@ -224,7 +224,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -253,7 +253,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER LA CASA AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -281,7 +281,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA DI TRASPORTI AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -309,7 +309,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER L'AUTO O AUTO NUOVA AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -337,7 +337,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER CARBURANTE AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -365,7 +365,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER BOLLETTE AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -393,7 +393,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER SHOPPING AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -421,7 +421,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER CIBO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -449,7 +449,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER SVAGO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -477,7 +477,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab,"NESSUNA SPESA PER VIAGGIO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -505,7 +505,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA PER ALTRO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -533,7 +533,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, getString(R.string.noSpeseAggiunte), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA SPESA AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 

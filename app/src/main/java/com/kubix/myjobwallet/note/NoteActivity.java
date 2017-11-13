@@ -175,7 +175,7 @@ public class NoteActivity extends AppCompatActivity {
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(mFloatingActionButton, getString(R.string.nessunaNota), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mFloatingActionButton, "NESSUNA NOTA AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 

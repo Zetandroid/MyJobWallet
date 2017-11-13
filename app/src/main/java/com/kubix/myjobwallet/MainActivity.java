@@ -81,10 +81,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //INDICIZZAZIONE OGGETTI
-        sommaEntrate = (TextView) findViewById(R.id.txtSommaEntrate);
-        sommaUscite = (TextView) findViewById(R.id.txtSommaUscite);
-
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
@@ -192,8 +188,6 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
-        contiEntrateBarraSpese();
-
     }
 
     //TOOLBAR MENU DESTRA
@@ -254,61 +248,6 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onResume(){
-        super.onResume();
-        contiEntrateBarraSpese();
-    }
-
-    public void contiEntrateBarraSpese(){
-
-        //SOMMA ENTRATE
-        try {
-            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Entrate",null);
-            if(cr!=null){
-                if(cr.moveToFirst()){
-                    do{
-                        VariabiliGlobali.sommaEntrate = cr.getDouble(0);
-                        sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
-                        if (VariabiliGlobali.sommaEntrate == 0){
-                            sommaEntrate.setText("0,00 €");
-                        }
-                    }while (cr.moveToNext());
-                }
-            }
-            cr.close();
-        }catch (Exception e){
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-
-        //SOMMA USCITE
-        try {
-            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Uscite",null);
-            if(cr!=null){
-                if(cr.moveToFirst()){
-                    do{
-                        VariabiliGlobali.sommaUscite = cr.getDouble(0);
-                        sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " €");
-                        if (VariabiliGlobali.sommaUscite == 0){
-                            sommaUscite.setText("0,00 €");
-                        }
-                    }while (cr.moveToNext());
-                }
-            }
-            cr.close();
-        }catch (Exception e){
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-
-        Double calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
-        sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " €");
-
-        if(calcoloDelCazzo == 0){
-            sommaUscite.setText("0,00 €");
-            sommaEntrate.setText("0,00 €");
-        }
     }
 
 }

@@ -611,7 +611,7 @@
                                 android:layout_marginLeft="72dp"
                                 android:layout_marginRight="72dp"
                                 android:layout_weight="1"
-                                android:text="@string/imposta_dati"
+                                android:text="IMPOSTA DATI"
                                 android:textColor="@color/colorPrimarySpesa"
                                 android:textStyle="bold"
                                 android:theme="@style/Bottone.Nero"

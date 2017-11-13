@@ -152,7 +152,7 @@ public class TurniActivity extends AppCompatActivity  {
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(mAdView, getString(R.string.nessun_turno), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mAdView, "NESSUN TURNO INSERITO", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 

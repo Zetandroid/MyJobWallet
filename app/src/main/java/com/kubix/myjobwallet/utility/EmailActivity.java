@@ -40,9 +40,9 @@ public class EmailActivity extends AppCompatActivity{
     private void sendFeedback() {
         final Intent _Intent = new Intent(android.content.Intent.ACTION_SEND);
         _Intent.setType("text/html");
-        _Intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{ getString(R.string.email) });
-        _Intent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.emailOggetto));
-        _Intent.putExtra(android.content.Intent.EXTRA_TEXT, getString(R.string.emailTesto));
-        startActivity(Intent.createChooser(_Intent, getString(R.string.emailTitolo)));
+        _Intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{ "studio.kubix@gmail.com" });
+        _Intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "MyJobWallet");
+        _Intent.putExtra(android.content.Intent.EXTRA_TEXT, "Ciao Kubix Studio...");
+        startActivity(Intent.createChooser(_Intent, "Invia email a Kubix Studio"));
     }
 }

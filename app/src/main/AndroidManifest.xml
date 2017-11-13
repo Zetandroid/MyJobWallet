@@ -73,10 +73,6 @@
             android:theme="@style/ThemeOre" />
 
         <!-- TURNI -->
-        <activity
-            android:name=".calendario.ElaborazioniActivity"
-            android:label="@string/toolbarCalcoloPaga"
-            android:theme="@style/ThemeTurni" />
 
         <activity
             android:name=".calendario.TurniActivity"

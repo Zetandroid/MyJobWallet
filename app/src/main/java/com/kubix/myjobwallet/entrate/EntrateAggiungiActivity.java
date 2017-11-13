@@ -40,17 +40,14 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
         TagEntrate = (Spinner) findViewById(R.id.testoTagEntrateSpinner);
 
         this.arraySpinnerEntrata = new String[]{
-                getString(R.string.bonifico), getString(R.string.assegno), getString(R.string.vincita), getString(R.string.regalo), getString(R.string.beni),
-                getString(R.string.rimborsi), getString(R.string.vendite), getString(R.string.altro)
+                "Bonifico", "Assegno", "Vincita", "Regalo", "Beni",
+                "Rimborsi", "Vendite", "Altro"
         };
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, arraySpinnerEntrata);
         TagEntrate.setAdapter(adapter);
-
-
-
         titoloEntrata = (EditText) findViewById(R.id.testoTitoloSpesa);
         valoreEntrata = (EditText) findViewById(R.id.testoPrezzoEntrate);
         dataEntrata = (EditText) findViewById(R.id.testoDataEntrate);
@@ -60,14 +57,14 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
     public void inserisciEntrataMonetaria(View v){
         if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("") && ! dataEntrata.getText().toString().equals("") && ! oraEntrata.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Categoria, Ora) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+TagEntrate.getSelectedItem().toString()+"', '"+oraEntrata.getText().toString()+"')");
-            Snackbar.make(v, getString(R.string.entrataAggiunta), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "ENTRATA AGGIUNTA CON SUCCESSO", Snackbar.LENGTH_LONG).show();
             titoloEntrata.setText("");
             valoreEntrata.setText("");
             dataEntrata.setText("");
             oraEntrata.setText("");
 
         }else{
-            Snackbar.make(v, getString(R.string.compilareDatiEntrata), Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "COMPILA TUTI I DATI PER INSERIRE UN ENTRATA", Snackbar.LENGTH_LONG).show();
         }
     }
 }

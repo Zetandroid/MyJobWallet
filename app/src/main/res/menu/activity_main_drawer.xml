@@ -9,19 +9,19 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_drawer_profilo"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_profilo" />
+            android:title="Profilo" />
 
         <item
             android:id="@+id/nav_premium"
             android:icon="@drawable/ic_drawer_premium"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_premium" />
+            android:title="Premium" />
 
         <item
             android:id="@+id/nav_email"
             android:icon="@drawable/ic_drawer_email"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_email" />
+            android:title="Email" />
 
 
    </group>
@@ -34,20 +34,20 @@
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_drawer_setting"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_impostazioni" />
+            android:title="Impostazioni" />
 
         <item
             android:id="@+id/nav_valuta"
             android:icon="@drawable/ic_drawer_valuta"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_valuta"
+            android:title="Valuta app"
             android:visible="false" />
 
         <item
             android:id="@+id/nav_plus"
             android:icon="@drawable/ic_drawer_googleplus"
             android:textColor="@color/colorAccent"
-            android:title="@string/drawer_googleplus" />
+            android:title="Kubix su google +" />
 
     </group>
 
