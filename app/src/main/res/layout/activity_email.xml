@@ -39,7 +39,7 @@
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="match_parent"
-                android:layout_height="224dp"
+                android:layout_height="192dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="24dp"
                 app:srcCompat="@drawable/ic_email"
@@ -56,7 +56,8 @@
                 android:text="HAI UN PROBLEMA ?"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco" />
+                android:textColor="@color/coloreTestoBianco"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -69,7 +70,8 @@
                 android:text="HAI UNA RICHIESTA?"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco" />
+                android:textColor="@color/coloreTestoBianco"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -82,7 +84,8 @@
                 android:text="INVIACI UNA MAIL"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco" />
+                android:textColor="@color/coloreTestoBianco"
+                android:textSize="18sp" />
 
         </LinearLayout>
     </ScrollView>
