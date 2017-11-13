@@ -40,9 +40,9 @@
     <color name="colorAccentEntrate">#00E676</color>
 
     <!-- TEMA TURNI -->
-    <color name="colorPrimaryTurni">#009688</color>
-    <color name="colorPrimaryDarkTurni">#00695C</color>
-    <color name="colorAccentTurni">#4DB6AC</color>
+    <color name="colorPrimaryTurni">#9c27b0</color>
+    <color name="colorPrimaryDarkTurni">#6a0080</color>
+    <color name="colorAccentTurni">#d05ce3</color>
 
     <!-- TEMA SPESA -->
     <color name="colorPrimarySpesa">#f44336</color>

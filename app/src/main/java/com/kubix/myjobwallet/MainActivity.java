@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
             R.drawable.ic_home_turni,
             R.drawable.ic_home_spesa,
             R.drawable.ic_home_entrate,
-            R.drawable.ic_home_valuta,
+            R.drawable.ic_home_riepilogo,
             R.drawable.ic_home_memo
     };
 
