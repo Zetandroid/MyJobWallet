@@ -1,7 +1,6 @@
 package com.kubix.myjobwallet.calendario;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,9 +14,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -28,16 +24,10 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import com.kubix.myjobwallet.entrate.*;
 import com.kubix.myjobwallet.fragment.BtnSheetElaborazioniFragment;
-import com.kubix.myjobwallet.utility.VariabiliGlobali;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TurniActivity extends AppCompatActivity  {
 
@@ -47,7 +37,6 @@ public class TurniActivity extends AppCompatActivity  {
     VideoController mVideoController;
 
     //INDICIZZA OGGETTI E VARIABILI
-    ImageView eliminaTurno;
     ImageView sviluppaTurno;
 
     // LISTA RECYCLER VIEW
@@ -59,10 +48,7 @@ public class TurniActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turni);
-        eliminaTurno = (ImageView) findViewById(R.id.bottoneEliminaTurno);
-        sviluppaTurno = (ImageView) findViewById(R.id.bottoneSviluppaTurno);
-        eliminaTurno.setVisibility(View.INVISIBLE);
-        sviluppaTurno.setVisibility(View.INVISIBLE);
+
 
         //TODO BOTTOM SHEET
         View showModalBottomSheet = findViewById(R.id.bottom_sheet);
