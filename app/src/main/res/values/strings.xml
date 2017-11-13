@@ -130,6 +130,7 @@
     <string name="rimosso_turno">TURNO RIMOSSO</string>
     <string name="non_eliminare">NON ELIMINARE</string>
     <string name="rimuoviRiposo">RIPOSO ELIMINATO CON SUCCESSO</string>
+    <string name="turnoInserito">TURNO INSERITO CON SUCCESSO</string>
 
     <!-- SPINNER PEIORITA -->
     <string name="bassa">Bassa</string>

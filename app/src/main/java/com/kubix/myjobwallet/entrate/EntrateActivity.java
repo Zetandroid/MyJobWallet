@@ -66,7 +66,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
             //EVENTI DI CLICK DEL FOTTUTO RECYCLER
             @Override
             public void onClick(View view, int position) {
-                //final Entrate movie = entrateList.get(position);
+                //final Turni movie = entrateList.get(position);
                 //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
             }
 

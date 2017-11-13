@@ -28,19 +28,19 @@ public class CalendarioActivity extends AppCompatActivity {
     EditText inserisciUscita;
     CalendarView dataTurno;
 
-    //DICHIARAZIONE VARIABILE DI RICEVIMENTO DATA TURNO
-    public static String thisDate;
-
-    //VARIABILI DI CONTROLLO
-    String oraDiEntrata;
-    String oraDiUscita;
+    //VARIABILI DI CLASSE
+    String giornoTestuale;
+    String giornoTestualeAbbreviato;
+    int numeroGiorno;
+    int numeroMese;
+    int numeroAnno;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendario);
 
-        //TODO TOOLBAR
+        //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarOrologio);
         setTitle(R.string.toolbarOre);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
@@ -51,48 +51,71 @@ public class CalendarioActivity extends AppCompatActivity {
         inserisciEntrata = (EditText) findViewById(R.id.editTextOraEntrata);
         inserisciUscita = (EditText) findViewById(R.id.editTextOraUscita);
 
-        //INDICIZZA DATABASE
+        //APRI DATABASE
         MainActivity.db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        thisDate = sdf.format(new Date(dataTurno.getDate()));
 
         //LISTNER CLICK CALENDARIO
         dataTurno.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
 
             @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                //PRELEVA DATA CLICCATA
-
+            public void onSelectedDayChange(CalendarView view, int year, int month,
+                                            int dayOfMonth) {
                 int d = dayOfMonth;
                 int m = month + 1;
                 int y = year;
 
-                if(m < 10){
-                    thisDate =String.valueOf(d + "/" + "0"+m + "/" + y);
-                }else{
-                    thisDate =String.valueOf(d + "/" + m + "/" + y);
-                }
+                //PASSA IN VARIABILI DI CLASSE
+                numeroGiorno = d;
+                numeroMese = m;
+                numeroAnno = y;
 
-                if(d < 10){
-                    thisDate =String.valueOf("0"+d + "/" +m + "/" + y);
-                }else{
-                    thisDate =String.valueOf(d + "/" +m + "/" + y);
-                }
+                //OTTIENI GIORNO DA DATA
+                try{
+                    SimpleDateFormat inFormat = new SimpleDateFormat("dd/MM/yyyy");
+                    Date date = inFormat.parse(d+"/"+m+"/"+y);
+                    SimpleDateFormat outFormat = new SimpleDateFormat("EEEE");
+                    String goal = outFormat.format(date);
+                    giornoTestuale = goal;
 
-                if(d < 10 && m <10){
-                    thisDate =String.valueOf("0"+d + "/" +"0" +m + "/" + y);
-                }else{
-                    thisDate =String.valueOf(d + "/" +m + "/" + y);
-                }
+                    //RIPORTA IN ITALIANO
+                    if(giornoTestuale.equals("Sunday")){
+                        giornoTestuale = "Domenica";
+                    }else if(giornoTestuale.equals("Monday")){
+                        giornoTestuale = "Lunedi";
+                    }else if(giornoTestuale.equals("Tuesday")){
+                        giornoTestuale = "Martedi";
+                    }else if (giornoTestuale.equals("Wednesday")){
+                        giornoTestuale = "Mercoledi";
+                    }else if(giornoTestuale.equals("Thursday")){
+                        giornoTestuale = "Giovedi";
+                    }else if(giornoTestuale.equals("Friday")){
+                        giornoTestuale = "Venerdi";
+                    }else if (giornoTestuale.equals("Saturday")){
+                        giornoTestuale = "Sabato";
+                    }
 
-                if (d<10 && m >9){
-                    thisDate =String.valueOf("0"+d + "/" +m + "/" + y);
-                }
+                    //ABBREVIA PER FOTTUTO IMPATTO GRAFICO
+                    if(giornoTestuale.equals("Domenica")){
+                        giornoTestualeAbbreviato = "DOM";
+                    }else if(giornoTestuale.equals("Lunedi")){
+                        giornoTestualeAbbreviato= "LUN";
+                    }else if(giornoTestuale.equals("Martedi")){
+                        giornoTestualeAbbreviato = "MAR";
+                    }else if (giornoTestuale.equals("Mercoledi")){
+                        giornoTestualeAbbreviato = "MER";
+                    }else if(giornoTestuale.equals("Giovedi")){
+                        giornoTestualeAbbreviato = "GIO";
+                    }else if(giornoTestuale.equals("Venerdi")){
+                        giornoTestualeAbbreviato = "VEN";
+                    }else if (giornoTestuale.equals("Sabato")){
+                        giornoTestualeAbbreviato = "SAB";
+                    }
 
+                }catch (Exception e){
+                    Toast.makeText(CalendarioActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
     }
 
     public void dialogTimePickerClickEntrata(View v){
@@ -134,97 +157,23 @@ public class CalendarioActivity extends AppCompatActivity {
         mTimePicker.show();
     }
 
-    public void inserisciEntrataTurno(View v){
+    public void inserisciTurno(View v){
+        if(! inserisciEntrata.getText().toString().equals("") && ! inserisciUscita.getText().toString().equals("")){
+            //INSERISCI TURNO
+            MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"')");
+            Toast.makeText(this, getString(R.string.turnoInserito), Toast.LENGTH_SHORT).show();
+            finish();
 
-        if (! inserisciEntrata.getText().toString().equals("")){
-
-            String oraEntrata = String.valueOf(String.format(inserisciEntrata.getText().toString()));
-            oraDiEntrata = oraEntrata;
-
-            try{
-                MainActivity.db.execSQL("INSERT INTO Turni (Data, oraEntrata, oraUscita) VALUES ('"+thisDate+"', '"+oraEntrata+"', 'IN SERVIZIO')");
-                MainActivity.db.execSQL("INSERT INTO Controlli (Data) VALUES ('"+thisDate+"')");
-                Snackbar.make(v, "Entrata impostata", Snackbar.LENGTH_LONG).show();
-
-            }catch (Exception e) {
-
-                //PARTE L'ECCEZIONE PERCHE IL CAMPO DATA DEL DB E' SETTATO UNIQUE E QUINDI SE SI INSERISCE UN'ALTRA ENTRATA LO STESSO GIORNO NON LA METTE E DA QUESTO MESSAGGIO SOTTOSTANTE
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-                builder1.setMessage("TURNAZIONE GIA ESISTENTE PER QUESTA GIORNATA, SE NON LO HAI FATTO: NON DIMENTICARE DI INSERIRE L'USCITA.");
-                builder1.setCancelable(true);
-                builder1.create();
-                builder1.show();
-            }
+            //EFFETTUA CALCOLI SU ORE ORDINARIE / STRAORDINARIE EFFETTUATE (Da programmare causa sonno abnorme)
 
         }else{
             Snackbar.make(v, getString(R.string.compilaDatiPerInserimentoTurno), Snackbar.LENGTH_LONG).show();
         }
-
     }
 
-    public void inserisciUscitaTurno(View v){
-
-        if (! inserisciUscita.getText().toString().equals("")){
-
-            String controllo = "";
-
-            try{
-
-                Cursor cs = MainActivity.db.rawQuery("SELECT * FROM Controlli WHERE Data = '"+thisDate+"'", null);
-                if (cs.getCount() > 0) {
-                    cs.moveToFirst();
-                    controllo = cs.getString(0);
-                }
-
-            }catch (Exception e){
-
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-
-            if(controllo != ""){
-
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                    String oraUscita = String.valueOf(String.format(inserisciUscita.getText().toString()));
-                    oraDiUscita = oraUscita;
-
-                    try{
-                        MainActivity.db.execSQL("UPDATE Turni SET oraUscita = '"+oraUscita+"' WHERE Data = '"+thisDate+"';");
-                    }catch (Exception e){
-                        Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-                //EVITA QUESTO MESSAGGIO QUANDO INSERISCI IL RIPOSO
-                if(! oraDiEntrata.equals(oraDiUscita)){
-                    Snackbar.make(v, "Uscita impostata", Snackbar.LENGTH_LONG).show();
-                    inserisciEntrata.setText("");
-                    inserisciUscita.setText("");
-                }
-
-
-            }else{
-                AlertDialog.Builder builder1 = new AlertDialog.Builder(this);
-                builder1.setMessage("PRIMA DI INSERIRE L'USCITA DEVI INSERIRE L'ENTRATA PER LA TURNAZIONE ODIERNA.");
-                builder1.setCancelable(true);
-                builder1.create();
-                builder1.show();
-            }
-
-            if(oraDiEntrata.equals(oraDiUscita)){
-                try{
-                    MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO' WHERE Data = '"+thisDate+"';");
-                    Toast.makeText(this, "GIORNO DI RIPOSO INSERITO CORRETTAMENTE", Toast.LENGTH_LONG).show();
-                    inserisciEntrata.setText("");
-                    inserisciUscita.setText("");
-                }catch (Exception e){
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
-                }
-            }
-
-        }else{
-            Snackbar.make(v, getString(R.string.compilaDatiPerInserimentoTurno), Snackbar.LENGTH_LONG).show();
-        }
-
+    //DA AGGANCIARE A UN FUTURO BOTTOMSHEET (So io che intendo xD)
+    public void inserisciRiposo(View v){
+        MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, ordinarie, straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', 'RIPOSO', 'RIPOSO')");
     }
 
     public void dialogTimePickerClickUscita(View v){

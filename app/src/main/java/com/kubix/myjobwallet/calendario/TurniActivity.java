@@ -3,11 +3,15 @@ package com.kubix.myjobwallet.calendario;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -31,6 +35,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.kubix.myjobwallet.entrate.*;
 import com.kubix.myjobwallet.fragment.BtnSheetElaborazioniFragment;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
@@ -44,13 +49,11 @@ public class TurniActivity extends AppCompatActivity  {
     //INDICIZZA OGGETTI E VARIABILI
     ImageView eliminaTurno;
     ImageView sviluppaTurno;
-    GridView listaTurni;
-    String entrataCalcolo;
-    String uscitaCalcolo;
-    String dataSelezionata;
-    int posizioneCorrente;
-    Date d1;
-    Date d2;
+
+    // LISTA RECYCLER VIEW
+    private List<Turni> turniList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private com.kubix.myjobwallet.calendario.CustomAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +61,6 @@ public class TurniActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_turni);
         eliminaTurno = (ImageView) findViewById(R.id.bottoneEliminaTurno);
         sviluppaTurno = (ImageView) findViewById(R.id.bottoneSviluppaTurno);
-        listaTurni = (GridView) findViewById(R.id.gridview1);
-        List<String> li = new ArrayList<>();
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, li);
-        dataAdapter.setDropDownViewResource(R.layout.activity_turni);
         eliminaTurno.setVisibility(View.INVISIBLE);
         sviluppaTurno.setVisibility(View.INVISIBLE);
 
@@ -109,145 +108,87 @@ public class TurniActivity extends AppCompatActivity  {
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
-        listaTurni.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        //INDICIZZA
+        recyclerView = (RecyclerView) findViewById(R.id.listaTurni);
+
+        //SETTAGGI RECYCLER VIEW
+        mAdapter = new com.kubix.myjobwallet.calendario.CustomAdapter(turniList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
+        recyclerView.addOnItemTouchListener(new com.kubix.myjobwallet.entrate.RecyclerTouchListener(getApplicationContext(), recyclerView, new com.kubix.myjobwallet.entrate.RecyclerTouchListener.ClickListener() {
+
+            //EVENTI DI CLICK DEL FOTTUTO RECYCLER
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-                eliminaTurno.setVisibility(View.VISIBLE);
-                sviluppaTurno.setVisibility(View.VISIBLE);
-
-                //PRELEVA DATI PER SVILUPPO TURNO
-                dataSelezionata = arg0.getItemAtPosition(position).toString().substring(0,10);
-                entrataCalcolo = arg0.getItemAtPosition(position).toString().substring(20, 25);
-                uscitaCalcolo = arg0.getItemAtPosition(position).toString().substring(35);
-                posizioneCorrente = position;
-                SimpleDateFormat fmt = new SimpleDateFormat("HH:mm");
-                fmt.setLenient(false);
-
-               //SUDDIVIDI IN DUE VARIABILI ENTRATA E USCITA
-                try {
-                    d1 = fmt.parse(entrataCalcolo);
-                    d2 = fmt.parse(uscitaCalcolo);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+            public void onClick(View view, int position) {
+                //final Turni movie = entrateList.get(position);
+                //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
             }
-        });
 
+            @Override
+            public void onLongClick(View view, final int position) {
+
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(TurniActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(TurniActivity.this);
+                }
+                builder.setTitle("ELIMINA TURNO")
+                        .setMessage("VUOI VERAMENTE ELIMINARE QUESTO TURNO?")
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // ELIMINA
+                                final Turni movie = turniList.get(position);
+                                MainActivity.db.execSQL("DELETE FROM Turni WHERE giornoSettimana = '"+movie.getGiornoSettimana()+"' AND numeroGiorno = '"+movie.getNumeroGiorno()+"' AND mese = '"+movie.getMese()+"' AND anno = '"+movie.getAnno()+"'");
+                                turniList.remove(position);
+                                mAdapter.notifyItemRemoved(position);
+                            }
+                        })
+                        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // NOTHING
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+            }
+        }));
+
+        caricaTurni();
+
+    }
+
+    public void caricaTurni(){
+        //CARICA TURNI IN RECYCLER
         try {
-            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Turni ORDER BY Data",null);
+            turniList.clear();
+            mAdapter.notifyDataSetChanged();
+            Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Turni",null);
             if(cr!=null){
                 if(cr.moveToFirst()){
                     do{
-
-                        String campoData=cr.getString(cr.getColumnIndex("Data"));
-                        String campoEntrata=cr.getString(cr.getColumnIndex("oraEntrata"));
-                        String campoUscita=cr.getString(cr.getColumnIndex("oraUscita"));
-
-                        li.add(campoData + "          " + campoEntrata + "          " + campoUscita);
-                        listaTurni.setAdapter(dataAdapter);
-
+                        String campoGiornoSettimana=cr.getString(cr.getColumnIndex("giornoSettimana"));
+                        String campoNumeroGiorno=cr.getString(cr.getColumnIndex("numeroGiorno"));
+                        String campoMese=cr.getString(cr.getColumnIndex("mese"));
+                        String campoAnno = cr.getString(cr.getColumnIndex("anno"));
+                        String campoOraEntrata= cr.getString(cr.getColumnIndex("oraEntrata"));
+                        String campoOraUscita= cr.getString(cr.getColumnIndex("oraUscita"));
+                        String campoOrdinarie= cr.getString(cr.getColumnIndex("Ordinarie"));
+                        String campoStraordinarie= cr.getString(cr.getColumnIndex("Straordinarie"));
+                        Turni turni = new Turni (campoGiornoSettimana, campoNumeroGiorno, campoMese,campoAnno, campoOraEntrata, campoOraUscita, campoOrdinarie, campoStraordinarie);
+                        turniList.add(turni);
+                        mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else{
-                    Snackbar.make(toolbar, getString(R.string.nessun_turno), Snackbar.LENGTH_LONG).show();
-                }
+                }else
+                    Snackbar.make(sviluppaTurno, getString(R.string.nessun_turno), Snackbar.LENGTH_LONG).show();
             }
             cr.close();
+
         }catch (Exception e){
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void eliminaTurno(final View v){
-
-        try{
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setCancelable(true);
-            builder.setTitle(R.string.elimina_turno);
-            builder.setMessage(R.string.verra_eliminato);
-            builder.setPositiveButton(R.string.si_elimina,
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog,
-                                            int which) {
-                            if (uscitaCalcolo.equals(getString(R.string.in_servizio))) {
-                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '" + entrataCalcolo + "' AND oraUscita = '"+getString(R.string.in_servizio)+"'");
-                                MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
-                                dialog.dismiss();
-                                Snackbar.make(v, getString(R.string.turno_rimosso), Snackbar.LENGTH_LONG).show();
-                                finish();
-                            }else if (uscitaCalcolo.equals(getString(R.string.riposo))){
-                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '" + dataSelezionata + "' AND oraEntrata = '"+getString(R.string.riposo)+"' AND oraUscita = '"+getString(R.string.riposo)+"'");
-                                MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '" + dataSelezionata + "'");
-                                dialog.dismiss();
-                                Snackbar.make(v, getString(R.string.rimuoviRiposo), Snackbar.LENGTH_LONG).show();
-                                finish();
-                            }else{
-                                MainActivity.db.execSQL("DELETE FROM Turni WHERE Data = '"+dataSelezionata+"' AND oraEntrata = '"+entrataCalcolo+"' AND oraUscita = '"+uscitaCalcolo+"'");
-                                MainActivity.db.execSQL("DELETE FROM Controlli Where Data = '"+dataSelezionata+"'");
-                                eliminaTurno.setVisibility(View.INVISIBLE);
-                                dialog.dismiss();
-                                Snackbar.make(v, getString(R.string.turno_rimosso), Snackbar.LENGTH_LONG).show();
-                                finish();
-                            }
-                        }
-                    });
-
-            builder.setNegativeButton(R.string.non_eliminare,
-                    new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog,
-                                            int which) {
-                            eliminaTurno.setVisibility(View.INVISIBLE);
-                            dialog.dismiss();
-                        }
-                    });
-            AlertDialog alert = builder.create();
-            alert.show();
-        }catch (Exception e){
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public void sviluppaTurno(View v){
-        try {
-
-            // Calculates the difference in milliseconds.
-            long millisDiff = d2.getTime() - d1.getTime();
-
-            // Calculates days/hours/minutes/seconds.
-            int seconds = (int) (millisDiff / 1000 % 60);
-            int minutes = (int) (millisDiff / 60000 % 60);
-            int hours = (int) (millisDiff / 3600000 % 24);
-            int days = (int) (millisDiff / 86400000);
-
-            if (hours < 0 && minutes <0 || hours <0 && minutes >=0) {
-                hours = (int) (millisDiff / 3600000 % 24 + 23);
-                minutes = (int) (millisDiff / 60000 % 60 + 60);
-
-            }
-
-            if (minutes > 59){
-                minutes = minutes - 60;
-                hours = hours + 1;
-            }
-
-            int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
-            if(oreOrdinarie > 0 && hours > oreOrdinarie){
-                //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO"  , Toast.LENGTH_LONG).show();
-                Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO", Snackbar.LENGTH_LONG).show();
-
-            }else{
-                //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI" , Toast.LENGTH_LONG).show();
-                Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI", Snackbar.LENGTH_LONG).show();
-            }
-
-        } catch (Exception e) {
-            Snackbar.make(v, "NON POSSO EFFETTUARE CALCOLI SU TURNI NON COMPLETI O DI RIPOSO", Snackbar.LENGTH_LONG).show();
-        }
-    }
-
-    public void apriCalcoloPaga (View v){
-        startActivity (new Intent(TurniActivity.this, ElaborazioniActivity.class));
-    }
 }
