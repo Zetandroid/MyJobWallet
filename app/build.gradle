@@ -7,8 +7,8 @@ android {
         applicationId "com.kubix.myjobwallet"
         minSdkVersion 24
         targetSdkVersion 26
-        versionCode 19
-        versionName "0.1.9"
+        versionCode 20
+        versionName "0.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
