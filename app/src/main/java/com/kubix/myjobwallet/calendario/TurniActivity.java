@@ -36,9 +36,6 @@ public class TurniActivity extends AppCompatActivity  {
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-    //INDICIZZA OGGETTI E VARIABILI
-    ImageView sviluppaTurno;
-
     // LISTA RECYCLER VIEW
     private List<Turni> turniList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -48,19 +45,6 @@ public class TurniActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turni);
-
-
-        //TODO BOTTOM SHEET
-        View showModalBottomSheet = findViewById(R.id.bottom_sheet);
-        showModalBottomSheet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Initializing a bottom sheet
-                BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetElaborazioniFragment();
-                //show it
-                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
-            }
-        });
 
         //TODO ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewTurni);
@@ -168,7 +152,7 @@ public class TurniActivity extends AppCompatActivity  {
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(sviluppaTurno, getString(R.string.nessun_turno), Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mAdView, getString(R.string.nessun_turno), Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 

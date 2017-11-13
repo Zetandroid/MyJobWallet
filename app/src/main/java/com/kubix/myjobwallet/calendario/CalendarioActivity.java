@@ -77,39 +77,24 @@ public class CalendarioActivity extends AppCompatActivity {
                     String goal = outFormat.format(date);
                     giornoTestuale = goal;
 
-                    //RIPORTA IN ITALIANO
-                    if(giornoTestuale.equals("Sunday")){
-                        giornoTestuale = "Domenica";
-                    }else if(giornoTestuale.equals("Monday")){
-                        giornoTestuale = "Lunedi";
-                    }else if(giornoTestuale.equals("Tuesday")){
-                        giornoTestuale = "Martedi";
-                    }else if (giornoTestuale.equals("Wednesday")){
-                        giornoTestuale = "Mercoledi";
-                    }else if(giornoTestuale.equals("Thursday")){
-                        giornoTestuale = "Giovedi";
-                    }else if(giornoTestuale.equals("Friday")){
-                        giornoTestuale = "Venerdi";
-                    }else if (giornoTestuale.equals("Saturday")){
-                        giornoTestuale = "Sabato";
-                    }
-
                     //ABBREVIA PER FOTTUTO IMPATTO GRAFICO
-                    if(giornoTestuale.equals("Domenica")){
+                    if(giornoTestuale.equals("domenica")){
                         giornoTestualeAbbreviato = "DOM";
-                    }else if(giornoTestuale.equals("Lunedi")){
+                    }else if(giornoTestuale.equals("lunedì")){
                         giornoTestualeAbbreviato= "LUN";
-                    }else if(giornoTestuale.equals("Martedi")){
+                    }else if(giornoTestuale.equals("martedì")){
                         giornoTestualeAbbreviato = "MAR";
-                    }else if (giornoTestuale.equals("Mercoledi")){
+                    }else if (giornoTestuale.equals("mercoledì")){
                         giornoTestualeAbbreviato = "MER";
-                    }else if(giornoTestuale.equals("Giovedi")){
+                    }else if(giornoTestuale.equals("giovedì")){
                         giornoTestualeAbbreviato = "GIO";
-                    }else if(giornoTestuale.equals("Venerdi")){
+                    }else if(giornoTestuale.equals("venerdì")){
                         giornoTestualeAbbreviato = "VEN";
-                    }else if (giornoTestuale.equals("Sabato")){
+                    }else if (giornoTestuale.equals("sabato")){
                         giornoTestualeAbbreviato = "SAB";
                     }
+
+                    Toast.makeText(CalendarioActivity.this, giornoTestuale, Toast.LENGTH_SHORT).show();
 
                 }catch (Exception e){
                     Toast.makeText(CalendarioActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
