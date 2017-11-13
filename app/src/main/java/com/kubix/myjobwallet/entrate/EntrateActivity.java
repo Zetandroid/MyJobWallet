@@ -249,7 +249,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER BONIFICO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -277,7 +277,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER ASSEGNO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -305,7 +305,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER VINCITE AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -333,7 +333,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER REGALO AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -361,7 +361,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER BENI AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -389,7 +389,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER RIMBORSI AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -417,7 +417,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER VENDITE AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -445,7 +445,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, "NESSUNA ENTRATA PER ALTRE CAUSE AGGIUNTA", Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
