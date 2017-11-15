@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_premium"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -31,10 +30,9 @@
             android:onClick="bottoneAcquista"
             android:stateListAnimator="@null"
             android:text="ACQUISTA"
-            android:textColor="@color/coloreTestoNero"
+            android:textColor="@color/coloreTestoBianco"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:visibility="invisible"
             tools:ignore="RtlHardcoded" />
 
         <Button
@@ -50,7 +48,7 @@
             android:background="@drawable/bottone_acquisto_ripristina"
             android:stateListAnimator="@null"
             android:text="RIPRISTINA ACQUISTO"
-            android:textColor="@color/coloreTestoBianco"
+            android:textColor="@color/coloreTestoNero"
             android:textSize="12sp"
             android:textStyle="bold"
             tools:ignore="RtlHardcoded" />
@@ -100,8 +98,9 @@
                 android:text="RIMUOVI PUBBLICITA'"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -113,8 +112,9 @@
                 android:text="CALCOLA STIPENDIO"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView13"
@@ -126,8 +126,9 @@
                 android:text="CAMBIA TEMA"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView14"
@@ -139,8 +140,9 @@
                 android:text="AGGIUNGI WIDGET"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

@@ -208,7 +208,7 @@
                     android:padding="4dp"
                     android:text="22"
                     android:textAlignment="center"
-                    android:textColor="@color/colorPrimarySpesa"
+                    android:textColor="@color/colorAccent"
                     android:textSize="26sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />

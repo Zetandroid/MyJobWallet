@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
-        app:srcCompat="@color/colorPrimaryOre"
+        app:srcCompat="@color/colorPrimary"
         tools:ignore="ContentDescription" />
 
 
@@ -111,7 +111,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimaryOre"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 

@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoNero));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
         //NAVIGATION DRAWER

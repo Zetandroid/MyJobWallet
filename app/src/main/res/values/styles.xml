@@ -8,76 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
-    <!-- TEMA PROFILO -->
-    <style name="ThemeProfilo" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryProfilo</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkProfilo</item>
-        <item name="colorAccent">@color/colorAccentProfilo</item>
-    </style>
-
-    <!-- TEMA ORE -->
-    <style name="ThemeOre" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryOre</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkOre</item>
-        <item name="colorAccent">@color/colorAccentOre</item>
-    </style>
-
-    <!-- TEMA TURNI -->
-    <style name="ThemeTurni" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryTurni</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkTurni</item>
-        <item name="colorAccent">@color/colorAccentTurni</item>
-    </style>
-
-    <!-- TEMA SPESA -->
-    <style name="ThemeSpesa" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimarySpesa</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkSpesa</item>
-        <item name="colorAccent">@color/colorAccentSpesa</item>
-    </style>
-
-
-    <!-- TEMA MEMO -->
-    <style name="ThemeMemo" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryMemo</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkMemo</item>
-        <item name="colorAccent">@color/colorAccentMemo</item>
-    </style>
-
-    <!-- TEMA EMAIL -->
-    <style name="ThemeEmail." parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryEmail</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryEmail</item>
-        <item name="colorAccent">@color/colorAccentEmail</item>
-    </style>
-
-    <!-- TEMA CONVERTITORE VALUTA -->
-    <style name="ThemeValuta" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryValuta</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkValuta</item>
-        <item name="colorAccent">@color/colorAccentValuta</item>
-    </style>
-
-    <!-- TEMA PREMIUM -->
-    <style name="ThemePremium" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryPremium</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkPremium</item>
-        <item name="colorAccent">@color/colorAccentPremium</item>
-    </style>
-
     <!-- TEMA IMPOSTAZIONI -->
     <style name="ThemeImpostazioni" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimaryImpostazioni</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkImpostazioni</item>
-        <item name="colorAccent">@color/colorAccentImpostazioni</item>
-    </style>
-
-    <!-- TEMA ENTRATE -->
-    <style name="ThemeEntrate" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryEntrate</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkEntrate</item>
-        <item name="colorAccent">@color/colorAccentEntrate</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -89,19 +24,6 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <!-- BOTTONI -->
-
-    <style name="Bottone.Rosso" parent="Widget.AppCompat.Button.Colored">
-        <item name="colorButtonNormal">@color/colorPrimarySpesa</item>
-        <item name="android:textColor">@color/coloreTestoBianco</item>
-    </style>
-
-
-    <style name="BottoneFlatRosso" parent="Theme.AppCompat.Light">
-        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
-        <item name="colorControlHighlight">@color/colorPrimarySpesa</item>
-        <item name="colorAccent">@color/coloreTestoBianco</item>
-    </style>
 
     <!-- TOOLBAR -->
 

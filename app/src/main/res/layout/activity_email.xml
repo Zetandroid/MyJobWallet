@@ -1,7 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/background_email"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -56,8 +55,9 @@
                 android:text="HAI UN PROBLEMA ?"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -70,8 +70,9 @@
                 android:text="HAI UNA RICHIESTA?"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -84,8 +85,9 @@
                 android:text="INVIACI UNA MAIL"
                 android:textAlignment="center"
                 android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="18sp" />
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

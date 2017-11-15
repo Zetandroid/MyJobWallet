@@ -37,79 +37,80 @@
         <activity
             android:name=".profilo.ProfiloActivity"
             android:label="@string/toolbarProfile"
-            android:theme="@style/ThemeSpesa"/>
+            android:theme="@style/AppTheme"/>
 
         <activity
             android:name=".profilo.ProfiloDatiActivity"
             android:label="@string/toolbarProfileDati"
-            android:theme="@style/ThemeSpesa"/>
+            android:theme="@style/AppTheme"/>
 
         <!-- SPESA -->
         <activity
             android:name=".spese.SpeseActivity"
             android:label="@string/toolbarSpese"
-            android:theme="@style/ThemeSpesa"/>
+            android:theme="@style/AppTheme"/>
 
         <activity
             android:name=".spese.SpeseAggiungiActivity"
             android:label="@string/toolbarSpeseAggiungi"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
 
         <!-- MEMO -->
         <activity
             android:name=".note.NoteActivity"
-            android:theme="@style/ThemeMemo" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".note.NoteAggiungiActivity"
             android:windowSoftInputMode="stateHidden"
             android:label="@string/toolbarNoteAggiungi"
-            android:theme="@style/ThemeMemo" />
+            android:theme="@style/AppTheme" />
 
         <!-- CALENDARIO/ORE -->
         <activity
             android:name=".calendario.CalendarioActivity"
             android:label="@string/toolbarCalendario"
-            android:theme="@style/ThemeOre" />
+            android:theme="@style/AppTheme" />
 
         <!-- TURNI -->
 
         <activity
             android:name=".calendario.TurniActivity"
             android:label="@string/toolbarTurni"
-            android:theme="@style/ThemeTurni" />
+            android:theme="@style/AppTheme" />
 
         <!-- PREMIUM -->
         <activity
             android:name="com.kubix.myjobwallet.utility.PremiumActivity"
             android:label="@string/toolbarPremium"
-            android:theme="@style/ThemePremium" />
+            android:theme="@style/AppTheme" />
 
         <!-- ENTRATE -->
         <activity
             android:name=".entrate.EntrateActivity"
             android:label="@string/toolbarEntrate"
-            android:theme="@style/ThemeEntrate" />
+            android:theme="@style/AppTheme" />
 
         <activity android:name=".entrate.EntrateAggiungiActivity"
             android:windowSoftInputMode="stateHidden"
             android:label="@string/toolbarEntrateAggiungi"
-            android:theme="@style/ThemeEntrate"/>
+            android:theme="@style/AppTheme"/>
 
         <!-- CONVERTITORE -->
         <activity
             android:name=".RiepilogoActivity"
             android:label="@string/toolbarValuta"
-            android:theme="@style/ThemeValuta" />
+            android:theme="@style/AppTheme" />
 
         <!-- EMAIL -->
         <activity android:name="com.kubix.myjobwallet.utility.EmailActivity"
             android:label="@string/toolbarEmail"
-            android:theme="@style/ThemeEmail."/>
+            android:theme="@style/AppTheme"/>
 
         <!-- INFO STAFF -->
         <activity android:name=".utility.InfoActivity"
-            android:theme="@style/ThemeProfilo"/>
+            android:theme="@style/AppTheme"/>
 
         <!-- WIDGET -->
         <receiver android:name=".widget.WidgetOne">

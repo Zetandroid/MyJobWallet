@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -51,7 +51,7 @@
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_immagine_morgan"
-                            app:civ_border_color="@color/place_autocomplete_separator"
+                            app:civ_border_color="@color/coloreTestoNero"
                             app:civ_border_width="2dp" />
 
                         <TextView
@@ -63,6 +63,7 @@
                             android:paddingTop="4dp"
                             android:text="Morgan Ciancio"
                             android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -75,6 +76,7 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER / GRAPHIC DESIGN"
                             android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
                             android:textSize="12sp" />
 
                         <View
@@ -98,9 +100,9 @@
                                 android:layout_weight="1"
                                 android:text="Google Plus"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/colorPrimarySpesa"
-                                android:textSize="12sp"
-                                android:theme="@style/BottoneFlatRosso"
+                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold" />
                                 tools:ignore="DuplicateIds,ObsoleteLayoutParam" />
 
                             <Button
@@ -112,9 +114,9 @@
                                 android:layout_weight="1"
                                 android:text="Twitter"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/colorPrimarySpesa"
-                                android:textSize="12sp"
-                                android:theme="@style/BottoneFlatRosso"
+                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold" />
                                 tools:ignore="ObsoleteLayoutParam" />
 
                         </LinearLayout>
@@ -162,6 +164,7 @@
                             android:paddingTop="4dp"
                             android:text="Alessio Boe"
                             android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -174,6 +177,7 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER "
                             android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
                             android:textSize="12sp" />
 
                         <View
@@ -197,9 +201,9 @@
                                 android:layout_weight="1"
                                 android:text="Google Plus"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/colorPrimarySpesa"
-                                android:textSize="12sp"
-                                android:theme="@style/BottoneFlatRosso"
+                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold" />
                                 tools:ignore="DuplicateIds,ObsoleteLayoutParam" />
 
                             <Button
@@ -211,9 +215,9 @@
                                 android:layout_weight="1"
                                 android:text="Twitter"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/colorPrimarySpesa"
-                                android:textSize="12sp"
-                                android:theme="@style/BottoneFlatRosso" />
+                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                                android:textColor="@color/colorAccent"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 

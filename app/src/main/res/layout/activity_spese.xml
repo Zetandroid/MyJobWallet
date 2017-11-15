@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimarySpesa"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -50,7 +50,7 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:src="@drawable/ic_matita"
         android:visibility="invisible"
-        app:backgroundTint="@color/colorPrimarySpesa"
+        app:backgroundTint="@color/colorAccent"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp" />
 
@@ -65,7 +65,7 @@
         android:layout_marginRight="@dimen/fab_margin"
         android:src="@drawable/ic_btn_sheet_categoria"
         android:visibility="invisible"
-        app:backgroundTint="@color/colorPrimarySpesa"
+        app:backgroundTint="@color/colorAccent"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp" />
 
@@ -78,7 +78,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_aggiungi"
-        app:backgroundTint="@color/colorPrimarySpesa"
+        app:backgroundTint="@color/colorAccent"
         app:elevation="6dp"
         app:pressedTranslationZ="12dp"
         tools:ignore="RelativeOverlap" />

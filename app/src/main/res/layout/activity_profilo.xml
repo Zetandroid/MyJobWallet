@@ -78,12 +78,12 @@
 
                 <Button
                     android:id="@+id/button3"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Accedi con Google"
-                    android:textColor="@color/colorPrimarySpesa"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
 
                 <View
@@ -123,8 +123,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginTop="4dp"
-                        android:padding="8dp"
-                        app:cardBackgroundColor="#E8F5E9">
+                        android:padding="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -155,7 +154,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="1345,00 €"
                                 android:textAlignment="center"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -169,8 +168,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginTop="4dp"
-                        android:padding="8dp"
-                        app:cardBackgroundColor="#FFEBEE">
+                        android:padding="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -201,7 +199,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="990,00 €"
                                 android:textAlignment="center"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -224,8 +222,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginTop="4dp"
-                        android:padding="8dp"
-                        app:cardBackgroundColor="#FFF3E0">
+                        android:padding="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -256,7 +253,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="160 Ore"
                                 android:textAlignment="center"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -271,8 +268,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginTop="4dp"
-                        android:padding="8dp"
-                        app:cardBackgroundColor="#E1F5FE">
+                        android:padding="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -303,7 +299,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="0 Ore"
                                 android:textAlignment="center"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -326,8 +322,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginTop="4dp"
-                        android:padding="8dp"
-                        app:cardBackgroundColor="#E8EAF6">
+                        android:padding="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -358,7 +353,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="0,00 €"
                                 android:textAlignment="center"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -373,8 +368,7 @@
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:layout_marginTop="4dp"
-                        android:padding="8dp"
-                        app:cardBackgroundColor="#EDE7F6">
+                        android:padding="8dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -405,7 +399,7 @@
                                 android:layout_marginTop="4dp"
                                 android:text="0,00 €"
                                 android:textAlignment="center"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
@@ -462,6 +456,7 @@
                                         android:layout_centerVertical="true"
                                         android:layout_marginLeft="24dp"
                                         android:text="Valuta"
+                                        android:textColor="@color/coloreTestoNero"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -515,6 +510,7 @@
                                         android:layout_centerVertical="true"
                                         android:layout_marginLeft="24dp"
                                         android:text="Ore lavorative"
+                                        android:textColor="@color/coloreTestoNero"
                                         android:textStyle="bold" />
 
                                 </RelativeLayout>
@@ -545,6 +541,7 @@
                                         android:layout_centerVertical="true"
                                         android:layout_marginLeft="24dp"
                                         android:text="Paga straordinaria"
+                                        android:textColor="@color/coloreTestoNero"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -596,6 +593,7 @@
                                         android:layout_centerInParent="true"
                                         android:layout_marginLeft="24dp"
                                         android:text="Paga oraria"
+                                        android:textColor="@color/coloreTestoNero"
                                         android:textStyle="bold" />
 
                                 </RelativeLayout>
@@ -612,7 +610,7 @@
                                 android:layout_marginRight="72dp"
                                 android:layout_marginTop="16dp"
                                 android:layout_weight="1"
-                                android:background="@drawable/bottone_google_plus"
+                                android:background="@drawable/bottone_acquista"
                                 android:text="IMPOSTA DATI"
                                 android:textColor="@color/coloreTestoBianco"
                                 android:textStyle="bold"

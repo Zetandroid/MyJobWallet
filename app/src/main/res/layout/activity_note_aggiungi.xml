@@ -23,8 +23,8 @@
         android:layout_height="200dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@color/colorPrimaryMemo"
         android:contentDescription=""
+        app:srcCompat="@color/colorPrimary"
         tools:ignore="ContentDescription" />
 
     <ScrollView
@@ -73,9 +73,9 @@
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="scriviNotaInDB"
-        app:srcCompat="@color/colorPrimaryMemo"
         android:contentDescription=""
+        android:onClick="scriviNotaInDB"
+        app:srcCompat="@color/colorPrimary"
         tools:ignore="ContentDescription" />
 
     <TextView

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -23,7 +23,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:onClick="inserisciEntrataMonetaria"
-        app:srcCompat="@color/colorPrimaryEntrate" />
+        app:srcCompat="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/textView6"

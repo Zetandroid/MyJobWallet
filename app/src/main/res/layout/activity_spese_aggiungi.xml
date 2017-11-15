@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimarySpesa"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -20,7 +20,7 @@
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:onClick="inserisciUscitaMonetaria"
-        app:srcCompat="@color/colorPrimarySpesa" />
+        app:srcCompat="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/textView6"

@@ -33,7 +33,7 @@
             <corners android:radius="90dp" />
             <stroke
                 android:width="2dp"
-                android:color="#fafafa" />
+                android:color="@color/colorPrimaryDark" />
         </shape>
     </item>
 
