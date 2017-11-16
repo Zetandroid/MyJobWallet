@@ -25,7 +25,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/toolbarSettings" />
+            android:theme="@style/AppTheme"/>
 
         <!-- IMPOSTAZIONI -->
         <activity

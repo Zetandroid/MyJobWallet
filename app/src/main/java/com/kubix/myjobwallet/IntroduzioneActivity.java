@@ -43,7 +43,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
             finish();
         }
 
-        // Making notification bar transparent
+        // Barra Notifiche
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
@@ -55,8 +55,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
         btnSkip = (Button) findViewById(R.id.btn_skip);
         btnNext = (Button) findViewById(R.id.btn_next);
 
-        // layouts of all welcome sliders
-        // add few more layouts if you want
+        // layouts di benvenuto
         layouts = new int[]{
                 R.layout.introduzione_slide_1,
                 R.layout.introduzione_slide_2,
@@ -64,10 +63,10 @@ public class IntroduzioneActivity extends AppCompatActivity {
                 R.layout.introduzione_slide_4,
                 R.layout.introduzione_slide_5};
 
-        // adding bottom dots
+        // Aggiunta bottoni Dots
         addBottomDots(0);
 
-        // making notification bar transparent
+        // Barra Notifiche
         changeStatusBarColor();
 
         myViewPagerAdapter = new MyViewPagerAdapter();
@@ -162,7 +161,7 @@ public class IntroduzioneActivity extends AppCompatActivity {
     private void changeStatusBarColor() {
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(Color.TRANSPARENT);
+        window.setStatusBarColor(Color.BLACK);
     }
 
     /**

@@ -17,11 +17,11 @@
 
     <!-- INTRODUZIONE -->
     <!-- DOTS INATTIVI -->
-    <color name="dot_dark_screen1">#50ffffff</color>
-    <color name="dot_dark_screen2">#50ffffff</color>
-    <color name="dot_dark_screen3">#50ffffff</color>
-    <color name="dot_dark_screen4">#50ffffff</color>
-    <color name="dot_dark_screen5">#50ffffff</color>
+    <color name="dot_dark_screen1">#222754</color>
+    <color name="dot_dark_screen2">#222754</color>
+    <color name="dot_dark_screen3">#222754</color>
+    <color name="dot_dark_screen4">#222754</color>
+    <color name="dot_dark_screen5">#222754</color>
 
     <array name="array_dot_inactive">
         <item>@color/dot_dark_screen1</item>
@@ -32,11 +32,11 @@
     </array>
 
     <!-- DOTS ATTIVI -->
-    <color name="dot_light_screen1">#50000000</color>
-    <color name="dot_light_screen2">#50000000</color>
-    <color name="dot_light_screen3">#50000000</color>
-    <color name="dot_light_screen4">#50000000</color>
-    <color name="dot_light_screen5">#50000000</color>
+    <color name="dot_light_screen1">#ef5350</color>
+    <color name="dot_light_screen2">#ef5350</color>
+    <color name="dot_light_screen3">#ef5350</color>
+    <color name="dot_light_screen4">#ef5350</color>
+    <color name="dot_light_screen5">#ef5350</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>

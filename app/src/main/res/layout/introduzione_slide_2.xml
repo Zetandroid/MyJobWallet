@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/imgSlide2"
                 android:layout_width="match_parent"
-                android:layout_height="144dp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/immagine_slide_2"
                 tools:ignore="ContentDescription" />
 
@@ -34,7 +34,7 @@
                 android:padding="8dp"
                 android:text="@string/testoSlide2"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
-                android:textColor="@color/coloreTestoBianco" />
+                android:textColor="@color/coloreTestoNero" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

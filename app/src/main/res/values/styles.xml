@@ -27,6 +27,11 @@
 
     <!-- TOOLBAR -->
 
+    <style name="ToolbarIconaBianca" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/coloreTestoBianco</item>
+        <item name="android:textColorPrimary">@color/coloreTestoBianco</item>
+    </style>
+
     <style name="ToolbarEstesa" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/coloreTestoBianco</item>
