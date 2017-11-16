@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.Date;
 
@@ -143,13 +144,64 @@ public class CalendarioActivity extends AppCompatActivity {
     }
 
     public void inserisciTurno(View v){
+        //CALCOLI FINALI
+        String resaCalcoloOrdinarie = null;
+        String resaCalcoloStraordinarie = null;
+
         if(! inserisciEntrata.getText().toString().equals("") && ! inserisciUscita.getText().toString().equals("")){
+            try {
+                SimpleDateFormat fmt = new SimpleDateFormat("HH:mm");
+                fmt.setLenient(false);
+
+                // CONVERTI IN ORARIO.
+                Date d1 = fmt.parse(inserisciEntrata.getText().toString());
+                Date d2 = fmt.parse(inserisciUscita.getText().toString());
+
+                // CALCOLA LA DIFFERENZA IN MILLISECONDI.
+                long millisDiff = d2.getTime() - d1.getTime();
+
+                // CALCOLA SU GIONRI/ORE/MINUTI/SECONDI.
+                int seconds = (int) (millisDiff / 1000 % 60);
+                int minutes = (int) (millisDiff / 60000 % 60);
+                int hours = (int) (millisDiff / 3600000 % 24);
+                int days = (int) (millisDiff / 86400000);
+
+                if (hours < 0 && minutes <0 || hours <0 && minutes >=0) {
+                    hours = (int) (millisDiff / 3600000 % 24 + 23);
+                    minutes = (int) (millisDiff / 60000 % 60 + 60);
+
+                }
+
+                if (minutes > 59){
+                    minutes = minutes - 60;
+                    hours = hours + 1;
+                }
+
+                int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
+
+                if(hours > oreOrdinarie){
+                    //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO"  , Toast.LENGTH_LONG).show();
+                    //Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO", Snackbar.LENGTH_LONG).show();
+                    resaCalcoloOrdinarie = hours + " Ore e " +minutes + " Minuti, di cui:";
+                    resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " ore e " + minutes + " Minuti";
+                }else{
+                    //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI" , Toast.LENGTH_LONG).show();
+                    //Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI", Snackbar.LENGTH_LONG).show();
+                    resaCalcoloOrdinarie = hours + " Ore e "+ minutes + " Minuti";
+                    resaCalcoloStraordinarie = "0";
+                }
+
+            } catch (Exception e) {
+                //Snackbar.make(v, "NON POSSO EFFETTUARE CALCOLI SU TURNI NON COMPLETI O DI RIPOSO", Snackbar.LENGTH_LONG).show();
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+
+
             //INSERISCI TURNO
-            MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"')");
+            MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, Ordinarie, Straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"', '"+resaCalcoloOrdinarie+"', '"+resaCalcoloStraordinarie+"')");
             Toast.makeText(this, "TURNO INSERITO CON SUCCESSO", Toast.LENGTH_SHORT).show();
             finish();
-
-            //EFFETTUA CALCOLI SU ORE ORDINARIE / STRAORDINARIE EFFETTUATE (Da programmare causa sonno abnorme)
 
         }else{
             Snackbar.make(v, "COMPILA I DATI PER INSERIRE IL TURNO", Snackbar.LENGTH_LONG).show();

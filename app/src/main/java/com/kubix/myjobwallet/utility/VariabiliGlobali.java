@@ -5,7 +5,7 @@ public class VariabiliGlobali {
     //INERENTI A FUNZIONI TURNO
     public static String dataTurno;
 
-    //INERENTI A FUNZIONE STIPENDIO
+    //INERENTI A FUNZIONI DI CALCOLO DEI TURNI
     public static Integer oreOrdinarie;
     public static Integer nettoOrario;
     public static Integer nettoStraordinario;
