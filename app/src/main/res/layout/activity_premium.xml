@@ -33,6 +33,7 @@
             android:textColor="@color/coloreTestoBianco"
             android:textSize="12sp"
             android:textStyle="bold"
+            android:visibility="gone"
             tools:ignore="RtlHardcoded" />
 
         <Button
