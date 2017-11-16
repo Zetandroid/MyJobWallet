@@ -36,10 +36,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Casa"
             android:onClick="clickBottomSheetSpeseCasa"
+            android:text="Casa"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -63,10 +64,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Trasporti"
             android:onClick="clickBottomSheetSpeseTrasporti"
+            android:text="Trasporti"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -90,10 +92,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Auto"
             android:onClick="clickBottomSheetSpeseAuto"
+            android:text="Auto"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -117,10 +120,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Carburante"
             android:onClick="clickBottomSheetSpeseCarburante"
+            android:text="Carburante"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -144,10 +148,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Bollette"
             android:onClick="clickBottomSheetSpeseBollette"
+            android:text="Bollette"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -171,10 +176,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Shopping"
             android:onClick="clickBottomSheetSpeseShopping"
+            android:text="Shopping"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -200,10 +206,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Cibo"
             android:onClick="clickBottomSheetSpeseCibo"
+            android:text="Cibo"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -227,10 +234,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Svago"
             android:onClick="clickBottomSheetSpeseSvago"
+            android:text="Svago"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -254,10 +262,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Viaggi"
             android:onClick="clickBottomSheetSpeseViaggi"
+            android:text="Viaggi"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -281,10 +290,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Altro"
             android:onClick="clickBottomSheetSpeseAltro"
+            android:text="Altro"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -314,10 +324,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Tutte le categorie"
             android:onClick="clickBottomSheetSpeseTutte"
+            android:text="Tutte le categorie"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 

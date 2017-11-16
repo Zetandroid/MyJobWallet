@@ -15,21 +15,25 @@
         android:layout_marginTop="8dp">
 
         <LinearLayout
+            android:id="@+id/linearDatiSpesa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="88dp"
+            android:background="@color/colorRossoTrasparente"
             android:orientation="vertical"
             tools:ignore="UselessParent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="36dp">
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/txtTitoloSpesa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginRight="72dp"
                     android:padding="4dp"
                     android:text="Titolo"
@@ -52,7 +56,9 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="36dp">
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/txtSpesa"
@@ -60,19 +66,21 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentStart="true"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="8dp"
+                    android:gravity="center_vertical"
                     android:padding="4dp"
                     android:text="200,00 €"
-                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
                     android:textColor="@color/coloreSommarioNero"
+                    android:textSize="16sp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="36dp">
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/imgNotificaSpese"
@@ -89,31 +97,126 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
                     android:padding="4dp"
                     android:text="17:10"
-                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
                     android:textColor="@color/coloreSommarioNero"
+                    android:textSize="16sp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="36dp">
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical">
 
                 <TextView
                     android:id="@+id/txtDataSpesa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
                     android:padding="4dp"
                     android:text="15 Ottobre 2017"
-                    android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                    android:textAppearance="@android:style/TextAppearance.Material.Small"
                     android:textColor="@color/coloreSommarioNero"
+                    android:textSize="16sp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearData"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/testoGiornoSettimana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:text="Gio"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/coloreTestoNero"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/testoNumeroGiorno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="22"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txtMese"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:text="Ott"
+                    android:textAlignment="center"
+                    android:textColor="@color/coloreSommarioNero"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/txtAnno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:text="2017"
+                    android:textAlignment="center"
+                    android:textColor="@color/coloreSommarioNero"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
             </RelativeLayout>
 
         </LinearLayout>

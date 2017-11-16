@@ -40,10 +40,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Bonifico"
             android:onClick="clickBottomSheetEntrateBonifico"
+            android:text="Bonifico"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -68,10 +69,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Assegno"
             android:onClick="clickBottomSheetEntrateAssegno"
+            android:text="Assegno"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -95,10 +97,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Vincita"
             android:onClick="clickBottomSheetEntrateVincite"
+            android:text="Vincita"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -122,10 +125,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Regalo"
             android:onClick="clickBottomSheetEntrateRegalo"
+            android:text="Regalo"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -149,10 +153,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Beni"
             android:onClick="clickBottomSheetEntrateBeni"
+            android:text="Beni"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -176,10 +181,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Rimborsi"
             android:onClick="clickBottomSheetEntrateRimborsi"
+            android:text="Rimborsi"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -203,10 +209,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Vendite"
             android:onClick="clickBottomSheetEntrateVendita"
+            android:text="Vendite"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -230,10 +237,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Altro"
             android:onClick="clickBottomSheetEntrateAltro"
+            android:text="Altro"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -263,10 +271,11 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="72dp"
             android:layout_marginRight="16dp"
-            android:text="Tutte le categorie"
             android:onClick="clickBottomSheetEntrateTutteLeCategorie"
+            android:text="Tutte le categorie"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:textColor="@color/coloreSommarioNero"
             android:textSize="14sp" />
     </RelativeLayout>
 

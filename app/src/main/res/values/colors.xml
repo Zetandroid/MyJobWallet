@@ -6,14 +6,16 @@
     <color name="colorPrimaryDark">#222754</color>
     <color name="colorAccent">#ef5350</color>
 
-    <color name="colorBannerHome">#f5f5f5</color>
+    <color name="colorBiancoScuro">#f5f5f5</color>
+    <color name="colorBluTrasparente">#10293266</color>
+    <color name="colorRossoTrasparente">#10ef5350</color>
     <color name="coloreTestoBianco">#ffffff</color>
     <color name="coloreTestoNero">#222754</color>
     <color name="coloreSommarioNero">#293266</color>
 
     <color name="coloreIcone">#222754</color>
     <color name="coloreLineaTrasparente">#00000000</color>
-    <color name="coloreNeroTrasparente">#40000000</color>
+    <color name="coloreNeroTrasparente">#20222754</color>
 
     <!-- INTRODUZIONE -->
     <!-- DOTS INATTIVI -->
