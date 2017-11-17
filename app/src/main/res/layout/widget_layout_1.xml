@@ -3,7 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#40000000">
+    android:background="#40000000"
+    android:gravity="center"
+    android:orientation="horizontal">
 
 
+    <Button
+        android:id="@+id/btnWidgetEntrata"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Entrata" />
+
+    <Button
+        android:id="@+id/btnWidgetUscita"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Uscita" />
 </LinearLayout>

@@ -24,72 +24,81 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
-    <ScrollView
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbarEmail">
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="72dp">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:ignore="ScrollViewSize">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarEmail">
 
-            <ImageView
-                android:id="@+id/imageView10"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="192dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="24dp"
-                app:srcCompat="@drawable/ic_email"
-                tools:ignore="ContentDescription" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:ignore="ScrollViewSize">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp"
-                android:text="HAI UN PROBLEMA ?"
-                android:textAlignment="center"
-                android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoNero"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="192dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    app:srcCompat="@drawable/ic_email"
+                    tools:ignore="ContentDescription" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:text="HAI UNA RICHIESTA?"
-                android:textAlignment="center"
-                android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoNero"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="HAI UN PROBLEMA ?"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:textColor="@color/coloreTestoNero"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="8dp"
-                android:text="INVIACI UNA MAIL"
-                android:textAlignment="center"
-                android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                android:textColor="@color/coloreTestoNero"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="HAI UNA RICHIESTA?"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:textColor="@color/coloreTestoNero"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-        </LinearLayout>
-    </ScrollView>
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginTop="8dp"
+                    android:text="INVIACI UNA MAIL"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                    android:textColor="@color/coloreTestoNero"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
 
 </RelativeLayout>
