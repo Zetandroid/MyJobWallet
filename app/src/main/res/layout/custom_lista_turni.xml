@@ -17,162 +17,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="88dp"
-            android:background="@color/colorBluTrasparente"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="16dp"
+                android:background="@color/colorAccent"
                 android:gravity="center"
                 android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="Entrata"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/txtOraEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="07:30"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtUscita"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="Uscita"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/txtOraUscita"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="18:00"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtOrdinarie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="Ore ordinarie"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/txtOreOrdinarie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="8h"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="16dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/txtStraordinarie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="Ore straordinarie"
-                    android:textAlignment="textStart"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/txtOreStraordinarie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="16dp"
-                    android:layout_weight="1"
-                    android:padding="4dp"
-                    android:text="1h"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearData"
-            android:layout_width="56dp"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            tools:ignore="RtlHardcoded">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center">
 
                 <TextView
                     android:id="@+id/testoGiornoSettimana"
@@ -180,19 +32,15 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="false"
+                    android:layout_marginLeft="16dp"
                     android:gravity="center"
                     android:padding="4dp"
                     android:text="Gio"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center">
 
                 <TextView
                     android:id="@+id/testoNumeroGiorno"
@@ -201,17 +49,12 @@
                     android:layout_centerHorizontal="false"
                     android:layout_centerInParent="false"
                     android:padding="4dp"
-                    android:text="22"
+                    android:text="18"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center">
 
                 <TextView
                     android:id="@+id/txtMese"
@@ -221,17 +64,11 @@
                     android:layout_centerHorizontal="true"
                     android:padding="4dp"
                     android:text="Ott"
-                    android:textAlignment="center"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:gravity="center">
 
                 <TextView
                     android:id="@+id/txtAnno"
@@ -240,12 +77,152 @@
                     android:layout_centerVertical="true"
                     android:padding="4dp"
                     android:text="2017"
-                    android:textAlignment="center"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtEntrata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Entrata"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/coloreSommarioNero"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtOraEntrata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="07:30"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtUscita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Uscita"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/coloreSommarioNero"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtOraUscita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="18:00"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtOrdinarie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Ore ordinarie"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/coloreSommarioNero"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtOreOrdinarie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="8h"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtStraordinarie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="Ore straordinarie"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/coloreSommarioNero"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/txtOreStraordinarie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:text="1h"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

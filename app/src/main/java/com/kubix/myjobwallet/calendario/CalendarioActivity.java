@@ -2,12 +2,10 @@ package com.kubix.myjobwallet.calendario;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.database.Cursor;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -182,7 +180,7 @@ public class CalendarioActivity extends AppCompatActivity {
                 if(hours > oreOrdinarie){
                     //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO"  , Toast.LENGTH_LONG).show();
                     //Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO", Snackbar.LENGTH_LONG).show();
-                    resaCalcoloOrdinarie = hours + " Ore e " +minutes + " Minuti, di cui:";
+                    resaCalcoloOrdinarie = hours + " Ore e " +minutes + " Minuti";
                     resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " ore e " + minutes + " Minuti";
                 }else{
                     //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI" , Toast.LENGTH_LONG).show();

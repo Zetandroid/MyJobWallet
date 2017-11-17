@@ -27,12 +27,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@color/colorAccent"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:paddingLeft="16dp"
                 android:text="16 Ottobre 2017"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 android:textColor="@color/coloreTestoBianco"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/titolo"
@@ -40,13 +40,14 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="8dp"
-                android:paddingBottom="8dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
                 android:text="TextView"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 android:textColor="@color/coloreTestoNero"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -56,14 +57,14 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/titolo"
                 android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingBottom="8dp"
-                android:paddingLeft="16dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="4dp"
+                android:paddingTop="4dp"
                 android:text="TextView"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
-                android:textColor="@color/coloreSommarioNero" />
+                android:textColor="@color/coloreSommarioNero"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
