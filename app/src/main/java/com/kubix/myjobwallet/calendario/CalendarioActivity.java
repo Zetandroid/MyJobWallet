@@ -242,9 +242,12 @@ public class CalendarioActivity extends AppCompatActivity {
         }
     }
 
-    //DA AGGANCIARE A UN FUTURO BOTTOMSHEET (So io che intendo xD)
     public void inserisciRiposo(View v){
-        MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, ordinarie, straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', 'RIPOSO', 'RIPOSO')");
+        MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, ordinarie, straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', 'RIPOSO', 'RIPOSO', 'RIPOSO', 'RIPOSO')");
+        Toast.makeText(this, "RIPOSO INSERITO CON SUCCESSO", Toast.LENGTH_SHORT).show();
+        finish();
+
+
     }
 
     public void dialogTimePickerClickUscita(View v){
