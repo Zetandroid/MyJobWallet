@@ -53,6 +53,48 @@ public class CalendarioActivity extends AppCompatActivity {
         //APRI DATABASE
         MainActivity.db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
 
+        //OTTIENI DATA ODIERNA
+        Calendar c = Calendar.getInstance();
+        int day = c.get(Calendar.DAY_OF_MONTH);
+        int month = c.get(Calendar.MONTH) + 1;
+        int year = c.get(Calendar.YEAR);
+
+        //PASSA IN VARIABILI DI CLASSE
+        numeroGiorno = day;
+        numeroMese = month;
+        numeroAnno = year;
+
+        //OTTIENI GIORNO DA DATA
+        try{
+            SimpleDateFormat inFormat = new SimpleDateFormat("dd/MM/yyyy");
+            Date date = inFormat.parse(day+"/"+month+"/"+year);
+            SimpleDateFormat outFormat = new SimpleDateFormat("EEEE");
+            String goal = outFormat.format(date);
+            giornoTestuale = goal;
+
+            //ABBREVIA PER FOTTUTO IMPATTO GRAFICO
+            if(giornoTestuale.equals("domenica")){
+                giornoTestualeAbbreviato = "DOM";
+            }else if(giornoTestuale.equals("lunedì")){
+                giornoTestualeAbbreviato= "LUN";
+            }else if(giornoTestuale.equals("martedì")){
+                giornoTestualeAbbreviato = "MAR";
+            }else if (giornoTestuale.equals("mercoledì")){
+                giornoTestualeAbbreviato = "MER";
+            }else if(giornoTestuale.equals("giovedì")){
+                giornoTestualeAbbreviato = "GIO";
+            }else if(giornoTestuale.equals("venerdì")){
+                giornoTestualeAbbreviato = "VEN";
+            }else if (giornoTestuale.equals("sabato")){
+                giornoTestualeAbbreviato = "SAB";
+            }
+
+            Toast.makeText(CalendarioActivity.this, giornoTestuale, Toast.LENGTH_SHORT).show();
+
+        }catch (Exception e){
+            Toast.makeText(CalendarioActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
         //LISTNER CLICK CALENDARIO
         dataTurno.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
 
@@ -142,6 +184,7 @@ public class CalendarioActivity extends AppCompatActivity {
     }
 
     public void inserisciTurno(View v){
+
         //CALCOLI FINALI
         String resaCalcoloOrdinarie = null;
         String resaCalcoloStraordinarie = null;
@@ -178,23 +221,16 @@ public class CalendarioActivity extends AppCompatActivity {
                 int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
 
                 if(hours > oreOrdinarie){
-                    //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO"  , Toast.LENGTH_LONG).show();
-                    //Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI, DI CUI " + "'"+String.valueOf(Integer.valueOf(hours - oreOrdinarie))+"' ORE E " + minutes + " MINUTI DI STRAORDINARIO", Snackbar.LENGTH_LONG).show();
                     resaCalcoloOrdinarie = hours + " Ore e " +minutes + " Minuti";
                     resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " ore e " + minutes + " Minuti";
                 }else{
-                    //Toast.makeText(TurniActivity.this, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI" , Toast.LENGTH_LONG).show();
-                    //Snackbar.make(v, "PER IL TURNO SELEZIONATO RISULTANO " + hours + " ORE E " +minutes + " MINUTI LAVORATI", Snackbar.LENGTH_LONG).show();
                     resaCalcoloOrdinarie = hours + " Ore e "+ minutes + " Minuti";
                     resaCalcoloStraordinarie = "0";
                 }
 
             } catch (Exception e) {
-                //Snackbar.make(v, "NON POSSO EFFETTUARE CALCOLI SU TURNI NON COMPLETI O DI RIPOSO", Snackbar.LENGTH_LONG).show();
                 Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
-
-
 
             //INSERISCI TURNO
             MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, Ordinarie, Straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"', '"+resaCalcoloOrdinarie+"', '"+resaCalcoloStraordinarie+"')");
