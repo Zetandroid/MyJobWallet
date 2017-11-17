@@ -17,55 +17,47 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
-    <ImageView
-        android:id="@+id/aggiungiCopertina"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:contentDescription=""
-        app:srcCompat="@color/colorPrimary"
-        tools:ignore="ContentDescription" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbarAggiungiNota"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/tastoSalvaNota"
-        android:layout_below="@+id/aggiungiCopertina">
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/testoTitoloSpesa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical">
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/coloreLineaTrasparente"
+            android:ems="10"
+            android:hint="TITOLO NOTA"
+            android:inputType="textMultiLine"
+            android:padding="8dp" />
 
-            <EditText
-                android:id="@+id/testoTitoloSpesa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/coloreLineaTrasparente"
-                android:ems="10"
-                android:hint="TITOLO NOTA"
-                android:inputType="textMultiLine"
-                android:padding="16dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/coloreNeroTrasparente" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/coloreIcone" />
+        <EditText
+            android:id="@+id/testoNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/coloreLineaTrasparente"
+            android:ems="10"
+            android:hint="Scrivi qui la tua nota..."
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/testoNota"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/coloreLineaTrasparente"
-                android:ems="10"
-                android:hint="Scrivi qui la tua nota..."
-                android:inputType="textMultiLine"
-                android:padding="16dp" />
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/tastoSalvaNota"

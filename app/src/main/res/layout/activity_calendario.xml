@@ -107,6 +107,8 @@
                         android:id="@+id/editTextRiposo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="inserisciRiposo"
                         android:padding="16dp"
                         android:text="Inserisci Riposo"
                         android:textAlignment="center"

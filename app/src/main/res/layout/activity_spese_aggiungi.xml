@@ -51,7 +51,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp">
+                android:layout_height="40dp">
 
                 <EditText
                     android:id="@+id/testoTitoloSpesa"
@@ -63,7 +63,8 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Titolo"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/iconaTitoloSpesa"
@@ -79,11 +80,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="72dp"
-                android:background="@color/coloreIcone" />
+                android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp">
+                android:layout_height="40dp">
 
                 <EditText
                     android:id="@+id/testoPrezzoSpesa"
@@ -94,7 +95,8 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Cifra"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/iconaCostoSpesa"
@@ -110,18 +112,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="72dp"
-                android:background="@color/coloreIcone" />
+                android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp">
+                android:layout_height="40dp">
 
                 <Spinner
                     android:id="@+id/tagSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="72dp" />
+                    android:layout_marginLeft="72dp"
+                    android:textAlignment="textStart" />
 
                 <ImageView
                     android:id="@+id/iconaTagSpesa"
@@ -137,11 +140,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="72dp"
-                android:background="@color/coloreIcone" />
+                android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp">
+                android:layout_height="40dp">
 
                 <EditText
                     android:id="@+id/testoDataSpesa"
@@ -152,7 +155,8 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Data"
-                    android:inputType="date" />
+                    android:inputType="date"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/iconaDataSpesa"
@@ -168,11 +172,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="72dp"
-                android:background="@color/coloreIcone" />
+                android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="56dp">
+                android:layout_height="40dp">
 
                 <EditText
                     android:id="@+id/testoPromemoriaSpesa"
@@ -183,7 +187,8 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Ora"
-                    android:inputType="time" />
+                    android:inputType="time"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:id="@+id/iconaNotificaSpesa"
@@ -199,7 +204,7 @@
                 android:layout_height="1dp"
                 android:layout_marginBottom="72dp"
                 android:layout_marginLeft="72dp"
-                android:background="@color/coloreIcone" />
+                android:background="@color/coloreNeroTrasparente" />
 
 
         </LinearLayout>

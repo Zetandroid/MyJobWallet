@@ -24,7 +24,6 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_note_aggiungi);
         titoloNota = (EditText) findViewById(R.id.testoTitoloSpesa);
         corpoNota = (EditText) findViewById(R.id.testoNota);
-        aggiungiCopertina = (ImageView) findViewById(R.id.aggiungiCopertina);
         salvaNota = (ImageView) findViewById(R.id.tastoSalvaNota);
 
         //TODO TOOLBAR
