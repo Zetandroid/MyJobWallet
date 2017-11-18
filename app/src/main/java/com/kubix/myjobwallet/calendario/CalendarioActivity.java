@@ -14,6 +14,9 @@ import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
@@ -34,6 +37,10 @@ public class CalendarioActivity extends AppCompatActivity {
     int numeroMese;
     int numeroAnno;
 
+    //INTERSTITIAL
+    private String TAG = CalendarioActivity.class.getSimpleName();
+    InterstitialAd mInterstitialAd;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +59,25 @@ public class CalendarioActivity extends AppCompatActivity {
 
         //APRI DATABASE
         MainActivity.db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
+
+        //GESTIONE INTERSTITIAL
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
+        AdRequest adRequest = new AdRequest.Builder()
+                .build();
+        mInterstitialAd.loadAd(adRequest);
+        mInterstitialAd.setAdListener(new AdListener() {
+
+            public void onAdLoaded() {
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                }
+            }
+
+            public void onAdClosed(){
+
+            }
+        });
 
         //OTTIENI DATA ODIERNA
         Calendar c = Calendar.getInstance();
