@@ -6,8 +6,8 @@
     <string name="adsSpese">ca-app-pub-9460579775308491/1775619596</string>
     <string name="adsNote">ca-app-pub-9460579775308491/9180957587</string>
     <string name="adsEntrate">ca-app-pub-9460579775308491/2783193903</string>
-    <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
     <string name="adsInterstitial">ca-app-pub-9460579775308491/9042311077</string>
+
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
@@ -38,7 +38,6 @@
     <string name="toolbarProfile">Profilo</string>
     <string name="toolbarOre">Ore</string>
     <string name="toolbarTurni">Turni</string>
-    <string name="toolbarElaborazioni">Elaborazioni</string>
     <string name="toolbarSpese">Spese</string>
     <string name="toolbarSpeseAggiungi">Aggiungi Spese</string>
     <string name="toolbarNote">Note</string>
@@ -54,7 +53,6 @@
     <string name="toolbarInfo">Staff Kubix Studio</string>
 
     <!-- INTRODUZIONE -->
-    <string name="title_activity_welcome">MyJobWallet</string>
     <string name="next">Avanti</string>
     <string name="skip">Salta</string>
     <string name="start">Vai</string>
@@ -62,7 +60,7 @@
     <string name="testoSlide2">Calcola il tuo stipendio in modo facile e veloce</string>
     <string name="testoSlide3">Gestisci tutte le tue entrate/uscite economiche</string>
     <string name="testoSlide4">Scrivi le tue Note con Testo e Immagini. Potrai anche inserire una notifica come promemoria</string>
-    <string name="testoSlide5">Tieni traccia di tutte le spese mensili grazie al Riepilogo </string>
+    <string name="testoSlide5">Tieni traccia di tutte le tue spese mensili tramite il Riepilogo</string>
 
 
     <!-- CALENDARIO -->
@@ -85,7 +83,7 @@
 
     <!-- PROFILO -->
     <string name="profilo_disconnetti">Disconnetti</string>
-    <string name="provilo_login_google">Accedi con Google</string>
+    <string name="profilo_login_google">Accedi con Google</string>
     <string name="ore_lavorative">Ore lavorative</string>
     <string name="paga_oraria">Paga oraria</string>
     <string name="paga_straordinaria">Paga straordinaria</string>
@@ -108,7 +106,7 @@
     <string name="bottomSheet_tutte_categorie">Tutte le categorie</string>
     <!-- BOTTOMSHEET SPESE -->
     <string name="bottomSheet_casa">Casa</string>
-    <string name="bottomSheet_trasporti">Trasporti</string>
+    <string name="bottomSheet_trasporti">Trasporti pubblici</string>
     <string name="bottomSheet_auto">Auto</string>
     <string name="bottomSheet_carburante">Carburante</string>
     <string name="bottomSheet_bollette">Bollette</string>
@@ -140,7 +138,7 @@
 
     <string name="titolo_cache">Dati e Cache</string>
     <string name="subtitolo_cache">Cancella Dati e Cache</string>
-
-
+    <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
+    <string name="title_activity_welcome">MyJobWallet</string>
 
 </resources>
