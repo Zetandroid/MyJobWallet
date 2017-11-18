@@ -25,6 +25,7 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             notificaImg = (ImageView) view.findViewById(R.id.imgNotificaEntrata);
             promemoria = (TextView) view.findViewById(R.id.txtPromemoria);
             dataEntrata = (TextView) view.findViewById(R.id.txtDataEntrata);
+            giornoCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoEntrata);
             numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoEntrata);
             meseCorrente = (TextView)view.findViewById(R.id.testoMeseEntrata);
             annoCorrente = (TextView)view.findViewById(R.id.testoAnnoEntrata);
@@ -80,7 +81,7 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             holder.notificaImg.setVisibility(View.VISIBLE);
         }
 
-        holder.giornoCorrente .setText(entrate.getGiornoCorrente());
+        holder.giornoCorrente .setText(entrate.getNumeroCorrente());
         holder.numeroCorrente.setText(entrate.getNumeroCorrente());
         holder.meseCorrente.setText(entrate.getMeseCorrente());
         holder.annoCorrente.setText(entrate.getAnnoCorrente());
