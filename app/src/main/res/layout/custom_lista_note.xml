@@ -23,13 +23,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/data"
+                android:id="@+id/dataNote"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="@color/colorAccent"
                 android:gravity="center"
                 android:paddingLeft="16dp"
-                android:text="16 Ottobre 2017"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
                 android:textColor="@color/coloreTestoBianco"
                 android:textSize="18sp" />

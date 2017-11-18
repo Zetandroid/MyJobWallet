@@ -1,18 +1,22 @@
 package com.kubix.myjobwallet.entrate;
 
 public class Entrate {
-    private String titolo, entrata, categoria, promemoria, dataEntrata;
+    private String titolo, entrata, categoria, promemoria, dataEntrata, giornoCorrente, numeroCorrente, meseCorrente, annoCorrente;
 
     public Entrate(String s) {
 
     }
 
-    public Entrate(String titolo, String entrata, String promemoria, String dataEntrata, String categoria) {
+    public Entrate(String titolo, String entrata, String promemoria, String dataEntrata, String categoria, String giornoCorrente, String numeroCorrente, String meseCorrente, String annoCorrente) {
         this.titolo = titolo;
         this.entrata = entrata;
         this.categoria = categoria;
         this.promemoria = promemoria;
         this.dataEntrata = dataEntrata;
+        this.giornoCorrente = giornoCorrente;
+        this.numeroCorrente=numeroCorrente;
+        this.meseCorrente = meseCorrente;
+        this.annoCorrente = annoCorrente;
     }
 
     public String getTitolo() {
@@ -48,6 +52,34 @@ public class Entrate {
     }
     public void setDataEntrata(String datenr) {
         this.dataEntrata = datenr;
+    }
+
+    public String getGiornoCorrente() {
+        return giornoCorrente;
+    }
+    public void setGiornoCorrente(String giorncor) {
+        this.giornoCorrente = giorncor;
+    }
+
+    public String getNumeroCorrente() {
+        return numeroCorrente;
+    }
+    public void setNumeroCorrente(String numcor) {
+        this.numeroCorrente = numcor;
+    }
+
+    public String getMeseCorrente() {
+        return meseCorrente;
+    }
+    public void setMeseCorrente(String mescor) {
+        this.meseCorrente = mescor;
+    }
+
+    public String getAnnoCorrente() {
+        return annoCorrente;
+    }
+    public void setAnnoCorrente(String annocor) {
+        this.annoCorrente = annocor;
     }
 }
 

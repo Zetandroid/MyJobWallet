@@ -80,6 +80,12 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             holder.notificaImg.setVisibility(View.VISIBLE);
         }
 
+        holder.giornoCorrente .setText(entrate.getGiornoCorrente());
+        holder.numeroCorrente.setText(entrate.getNumeroCorrente());
+        holder.meseCorrente.setText(entrate.getMeseCorrente());
+        holder.annoCorrente.setText(entrate.getAnnoCorrente());
+
+
 
     }
 
