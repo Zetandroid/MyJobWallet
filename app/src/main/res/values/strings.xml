@@ -141,4 +141,30 @@
     <string name="subtitolo_cache">Cancella Dati e Cache</string>
 
 
+    <!-- GIORNI -->
+    <string name="lunedi">Lunedì</string>
+    <string name="martedì">Martedì</string>
+    <string name="mercoledì">Mercoledì</string>
+    <string name="giovedì">Giovedì</string>
+    <string name="venerdì">Venerdì</string>
+    <string name="sabato">Sabato</string>
+    <string name="domenica">Domenica</string>
+
+    <!-- MESI -->
+    <string name="gennaio">Gennaio</string>
+    <string name="febbraio">Febbraio</string>
+    <string name="marzo">Marzo</string>
+    <string name="aprile">Aprile</string>
+    <string name="maggio">Maggio</string>
+    <string name="giugno">Giugno</string>
+    <string name="luglio">Luglio</string>
+    <string name="agosto">Agosto</string>
+    <string name="settembre">Settembre</string>
+    <string name="ottibre">Ottobre</string>
+    <string name="novembre">Novembre</string>
+    <string name="dicembre">Dicembre</string>
+
+
+
+
 </resources>

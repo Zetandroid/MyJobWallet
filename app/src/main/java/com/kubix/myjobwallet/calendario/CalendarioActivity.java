@@ -247,10 +247,10 @@ public class CalendarioActivity extends AppCompatActivity {
                 int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
 
                 if(hours > oreOrdinarie){
-                    resaCalcoloOrdinarie = hours + " H " +minutes + " m";
-                    resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " H " + minutes + " m";
+                    resaCalcoloOrdinarie = hours + " Ore " +minutes + " Minuti";
+                    resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " Ore " + minutes + " Minuti ";
                 }else{
-                    resaCalcoloOrdinarie = hours + " H "+ minutes + " m";
+                    resaCalcoloOrdinarie = hours + " Ore "+ minutes + " Minuti ";
                     resaCalcoloStraordinarie = "0";
                 }
 

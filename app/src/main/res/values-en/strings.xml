@@ -43,7 +43,7 @@
     <string name="toolbarEmail">Submit email</string>
     <string name="toolbarInfo">Staff Kubix Studio</string>
     <string name="title_activity_welcome">MyJobWallet</string>
-    <string name="skip">Skup</string>
+    <string name="skip">Skip</string>
     <string name="next">Go</string>
     <string name="start">Start</string>
     <string name="testoSlide1">Welcome to MyJobWallet.A project by Kubix Studio</string>
@@ -107,5 +107,26 @@
     <string name="sommario_backup_carica">Load the BackUp on your device</string>
     <string name="titolo_cache">Data and Cache</string>
     <string name="subtitolo_cache">Clear Data and Cache</string>
+    <string name="toolbarCalendario">Calendar</string>
+    <string name="toolbarCalcoloPaga">calculates pay</string>
+    <string name="lunedi">Monday</string>
+    <string name="martedì">Tuesday</string>
+    <string name="mercoledì">Wednesday</string>
+    <string name="giovedì">Thursday</string>
+    <string name="venerdì">Friday</string>
+    <string name="sabato">Saturday</string>
+    <string name="domenica">Sunday</string>
+    <string name="gennaio">January</string>
+    <string name="febbraio">February</string>
+    <string name="marzo">March</string>
+    <string name="aprile">April</string>
+    <string name="maggio">May</string>
+    <string name="giugno">June</string>
+    <string name="luglio">July</string>
+    <string name="agosto">August</string>
+    <string name="settembre">September</string>
+    <string name="ottibre">October</string>
+    <string name="novembre">November</string>
+    <string name="dicembre">December</string>
 
 </resources>
