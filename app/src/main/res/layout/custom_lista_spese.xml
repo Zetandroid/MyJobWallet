@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="88dp"
-            android:background="@color/colorRossoTrasparente"
+            android:background="#F5F5F5"
             android:orientation="vertical"
             tools:ignore="UselessParent">
 

@@ -22,8 +22,9 @@
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:contentDescription="TODO"
         android:onClick="inserisciEntrataMonetaria"
-        app:srcCompat="@color/colorPrimary" />
+        app:srcCompat="@color/colorAccent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -32,7 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:text="Salva"
+        android:text="@string/salva"
         android:textColor="@color/coloreTestoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -65,7 +66,7 @@
                     android:layout_marginRight="8dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="Titolo spesa"
+                    android:hint="@string/titolo"
                     android:inputType="textMultiLine"
                     android:textSize="16sp" />
 
@@ -75,7 +76,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_titolo" />
+                    app:srcCompat="@drawable/ic_spesa_titolo" android:contentDescription="TODO" />
             </RelativeLayout>
 
             <View
@@ -96,7 +97,7 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="Valore entrata"
+                    android:hint="@string/valore"
                     android:inputType="numberDecimal"
                     android:textSize="16sp" />
 
@@ -106,7 +107,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_costo" />
+                    app:srcCompat="@drawable/ic_spesa_costo" android:contentDescription="TODO" />
             </RelativeLayout>
 
             <View
@@ -132,7 +133,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_tag" />
+                    app:srcCompat="@drawable/ic_spesa_tag" android:contentDescription="TODO" />
             </RelativeLayout>
 
             <View
@@ -154,7 +155,7 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="Data"
+                    android:hint="@string/data"
                     android:inputType="date"
                     android:textSize="16sp" />
 
@@ -185,7 +186,7 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="Orario"
+                    android:hint="@string/ora"
                     android:inputType="time"
                     android:textSize="16sp" />
 

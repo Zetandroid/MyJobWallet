@@ -58,7 +58,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_weight="1"
-                    android:text="Nome"
+                    android:text="@string/nome"
                     android:textAlignment="center"
                     android:textColor="@color/coloreTestoNero"
                     android:textSize="16sp"
@@ -71,9 +71,46 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
-                    android:text="Email"
+                    android:text="E-mail"
                     android:textAlignment="center"
                     android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnProfiloDisconnetti"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/profilo_disconnetti"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnProfiloBackup"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/backup"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/button3"
@@ -81,8 +118,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="42dp"
                     android:layout_weight="1"
-                    android:text="Accedi con Google"
+                    android:text="@string/provilo_login_google"
                     android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <View
@@ -137,7 +175,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text="Entrate"
+                                android:text="@string/entrate"
                                 android:textAlignment="center"
                                 android:textColor="@color/coloreSommarioNero"
                                 android:textSize="14sp" />
@@ -182,7 +220,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text="Spese"
+                                android:text="@string/spese"
                                 android:textAlignment="center"
                                 android:textColor="@color/coloreSommarioNero"
                                 android:textSize="14sp" />
@@ -236,7 +274,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text="Ore ordinarie"
+                                android:text="@string/ore_ordinarie"
                                 android:textAlignment="center"
                                 android:textColor="@color/coloreSommarioNero"
                                 android:textSize="14sp" />
@@ -282,7 +320,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text=" Ore straordinarie"
+                                android:text="@string/ore_straordinarie"
                                 android:textAlignment="center"
                                 android:textColor="@color/coloreSommarioNero"
                                 android:textSize="14sp" />
@@ -336,7 +374,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text="Stipendio"
+                                android:text="@string/stipendio"
                                 android:textAlignment="center"
                                 android:textColor="@color/coloreSommarioNero"
                                 android:textSize="14sp" />
@@ -382,7 +420,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text="Straordinari"
+                                android:text="@string/straordinari"
                                 android:textAlignment="center"
                                 android:textColor="@color/coloreSommarioNero"
                                 android:textSize="14sp" />
@@ -443,11 +481,8 @@
                                     android:id="@+id/txtOreLavorate"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_centerVertical="true"
                                     android:layout_weight="1"
-                                    android:text="Ore lavorative"
+                                    android:text="@string/ore_lavorative"
                                     android:textAlignment="viewStart"
                                     android:textColor="@color/coloreTestoNero" />
 
@@ -455,7 +490,6 @@
                                     android:id="@+id/txtOre"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
                                     android:layout_weight="1"
                                     android:padding="4dp"
                                     android:textAlignment="viewEnd"
@@ -477,11 +511,10 @@
                                     android:id="@+id/textPagaOraria"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true"
                                     android:layout_centerHorizontal="true"
                                     android:layout_centerInParent="true"
                                     android:layout_weight="1"
-                                    android:text="Paga oraria"
+                                    android:text="@string/paga_oraria"
                                     android:textAlignment="viewStart"
                                     android:textColor="@color/coloreTestoNero" />
 
@@ -515,7 +548,7 @@
                                     android:layout_centerInParent="true"
                                     android:layout_centerVertical="true"
                                     android:layout_weight="1"
-                                    android:text="Paga straordinaria"
+                                    android:text="@string/paga_straordinaria"
                                     android:textAlignment="viewStart"
                                     android:textColor="@color/coloreTestoNero" />
 
@@ -550,7 +583,7 @@
                                     android:layout_centerInParent="true"
                                     android:layout_centerVertical="true"
                                     android:layout_weight="1"
-                                    android:text="Valuta"
+                                    android:text="@string/valuta"
                                     android:textAlignment="viewStart"
                                     android:textColor="@color/coloreTestoNero" />
 
@@ -558,7 +591,6 @@
                                     android:id="@+id/txtValuta"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
                                     android:layout_weight="1"
                                     android:padding="4dp"
                                     android:textAlignment="viewEnd"
@@ -579,16 +611,14 @@
                                 android:id="@+id/bottoneDati"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:layout_alignParentBottom="true"
                                 android:layout_marginBottom="16dp"
                                 android:layout_marginLeft="72dp"
                                 android:layout_marginRight="72dp"
-                                android:layout_weight="1"
                                 android:background="@drawable/bottone_acquista"
-                                android:text="IMPOSTA DATI"
+                                android:text="@string/imposta_dati"
                                 android:textColor="@color/coloreTestoBianco"
-                                android:textStyle="bold"
-                                tools:ignore="ObsoleteLayoutParam" />
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
                     </android.support.v7.widget.CardView>

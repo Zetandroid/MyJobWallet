@@ -13,7 +13,7 @@ public class RiepilogoActivity extends AppCompatActivity{
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarRiepilogo);
-        setTitle(R.string.toolbarValuta);
+        setTitle(R.string.toolbarRiepilogo);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
     }

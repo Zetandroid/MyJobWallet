@@ -9,13 +9,13 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_drawer_profilo"
             android:textColor="@color/colorAccent"
-            android:title="Profilo" />
+            android:title="@string/toolbarProfile" />
 
         <item
             android:id="@+id/nav_premium"
             android:icon="@drawable/ic_drawer_premium"
             android:textColor="@color/colorAccent"
-            android:title="Premium" />
+            android:title="@string/toolbarPremium" />
 
         <item
             android:id="@+id/nav_email"
@@ -34,13 +34,13 @@
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_drawer_setting"
             android:textColor="@color/colorAccent"
-            android:title="Impostazioni" />
+            android:title="@string/toolbarSettings" />
 
         <item
             android:id="@+id/nav_valuta"
             android:icon="@drawable/ic_drawer_valuta"
             android:textColor="@color/colorAccent"
-            android:title="Valuta app"
+            android:title="@string/valuta_app"
             android:visible="false" />
 
         <item

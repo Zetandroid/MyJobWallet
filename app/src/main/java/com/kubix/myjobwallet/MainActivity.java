@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
             "Spese",
             "Entrate",
             "Riepilogo",
-            "Memo"
+            "Note",
     };
 
     int[] imageId = {

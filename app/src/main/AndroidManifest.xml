@@ -100,7 +100,7 @@
         <!-- CONVERTITORE -->
         <activity
             android:name=".RiepilogoActivity"
-            android:label="@string/toolbarValuta"
+            android:label="@string/toolbarRiepilogo"
             android:theme="@style/AppTheme" />
 
         <!-- EMAIL -->

@@ -5,15 +5,6 @@
     android:layout_height="200dp"
     android:background="@color/colorPrimary">
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:scaleType="centerCrop"
-        app:srcCompat="@drawable/nav_header" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +17,7 @@
             android:layout_marginTop="48dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_profilo"
-            app:civ_border_color="@color/coloreTestoNero"
+            app:civ_border_color="@color/coloreTestoBianco"
             app:civ_border_width="2dp" />
 
         <TextView
@@ -39,10 +30,10 @@
             android:layout_marginRight="16dp"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:text="NOME PROFILO"
+            android:text="@string/nome"
             android:textAlignment="center"
-            android:textColor="@color/coloreTestoNero"
-            android:textSize="16sp"
+            android:textColor="@color/coloreTestoBianco"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
     </LinearLayout>

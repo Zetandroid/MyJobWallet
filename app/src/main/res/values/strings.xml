@@ -11,6 +11,28 @@
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
+    <!-- GENERALI -->
+    <string name="salva">Salva</string>
+    <string name="titolo">Titolo</string>
+    <string name="data">Data</string>
+    <string name="ora">Ora</string>
+    <string name="valore">Valore</string>
+    <string name="scrivi">Scrivi</string>
+    <string name="nome">Nome</string>
+    <string name="backup">BackUp</string>
+    <string name="valuta">Valuta</string>
+    <string name="entrate">Entrate</string>
+    <string name="spese">Spese</string>
+    <string name="ore_ordinarie">Ore ordinarie</string>
+    <string name="ore_straordinarie">Ore straordinarie</string>
+    <string name="stipendio">Stipendio</string>
+    <string name="straordinari">Straordinari</string>
+    <string name="seleziona_categoria">Seleziona categoria</string>
+    <string name="entrata_lavoro">Entrata</string>
+    <string name="uscita_lavoro">Uscita</string>
+    <string name="valuta_app">Valuta app</string>
+
+
     <!-- NOMI SU TOOLBAR -->
     <string name="toolbarSettings">Impostazioni</string>
     <string name="toolbarProfile">Profilo</string>
@@ -26,7 +48,7 @@
     <string name="toolbarPremium">Premium</string>
     <string name="toolbarEntrate">Entrate</string>
     <string name="toolbarEntrateAggiungi">Aggiungi Entrata</string>
-    <string name="toolbarValuta">Riepilogo</string>
+    <string name="toolbarRiepilogo">Riepilogo</string>
     <string name="toolbarProfileDati">Dati Utente</string>
     <string name="toolbarEmail">Invia Email</string>
     <string name="toolbarInfo">Staff Kubix Studio</string>
@@ -39,7 +61,86 @@
     <string name="testoSlide1">Benvenuto in MyJobWallet. Un progetto di Kubix Studio</string>
     <string name="testoSlide2">Calcola il tuo stipendio in modo facile e veloce</string>
     <string name="testoSlide3">Gestisci tutte le tue entrate/uscite economiche</string>
-    <string name="testoSlide4">Scrivi le tue Note con Testi e Immagini. Potrai anche inserire una notifica come promemoria</string>
+    <string name="testoSlide4">Scrivi le tue Note con Testo e Immagini. Potrai anche inserire una notifica come promemoria</string>
     <string name="testoSlide5">Tieni traccia di tutte le spese mensili grazie al Riepilogo </string>
+
+
+    <!-- CALENDARIO -->
+    <string name="calendario_inserisci_entrata">Inserisci Entrata</string>
+    <string name="calendario_inserisci_uscita">Inserisci Uscita</string>
+    <string name="calendario_inserisci_riposo">Inserisci Riposo</string>
+
+    <!-- EMAIL -->
+    <string name="email_linea_1">Hai un problema?</string>
+    <string name="email_linea_2">Hai una richiesta?</string>
+    <string name="email_linea_3">Inviaci una E-mail!</string>
+
+    <!-- PREMIUM -->
+    <string name="bottone_acquista">Acquista</string>
+    <string name="bottone_ripristina_acquista">Ripristina Acquista</string>
+    <string name="premium_linea_1">Rimuovi Pubblicità</string>
+    <string name="premium_linea_2">Calcola stipendio</string>
+    <string name="premium_linea_3">Crea BackUp sul telefono</string>
+    <string name="premium_linea_4">Sbocca i Widget</string>
+
+    <!-- PROFILO -->
+    <string name="profilo_disconnetti">Disconnetti</string>
+    <string name="provilo_login_google">Accedi con Google</string>
+    <string name="ore_lavorative">Ore lavorative</string>
+    <string name="paga_oraria">Paga oraria</string>
+    <string name="paga_straordinaria">Paga straordinaria</string>
+    <string name="imposta_dati">Imposta Dati</string>
+
+    <!-- PROFILO DATI -->
+    <string name="paga_oraria_ordinaria">Paga oraria</string>
+    <string name="paga_oraria_straordinaria">Paga straordinaria</string>
+
+
+    <!-- BOTTOMSHEET ENTRATE -->
+    <string name="bottomSheet_bonifico">Bonifico</string>
+    <string name="bottomSheet_assegno">Assegno</string>
+    <string name="bottomSheet_vincita">Vincita</string>
+    <string name="bottomSheet_regalo">Regalo</string>
+    <string name="bottomSheet_beni">Beni</string>
+    <string name="bottomSheet_rimborsi">Rimborsi</string>
+    <string name="bottomSheet_vendite">Vendite</string>
+    <string name="bottomSheet_altro">Altro</string>
+    <string name="bottomSheet_tutte_categorie">Tutte le categorie</string>
+    <!-- BOTTOMSHEET SPESE -->
+    <string name="bottomSheet_casa">Casa</string>
+    <string name="bottomSheet_trasporti">Trasporti</string>
+    <string name="bottomSheet_auto">Auto</string>
+    <string name="bottomSheet_carburante">Carburante</string>
+    <string name="bottomSheet_bollette">Bollette</string>
+    <string name="bottomSheet_shopping">Shopping</string>
+    <string name="bottomSheet_cibo">Cibo</string>
+    <string name="bottomSheet_svago">Svago</string>
+    <string name="bottomSheet_viaggi">Viaggi</string>
+
+    <!-- IMPOSTAZIONI -->
+    <string name="titolo_tema">Temi</string>
+    <string name="subtitolo_tema">Modalità notturna</string>
+    <string name="sommario_tema">Imposta il tema scuro</string>
+
+    <string name="titolo_notifiche">Notifiche</string>
+    <string name="subtitolo_tono_notifiche">Tono notifica</string>
+    <string name="sommario_tono_notifiche">Imposta il tono delle notifiche</string>
+
+    <string name="subtitolo_notifica_memo">Notifica Memo</string>
+    <string name="sommario_notifica_memo">Imposta un promemoria per le Note</string>
+
+    <string name="subtitolo_notifica_spesa">Notifica Spese</string>
+    <string name="sommario_notifica_spesa">Imposta un promemoria per le Spese</string>
+
+    <string name="subtitolo_backup_crea">Crea BackUp</string>
+    <string name="sommario_backup_crea">Salva il BackUp sul tio Dispositivo</string>
+
+    <string name="subtitolo_backup_carica">Carica BackUp</string>
+    <string name="sommario_backup_carica">Carica il BackUp sul tio Dispositivo</string>
+
+    <string name="titolo_cache">Dati e Cache</string>
+    <string name="subtitolo_cache">Cancella Dati e Cache</string>
+
+
 
 </resources>
