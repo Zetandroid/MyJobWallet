@@ -58,7 +58,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
     }
 
     public void inserisciUscitaMonetaria(View v){
-        if(! titoloSpesa.getText().toString().equals("") && ! cifraSpesa.getText().toString().equals("") && ! dataSpesa.getText().toString().equals("") && ! oraSpesa.getText().toString().equals("")){
+        if(! titoloSpesa.getText().toString().equals("") && ! cifraSpesa.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra, Categoria, Ora) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"', '"+TagSpese.getSelectedItem().toString()+"', '"+oraSpesa.getText().toString()+"')");
             Snackbar.make(v, "SPESA INSERITA CORRETTAMENTE ", Snackbar.LENGTH_LONG).show();
             titoloSpesa.setText("");
@@ -67,7 +67,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
             oraSpesa.setText("");
 
         }else{
-            Snackbar.make(v, "COMPILA TUTTI I DATI PER INSERIRE LA SPESA", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "INSERISCI TITOLO E CIFRA PER AGGIUNGERE LA SPESA MONETARIA", Snackbar.LENGTH_LONG).show();
         }
     }
 }

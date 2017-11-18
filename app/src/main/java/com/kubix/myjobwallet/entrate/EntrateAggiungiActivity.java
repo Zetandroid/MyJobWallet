@@ -55,7 +55,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
     }
 
     public void inserisciEntrataMonetaria(View v){
-        if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("") && ! dataEntrata.getText().toString().equals("") && ! oraEntrata.getText().toString().equals("")){
+        if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Categoria, Ora) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+TagEntrate.getSelectedItem().toString()+"', '"+oraEntrata.getText().toString()+"')");
             Snackbar.make(v, "ENTRATA AGGIUNTA CON SUCCESSO", Snackbar.LENGTH_LONG).show();
             titoloEntrata.setText("");
@@ -64,7 +64,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
             oraEntrata.setText("");
 
         }else{
-            Snackbar.make(v, "COMPILA TUTI I DATI PER INSERIRE UN ENTRATA", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "INSERISCI TITOLO E CIFRA PER AGGIUNGERE L'ENTRATA MONETARIA", Snackbar.LENGTH_LONG).show();
         }
     }
 }

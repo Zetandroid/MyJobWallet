@@ -154,6 +154,7 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
+                    android:enabled="false"
                     android:hint="@string/data"
                     android:inputType="date"
                     android:textSize="16sp" />
@@ -186,6 +187,7 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
+                    android:enabled="false"
                     android:hint="@string/ora"
                     android:inputType="time"
                     android:textSize="16sp" />

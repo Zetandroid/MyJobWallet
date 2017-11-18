@@ -13,15 +13,20 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private List<Uscite> usciteList;
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView titolo, uscita, promemoria, dataUscita;
-        public ImageView categoriaImg;
+        public TextView titolo, uscita, promemoria, dataUscita, giornoCorrente, numeroCorrente, meseCorrente, annoCorrente;
+        public ImageView categoriaImg, notificaImg;
         MyViewHolder(View view) {
             super(view);
             titolo = (TextView) view.findViewById(R.id.txtTitoloSpesa);
             uscita = (TextView) view.findViewById(R.id.txtSpesa);
             categoriaImg = (ImageView) view.findViewById(R.id.iconaTagUscite);
+            notificaImg = (ImageView) view.findViewById(R.id.imgNotificaSpese);
             promemoria = (TextView) view.findViewById(R.id.txtPromemoriaUsc);
             dataUscita = (TextView) view.findViewById(R.id.txtDataSpesa);
+            giornoCorrente = (TextView)view.findViewById(R.id.testoGiornoSettimanaSpese);
+            numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoSpese);
+            meseCorrente = (TextView)view.findViewById(R.id.testoMeseSpese);
+            annoCorrente = (TextView)view.findViewById(R.id.testoAnnoSpese);
         }
     }
 
@@ -63,8 +68,18 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
         }else if (categoria.equals("Altro")){
             holder.categoriaImg.setImageResource(R.drawable.ic_btnsheet_spese_altro);
         }
+
         holder.promemoria.setText(uscite.getPromemoria());
         holder.dataUscita.setText(uscite.getDataUscita());
+
+        String oraEntrata = uscite.getPromemoria();
+        String dataUscita = uscite.getDataUscita();
+
+        if(oraEntrata.equals("") && dataUscita.equals("")){
+            holder.notificaImg.setVisibility(View.INVISIBLE);
+        }else{
+            holder.notificaImg.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

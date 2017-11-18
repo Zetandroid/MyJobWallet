@@ -72,7 +72,7 @@ public class CalendarioActivity extends AppCompatActivity {
             String goal = outFormat.format(date);
             giornoTestuale = goal;
 
-            //ABBREVIA PER FOTTUTO IMPATTO GRAFICO
+            //ABBREVIA PER IMPATTO GRAFICO
             if(giornoTestuale.equals("domenica")){
                 giornoTestualeAbbreviato = "DOM";
             }else if(giornoTestuale.equals("lunedì")){

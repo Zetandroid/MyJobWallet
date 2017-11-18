@@ -1,33 +1,33 @@
 package com.kubix.myjobwallet.entrate;
 
+import android.opengl.Visibility;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.note.Note;
-
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private List<Entrate> entrateList;
-
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView titolo, entrata, promemoria, dataEntrata;
-        public ImageView categoriaImg;
+        public TextView titolo, entrata, promemoria, dataEntrata, giornoCorrente, numeroCorrente, meseCorrente, annoCorrente;
+        public ImageView categoriaImg, notificaImg;
         MyViewHolder(View view) {
             super(view);
             titolo = (TextView) view.findViewById(R.id.txtTitoloEntrate);
             entrata = (TextView) view.findViewById(R.id.txtEntrata);
             categoriaImg = (ImageView) view.findViewById(R.id.iconaTagEntrata);
+            notificaImg = (ImageView) view.findViewById(R.id.imgNotificaEntrata);
             promemoria = (TextView) view.findViewById(R.id.txtPromemoria);
             dataEntrata = (TextView) view.findViewById(R.id.txtDataEntrata);
+            giornoCorrente = (TextView)view.findViewById(R.id.testoGiornoSettimanaEntrate);
+            numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoEntrata);
+            meseCorrente = (TextView)view.findViewById(R.id.testoMeseEntrata);
+            annoCorrente = (TextView)view.findViewById(R.id.testoAnnoEntrata);
         }
     }
 
@@ -49,6 +49,7 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
         holder.titolo.setText(entrate.getTitolo());
         holder.entrata.setText(entrate.getEntrata() + " €");
         String categoria = entrate.getCategoria();
+
         if(categoria.equals("Bonifico")){
             holder.categoriaImg.setImageResource(R.drawable.ic_btnsheet_entrate_bonifico);
         }else if(categoria.equals("Assegno")){
@@ -66,8 +67,20 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
         }else if(categoria.equals("Altro")){
             holder.categoriaImg.setImageResource(R.drawable.ic_btnsheet_spese_altro);
         }
+
         holder.promemoria.setText(entrate.getPromemoria());
         holder.dataEntrata.setText(entrate.getDataEntrata());
+
+        String oraEntrata = entrate.getPromemoria();
+        String dataEntrata = entrate.getDataEntrata();
+
+        if(oraEntrata.equals("") && dataEntrata.equals("")){
+            holder.notificaImg.setVisibility(View.INVISIBLE);
+        }else{
+            holder.notificaImg.setVisibility(View.VISIBLE);
+        }
+
+
     }
 
     @Override
