@@ -23,7 +23,6 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             notificaImg = (ImageView) view.findViewById(R.id.imgNotificaSpese);
             promemoria = (TextView) view.findViewById(R.id.txtPromemoriaUsc);
             dataUscita = (TextView) view.findViewById(R.id.txtDataSpesa);
-            giornoCorrente = (TextView)view.findViewById(R.id.testoGiornoSettimanaSpese);
             numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoSpese);
             meseCorrente = (TextView)view.findViewById(R.id.testoMeseSpese);
             annoCorrente = (TextView)view.findViewById(R.id.testoAnnoSpese);

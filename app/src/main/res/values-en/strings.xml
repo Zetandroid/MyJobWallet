@@ -9,6 +9,7 @@
     <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
     <string name="salva">Save</string>
     <string name="titolo">Title</string>
     <string name="data">Date</string>
@@ -28,14 +29,12 @@
     <string name="straordinari">Overtime</string>
     <string name="toolbarSettings">Settings</string>
     <string name="toolbarProfile">Profile</string>
-    <string name="toolbarOre">Hours</string>
-    <string name="toolbarTurni">Rounds</string>
+    <string name="toolbarOre">Round</string>
+    <string name="toolbarTurni">Turn List</string>
     <string name="toolbarSpese">Expenses</string>
     <string name="toolbarSpeseAggiungi">Add expenses</string>
     <string name="toolbarNote">Notes</string>
     <string name="toolbarNoteAggiungi">Add note</string>
-    <string name="toolbarCalendario">Calendar</string>
-    <string name="toolbarCalcoloPaga">Calculation pay</string>
     <string name="toolbarPremium">Premium</string>
     <string name="toolbarEntrate">Revenue</string>
     <string name="toolbarEntrateAggiungi">Add revenue</string>

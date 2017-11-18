@@ -8,114 +8,64 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp">
 
         <LinearLayout
-            android:id="@+id/linearData"
-            android:layout_width="56dp"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:gravity="center"
+            android:id="@+id/linearEntrateDati"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:ignore="RtlHardcoded">
+            tools:ignore="UselessParent">
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/linearTitolo"
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/testoGiornoSettimanaEntrate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:padding="4dp"
-                    android:text="Gio"
-                    android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:gravity="center">
+                android:layout_height="40dp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/testoNumeroGiornoEntrata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:gravity="center"
                     android:padding="4dp"
-                    android:text="22"
+                    android:text="18"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:gravity="center">
 
                 <TextView
                     android:id="@+id/testoMeseEntrata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:padding="4dp"
                     android:text="Ott"
-                    android:textAlignment="center"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_gravity="center">
 
                 <TextView
                     android:id="@+id/testoAnnoEntrata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
                     android:padding="4dp"
                     android:text="2017"
-                    android:textAlignment="center"
-                    android:textColor="@color/coloreSommarioNero"
-                    android:textSize="16sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
-            </RelativeLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearEntrateDati"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="88dp"
-            android:background="#F5F5F5"
-            android:orientation="vertical"
-            tools:ignore="UselessParent">
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

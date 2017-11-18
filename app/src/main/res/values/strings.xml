@@ -10,7 +10,6 @@
     <string name="adsTurni">ca-app-pub-9460579775308491/6915199974</string>
     <string name="adsInterstitial">ca-app-pub-9460579775308491/9042311077</string>
 
-
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
@@ -36,11 +35,10 @@
     <string name="valuta_app">Valuta app</string>
 
 
-    <!-- NOMI SU TOOLBAR -->
     <string name="toolbarSettings">Impostazioni</string>
     <string name="toolbarProfile">Profilo</string>
-    <string name="toolbarOre">Ore</string>
-    <string name="toolbarTurni">Turni</string>
+    <string name="toolbarOre">Turno</string>
+    <string name="toolbarTurni">Lista Turni</string>
     <string name="toolbarSpese">Spese</string>
     <string name="toolbarSpeseAggiungi">Aggiungi Spese</string>
     <string name="toolbarNote">Note</string>

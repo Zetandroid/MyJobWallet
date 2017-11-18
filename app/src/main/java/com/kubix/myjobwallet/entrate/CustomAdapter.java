@@ -1,13 +1,14 @@
 package com.kubix.myjobwallet.entrate;
 
-import android.opengl.Visibility;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.kubix.myjobwallet.R;
+
 import java.util.List;
 
 class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
@@ -24,7 +25,6 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             notificaImg = (ImageView) view.findViewById(R.id.imgNotificaEntrata);
             promemoria = (TextView) view.findViewById(R.id.txtPromemoria);
             dataEntrata = (TextView) view.findViewById(R.id.txtDataEntrata);
-            giornoCorrente = (TextView)view.findViewById(R.id.testoGiornoSettimanaEntrate);
             numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoEntrata);
             meseCorrente = (TextView)view.findViewById(R.id.testoMeseEntrata);
             annoCorrente = (TextView)view.findViewById(R.id.testoAnnoEntrata);

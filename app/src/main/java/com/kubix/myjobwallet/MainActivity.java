@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity
     GridView grid;
     String[] web = {
 
-            "Ore",
-            "Turni",
+            "Turno",
+            "Lista Turni",
             "Spese",
             "Entrate",
             "Riepilogo",
