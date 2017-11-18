@@ -30,6 +30,19 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/testoGiornoGiornoEntrata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="Mar"
+                    android:textAppearance="@android:style/TextAppearance.Material.Title"
+                    android:textColor="@color/coloreTestoBianco"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
                     android:id="@+id/testoNumeroGiornoEntrata"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

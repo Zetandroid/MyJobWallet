@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.calendario.CalendarioActivity;
 
 import java.util.Date;
 
@@ -50,8 +49,8 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
         TagEntrate = (Spinner) findViewById(R.id.testoTagEntrateSpinner);
 
         this.arraySpinnerEntrata = new String[]{
-                "Bonifico", "Assegno", "Vincita", "Regalo", "Beni",
-                "Rimborsi", "Vendite", "Altro"
+                getString(R.string.bottomSheet_bonifico), getString(R.string.bottomSheet_assegno), getString(R.string.bottomSheet_vincita), getString(R.string.bottomSheet_regalo),
+                getString(R.string.bottomSheet_beni), getString(R.string.bottomSheet_rimborsi), getString(R.string.bottomSheet_vendite), getString(R.string.bottomSheet_altro)
         };
 
 

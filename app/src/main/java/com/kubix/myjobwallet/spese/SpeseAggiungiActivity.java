@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.entrate.EntrateAggiungiActivity;
 
 import java.util.Date;
 
@@ -51,8 +50,9 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         this.arraySpinnerSpesa = new String[]{
-                "Casa","Trasporti","Auto","Carburante",
-               "Bollette","Shopping","Cibo","Svago","Viaggi","Altro"
+                getString(R.string.bottomSheet_casa),getString(R.string.bottomSheet_trasporti),getString(R.string.bottomSheet_auto),getString(R.string.bottomSheet_carburante),
+               getString(R.string.bottomSheet_bollette),getString(R.string.bottomSheet_shopping),getString(R.string.bottomSheet_cibo),
+                getString(R.string.bottomSheet_svago),getString(R.string.bottomSheet_viaggi),getString(R.string.bottomSheet_altro)
         };
 
 
