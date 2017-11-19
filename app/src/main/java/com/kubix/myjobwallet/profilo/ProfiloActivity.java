@@ -32,12 +32,21 @@ public class ProfiloActivity extends AppCompatActivity {
     private GoogleApiClient mGoogleApiClient;
     private ProgressDialog mProgressDialog;
     private TextView txtName, txtEmail;
+    private Button bottoneGoogle;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilo);
+
+
+        bottoneGoogle = (Button) findViewById(R.id.btnLoginGoogle);
+        bottoneGoogle.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)  {
+                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+            }
+        });
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);

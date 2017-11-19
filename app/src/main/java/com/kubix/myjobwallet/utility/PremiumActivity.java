@@ -8,6 +8,8 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
 import com.kubix.myjobwallet.BuildConfig;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.util.IabHelper;
@@ -36,7 +38,17 @@ public class PremiumActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         bottoneAcquista = (Button) findViewById(R.id.btnAcquista);
+        bottoneAcquista.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)  {
+                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+            }
+        });
         bottoneRipristina = (Button) findViewById(R.id.btnRipristana);
+        bottoneRipristina.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)  {
+                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+            }
+        });
         bottoneRipristina.setEnabled(true);
 
         //TOOLBAR

@@ -138,7 +138,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_marginLeft="16dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:visibility="gone">
 
                 <ImageView
                     android:id="@+id/imgNotificaSpese"
@@ -169,7 +170,7 @@
                 android:layout_height="32dp"
                 android:layout_marginLeft="16dp"
                 android:gravity="center_vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/txtDataSpesa"
