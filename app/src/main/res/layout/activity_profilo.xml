@@ -286,7 +286,7 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_marginRight="4dp"
                                 android:layout_marginTop="4dp"
-                                android:text="160 Ore"
+                                android:text="0 Ore"
                                 android:textAlignment="center"
                                 android:textColor="@color/colorAccent"
                                 android:textSize="16sp"

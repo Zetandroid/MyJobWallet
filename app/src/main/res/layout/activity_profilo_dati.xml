@@ -97,7 +97,7 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="@string/paga_oraria_ordinaria"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:textAlignment="viewStart"
                     android:textSize="14sp" />
             </RelativeLayout>
@@ -135,7 +135,7 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="@string/paga_oraria_straordinaria"
-                    android:inputType="number"
+                    android:inputType="numberDecimal"
                     android:textAlignment="viewStart"
                     android:textSize="14sp" />
             </RelativeLayout>

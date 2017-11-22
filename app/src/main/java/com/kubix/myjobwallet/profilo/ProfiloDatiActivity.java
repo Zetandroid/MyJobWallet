@@ -40,8 +40,8 @@ public class ProfiloDatiActivity extends AppCompatActivity {
         if(!aggiornaOrdinarie.getText().toString().equals("") && !aggiornaPaga.getText().toString().equals("") && !aggiornaPagaStraordinari.getText().toString().equals("")){
             MainActivity.db.execSQL("UPDATE InfoProfilo SET OreOrdinarie = '"+aggiornaOrdinarie.getText().toString()+"', NettoOrario = '"+aggiornaPaga.getText().toString()+"', NettoStraordinario = '"+aggiornaPagaStraordinari.getText().toString()+"' WHERE ID = '0'");
             VariabiliGlobali.oreOrdinarie = Integer.valueOf(aggiornaOrdinarie.getText().toString());
-            VariabiliGlobali.nettoOrario = Integer.valueOf(aggiornaPaga.getText().toString());
-            VariabiliGlobali.nettoStraordinario = Integer.valueOf(aggiornaPagaStraordinari.getText().toString());
+            VariabiliGlobali.nettoOrario = Double.valueOf(aggiornaPaga.getText().toString());
+            VariabiliGlobali.nettoStraordinario = Double.valueOf(aggiornaPagaStraordinari.getText().toString());
             Toast.makeText(this, "Info profilo aggiornate con successo.", Toast.LENGTH_LONG).show();
             finish();
         }else{

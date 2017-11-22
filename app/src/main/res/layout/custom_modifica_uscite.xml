@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERISCI LA NUOVA SPESA" />
+
+    <EditText
+        android:id="@+id/testoModificaCifraUscita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/bottoneModificaCifraUscita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="modificaSpesa"
+        android:text="MODIFICA QUESTA SPESA" />
+</LinearLayout>

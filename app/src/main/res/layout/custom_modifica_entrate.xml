@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INSERISCI LA NUOVA ENTRATA" />
+
+    <EditText
+        android:id="@+id/testoModificaCifraEntrata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/bottoneModificaCifraEntrata"
+        android:onClick="modificaEntrata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MODIFICA QUESTA ENTRATA" />
+</LinearLayout>

@@ -179,8 +179,8 @@ public class MainActivity extends AppCompatActivity
                 if(cr.moveToFirst()){
                     do{
                         VariabiliGlobali.oreOrdinarie = Integer.valueOf(cr.getString(cr.getColumnIndex("OreOrdinarie")));
-                        VariabiliGlobali.nettoOrario = Integer.valueOf(cr.getString(cr.getColumnIndex("NettoOrario")));
-                        VariabiliGlobali.nettoStraordinario = Integer.valueOf(cr.getString(cr.getColumnIndex("NettoStraordinario")));
+                        VariabiliGlobali.nettoOrario = Double.valueOf(cr.getString(cr.getColumnIndex("NettoOrario")));
+                        VariabiliGlobali.nettoStraordinario = Double.valueOf(cr.getString(cr.getColumnIndex("NettoStraordinario")));
                     }while (cr.moveToNext());
                 }else{
                     Toast.makeText(getApplicationContext(), "NESSUN DATO INSERITO", Toast.LENGTH_LONG).show();

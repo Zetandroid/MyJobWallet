@@ -15,9 +15,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -47,6 +50,10 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
     private RecyclerView recyclerView;
     private com.kubix.myjobwallet.entrate.CustomAdapter mAdapter;
 
+    //OGGETTI PER MODIFICA
+    EditText testoModifica;
+    Button buttonModifica;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,16 +70,29 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         recyclerView.setAdapter(mAdapter);
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new RecyclerTouchListener.ClickListener() {
 
-            //EVENTI DI CLICK DEL FOTTUTO RECYCLER
+            //EVENTI DI CLICK DEL RECYCLER
             @Override
             public void onClick(View view, int position) {
-                //final Turni movie = entrateList.get(position);
-                //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
+                //MODIFICA ENTRATA
+                final Entrate movie = entrateList.get(position);
+                vecchiaData = movie.getDataEntrata();
+                vecchioTitolo = movie.getTitolo();
+                vecchiaCifra = movie.getEntrata();
+                vecchioTag = movie.getCategoria();
+
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(EntrateActivity.this);
+                LayoutInflater inflater = EntrateActivity.this.getLayoutInflater();
+                View dialogView = inflater.inflate(R.layout.custom_modifica_entrate, null);
+                dialogBuilder.setView(dialogView);
+                testoModifica = (EditText) dialogView.findViewById(R.id.testoModificaCifraEntrata);
+                buttonModifica = (Button) dialogView.findViewById(R.id.bottoneModificaCifraEntrata);
+                AlertDialog alertDialog = dialogBuilder.create();
+                alertDialog.show();
             }
 
             @Override
             public void onLongClick(View view, final int position) {
-
+                //ELIMINA ENTRATA
                 AlertDialog.Builder builder;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     builder = new AlertDialog.Builder(EntrateActivity.this, android.R.style.Theme_Material_Dialog_Alert);
@@ -519,6 +539,21 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    String vecchiaData;
+    String vecchioTitolo;
+    String vecchiaCifra;
+    String vecchioTag;
+
+    public void modificaEntrata(View v){
+        if (! testoModifica.getText().toString().equals("")){
+            MainActivity.db.execSQL("UPDATE Entrate SET Cifra = '"+testoModifica.getText().toString()+"' WHERE Data = '"+vecchiaData+"' AND Titolo = '"+vecchioTitolo+"' AND Cifra = '"+vecchiaCifra+"' AND Categoria = '"+vecchioTag+"'");
+            Toast.makeText(this, "ENTRATA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+            finish();
+        }else{
+            Toast.makeText(this, "DICHIARA UNA CIFRA PER MODIFICARE L'ENTRATA", Toast.LENGTH_SHORT).show();
         }
     }
 }

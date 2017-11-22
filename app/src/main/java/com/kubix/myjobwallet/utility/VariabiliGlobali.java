@@ -7,8 +7,8 @@ public class VariabiliGlobali {
 
     //INERENTI A FUNZIONI DI CALCOLO DEI TURNI
     public static Integer oreOrdinarie;
-    public static Integer nettoOrario;
-    public static Integer nettoStraordinario;
+    public static Double nettoOrario;
+    public static Double nettoStraordinario;
     public static Integer calcoloCompletoStipendio;
 
     //INERENTI A HOME PAGE

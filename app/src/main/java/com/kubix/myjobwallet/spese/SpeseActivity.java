@@ -15,9 +15,12 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 import com.google.android.gms.ads.AdListener;
@@ -28,6 +31,7 @@ import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.entrate.Entrate;
+import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +48,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
     private RecyclerView recyclerView;
     private com.kubix.myjobwallet.spese.CustomAdapter mAdapter;
 
-    //INDICIZZA OGGETTI
-    GridView listaSpese;
+    //OGGETTI PER MODIFICA
+    EditText testoModifica;
+    Button buttonModifica;
 
     //ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -68,11 +73,25 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         recyclerView.setAdapter(mAdapter);
         recyclerView.addOnItemTouchListener(new com.kubix.myjobwallet.spese.RecyclerTouchListener(getApplicationContext(), recyclerView, new com.kubix.myjobwallet.spese.RecyclerTouchListener.ClickListener() {
 
-            //EVENTI DI CLICK DEL FOTTUTO RECYCLER
+            //EVENTI DI CLICK DEL RECYCLER
             @Override
             public void onClick(View view, int position) {
-                //final Uscite movie = entrateList.get(position);
-                //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
+
+                //MODIFICA ENTRATA
+                final Uscite movie = usciteList.get(position);
+                vecchiaData = movie.getDataUscita();
+                vecchioTitolo = movie.getTitolo();
+                vecchiaCifra = movie.getUscita();
+                vecchioTag = movie.getCategoriaUscita();
+
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(SpeseActivity.this);
+                LayoutInflater inflater = SpeseActivity.this.getLayoutInflater();
+                View dialogView = inflater.inflate(R.layout.custom_modifica_uscite, null);
+                dialogBuilder.setView(dialogView);
+                testoModifica = (EditText) dialogView.findViewById(R.id.testoModificaCifraUscita);
+                buttonModifica = (Button) dialogView.findViewById(R.id.bottoneModificaCifraUscita);
+                AlertDialog alertDialog = dialogBuilder.create();
+                alertDialog.show();
             }
 
             @Override
@@ -589,6 +608,21 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    String vecchiaData;
+    String vecchioTitolo;
+    String vecchiaCifra;
+    String vecchioTag;
+
+    public void modificaSpesa(View v){
+       if (! testoModifica.getText().toString().equals("")){
+           MainActivity.db.execSQL("UPDATE Uscite SET Cifra = '"+testoModifica.getText().toString()+"' WHERE Data = '"+vecchiaData+"' AND Titolo = '"+vecchioTitolo+"' AND Cifra = '"+vecchiaCifra+"' AND Categoria = '"+vecchioTag+"'");
+           Toast.makeText(this, "SPESA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+           finish();
+       }else{
+           Toast.makeText(this, "DICHIARA UNA CIFRA PER MODIFICARE LA SPESA", Toast.LENGTH_SHORT).show();
+       }
     }
 
 }
