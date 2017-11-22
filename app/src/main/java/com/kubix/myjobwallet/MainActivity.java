@@ -82,8 +82,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
@@ -93,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         //NAVIGATION DRAWER
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                  this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -147,8 +145,7 @@ public class MainActivity extends AppCompatActivity
                     Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
                     startActivity(intent);
                 } else if (position == 4) {
-                    Intent intent = new Intent(MainActivity.this, RiepilogoActivity.class);
-                    startActivity(intent);
+                    Toast.makeText(getBaseContext(), R.string.prossimamente , Toast.LENGTH_SHORT ).show();
                 } else if (position == 5) {
                     Intent intent = new Intent(MainActivity.this, NoteActivity.class);
                     startActivity(intent);

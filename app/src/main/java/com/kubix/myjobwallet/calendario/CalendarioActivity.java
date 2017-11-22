@@ -247,7 +247,7 @@ public class CalendarioActivity extends AppCompatActivity {
                 int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
 
                 if(hours > oreOrdinarie){
-                    resaCalcoloOrdinarie = hours + " Ore " +minutes + " Minuti";
+                    resaCalcoloOrdinarie = hours + getString(R.string.ore) +minutes + getString(R.string.minuti);
                     resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " Ore " + minutes + " Minuti ";
                 }else{
                     resaCalcoloOrdinarie = hours + " Ore "+ minutes + " Minuti ";

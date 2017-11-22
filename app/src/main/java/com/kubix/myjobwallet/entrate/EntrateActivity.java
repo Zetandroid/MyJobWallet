@@ -99,8 +99,8 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                 } else {
                     builder = new AlertDialog.Builder(EntrateActivity.this);
                 }
-                builder.setTitle("ELIMINA ENTRATA")
-                        .setMessage("VUOI VERAMENTE ELIMINARE QUESTA ENTRATA?")
+                builder.setTitle("ELIMINA")
+                        .setMessage("VUOI VERAMENTE ELIMINARE?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINA
@@ -553,7 +553,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
             Toast.makeText(this, "ENTRATA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
             finish();
         }else{
-            Toast.makeText(this, "DICHIARA UNA CIFRA PER MODIFICARE L'ENTRATA", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NESSUN DATO MODIFICATO", Toast.LENGTH_SHORT).show();
         }
     }
 }

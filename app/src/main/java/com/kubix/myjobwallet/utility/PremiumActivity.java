@@ -40,13 +40,13 @@ public class PremiumActivity extends AppCompatActivity {
         bottoneAcquista = (Button) findViewById(R.id.btnAcquista);
         bottoneAcquista.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)  {
-                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getBaseContext(), R.string.prossimamente , Toast.LENGTH_SHORT ).show();
             }
         });
         bottoneRipristina = (Button) findViewById(R.id.btnRipristana);
         bottoneRipristina.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)  {
-                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getBaseContext(), R.string.prossimamente , Toast.LENGTH_SHORT ).show();
             }
         });
         bottoneRipristina.setEnabled(true);
@@ -63,9 +63,9 @@ public class PremiumActivity extends AppCompatActivity {
         mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
             public void onIabSetupFinished(IabResult result) {
                 if (!result.isSuccess()) {
-                    Log.d(TAG, "Acquisto fallito!" + result);
+                    Log.d(TAG, getString(R.string.aquisto_fallito) + result);
                 } else {
-                    Log.d(TAG, "Acquisto avvenuto con successo!");
+                    Log.d(TAG, getString(R.string.acquisto_ok));
                 }
             }
         });

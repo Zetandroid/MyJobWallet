@@ -102,8 +102,8 @@ public class TurniActivity extends AppCompatActivity  {
                 } else {
                     builder = new AlertDialog.Builder(TurniActivity.this);
                 }
-                builder.setTitle("ELIMINA TURNO")
-                        .setMessage("VUOI VERAMENTE ELIMINARE QUESTO TURNO?")
+                builder.setTitle("ELIMINA")
+                        .setMessage("VUOI VERAMENTE ELIMINARE?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINA

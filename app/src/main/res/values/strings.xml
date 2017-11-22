@@ -33,6 +33,7 @@
     <string name="entrata_lavoro">Entrata</string>
     <string name="uscita_lavoro">Uscita</string>
     <string name="valuta_app">Valuta app</string>
+    <string name="prossimamente">Prossimamente</string>
 
 
     <string name="toolbarSettings">Impostazioni</string>
@@ -64,10 +65,12 @@
     <string name="testoSlide5">Tieni traccia di tutte le tue spese mensili tramite il Riepilogo</string>
 
 
-    <!-- CALENDARIO -->
+    <!-- CALENDARIO/TURNI -->
     <string name="calendario_inserisci_entrata">Inserisci Entrata</string>
     <string name="calendario_inserisci_uscita">Inserisci Uscita</string>
     <string name="calendario_inserisci_riposo">Inserisci Riposo</string>
+    <string name="ore">Ore</string>
+    <string name="minuti">Minuti</string>
 
     <!-- EMAIL -->
     <string name="email_linea_1">Hai un problema?</string>
@@ -81,6 +84,8 @@
     <string name="premium_linea_2">Calcola stipendio</string>
     <string name="premium_linea_3">Crea BackUp sul telefono</string>
     <string name="premium_linea_4">Sbocca i Widget</string>
+    <string name="aquisto_fallito">Acquisto fallito!</string>
+    <string name="acquisto_ok">Acquisto avvenuto con successo!</string>
 
     <!-- PROFILO -->
     <string name="profilo_disconnetti">Disconnetti</string>
@@ -163,5 +168,6 @@
     <string name="ottibre">Ottobre</string>
     <string name="novembre">Novembre</string>
     <string name="dicembre">Dicembre</string>
+
 
 </resources>

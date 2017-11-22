@@ -128,5 +128,8 @@
     <string name="ottibre">October</string>
     <string name="novembre">November</string>
     <string name="dicembre">December</string>
+    <string name="prossimamente">Coming Soon</string>
+    <string name="aquisto_fallito">Purchase failed!</string>
+    <string name="acquisto_ok">Purchase successfully!</string>
 
 </resources>

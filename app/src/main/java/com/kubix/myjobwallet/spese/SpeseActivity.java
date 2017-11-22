@@ -21,8 +21,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.Toast;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -30,9 +30,8 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.entrate.Entrate;
-import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -621,7 +620,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
            Toast.makeText(this, "SPESA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
            finish();
        }else{
-           Toast.makeText(this, "DICHIARA UNA CIFRA PER MODIFICARE LA SPESA", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "NESSUN DATO MODIFICATO", Toast.LENGTH_SHORT).show();
        }
     }
 
