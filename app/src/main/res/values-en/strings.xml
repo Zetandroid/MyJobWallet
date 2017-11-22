@@ -131,5 +131,7 @@
     <string name="prossimamente">Coming Soon</string>
     <string name="aquisto_fallito">Purchase failed!</string>
     <string name="acquisto_ok">Purchase successfully!</string>
+    <string name="ore">Hours</string>
+    <string name="minuti">Minutes</string>
 
 </resources>
