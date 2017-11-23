@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.1'
     defaultConfig {
         applicationId "com.kubix.myjobwallet"
-        minSdkVersion 24
+        minSdkVersion 23
         targetSdkVersion 26
         versionCode 25
         versionName "0.2.5"

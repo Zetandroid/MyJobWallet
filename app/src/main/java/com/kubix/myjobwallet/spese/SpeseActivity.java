@@ -97,11 +97,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
             public void onLongClick(View view, final int position) {
 
                 AlertDialog.Builder builder;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(SpeseActivity.this);
-                } else {
-                    builder = new AlertDialog.Builder(SpeseActivity.this);
-                }
+                builder = new AlertDialog.Builder(SpeseActivity.this);
                 builder.setTitle(R.string.elimina)
                         .setMessage(R.string.elimina_veramente)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {

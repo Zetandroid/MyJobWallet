@@ -73,6 +73,11 @@
             android:label="@string/toolbarCalendario"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name=".calendario.CalendarioActivityDue"
+            android:label="@string/toolbarCalendario"
+            android:theme="@style/AppTheme" />
+
         <!-- TURNI -->
 
         <activity

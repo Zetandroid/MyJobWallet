@@ -131,11 +131,7 @@ public class NoteActivity extends AppCompatActivity {
             @Override
             public void onLongClick(View view, final int position) {
                 AlertDialog.Builder builder;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(NoteActivity.this, android.R.style.Theme_Material_Dialog_Alert);
-                } else {
-                    builder = new AlertDialog.Builder(NoteActivity.this);
-                }
+                builder = new AlertDialog.Builder(NoteActivity.this);
                 builder.setTitle(R.string.elimina)
                         .setMessage(R.string.elimina_veramente)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {

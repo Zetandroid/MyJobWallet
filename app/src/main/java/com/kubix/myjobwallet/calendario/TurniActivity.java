@@ -97,11 +97,7 @@ public class TurniActivity extends AppCompatActivity  {
             public void onLongClick(View view, final int position) {
 
                 AlertDialog.Builder builder;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(TurniActivity.this);
-                } else {
-                    builder = new AlertDialog.Builder(TurniActivity.this);
-                }
+                builder = new AlertDialog.Builder(TurniActivity.this);
                 builder.setTitle(R.string.elimina)
                         .setMessage("VUOI VERAMENTE ELIMINARE?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {

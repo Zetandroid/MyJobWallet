@@ -94,11 +94,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
             public void onLongClick(View view, final int position) {
                 //ELIMINA ENTRATA
                 AlertDialog.Builder builder;
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(EntrateActivity.this);
-                } else {
-                    builder = new AlertDialog.Builder(EntrateActivity.this);
-                }
+                builder = new AlertDialog.Builder(EntrateActivity.this);
                 builder.setTitle(R.string.elimina)
                         .setMessage(R.string.elimina_veramente)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
