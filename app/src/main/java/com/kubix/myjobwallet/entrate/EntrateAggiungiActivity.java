@@ -1,5 +1,6 @@
 package com.kubix.myjobwallet.entrate;
 
+import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.calendario.TurniActivity;
 
 import java.util.Date;
 
@@ -112,7 +114,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
             valoreEntrata.setText("");
             dataEntrata.setText("");
             oraEntrata.setText("");
-
+            onBackPressed();
         }else{
             Snackbar.make(v, "INSERISCI TITOLO E CIFRA PER AGGIUNGERE L'ENTRATA MONETARIA", Snackbar.LENGTH_LONG).show();
         }

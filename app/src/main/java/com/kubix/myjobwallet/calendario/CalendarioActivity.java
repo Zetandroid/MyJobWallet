@@ -19,6 +19,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.utility.EmailActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.Date;
@@ -115,7 +116,7 @@ public class CalendarioActivity extends AppCompatActivity {
                 giornoTestualeAbbreviato = "SAB";
             }
 
-            Toast.makeText(CalendarioActivity.this, giornoTestuale, Toast.LENGTH_SHORT).show();
+            Snackbar.make(inserisciUscita, giornoTestuale, Snackbar.LENGTH_LONG).show();
 
         }catch (Exception e){
             Toast.makeText(CalendarioActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -161,7 +162,7 @@ public class CalendarioActivity extends AppCompatActivity {
                         giornoTestualeAbbreviato = "SAB";
                     }
 
-                    Toast.makeText(CalendarioActivity.this, giornoTestuale, Toast.LENGTH_SHORT).show();
+                    Snackbar.make(inserisciUscita, giornoTestuale, Snackbar.LENGTH_LONG).show();
 
                 }catch (Exception e){
                     Toast.makeText(CalendarioActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -260,8 +261,9 @@ public class CalendarioActivity extends AppCompatActivity {
 
             //INSERISCI TURNO
             MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, Ordinarie, Straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"', '"+resaCalcoloOrdinarie+"', '"+resaCalcoloStraordinarie+"')");
-            Toast.makeText(this, "TURNO INSERITO CON SUCCESSO", Toast.LENGTH_SHORT).show();
-            finish();
+            Snackbar.make(v, "TURNO INSERITO CON SUCCESSO", Snackbar.LENGTH_LONG).show();
+            onBackPressed();
+            startActivity(new Intent(this, TurniActivity.class));
 
         }else{
             Snackbar.make(v, "COMPILA I DATI PER INSERIRE IL TURNO", Snackbar.LENGTH_LONG).show();
@@ -270,8 +272,9 @@ public class CalendarioActivity extends AppCompatActivity {
 
     public void inserisciRiposo(View v){
         MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, ordinarie, straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', 'RIPOSO', 'RIPOSO', 'RIPOSO', 'RIPOSO')");
-        Toast.makeText(this, "RIPOSO INSERITO CON SUCCESSO", Toast.LENGTH_SHORT).show();
-        finish();
+        Snackbar.make(v, "GIORNO DI RIPOSO INSERITO CON SUCCESSO", Snackbar.LENGTH_LONG).show();
+        onBackPressed();
+        startActivity(new Intent(this, TurniActivity.class));
 
 
     }
@@ -311,11 +314,6 @@ public class CalendarioActivity extends AppCompatActivity {
         }, hour, minute, true);
         mTimePicker.setTitle("Imposta Uscita");
         mTimePicker.show();
-    }
-
-    public void apriStorico(View v){
-        Intent intent = new Intent(this, TurniActivity.class);
-        startActivity(intent);
     }
 
 }

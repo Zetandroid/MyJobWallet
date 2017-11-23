@@ -1,5 +1,6 @@
 package com.kubix.myjobwallet.spese;
 
+import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.entrate.EntrateActivity;
 
 import java.util.Date;
 
@@ -116,6 +118,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
             cifraSpesa.setText("");
             dataSpesa.setText("");
             oraSpesa.setText("");
+            onBackPressed();
 
         }else{
             Snackbar.make(v, "INSERISCI TITOLO E CIFRA PER AGGIUNGERE LA SPESA MONETARIA", Snackbar.LENGTH_LONG).show();

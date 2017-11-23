@@ -98,7 +98,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
 
                 AlertDialog.Builder builder;
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    builder = new AlertDialog.Builder(SpeseActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                    builder = new AlertDialog.Builder(SpeseActivity.this);
                 } else {
                     builder = new AlertDialog.Builder(SpeseActivity.this);
                 }
