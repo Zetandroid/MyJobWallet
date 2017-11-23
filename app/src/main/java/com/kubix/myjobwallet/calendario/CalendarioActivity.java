@@ -19,7 +19,6 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.utility.EmailActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.Date;
@@ -206,7 +205,7 @@ public class CalendarioActivity extends AppCompatActivity {
             }
 
         }, hour, minute, true);
-        mTimePicker.setTitle("Imposta Entrata");
+        mTimePicker.setTitle(getString(R.string.imposta_entrata));
         mTimePicker.show();
     }
 
@@ -261,18 +260,18 @@ public class CalendarioActivity extends AppCompatActivity {
 
             //INSERISCI TURNO
             MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, Ordinarie, Straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"', '"+resaCalcoloOrdinarie+"', '"+resaCalcoloStraordinarie+"')");
-            Snackbar.make(v, "TURNO INSERITO CON SUCCESSO", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             onBackPressed();
             startActivity(new Intent(this, TurniActivity.class));
 
         }else{
-            Snackbar.make(v, "COMPILA I DATI PER INSERIRE IL TURNO", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, R.string.compila_tutti_dati, Snackbar.LENGTH_LONG).show();
         }
     }
 
     public void inserisciRiposo(View v){
         MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, ordinarie, straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', 'RIPOSO', 'RIPOSO', 'RIPOSO', 'RIPOSO')");
-        Snackbar.make(v, "GIORNO DI RIPOSO INSERITO CON SUCCESSO", Snackbar.LENGTH_LONG).show();
+        Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
         onBackPressed();
         startActivity(new Intent(this, TurniActivity.class));
 
@@ -312,7 +311,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
             }
         }, hour, minute, true);
-        mTimePicker.setTitle("Imposta Uscita");
+        mTimePicker.setTitle(getString(R.string.imposta_uscita));
         mTimePicker.show();
     }
 

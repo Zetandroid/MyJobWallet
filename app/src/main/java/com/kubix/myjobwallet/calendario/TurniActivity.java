@@ -102,7 +102,7 @@ public class TurniActivity extends AppCompatActivity  {
                 } else {
                     builder = new AlertDialog.Builder(TurniActivity.this);
                 }
-                builder.setTitle("ELIMINA")
+                builder.setTitle(R.string.elimina)
                         .setMessage("VUOI VERAMENTE ELIMINARE?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
@@ -149,7 +149,7 @@ public class TurniActivity extends AppCompatActivity  {
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(mAdView, "NESSUN TURNO INSERITO", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mAdView, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 

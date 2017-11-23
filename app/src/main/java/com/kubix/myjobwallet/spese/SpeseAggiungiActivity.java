@@ -1,6 +1,5 @@
 package com.kubix.myjobwallet.spese;
 
-import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.entrate.EntrateActivity;
 
 import java.util.Date;
 
@@ -113,7 +111,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
     public void inserisciUscitaMonetaria(View v){
         if(! titoloSpesa.getText().toString().equals("") && ! cifraSpesa.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra, Categoria, Ora, GiornoTesto, GiornoNumero, MeseNumero, AnnoNumero) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"', '"+TagSpese.getSelectedItem().toString()+"', '"+oraSpesa.getText().toString()+"', '"+giornoTestualeAbbreviato+"', '"+String.valueOf(numeroGiorno)+"', '"+String.valueOf(numeroMese)+"', '"+String.valueOf(numeroAnno)+"')");
-            Snackbar.make(v, "SPESA INSERITA CORRETTAMENTE ", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             titoloSpesa.setText("");
             cifraSpesa.setText("");
             dataSpesa.setText("");

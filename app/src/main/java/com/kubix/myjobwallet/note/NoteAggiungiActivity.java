@@ -41,9 +41,9 @@ public class NoteAggiungiActivity extends AppCompatActivity {
                 MainActivity.db.execSQL("INSERT INTO Note (Titolo, Nota) VALUES ('" + titoloNota.getText().toString() + "', '" + corpoNota.getText().toString() + "')");
                 titoloNota.setText("");
                 corpoNota.setText("");
-                Snackbar.make(v, "NOTA INSERITA CON SUCCESSO", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             } else {
-                Snackbar.make(v, "INSERIRE DATI NOTA", Snackbar.LENGTH_LONG).show();
+                Snackbar.make(v, R.string.compila_tutti_dati, Snackbar.LENGTH_LONG).show();
             }
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();

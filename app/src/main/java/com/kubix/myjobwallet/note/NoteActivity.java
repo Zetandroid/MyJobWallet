@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
+
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
@@ -24,8 +25,6 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.spese.SpeseActivity;
-import com.kubix.myjobwallet.spese.Uscite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,8 +136,8 @@ public class NoteActivity extends AppCompatActivity {
                 } else {
                     builder = new AlertDialog.Builder(NoteActivity.this);
                 }
-                builder.setTitle("ELIMINA NOTA")
-                        .setMessage("VUOI ELIMINARE VERAMENTE QUESTA NOTA?")
+                builder.setTitle(R.string.elimina)
+                        .setMessage(R.string.elimina_veramente)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINAZIONE
@@ -202,7 +201,7 @@ public class NoteActivity extends AppCompatActivity {
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(mFloatingActionButton, "NESSUNA NOTA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mFloatingActionButton, R.string.nessuna_modifica, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 

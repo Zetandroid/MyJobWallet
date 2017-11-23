@@ -110,7 +110,7 @@ public class ProfiloActivity extends AppCompatActivity {
 
     //EVENTO TEMPORANEO
     public void alertAggiornamento(View v){
-        Toast.makeText(this, "QUESTA FUNZIONE VERRA IMPLEMENTATA CON GLI AGGIORNAMENTI", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.prossimamente, Toast.LENGTH_SHORT).show();
     }
 
     public void contiEntrateBarraSpese(){

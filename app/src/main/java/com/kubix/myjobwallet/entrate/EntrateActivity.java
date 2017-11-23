@@ -99,8 +99,8 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                 } else {
                     builder = new AlertDialog.Builder(EntrateActivity.this);
                 }
-                builder.setTitle("ELIMINA")
-                        .setMessage("VUOI VERAMENTE ELIMINARE?")
+                builder.setTitle(R.string.elimina)
+                        .setMessage(R.string.elimina_veramente)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINA
@@ -243,7 +243,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -277,7 +277,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER BONIFICO AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -309,7 +309,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER ASSEGNO AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -341,7 +341,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER VINCITE AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -373,7 +373,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER REGALO AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -405,7 +405,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER BENI AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -437,7 +437,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER RIMBORSI AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -469,7 +469,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER VENDITE AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -501,7 +501,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA PER ALTRE CAUSE AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -533,7 +533,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
                 }else
-                    Snackbar.make(fab, "NESSUNA ENTRATA AGGIUNTA", Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
             }
             cr.close();
 
@@ -550,10 +550,10 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
     public void modificaEntrata(View v){
         if (! testoModifica.getText().toString().equals("")){
             MainActivity.db.execSQL("UPDATE Entrate SET Cifra = '"+testoModifica.getText().toString()+"' WHERE Data = '"+vecchiaData+"' AND Titolo = '"+vecchioTitolo+"' AND Cifra = '"+vecchiaCifra+"' AND Categoria = '"+vecchioTag+"'");
-            Toast.makeText(this, "ENTRATA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_SHORT).show();
             finish();
         }else{
-            Toast.makeText(this, "NESSUN DATO MODIFICATO", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
         }
     }
 }

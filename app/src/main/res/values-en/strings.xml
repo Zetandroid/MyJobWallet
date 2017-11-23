@@ -133,5 +133,14 @@
     <string name="acquisto_ok">Purchase successfully!</string>
     <string name="ore">Hours</string>
     <string name="minuti">Minutes</string>
+    <string name="elimina">DELETE</string>
+    <string name="elimina_veramente">WANT TO ELIMINATE?</string>
+    <string name="dati_non_inseriti">DATA NOT INSERTED</string>
+    <string name="nessuna_modifica">NO MODIFICATION</string>
+    <string name="dati_inseriti_successo">SUCCESSFUL</string>
+    <string name="compila_tutti_dati">COMPLETE ALL</string>
+    <string name="dati_inseriti">SUCCESSFUL</string>
+    <string name="imposta_entrata">Enter Entry</string>
+    <string name="imposta_uscita">Enter Output</string>
 
 </resources>

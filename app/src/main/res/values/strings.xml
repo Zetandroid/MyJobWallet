@@ -34,6 +34,17 @@
     <string name="uscita_lavoro">Uscita</string>
     <string name="valuta_app">Valuta app</string>
     <string name="prossimamente">Prossimamente</string>
+    <string name="imposta_entrata">Imposta Entrata</string>
+    <string name="imposta_uscita">Imposta Uscita</string>
+
+    <!-- POPUP -->
+    <string name="dati_inseriti_successo">DATI INSERITI CON SUCCESSO</string>
+    <string name="compila_tutti_dati">COMPILA TUTTI I DATI</string>
+    <string name="elimina">ELIMINA</string>
+    <string name="elimina_veramente">VUOI ELIMINARE?</string>
+    <string name="dati_non_inseriti">DATI NON INSERITI</string>
+    <string name="dati_inseriti">DATI INSERITI</string>
+    <string name="nessuna_modifica">NESSUNA MODIFICA</string>
 
 
     <string name="toolbarSettings">Impostazioni</string>
@@ -168,6 +179,7 @@
     <string name="ottibre">Ottobre</string>
     <string name="novembre">Novembre</string>
     <string name="dicembre">Dicembre</string>
+
 
 
 </resources>

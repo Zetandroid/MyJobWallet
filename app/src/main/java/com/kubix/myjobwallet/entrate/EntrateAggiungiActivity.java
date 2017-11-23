@@ -1,6 +1,5 @@
 package com.kubix.myjobwallet.entrate;
 
-import android.content.Intent;
 import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.calendario.TurniActivity;
 
 import java.util.Date;
 
@@ -109,7 +107,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
     public void inserisciEntrataMonetaria(View v){
         if(! titoloEntrata.getText().toString().equals("") && ! valoreEntrata.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Entrate (Data, Titolo, Cifra, Categoria, Ora, GiornoTesto, GiornoNumero, MeseNumero, AnnoNumero) VALUES ('"+dataEntrata.getText().toString()+"', '"+titoloEntrata.getText().toString()+"', '"+valoreEntrata.getText().toString()+"', '"+TagEntrate.getSelectedItem().toString()+"', '"+oraEntrata.getText().toString()+"', '"+giornoTestualeAbbreviato+"', '"+String.valueOf(numeroGiorno)+"', '"+String.valueOf(numeroMese)+"', '"+String.valueOf(numeroAnno)+"')");
-            Snackbar.make(v, "ENTRATA AGGIUNTA CON SUCCESSO", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             titoloEntrata.setText("");
             valoreEntrata.setText("");
             dataEntrata.setText("");

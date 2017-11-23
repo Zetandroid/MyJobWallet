@@ -42,10 +42,10 @@ public class ProfiloDatiActivity extends AppCompatActivity {
             VariabiliGlobali.oreOrdinarie = Integer.valueOf(aggiornaOrdinarie.getText().toString());
             VariabiliGlobali.nettoOrario = Double.valueOf(aggiornaPaga.getText().toString());
             VariabiliGlobali.nettoStraordinario = Double.valueOf(aggiornaPagaStraordinari.getText().toString());
-            Toast.makeText(this, "Info profilo aggiornate con successo.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_LONG).show();
             finish();
         }else{
-            Toast.makeText(this, "I dati profilo devono essere compilati correttamente.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.compila_tutti_dati, Toast.LENGTH_SHORT).show();
         }
     }
 
