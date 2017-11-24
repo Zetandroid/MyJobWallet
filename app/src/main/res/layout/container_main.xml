@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarHome"
@@ -15,10 +15,11 @@
         android:theme="@style/ToolbarIconaBianca" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/toolbarHome">
+        android:layout_below="@+id/toolbarHome"
+        android:orientation="vertical">
 
         <com.google.android.gms.ads.NativeExpressAdView
             android:id="@+id/adView"
@@ -40,8 +41,9 @@
 
         </LinearLayout>
 
-        <include layout="@layout/container_main_griglia"/>
+        <include layout="@layout/container_main_griglia" />
 
     </LinearLayout>
+
 
 </RelativeLayout>

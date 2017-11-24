@@ -48,9 +48,6 @@ import com.kubix.myjobwallet.utility.VariabiliGlobali;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView sommaEntrate;
-    TextView sommaUscite;
-
     GridView grid;
     String[] web = {
 
@@ -71,13 +68,12 @@ public class MainActivity extends AppCompatActivity
             R.drawable.ic_home_memo
     };
 
-    //ADMOB NATIVA
+    //INDICIZZA ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
-
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
-    //DICHIARA DATABASE
+    //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
 
     @Override
@@ -85,13 +81,13 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //TOOLBAR
+        //SETTAGGI TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.app_name);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
 
-        //NAVIGATION DRAWER
+        //SETTAGGI NAVIGATION DRAWER
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                   this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -100,7 +96,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //ADMOB NATIVA
+        //CREA ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adView);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
@@ -126,7 +122,7 @@ public class MainActivity extends AppCompatActivity
 
         mAdView.loadAd(new AdRequest.Builder().build());
 
-        //GRIGLIA
+        //EVENTI E SETTAGGI SCHEDE IN HOME PAGE
         HomeGridAdapter adapter = new HomeGridAdapter(MainActivity.this, web, imageId);
         grid=(GridView)findViewById(R.id.grid);
         grid.setAdapter(adapter);
@@ -134,7 +130,6 @@ public class MainActivity extends AppCompatActivity
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
                 if (position == 0) {
                     Intent intent = new Intent(MainActivity.this, CalendarioActivity.class);
                     startActivity(intent);
@@ -156,23 +151,22 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        //INDICIZZARE DATABASE CON QUERY SQL
+        //CREAZIONE EFFETTIVA DEL DATABASE ESEGUENDO QUERY
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS Turni (giornoSettimana Varchar(50), numeroGiorno Varchar (50), mese Varchar(50), anno Varchar (50), oraEntrata Varchar (50), oraUscita Varchar (50), Ordinarie Varchar (50), Straordinarie Varchar (50));");
-        db.execSQL("CREATE TABLE IF NOT EXISTS Controlli (Data Varchar (50) Unique);");
         db.execSQL("CREATE TABLE IF NOT EXISTS Note (Titolo Varchar (50), Nota Varchar (1000));");
         db.execSQL("CREATE TABLE IF NOT EXISTS InfoProfilo (ID Varchar (10) Unique, OreOrdinarie Varchar (50), NettoOrario Varchar (50), NettoStraordinario Varchar (50), ValutaSimbolo Varchar (50));");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Entrate (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar(50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Uscite (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar (50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
 
+        //IMPOSTA DATI INIZIALI TABELLA INFOPROFILO
         try{
             db.execSQL("INSERT INTO InfoProfilo (ID, OreOrdinarie, NettoOrario, NettoStraordinario) VALUES ('0', '8', '8', '10')");
         }catch (SQLException e){
             //NOTHING
         }
 
-        db.execSQL("CREATE TABLE IF NOT EXISTS Entrate (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar(50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
-        db.execSQL("CREATE TABLE IF NOT EXISTS Uscite (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar (50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
-
-        //INDICIZZA DA DATABASE IN VARIABILI GLOBALI DATI PROFILO SU PAGA ORARIA, STRAORDINARIA E ORE ORDINARIE
+        //CARICA DA DATABASE IN VARIABILI GLOBALI I DATI DEL PROFILO
         try {
             Cursor cr=MainActivity.db.rawQuery("SELECT * FROM InfoProfilo",null);
             if(cr!=null){

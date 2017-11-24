@@ -147,7 +147,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/ore_ordinarie"
+                    android:text="@string/ore_lavorate"
                     android:textAlignment="viewStart"
                     android:textColor="@color/coloreSommarioNero"
                     android:textSize="14sp"

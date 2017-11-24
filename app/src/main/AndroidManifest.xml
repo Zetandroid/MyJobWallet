@@ -91,6 +91,11 @@
             android:label="@string/toolbarPremium"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name="com.kubix.myjobwallet.PannelloPremium"
+            android:label="@string/toolbarPremium"
+            android:theme="@style/AppTheme" />
+
         <!-- ENTRATE -->
         <activity
             android:name=".entrate.EntrateActivity"

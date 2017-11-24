@@ -26,7 +26,8 @@
     <string name="entrate">Entrate</string>
     <string name="spese">Spese</string>
     <string name="ore_ordinarie">Ore ordinarie</string>
-    <string name="ore_straordinarie">Ore straordinarie</string>
+    <string name="ore_lavorate">Ore lavorate</string>
+    <string name="ore_straordinarie">Straordinari del turno</string>
     <string name="stipendio">Stipendio</string>
     <string name="straordinari">Straordinari</string>
     <string name="seleziona_categoria">Seleziona categoria</string>

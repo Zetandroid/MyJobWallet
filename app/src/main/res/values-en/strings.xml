@@ -62,8 +62,9 @@
     <string name="premium_linea_4">Drop the Widgets</string>
     <string name="profilo_disconnetti">Logaut</string>
     <string name="profilo_login_google">Sign in with Google</string>
-    <string name="ore_ordinarie">Ordinary Hours</string>
-    <string name="ore_straordinarie">Extraordinary hours</string>
+    <string name="ore_ordinarie">Hordinary hours</string>
+    <string name="ore_lavorate">You work for</string>
+    <string name="ore_straordinarie">Extra hours</string>
     <string name="seleziona_categoria">Select category</string>
     <string name="uscita_lavoro">Exit</string>
     <string name="valuta_app">Rate App</string>
