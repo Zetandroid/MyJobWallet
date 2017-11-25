@@ -42,6 +42,7 @@ public class NoteAggiungiActivity extends AppCompatActivity {
                 titoloNota.setText("");
                 corpoNota.setText("");
                 Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
+                onBackPressed();
             } else {
                 Snackbar.make(v, R.string.compila_tutti_dati, Snackbar.LENGTH_LONG).show();
             }

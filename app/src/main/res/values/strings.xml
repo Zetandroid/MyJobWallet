@@ -122,6 +122,7 @@
     <string name="bottomSheet_vendite">Vendite</string>
     <string name="bottomSheet_altro">Altro</string>
     <string name="bottomSheet_tutte_categorie">Tutte le categorie</string>
+
     <!-- BOTTOMSHEET SPESE -->
     <string name="bottomSheet_casa">Casa</string>
     <string name="bottomSheet_trasporti">Trasporti pubblici</string>

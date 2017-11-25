@@ -14,7 +14,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -25,6 +28,8 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.spese.SpeseActivity;
+import com.kubix.myjobwallet.spese.Uscite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +52,10 @@ public class NoteActivity extends AppCompatActivity {
 
     //FAB DISSOLVENZA
     private FloatingActionButton mFloatingActionButton;
+
+    //INDICIZZA OGGETTI PER MODIFICA
+    EditText titoloModifica;
+    EditText corpoModifica;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -124,8 +133,19 @@ public class NoteActivity extends AppCompatActivity {
             //LISTNER RECYCLER VIEW
             @Override
             public void onClick(View view, int position) {
-                //final Note movie = noteList.get(position);
-                //Toast.makeText(getApplicationContext(), movie.getTitolo() + " is selected!", Toast.LENGTH_SHORT).show();
+                //MODIFICA NOTA
+                final Note movie = noteList.get(position);
+                vecchioTitolo = movie.getTitolo();
+                vecchiaNota = movie.getNote();
+
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(NoteActivity.this);
+                LayoutInflater inflater = NoteActivity.this.getLayoutInflater();
+                View dialogView = inflater.inflate(R.layout.custom_modifica_note, null);
+                dialogBuilder.setView(dialogView);
+                titoloModifica = (EditText) dialogView.findViewById(R.id.testoModificaTitoloNote);
+                corpoModifica = (EditText) dialogView.findViewById(R.id.testoModificaCorpoNote);
+                AlertDialog alertDialog = dialogBuilder.create();
+                alertDialog.show();
             }
 
             @Override
@@ -203,6 +223,19 @@ public class NoteActivity extends AppCompatActivity {
 
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    String vecchioTitolo;
+    String vecchiaNota;
+
+    public void modificaNota(View v){
+        if (! titoloModifica.getText().toString().equals("") && ! corpoModifica.getText().toString().equals("")){
+            MainActivity.db.execSQL("UPDATE Note SET Titolo = '"+titoloModifica.getText().toString()+"', Nota = '"+corpoModifica.getText().toString()+"' WHERE Titolo = '"+vecchioTitolo+"' AND Nota = '"+vecchiaNota+"'");
+            Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_SHORT).show();
+            finish();
+        }else{
+            Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
         }
     }
 }
