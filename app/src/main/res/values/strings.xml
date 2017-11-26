@@ -37,6 +37,8 @@
     <string name="prossimamente">Prossimamente</string>
     <string name="imposta_entrata">Imposta Entrata</string>
     <string name="imposta_uscita">Imposta Uscita</string>
+    <string name="modifica_turno">Modifica turno</string>
+    <string name="trasforma_riposo">Trasforma in riposo</string>
 
     <!-- POPUP -->
     <string name="dati_inseriti_successo">DATI INSERITI CON SUCCESSO</string>

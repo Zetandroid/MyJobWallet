@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <TimePicker
@@ -14,9 +14,12 @@
         android:id="@+id/oraEntrataPerModificaTurno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
         android:editable="false"
         android:ems="10"
-        android:hint="ORA ENTRATA"
+        android:hint="@string/entrata_lavoro"
         android:onClick="settaEntrataPerModifica"
         android:textAlignment="center" />
 
@@ -24,9 +27,11 @@
         android:id="@+id/oraUscitaPerModificaTurno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:editable="false"
         android:ems="10"
-        android:hint="ORA USCITA"
+        android:hint="@string/uscita_lavoro"
         android:onClick="settaUscitaPerModifica"
         android:textAlignment="center" />
 
@@ -34,21 +39,23 @@
         android:id="@+id/button6"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MODIFICA TURNAZIONE" />
+        android:layout_height="42dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bottone_acquista"
+        android:text="@string/modifica_turno" />
 
     <Button
         android:id="@+id/button7"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TRASFORMA IN RIPOSO" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="22dp"
-        android:text="Doppio click sulla casella per inserire l'orario dello spinner" />
+        android:layout_height="42dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginRight="72dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bottone_acquista"
+        android:text="@string/trasforma_riposo" />
 
 </LinearLayout>
