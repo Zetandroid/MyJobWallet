@@ -2,7 +2,9 @@ package com.kubix.myjobwallet.calendario;
 
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
+import android.icu.text.SimpleDateFormat;
 import android.icu.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
@@ -30,8 +32,10 @@ import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.entrate.Entrate;
 import com.kubix.myjobwallet.entrate.EntrateActivity;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TurniActivity extends AppCompatActivity  {
@@ -104,7 +108,9 @@ public class TurniActivity extends AppCompatActivity  {
             public void onClick(View view, int position) {
                 //MODIFICA TURNO
                 final Turni movie = turniList.get(position);
-                vecchiaData = movie.getNumeroGiorno() + " " + movie.getMese() + " " + movie.getAnno();
+                vecchioNumeroGiorno = movie.getNumeroGiorno();
+                vecchioNumeroMese = movie.getMese();
+                vecchioNumeroAnno = movie.getAnno();
                 vecchiaEntrata = movie.getOraEntrata();
                 vecchiaUscita = movie.getOraUscita();
 
@@ -180,7 +186,9 @@ public class TurniActivity extends AppCompatActivity  {
         }
     }
 
-    String vecchiaData;
+    String vecchioNumeroGiorno;
+    String vecchioNumeroMese;
+    String vecchioNumeroAnno;
     String vecchiaEntrata;
     String vecchiaUscita;
 
@@ -248,4 +256,66 @@ public class TurniActivity extends AppCompatActivity  {
 
     }
 
+    String resaCalcoloOrdinarie;
+    String resaCalcoloStraordinarie;
+    public void aggiornaTurnoEsistente(View v) {
+        if(! oraEntrataPerModificaTurno.getText().toString().equals("") && ! oraUscitaPerModificaTurno.getText().toString().equals("")){
+            try {
+                SimpleDateFormat fmt = new SimpleDateFormat("HH:mm");
+                fmt.setLenient(false);
+
+                // CONVERTI IN ORARIO.
+                Date d1 = fmt.parse(oraEntrataPerModificaTurno.getText().toString());
+                Date d2 = fmt.parse(oraUscitaPerModificaTurno.getText().toString());
+
+                // CALCOLA LA DIFFERENZA IN MILLISECONDI.
+                long millisDiff = d2.getTime() - d1.getTime();
+
+                // CALCOLA SU GIONRI/ORE/MINUTI/SECONDI.
+                int seconds = (int) (millisDiff / 1000 % 60);
+                int minutes = (int) (millisDiff / 60000 % 60);
+                int hours = (int) (millisDiff / 3600000 % 24);
+                int days = (int) (millisDiff / 86400000);
+
+                if (hours < 0 && minutes <0 || hours <0 && minutes >=0) {
+                    hours = (int) (millisDiff / 3600000 % 24 + 23);
+                    minutes = (int) (millisDiff / 60000 % 60 + 60);
+
+                }
+
+                if (minutes > 59){
+                    minutes = minutes - 60;
+                    hours = hours + 1;
+                }
+
+                int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
+
+                if(hours > oreOrdinarie){
+                    resaCalcoloOrdinarie = hours + getString(R.string.ore) +minutes + getString(R.string.minuti);
+                    resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " Ore " + minutes + " Minuti ";
+                }else{
+                    resaCalcoloOrdinarie = hours + " Ore "+ minutes + " Minuti ";
+                    resaCalcoloStraordinarie = "0";
+                }
+
+            } catch (Exception e) {
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
+            //MODIFICA TURNO
+            MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = '"+oraEntrataPerModificaTurno.getText().toString()+"', oraUscita = '"+oraUscitaPerModificaTurno.getText().toString()+"', Ordinarie = '"+resaCalcoloOrdinarie+"', Straordinarie = '"+resaCalcoloStraordinarie+"' WHERE numeroGiorno = '"+vecchioNumeroGiorno+"' AND mese = '"+vecchioNumeroMese+"' AND anno  = '"+vecchioNumeroAnno+"'");
+            Toast.makeText(this, "MODIFICA TURNO EFFETTUATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+            finish();
+
+        }else{
+            Snackbar.make(v, R.string.compila_tutti_dati, Snackbar.LENGTH_LONG).show();
+        }
+    }
+
+    public void trasformaInRiposo (View v){
+        //TRASFORMA TURNO IN RIPOSO
+        MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO', Ordinarie = 'RIPOSO', Straordinarie = 'RIPOSO' WHERE numeroGiorno = '"+vecchioNumeroGiorno+"' AND mese = '"+vecchioNumeroMese+"' AND anno  = '"+vecchioNumeroAnno+"'");
+        Toast.makeText(this, "MODIFICA TURNO EFFETTUATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+        finish();
+    }
 }

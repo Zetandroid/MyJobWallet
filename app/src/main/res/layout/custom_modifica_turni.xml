@@ -44,6 +44,7 @@
         android:layout_marginRight="72dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/bottone_acquista"
+        android:onClick="aggiornaTurnoEsistente"
         android:text="@string/modifica_turno" />
 
     <Button
@@ -56,6 +57,7 @@
         android:layout_marginRight="72dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/bottone_acquista"
+        android:onClick="trasformaInRiposo"
         android:text="@string/trasforma_riposo" />
 
 </LinearLayout>
