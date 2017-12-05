@@ -15,4 +15,7 @@ public class VariabiliGlobali {
     public static Double sommaEntrate;
     public static Double sommaUscite;
 
+    //INERENTI A PREMIUM
+    public static String statoPremium;
+
 }

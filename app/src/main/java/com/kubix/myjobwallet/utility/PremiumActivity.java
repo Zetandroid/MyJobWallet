@@ -1,6 +1,8 @@
 package com.kubix.myjobwallet.utility;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,15 +11,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.kubix.myjobwallet.BuildConfig;
+import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.util.IabHelper;
 import com.kubix.myjobwallet.util.IabResult;
 import com.kubix.myjobwallet.util.Inventory;
 import com.kubix.myjobwallet.util.Purchase;
 import com.kubix.myjobwallet.util.Security;
-
 import java.security.PublicKey;
 
 public class PremiumActivity extends AppCompatActivity {
@@ -33,6 +34,10 @@ public class PremiumActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium);
+
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            bottoneRipristina.setEnabled(true);
+        }
     }
 
     protected void onStart() {
@@ -130,6 +135,11 @@ public class PremiumActivity extends AppCompatActivity {
 
                         if (result.isSuccess()) {
                             bottoneRipristina.setEnabled(true);
+
+                            //CODICE SORGENTE CHE PARTE DOPO ACQUISTO RIUSCITO
+                            MainActivity.db.execSQL("UPDATE Acquisti SET Premium = 'SI' WHERE Premium = 'NO'");
+                            Toast.makeText(PremiumActivity.this, "Grazie per aver acquistato MyJobWallet Premium, al prossimo avvio dell'applicazione non visualizzerai più alcun tipo di annuncio", Toast.LENGTH_LONG).show();
+                            onBackPressed();
                         } else {
                             // handle error
                         }

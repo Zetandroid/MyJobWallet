@@ -60,24 +60,30 @@ public class CalendarioActivity extends AppCompatActivity {
         //APRI DATABASE
         MainActivity.db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
 
-        //GESTIONE INTERSTITIAL
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-        mInterstitialAd.loadAd(adRequest);
-        mInterstitialAd.setAdListener(new AdListener() {
+        //CONTROLLO GESTIONE INTERSTITIAL
+        if (VariabiliGlobali.statoPremium.equals("SI")){
 
-            public void onAdLoaded() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
+        }else{
+            //GESTIONE INTERSTITIAL
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
+            AdRequest adRequest = new AdRequest.Builder()
+                    .build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
                 }
-            }
 
-            public void onAdClosed(){
+                public void onAdClosed(){
 
-            }
-        });
+                }
+            });
+
+        }
 
         //OTTIENI DATA ODIERNA
         Calendar c = Calendar.getInstance();

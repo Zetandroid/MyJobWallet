@@ -151,6 +151,11 @@ public class TurniActivity extends AppCompatActivity  {
             }
         }));
 
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
+
         caricaTurni();
 
     }

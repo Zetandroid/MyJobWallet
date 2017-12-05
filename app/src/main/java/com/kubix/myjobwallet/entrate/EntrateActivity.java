@@ -30,6 +30,8 @@ import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.fragment.BtnSheetEntrateFragment;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -159,6 +161,12 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         fab.setOnClickListener(this);
         fab1.setOnClickListener(this);
         fab2.setOnClickListener(this);
+
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
 
         caricaEntrate();
 

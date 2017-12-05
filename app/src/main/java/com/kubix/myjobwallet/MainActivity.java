@@ -5,6 +5,7 @@ package com.kubix.myjobwallet;
 //DISTRIBUIRE L'APPLICATIVO...
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -29,6 +30,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //CREA ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adView);
+        mAdView = (NativeExpressAdView) findViewById(R.id.adViewHome);
         mAdView.setVideoOptions(new VideoOptions.Builder()
                 .setStartMuted(true)
                 .build());
@@ -119,8 +121,7 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
-
-        mAdView.loadAd(new AdRequest.Builder().build());
+            mAdView.loadAd(new AdRequest.Builder().build());
 
         //EVENTI E SETTAGGI SCHEDE IN HOME PAGE
         HomeGridAdapter adapter = new HomeGridAdapter(MainActivity.this, web, imageId);
@@ -158,6 +159,31 @@ public class MainActivity extends AppCompatActivity
         db.execSQL("CREATE TABLE IF NOT EXISTS InfoProfilo (ID Varchar (10) Unique, OreOrdinarie Varchar (50), NettoOrario Varchar (50), NettoStraordinario Varchar (50), ValutaSimbolo Varchar (50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Entrate (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar(50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Uscite (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar (50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
+        db.execSQL("CREATE TABLE IF NOT EXISTS Acquisti (Premium Varchar (50));");
+
+        //IMPOSTA DATI INIZIALI TABELLA ACQUISTI
+        try{
+            db.execSQL("INSERT INTO Acquisti (Premium) VALUES ('NO')");
+        }catch (SQLException e){
+            //NOTHING
+        }
+
+        //CARICA DA DATABASE IN VARIABILI GLOBALI I DATI DELLO STATO PREMIUM
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT * FROM Acquisti",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.statoPremium = cr.getString(cr.getColumnIndex("Premium"));
+                    }while (cr.moveToNext());
+                }else{
+
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
         //IMPOSTA DATI INIZIALI TABELLA INFOPROFILO
         try{
@@ -185,6 +211,10 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
+        //CONTROLLO PER LA VISUALIZZAZIONE DEGLI ANNUNCI
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
     //TOOLBAR MENU DESTRA

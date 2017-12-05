@@ -30,6 +30,7 @@ import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 import com.kubix.myjobwallet.spese.Uscite;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -173,24 +174,36 @@ public class NoteActivity extends AppCompatActivity {
             }
         }));
 
-        //GESTIONE INTERSTITIAL
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
-        AdRequest adRequest = new AdRequest.Builder()
-                .build();
-        mInterstitialAd.loadAd(adRequest);
-        mInterstitialAd.setAdListener(new AdListener() {
 
-            public void onAdLoaded() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'INTERSTITIAL
+        if(VariabiliGlobali.statoPremium.equals("SI")){
+            //NOTHING
+        }else{
+            //GESTIONE INTERSTITIAL
+            mInterstitialAd = new InterstitialAd(this);
+            mInterstitialAd.setAdUnitId(getString(R.string.adsInterstitial));
+            AdRequest adRequest = new AdRequest.Builder()
+                    .build();
+            mInterstitialAd.loadAd(adRequest);
+            mInterstitialAd.setAdListener(new AdListener() {
+
+                public void onAdLoaded() {
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    }
                 }
-            }
 
-            public void onAdClosed(){
+                public void onAdClosed(){
 
-            }
-        });
+                }
+            });
+        }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
 
         caricaNote();
     }
