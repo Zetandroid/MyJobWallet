@@ -10,8 +10,8 @@
     <color name="colorBluTrasparente">#10293266</color>
     <color name="colorRossoTrasparente">#10ef5350</color>
     <color name="coloreTestoBianco">#ffffff</color>
-    <color name="coloreTestoNero">#222754</color>
-    <color name="coloreSommarioNero">#293266</color>
+    <color name="coloreTestoNero">#333333</color>
+    <color name="coloreSommarioNero">#424242</color>
 
     <color name="coloreIcone">#222754</color>
     <color name="coloreLineaTrasparente">#00000000</color>
