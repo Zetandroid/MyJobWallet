@@ -24,6 +24,7 @@ public class ProfiloActivity extends AppCompatActivity {
     public static TextView pagaStraordinariaText;
     public static TextView sommaEntrate;
     public static TextView sommaUscite;
+    public static TextView sommaStipendio;
 
     //LOGIN GOOGLE
     private ProfiloActivity mContext;
@@ -73,8 +74,10 @@ public class ProfiloActivity extends AppCompatActivity {
         //INDICIZZO OGGETTI CALCOLI VARI
         sommaEntrate = (TextView) findViewById(R.id.txtEntrateCard1);
         sommaUscite = (TextView) findViewById(R.id.txtSpeseCard1);
+        sommaStipendio = (TextView) findViewById(R.id.txtCalcoloStipendio);
 
         contiEntrateBarraSpese();
+        calcoloStipendio();
         caricaDatiProfilo();
     }
 
@@ -82,6 +85,8 @@ public class ProfiloActivity extends AppCompatActivity {
     public void onResume(){
         super.onResume();
         contiEntrateBarraSpese();
+        calcoloStipendio();
+
         caricaDatiProfilo();
     }
 
@@ -159,6 +164,26 @@ public class ProfiloActivity extends AppCompatActivity {
         if(calcoloDelCazzo == 0){
             sommaUscite.setText("0,00 €");
             sommaEntrate.setText("0,00 €");
+        }
+    }
+
+    public void calcoloStipendio(){
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Importo) FROM CalcoloStipendio",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.calcoloCompletoStipendio = cr.getDouble(0);
+                        sommaStipendio.setText(String.valueOf(VariabiliGlobali.calcoloCompletoStipendio) + " €");
+                        if (VariabiliGlobali.calcoloCompletoStipendio == 0){
+                            sommaStipendio.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 
