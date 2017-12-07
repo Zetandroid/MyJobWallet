@@ -9,7 +9,7 @@ public class VariabiliGlobali {
     public static Integer oreOrdinarie;
     public static Double nettoOrario;
     public static Double nettoStraordinario;
-    public static Integer calcoloCompletoStipendio;
+    public static Double calcoloCompletoStipendio;
 
     //INERENTI A HOME PAGE
     public static Double sommaEntrate;
