@@ -37,27 +37,25 @@
 
     <Button
         android:id="@+id/button6"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/bottone_acquista"
         android:onClick="aggiornaTurnoEsistente"
         android:text="@string/modifica_turno"
         android:textSize="12sp" />
 
     <Button
         android:id="@+id/button7"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/bottone_acquista"
         android:onClick="trasformaInRiposo"
         android:text="@string/trasforma_riposo"
         android:textSize="12sp" />

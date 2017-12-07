@@ -25,7 +25,7 @@
                 android:id="@+id/linearTitolo"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/colorAccent"
+                android:background="@color/colorBiancoScuro"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -36,7 +36,6 @@
                     android:padding="4dp"
                     android:text="Mar"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoBianco"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:visibility="gone"
@@ -49,7 +48,7 @@
                     android:padding="4dp"
                     android:text="18"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoBianco"
+                    android:textColor="@color/coloreTestoNero"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -61,7 +60,7 @@
                     android:padding="4dp"
                     android:text="Ott"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoBianco"
+                    android:textColor="@color/coloreTestoNero"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -73,7 +72,7 @@
                     android:padding="4dp"
                     android:text="2017"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoBianco"
+                    android:textColor="@color/coloreTestoNero"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
