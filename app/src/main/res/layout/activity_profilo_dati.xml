@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -197,18 +197,17 @@
 
             <Button
                 android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="72dp"
                 android:layout_marginRight="72dp"
-                android:layout_marginTop="42dp"
-                android:background="@drawable/bottone_acquista"
+                android:layout_marginTop="16dp"
                 android:onClick="AggiornaDatiProfilo"
                 android:stateListAnimator="@null"
                 android:text="@string/salva"
-                android:textColor="@color/coloreTestoBianco"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
 

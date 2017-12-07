@@ -1,16 +1,16 @@
 package com.kubix.myjobwallet.utility;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import com.kubix.myjobwallet.BuildConfig;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
@@ -19,6 +19,7 @@ import com.kubix.myjobwallet.util.IabResult;
 import com.kubix.myjobwallet.util.Inventory;
 import com.kubix.myjobwallet.util.Purchase;
 import com.kubix.myjobwallet.util.Security;
+
 import java.security.PublicKey;
 
 public class PremiumActivity extends AppCompatActivity {
@@ -59,8 +60,9 @@ public class PremiumActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarPremium);
         setTitle(R.string.toolbarPremium);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         String base64EncodedPublicKey = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt9EzTDIwPWeQUYYAjvPsutoXF1m+HvH5QO4jEjJkeFKvcNYVt99nTjJbT+DZ/AEpoLPhkFaFiUasFOdN2L262GJxg9Iz4bFXeYswievQ8afvWqsjkLNcuuHKnE8ZFTf/jlHkXsce1VsHsmRL8a1l7iJ/B93nS7aZb8wpIB8k54561diPLxS1pEUTxPTBjxPyQNb3XYmmMFJpJaowAPSG2smleZePka+I0FfLHufvGbOUcbGN239m9IPESHcgs20Mudx6mK0BzD77kBHgDNz6jutuqgP/UYEM2TXZf6+CVoO6/QOqeP3SNE3zNn68pUwfXbjKjCSDoEJZLI8I7OzrvwIDAQAB";
 
@@ -168,6 +170,15 @@ public class PremiumActivity extends AppCompatActivity {
 
         PublicKey key = Security.generatePublicKey(base64PublicKey);
         return Security.verify(key, signedData, signature);
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
     
 }

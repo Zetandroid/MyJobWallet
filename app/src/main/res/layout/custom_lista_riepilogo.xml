@@ -30,7 +30,7 @@
                     android:text="Novembre"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
                     android:textColor="@color/coloreTestoNero"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
@@ -42,7 +42,7 @@
                     android:text="2017"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
                     android:textColor="@color/coloreTestoNero"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
@@ -73,8 +73,7 @@
                     android:padding="4dp"
                     android:text="2145,00€"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
+                    android:textColor="@color/colorAccent" />
             </LinearLayout>
 
             <LinearLayout
@@ -102,8 +101,7 @@
                     android:padding="4dp"
                     android:text="1456,00€"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
+                    android:textColor="@color/colorAccent" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,8 +129,7 @@
                     android:padding="4dp"
                     android:text="160 H"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
+                    android:textColor="@color/colorAccent" />
             </LinearLayout>
 
 
@@ -148,7 +145,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/ore_straordinarie"
+                    android:text="@string/straordinari"
                     android:textAlignment="viewStart"
                     android:textColor="@color/coloreTestoNero" />
 
@@ -161,8 +158,7 @@
                     android:padding="4dp"
                     android:text="15 H"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
+                    android:textColor="@color/colorAccent" />
             </LinearLayout>
 
             <LinearLayout
@@ -190,8 +186,7 @@
                     android:padding="4dp"
                     android:text="1156,00€"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/colorAccent"
-                    android:textStyle="bold" />
+                    android:textColor="@color/colorAccent" />
             </LinearLayout>
 
 

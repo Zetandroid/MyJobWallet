@@ -3,6 +3,7 @@ package com.kubix.myjobwallet.profilo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,8 +27,9 @@ public class ProfiloDatiActivity extends AppCompatActivity {
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfiloDati);
         setTitle(R.string.toolbarProfileDati);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         aggiornaOrdinarie = (EditText) findViewById(R.id.oreOrdinarieText);
         aggiornaPaga = (EditText) findViewById(R.id.pagaOrariaText);
@@ -47,6 +49,15 @@ public class ProfiloDatiActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, R.string.compila_tutti_dati, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

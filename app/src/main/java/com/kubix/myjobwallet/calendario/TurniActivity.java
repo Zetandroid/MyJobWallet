@@ -1,12 +1,8 @@
 package com.kubix.myjobwallet.calendario;
 
-import android.app.TimePickerDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.icu.text.SimpleDateFormat;
-import android.icu.util.Calendar;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -18,7 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -30,8 +25,6 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.entrate.Entrate;
-import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.ArrayList;
@@ -209,30 +202,30 @@ public class TurniActivity extends AppCompatActivity  {
 
     public void settaEntrataPerModifica(View v){
 
-                int selectedHour = selezionaOrariPerModificaTurno.getHour();
-                int selectedMinute = selezionaOrariPerModificaTurno.getMinute();
-                String selezioneOra;
-                String selezioneMinuti;
+        int selectedHour = selezionaOrariPerModificaTurno.getHour();
+        int selectedMinute = selezionaOrariPerModificaTurno.getMinute();
+        String selezioneOra;
+        String selezioneMinuti;
 
-                if (String.valueOf(selectedHour).length() == 1 && String.valueOf(selectedMinute).length() == 1){
-                    selezioneOra = "0" + selectedHour;
-                    selezioneMinuti = "0" +selectedMinute;
-                    oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
-                }else if(String.valueOf(selectedHour).length() == 1){
-                    selezioneOra = "0" + selectedHour;
-                    selezioneMinuti = String.valueOf(selectedMinute);
-                    oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
-                }else if (String.valueOf(selectedMinute).length() == 1){
-                    selezioneOra = String.valueOf(selectedHour);
-                    selezioneMinuti = "0" + selectedMinute;
-                    oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
-                }else{
-                    selezioneOra = String.valueOf(selectedHour);
-                    selezioneMinuti = String.valueOf(selectedMinute);
-                    oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
-                }
+        if (String.valueOf(selectedHour).length() == 1 && String.valueOf(selectedMinute).length() == 1){
+            selezioneOra = "0" + selectedHour;
+            selezioneMinuti = "0" +selectedMinute;
+            oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
+        }else if(String.valueOf(selectedHour).length() == 1){
+            selezioneOra = "0" + selectedHour;
+            selezioneMinuti = String.valueOf(selectedMinute);
+            oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
+        }else if (String.valueOf(selectedMinute).length() == 1){
+            selezioneOra = String.valueOf(selectedHour);
+            selezioneMinuti = "0" + selectedMinute;
+            oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
+        }else{
+            selezioneOra = String.valueOf(selectedHour);
+            selezioneMinuti = String.valueOf(selectedMinute);
+            oraEntrataPerModificaTurno.setText(selezioneOra + ":" + selezioneMinuti);
+        }
 
-            }
+    }
 
     public void settaUscitaPerModifica(View v){
 

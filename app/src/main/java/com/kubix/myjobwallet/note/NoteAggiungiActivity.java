@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -26,11 +27,12 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         corpoNota = (EditText) findViewById(R.id.testoNota);
         salvaNota = (ImageView) findViewById(R.id.tastoSalvaNota);
 
-        //TODO TOOLBAR
+        //Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarAggiungiNota);
         setTitle(R.string.toolbarNoteAggiungi);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
     }
@@ -49,5 +51,14 @@ public class NoteAggiungiActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

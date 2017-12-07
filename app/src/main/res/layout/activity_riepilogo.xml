@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@color/colorPrimary" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view"
@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="false"
         android:layout_centerHorizontal="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-9460579775308491/7713858828"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-9460579775308491/9696367794"
         android:layout_below="@+id/toolbarRiepilogo"/>
 
 

@@ -3,7 +3,6 @@ package com.kubix.myjobwallet.spese;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
@@ -16,6 +15,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -125,6 +125,8 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         setTitle(R.string.toolbarSpese);
         toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewSpese);
@@ -624,6 +626,15 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
        }else{
            Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
        }
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

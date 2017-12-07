@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.EditText;
@@ -49,8 +50,9 @@ public class CalendarioActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarOrologio);
         setTitle(R.string.toolbarOre);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //INDICIZZA OGETTI
         dataTurno = (CalendarView) findViewById(R.id.calendarView);
@@ -328,6 +330,15 @@ public class CalendarioActivity extends AppCompatActivity {
         }, hour, minute, true);
         mTimePicker.setTitle(getString(R.string.imposta_uscita));
         mTimePicker.show();
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

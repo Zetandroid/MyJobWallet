@@ -3,7 +3,6 @@ package com.kubix.myjobwallet.note;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,8 +14,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,8 +27,6 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
-import com.kubix.myjobwallet.spese.SpeseActivity;
-import com.kubix.myjobwallet.spese.Uscite;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.ArrayList;
@@ -69,8 +66,9 @@ public class NoteActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
         setTitle(R.string.toolbarNote);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //FAB DISSOLVENZA
         mFloatingActionButton = (FloatingActionButton) findViewById(R.id.floatingAddNote);
@@ -250,5 +248,14 @@ public class NoteActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -15,13 +15,12 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.GridView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
@@ -37,32 +36,13 @@ import com.kubix.myjobwallet.profilo.ProfiloActivity;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 import com.kubix.myjobwallet.utility.EmailActivity;
-import com.kubix.myjobwallet.utility.HomeGridAdapter;
 import com.kubix.myjobwallet.utility.PremiumActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    GridView grid;
-    String[] web = {
 
-            "Turno",
-            "Lista Turni",
-            "Spese",
-            "Entrate",
-            "Riepilogo",
-            "Note",
-    };
-
-    int[] imageId = {
-            R.drawable.ic_home_ora,
-            R.drawable.ic_home_turni,
-            R.drawable.ic_home_spesa,
-            R.drawable.ic_home_entrate,
-            R.drawable.ic_home_riepilogo,
-            R.drawable.ic_home_memo
-    };
 
     //INDICIZZA ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -92,6 +72,52 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        // CARD HOME
+        CardView cardTurni = (CardView) findViewById(R.id.cardTurni);
+        CardView cardListaTurni = (CardView) findViewById(R.id.cardListaTurni);
+        CardView cardEntrate = (CardView) findViewById(R.id.cardEntrate);
+        CardView cardSpese = (CardView) findViewById(R.id.cardSpese);
+        CardView cardRiepilogo = (CardView) findViewById(R.id.cardRiepilogo);
+        CardView cardMemo = (CardView) findViewById(R.id.cardMemo);
+
+        //CARD HOME CLICK EVENT
+        cardTurni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CalendarioActivity.class));
+            }
+        });
+        cardListaTurni.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TurniActivity.class));
+            }
+        });
+        cardEntrate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, EntrateActivity.class));
+            }
+        });
+        cardSpese.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SpeseActivity.class));
+            }
+        });
+        cardRiepilogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RiepilogoActivity.class));
+            }
+        });
+        cardMemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NoteActivity.class));
+            }
+        });
+
         //CREA ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewHome);
         mAdView.setVideoOptions(new VideoOptions.Builder()
@@ -117,35 +143,7 @@ public class MainActivity extends AppCompatActivity
         });
             mAdView.loadAd(new AdRequest.Builder().build());
 
-        //EVENTI E SETTAGGI SCHEDE IN HOME PAGE
-        HomeGridAdapter adapter = new HomeGridAdapter(MainActivity.this, web, imageId);
-        grid=(GridView)findViewById(R.id.grid);
-        grid.setAdapter(adapter);
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    Intent intent = new Intent(MainActivity.this, CalendarioActivity.class);
-                    startActivity(intent);
-                } else if (position == 1) {
-                    Intent intent = new Intent(MainActivity.this, TurniActivity.class);
-                    startActivity(intent);
-                } else if (position == 2) {
-                    Intent intent = new Intent(MainActivity.this, SpeseActivity.class);
-                    startActivity(intent);
-                } else if (position == 3) {
-                    Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
-                    startActivity(intent);
-                } else if (position == 4) {
-                    Intent intent = new Intent(MainActivity.this,RiepilogoActivity.class);
-                    startActivity(intent);
-                } else if (position == 5) {
-                    Intent intent = new Intent(MainActivity.this, NoteActivity.class);
-                    startActivity(intent);
-                }
-            }
-        });
 
         //CREAZIONE EFFETTIVA DEL DATABASE ESEGUENDO QUERY
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);

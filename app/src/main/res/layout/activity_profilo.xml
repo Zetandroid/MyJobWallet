@@ -1,585 +1,565 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarProfilo"
         android:layout_width="match_parent"
-        android:layout_height="180dp">
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:layout_scrollInterpolator="@android:anim/decelerate_interpolator"
-            app:expandedTitleTextAppearance="@style/ToolbarEstesa"
-            app:collapsedTitleTextAppearance="@style/ToolbarContratta"
-            app:toolbarId="@+id/toolbarProfilo">
-
-
-            <ImageView
-                android:id="@+id/imageView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/ic_prova" />
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbarProfilo"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
-            </android.support.v7.widget.Toolbar>
-
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+        android:layout_below="@+id/toolbarProfilo">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_profilo"
+                app:civ_border_color="@color/coloreTestoNero"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/idNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:text="@string/nome"
+                android:textAlignment="center"
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/idEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="E-mail"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/idNome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_weight="1"
-                    android:text="@string/nome"
-                    android:textAlignment="center"
-                    android:textColor="@color/coloreTestoNero"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/idEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:text="E-mail"
-                    android:textAlignment="center"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:visibility="gone">
-
-                    <Button
-                        android:id="@+id/btnProfiloDisconnetti"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_weight="1"
-                        android:text="@string/profilo_disconnetti"
-                        android:textAlignment="viewStart"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/btnProfiloBackup"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:layout_weight="1"
-                        android:text="@string/backup"
-                        android:textAlignment="viewStart"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <Button
-                    android:id="@+id/btnLoginGoogle"
+                    android:id="@+id/btnProfiloDisconnetti"
                     style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="match_parent"
-                    android:layout_height="42dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
                     android:layout_weight="1"
-                    android:text="@string/profilo_login_google"
+                    android:text="@string/profilo_disconnetti"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/colorAccent"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/coloreNeroTrasparente" />
-
-
-                <TextView
-                    android:id="@+id/textDataProfilo"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/btnProfiloBackup"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="4dp"
                     android:layout_weight="1"
-                    android:text="Ottobre 2017"
-                    android:textColor="@color/coloreTestoNero"
-                    android:textSize="18sp"
+                    android:text="@string/backup"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
+            </LinearLayout>
 
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <Button
+                android:id="@+id/btnLoginGoogle"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_weight="1"
+                android:text="@string/profilo_login_google"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreNeroTrasparente" />
+
+
+            <TextView
+                android:id="@+id/textDataProfilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:text="Ottobre 2017"
+                android:textColor="@color/coloreTestoNero"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:columnCount="2">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:columnCount="2">
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp">
 
-                    <android.support.v7.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="4dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_marginTop="4dp"
-                        android:padding="8dp">
+                        android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/txtEntrateCard"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
-                            android:orientation="vertical">
+                            android:layout_marginTop="4dp"
+                            android:text="@string/entrate"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:id="@+id/txtEntrateCard"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="@string/entrate"
-                                android:textAlignment="center"
-                                android:textColor="@color/coloreSommarioNero"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:id="@+id/txtEntrateCard1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="1345,00 €"
-                                android:textAlignment="center"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="4dp"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:layout_marginTop="4dp"
-                        android:padding="8dp">
-
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/txtEntrateCard1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
-                            android:orientation="vertical">
+                            android:layout_marginTop="4dp"
+                            android:text="1345,00 €"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txtSpeseCard"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="@string/spese"
-                                android:textAlignment="center"
-                                android:textColor="@color/coloreSommarioNero"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:id="@+id/txtSpeseCard1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="990,00 €"
-                                android:textAlignment="center"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-
-                </GridLayout>
-
-                <GridLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:columnCount="2">
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp">
 
-                    <android.support.v7.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="4dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_marginTop="4dp"
-                        android:padding="8dp">
+                        android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/txtSpeseCard"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
-                            android:orientation="vertical">
+                            android:layout_marginTop="4dp"
+                            android:text="@string/spese"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:id="@+id/txtOrdinarieCard"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="@string/ore_ordinarie"
-                                android:textAlignment="center"
-                                android:textColor="@color/coloreSommarioNero"
-                                android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/txtSpeseCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="990,00 €"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txtOrdinarieCard1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="0 Ore"
-                                android:textAlignment="center"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
+            </GridLayout>
 
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:columnCount="2">
 
-                    <android.support.v7.widget.CardView
-                        android:layout_width="160dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="4dp"
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
-                        android:layout_marginTop="4dp"
-                        android:padding="8dp">
+                        android:orientation="vertical">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/txtOrdinarieCard"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
-                            android:orientation="vertical">
+                            android:layout_marginTop="4dp"
+                            android:text="@string/ore_ordinarie"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
-                            <TextView
-                                android:id="@+id/txtStraordinarieCard"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="@string/ore_straordinarie"
-                                android:textAlignment="center"
-                                android:textColor="@color/coloreSommarioNero"
-                                android:textSize="14sp" />
+                        <TextView
+                            android:id="@+id/txtOrdinarieCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="0 Ore"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txtStraordinarieCard1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="0 Ore"
-                                android:textAlignment="center"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                </GridLayout>
 
-                <LinearLayout
+                <android.support.v7.widget.CardView
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtStraordinarieCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/ore_straordinarie"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtStraordinarieCard1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="0 Ore"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                tools:ignore="InefficientWeight">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtStipendioCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/stipendio"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreTestoNero"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtCalcoloStipendio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="4dp"
+                            android:text="0,00 €"
+                            android:textAlignment="center"
+                            android:textColor="@color/coloreSommarioNero"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/coloreNeroTrasparente" />
+
+                        <Button
+                            android:id="@+id/btnAggiungiStipendio"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Aggiungi alle Entrate"
+                            android:textAllCaps="false"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
-                    android:layout_weight="1"
-                    android:baselineAligned="false"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1">
 
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_vertical"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/txtStipendioCard"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/stipendio"
-                                android:textAlignment="center"
-                                android:textColor="@color/coloreSommarioNero"
-                                android:textSize="14sp" />
-
-                            <TextView
-                                android:id="@+id/txtCalcoloStipendio"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="8dp"
-                                android:layout_marginLeft="4dp"
-                                android:layout_marginRight="4dp"
-                                android:layout_marginTop="4dp"
-                                android:text="0,00 €"
-                                android:textAlignment="center"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="@color/coloreNeroTrasparente" />
-
-                            <Button
-                                android:id="@+id/btnAggiungiStipendio"
-                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Aggiungi alle Entrate"
-                                android:textAllCaps="false"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-
-                    <android.support.v7.widget.CardView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_weight="1">
+                        android:orientation="vertical">
 
                         <LinearLayout
+                            android:id="@+id/oreLavorate"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            tools:ignore="NestedWeights">
 
-                            <LinearLayout
-                                android:id="@+id/oreLavorate"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
-                                tools:ignore="NestedWeights">
-
-                                <TextView
-                                    android:id="@+id/txtOreLavorate"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/ore_lavorative"
-                                    android:textAlignment="viewStart"
-                                    android:textColor="@color/coloreTestoNero" />
-
-                                <TextView
-                                    android:id="@+id/txtOre"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:padding="4dp"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@color/colorAccent"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/pagaOraria"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/textPagaOraria"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_centerInParent="true"
-                                    android:layout_weight="1"
-                                    android:text="@string/paga_oraria"
-                                    android:textAlignment="viewStart"
-                                    android:textColor="@color/coloreTestoNero" />
-
-                                <TextView
-                                    android:id="@+id/txtPagaOraria"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_weight="1"
-                                    android:padding="4dp"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@color/colorAccent"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:id="@+id/pagaStraordinaria"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/txtPagaStraordinaria"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_centerInParent="true"
-                                    android:layout_centerVertical="true"
-                                    android:layout_weight="1"
-                                    android:text="@string/paga_straordinaria"
-                                    android:textAlignment="viewStart"
-                                    android:textColor="@color/coloreTestoNero" />
-
-                                <TextView
-                                    android:id="@+id/txtStraordinaria"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_weight="1"
-                                    android:padding="4dp"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@color/colorAccent"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-
-
-                            <LinearLayout
-                                android:id="@+id/valuta"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_marginLeft="8dp"
-                                android:layout_marginRight="8dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:id="@+id/textValuta"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentLeft="true"
-                                    android:layout_centerInParent="true"
-                                    android:layout_centerVertical="true"
-                                    android:layout_weight="1"
-                                    android:text="@string/valuta"
-                                    android:textAlignment="viewStart"
-                                    android:textColor="@color/coloreTestoNero" />
-
-                                <TextView
-                                    android:id="@+id/txtValuta"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:padding="4dp"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@color/colorAccent"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="@color/coloreNeroTrasparente" />
-
-                            <Button
-                                android:id="@+id/bottoneDati"
-                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:id="@+id/txtOreLavorate"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/imposta_dati"
-                                android:textAllCaps="false"
+                                android:layout_weight="1"
+                                android:text="@string/ore_lavorative"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/coloreTestoNero"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtOre"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/coloreSommarioNero" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pagaOraria"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textPagaOraria"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerInParent="true"
+                                android:layout_weight="1"
+                                android:text="@string/paga_oraria"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/coloreTestoNero"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtPagaOraria"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/coloreSommarioNero" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pagaStraordinaria"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtPagaStraordinaria"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:text="@string/paga_straordinaria"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/coloreTestoNero"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtStraordinaria"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/coloreSommarioNero" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/valuta"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textValuta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:text="@string/valuta"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/coloreTestoNero"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtValuta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:padding="4dp"
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/colorAccent"
                                 android:textSize="14sp" />
 
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
 
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/coloreNeroTrasparente" />
 
-                </LinearLayout>
+                        <Button
+                            android:id="@+id/bottoneDati"
+                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/imposta_dati"
+                            android:textAllCaps="false"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
 
             </LinearLayout>
 
+        </LinearLayout>
 
-        </RelativeLayout>
-    </android.support.v4.widget.NestedScrollView>
-</android.support.design.widget.CoordinatorLayout>
+    </ScrollView>
+
+</RelativeLayout>
