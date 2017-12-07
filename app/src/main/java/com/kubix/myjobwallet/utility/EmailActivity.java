@@ -36,6 +36,11 @@ public class EmailActivity extends AppCompatActivity{
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
         mAdView.loadAd(adRequest);
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -43,6 +48,12 @@ public class EmailActivity extends AppCompatActivity{
         if (mAdView != null) {
             mAdView.pause();
         }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
+
         super.onPause();
     }
 
@@ -52,12 +63,22 @@ public class EmailActivity extends AppCompatActivity{
         if (mAdView != null) {
             mAdView.resume();
         }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
     @Override
     public void onDestroy() {
         if (mAdView != null) {
             mAdView.destroy();
+        }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
         }
         super.onDestroy();
 

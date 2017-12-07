@@ -36,9 +36,6 @@ public class PremiumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_premium);
 
-        if (VariabiliGlobali.statoPremium.equals("SI")){
-            bottoneRipristina.setEnabled(true);
-        }
     }
 
     protected void onStart() {

@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class RiepilogoActivity extends AppCompatActivity{
 
@@ -40,6 +42,12 @@ public class RiepilogoActivity extends AppCompatActivity{
         if (mAdView != null) {
             mAdView.pause();
         }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
+
         super.onPause();
     }
 
@@ -49,12 +57,22 @@ public class RiepilogoActivity extends AppCompatActivity{
         if (mAdView != null) {
             mAdView.resume();
         }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
     @Override
     public void onDestroy() {
         if (mAdView != null) {
             mAdView.destroy();
+        }
+
+        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
+        if (VariabiliGlobali.statoPremium.equals("SI")){
+            mAdView.setVisibility(View.GONE);
         }
         super.onDestroy();
     }
