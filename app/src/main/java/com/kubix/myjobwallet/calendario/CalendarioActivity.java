@@ -275,7 +275,6 @@ public class CalendarioActivity extends AppCompatActivity {
             int oreStraordinarie = hours - VariabiliGlobali.oreOrdinarie;
             Double pagaTurnoStraordinaria = VariabiliGlobali.nettoStraordinario * oreStraordinarie;
             MainActivity.db.execSQL("INSERT INTO CalcoloStipendio (Importo) VALUES ('"+pagaTurnoOrdinaria + pagaTurnoStraordinaria+"')");
-            Toast.makeText(this, (int) (pagaTurnoOrdinaria + pagaTurnoStraordinaria), Toast.LENGTH_SHORT).show();
             Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             onBackPressed();
             startActivity(new Intent(this, TurniActivity.class));
