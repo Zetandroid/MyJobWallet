@@ -25,8 +25,10 @@ public class InfoActivity extends AppCompatActivity {
         //INDICIZZAZIONE OGGETTI
         Button googleMorgan = (Button) findViewById(R.id.googleMorgan);
         Button twitterMorgan = (Button) findViewById(R.id.twitterMorgan);
-        Button googlelessio = (Button) findViewById(R.id.googleAlessio);
+        Button googleAlessio = (Button) findViewById(R.id.googleAlessio);
         Button twitterAlessio = (Button) findViewById(R.id.twitterAlessio);
+        Button googleWalter = (Button) findViewById(R.id.googleWalter);
+        Button facebookWalter = (Button) findViewById(R.id.facebookWalter);
 
         googleMorgan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +44,7 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
 
-        googlelessio.setOnClickListener(new View.OnClickListener() {
+        googleAlessio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://plus.google.com/u/0/108762755836299160559")));
@@ -52,7 +54,20 @@ public class InfoActivity extends AppCompatActivity {
         twitterAlessio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("")));
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://twitter.com/https://twitter.com/AlessioBoe")));
+            }
+        });
+        googleWalter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://plus.google.com/111377131526563774776")));
+            }
+        });
+
+        facebookWalter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/walter.tomiati")));
             }
         });
     }
