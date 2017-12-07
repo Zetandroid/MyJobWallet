@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity
         db.execSQL("CREATE TABLE IF NOT EXISTS Entrate (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar(50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Uscite (Data Varchar (50), Titolo Varchar (50), Cifra Varchar (50), Categoria Varchar (50), Ora Varchar (50), GiornoTesto Varchar (50), GiornoNumero Varchar (50), MeseNumero Varchar (50), AnnoNumero Varchar (50));");
         db.execSQL("CREATE TABLE IF NOT EXISTS Acquisti (Premium Varchar (50));");
+        db.execSQL("CREATE TABLE IF NOT EXISTS CalcoloStipendio (Importo Varchar (50));");
 
         //IMPOSTA DATI INIZIALI TABELLA ACQUISTI
         try{

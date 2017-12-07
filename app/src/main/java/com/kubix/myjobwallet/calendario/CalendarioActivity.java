@@ -217,6 +217,11 @@ public class CalendarioActivity extends AppCompatActivity {
 
     public void inserisciTurno(View v){
 
+        int seconds = 0;
+        int minutes = 0;
+        int hours = 0;
+        int days = 0;
+
         //CALCOLI FINALI
         String resaCalcoloOrdinarie = null;
         String resaCalcoloStraordinarie = null;
@@ -234,10 +239,10 @@ public class CalendarioActivity extends AppCompatActivity {
                 long millisDiff = d2.getTime() - d1.getTime();
 
                 // CALCOLA SU GIONRI/ORE/MINUTI/SECONDI.
-                int seconds = (int) (millisDiff / 1000 % 60);
-                int minutes = (int) (millisDiff / 60000 % 60);
-                int hours = (int) (millisDiff / 3600000 % 24);
-                int days = (int) (millisDiff / 86400000);
+                seconds = (int) (millisDiff / 1000 % 60);
+                minutes = (int) (millisDiff / 60000 % 60);
+                hours = (int) (millisDiff / 3600000 % 24);
+                days = (int) (millisDiff / 86400000);
 
                 if (hours < 0 && minutes <0 || hours <0 && minutes >=0) {
                     hours = (int) (millisDiff / 3600000 % 24 + 23);
@@ -266,6 +271,11 @@ public class CalendarioActivity extends AppCompatActivity {
 
             //INSERISCI TURNO
             MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, Ordinarie, Straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+inserisciEntrata.getText().toString()+"', '"+inserisciUscita.getText().toString()+"', '"+resaCalcoloOrdinarie+"', '"+resaCalcoloStraordinarie+"')");
+            Double pagaTurnoOrdinaria = VariabiliGlobali.nettoOrario * hours;
+            int oreStraordinarie = hours - VariabiliGlobali.oreOrdinarie;
+            Double pagaTurnoStraordinaria = VariabiliGlobali.nettoStraordinario * oreStraordinarie;
+            MainActivity.db.execSQL("INSERT INTO CalcoloStipendio (Importo) VALUES ('"+pagaTurnoOrdinaria + pagaTurnoStraordinaria+"')");
+            Toast.makeText(this, (int) (pagaTurnoOrdinaria + pagaTurnoStraordinaria), Toast.LENGTH_SHORT).show();
             Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             onBackPressed();
             startActivity(new Intent(this, TurniActivity.class));
