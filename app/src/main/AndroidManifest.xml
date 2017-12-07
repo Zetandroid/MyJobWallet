@@ -102,7 +102,7 @@
             android:label="@string/toolbarEntrateAggiungi"
             android:theme="@style/AppTheme"/>
 
-        <!-- CONVERTITORE -->
+        <!-- RIEPILOGO -->
         <activity
             android:name=".RiepilogoActivity"
             android:label="@string/toolbarRiepilogo"
@@ -112,6 +112,7 @@
         <activity android:name="com.kubix.myjobwallet.utility.EmailActivity"
             android:label="@string/toolbarEmail"
             android:theme="@style/AppTheme"/>
+
 
         <!-- INFO STAFF -->
         <activity android:name=".utility.InfoActivity"

@@ -5,18 +5,15 @@ package com.kubix.myjobwallet;
 //DISTRIBUIRE L'APPLICATIVO...
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -25,17 +22,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.calendario.CalendarioActivity;
-import com.kubix.myjobwallet.calendario.CalendarioActivityDue;
 import com.kubix.myjobwallet.calendario.TurniActivity;
 import com.kubix.myjobwallet.entrate.EntrateActivity;
 import com.kubix.myjobwallet.note.NoteActivity;
@@ -144,7 +138,8 @@ public class MainActivity extends AppCompatActivity
                     Intent intent = new Intent(MainActivity.this, EntrateActivity.class);
                     startActivity(intent);
                 } else if (position == 4) {
-                    Toast.makeText(getBaseContext(), R.string.prossimamente , Toast.LENGTH_SHORT ).show();
+                    Intent intent = new Intent(MainActivity.this,RiepilogoActivity.class);
+                    startActivity(intent);
                 } else if (position == 5) {
                     Intent intent = new Intent(MainActivity.this, NoteActivity.class);
                     startActivity(intent);
