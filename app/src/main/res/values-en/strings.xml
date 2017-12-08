@@ -143,5 +143,7 @@
     <string name="dati_inseriti">SUCCESSFUL</string>
     <string name="imposta_entrata">Enter Entry</string>
     <string name="imposta_uscita">Enter Output</string>
+    <string name="modifica_turno">Change round</string>
+    <string name="trasforma_riposo">Transform into rest</string>
 
 </resources>
