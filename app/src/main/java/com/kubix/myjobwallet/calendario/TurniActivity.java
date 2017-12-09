@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
@@ -36,7 +38,7 @@ public class TurniActivity extends AppCompatActivity  {
 
     //TODO ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
-    NativeExpressAdView mAdView;
+    private AdView mAdView;
     VideoController mVideoController;
 
     // LISTA RECYCLER VIEW
@@ -54,31 +56,13 @@ public class TurniActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turni);
 
-        //TODO ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adViewTurni);
-        mAdView.setVideoOptions(new VideoOptions.Builder()
-                .setStartMuted(true)
-                .build());
-        mVideoController = mAdView.getVideoController();
-        mVideoController.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
-            @Override
-            public void onVideoEnd() {
-                Log.d(LOG_TAG, "Video playback is finished.");
-                super.onVideoEnd();
-            }
-        });
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mVideoController.hasVideoContent()) {
-                    Log.d(LOG_TAG, "Received an ad that contains a video asset.");
-                } else {
-                    Log.d(LOG_TAG, "Received an ad that does not contain a video asset.");
-                }
-            }
-        });
-
-        mAdView.loadAd(new AdRequest.Builder().build());
+        // AdMob
+        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
+        mAdView = findViewById(R.id.ad_view_turni);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
 
         //TODO TOOLBAR
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarTurni);

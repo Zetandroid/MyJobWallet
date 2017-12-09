@@ -51,8 +51,6 @@ public class MainActivity extends AppCompatActivity
     private AdView mAdView;
     VideoController mVideoController;
 
-
-
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
 

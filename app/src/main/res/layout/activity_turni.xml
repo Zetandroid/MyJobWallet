@@ -16,20 +16,21 @@
         android:theme="@style/AppTheme" />
 
 
-    <com.google.android.gms.ads.NativeExpressAdView
-        android:id="@+id/adViewTurni"
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view_turni"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/toolbarTurni"
-        ads:adSize="360x132"
-        ads:adUnitId="@string/adsTurni" />
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9460579775308491/4775778253"
+        android:layout_below="@+id/toolbarRiepilogo"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/adViewTurni">
+        android:layout_below="@+id/ad_view_turni">
 
         <LinearLayout
             android:layout_width="match_parent"
