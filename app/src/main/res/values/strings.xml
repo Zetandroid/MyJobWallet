@@ -19,7 +19,7 @@
     <string name="titolo">Titolo</string>
     <string name="data">Data</string>
     <string name="ora">Ora</string>
-    <string name="valore">Valore</string>
+    <string name="valore">Importo</string>
     <string name="scrivi">Scrivi</string>
     <string name="nome">Nome</string>
     <string name="backup">BackUp</string>
@@ -51,6 +51,7 @@
     <string name="nessuna_modifica">NESSUNA MODIFICA</string>
 
 
+    <string name="toolbarHome">Casa</string>
     <string name="toolbarSettings">Impostazioni</string>
     <string name="toolbarProfile">Profilo</string>
     <string name="toolbarOre">Turno</string>

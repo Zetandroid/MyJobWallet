@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        app:theme="@style/AppTheme" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,11 +25,8 @@
             android:id="@+id/adViewEntrate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             ads:adSize="360x132"
-            ads:adUnitId="@string/adsEntrate">
-
-        </com.google.android.gms.ads.NativeExpressAdView>
+            ads:adUnitId="@string/adsSpese" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/listaEntrate"

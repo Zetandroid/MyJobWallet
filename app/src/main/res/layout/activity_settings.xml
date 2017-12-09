@@ -14,7 +14,8 @@
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:theme="@style/AppTheme" />
 
     <FrameLayout
         android:id="@+id/fragment_container"

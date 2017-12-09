@@ -115,7 +115,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                                 // NOTHING
                             }
                         })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setIcon(R.drawable.ic_dialog_alert)
                         .show();
             }
         }));
@@ -123,7 +123,6 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
         setTitle(R.string.toolbarSpese);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

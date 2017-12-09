@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        app:theme="@style/AppTheme" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profilo"
-                app:civ_border_color="@color/coloreTestoNero"
+                app:civ_border_color="@color/textColorPrimary"
                 app:civ_border_width="2dp" />
 
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_weight="1"
                 android:text="@string/nome"
                 android:textAlignment="center"
-                android:textColor="@color/coloreTestoNero"
+                android:textColor="@color/textColorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -120,7 +120,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
                 android:text="Ottobre 2017"
-                android:textColor="@color/coloreTestoNero"
+                android:textColor="@color/textColorPrimary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -158,7 +158,7 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/entrate"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -171,7 +171,7 @@
                             android:layout_marginTop="4dp"
                             android:text="1345,00 €"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -203,7 +203,7 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/spese"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -216,7 +216,7 @@
                             android:layout_marginTop="4dp"
                             android:text="990,00 €"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -257,7 +257,7 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/ore_ordinarie"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -270,7 +270,7 @@
                             android:layout_marginTop="4dp"
                             android:text="0 Ore"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -303,7 +303,7 @@
                             android:layout_marginTop="4dp"
                             android:text="@string/ore_straordinarie"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -316,7 +316,7 @@
                             android:layout_marginTop="4dp"
                             android:text="0 Ore"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="14sp" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -357,7 +357,7 @@
                             android:layout_marginTop="8dp"
                             android:text="@string/stipendio"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -371,7 +371,7 @@
                             android:layout_marginTop="4dp"
                             android:text="0,00 €"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="14sp" />
 
                         <View
@@ -422,7 +422,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/ore_lavorative"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -432,7 +432,7 @@
                                 android:layout_weight="1"
                                 android:padding="4dp"
                                 android:textAlignment="viewEnd"
-                                android:textColor="@color/coloreSommarioNero" />
+                                android:textColor="@color/textColorSecondary" />
 
                         </LinearLayout>
 
@@ -454,7 +454,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/paga_oraria"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -465,7 +465,7 @@
                                 android:layout_weight="1"
                                 android:padding="4dp"
                                 android:textAlignment="viewEnd"
-                                android:textColor="@color/coloreSommarioNero" />
+                                android:textColor="@color/textColorSecondary" />
 
                         </LinearLayout>
 
@@ -488,7 +488,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/paga_straordinaria"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -499,7 +499,7 @@
                                 android:layout_weight="1"
                                 android:padding="4dp"
                                 android:textAlignment="viewEnd"
-                                android:textColor="@color/coloreSommarioNero" />
+                                android:textColor="@color/textColorSecondary" />
 
                         </LinearLayout>
 
@@ -523,7 +523,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/valuta"
                                 android:textAlignment="viewStart"
-                                android:textColor="@color/coloreTestoNero"
+                                android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
 
                             <TextView

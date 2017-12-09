@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        app:theme="@style/AppTheme" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_immagine_morgan"
-                            app:civ_border_color="@color/coloreTestoNero"
+                            app:civ_border_color="@color/textColorPrimary"
                             app:civ_border_width="2dp" />
 
                         <TextView
@@ -62,7 +62,7 @@
                             android:paddingTop="4dp"
                             android:text="Morgan Ciancio"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -74,14 +74,14 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER / GRAPHIC DESIGN"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="12sp" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/coloreIcone" />
+                            android:background="@color/textColorPrimary" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_immagine_alessio"
-                            app:civ_border_color="@color/coloreTestoNero"
+                            app:civ_border_color="@color/textColorPrimary"
                             app:civ_border_width="2dp" />
 
                         <TextView
@@ -158,7 +158,7 @@
                             android:paddingTop="4dp"
                             android:text="Alessio Boe"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -170,14 +170,14 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER "
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="12sp" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/coloreIcone" />
+                            android:background="@color/textColorPrimary" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -242,7 +242,7 @@
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/ic_immagine_walter"
-                            app:civ_border_color="@color/coloreTestoNero"
+                            app:civ_border_color="@color/textColorPrimary"
                             app:civ_border_width="2dp" />
 
                         <TextView
@@ -253,7 +253,7 @@
                             android:paddingTop="4dp"
                             android:text="Walter Tomiati"
                             android:textAlignment="center"
-                            android:textColor="@color/coloreTestoNero"
+                            android:textColor="@color/textColorPrimary"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -265,14 +265,14 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER "
                             android:textAlignment="center"
-                            android:textColor="@color/coloreSommarioNero"
+                            android:textColor="@color/textColorSecondary"
                             android:textSize="12sp" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/coloreIcone" />
+                            android:background="@color/textColorPrimary" />
 
                         <LinearLayout
                             android:layout_width="wrap_content"

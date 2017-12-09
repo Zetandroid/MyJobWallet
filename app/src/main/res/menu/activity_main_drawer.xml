@@ -8,45 +8,72 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_drawer_profilo"
-            android:textColor="@color/colorAccent"
             android:title="@string/toolbarProfile" />
-
-        <item
-            android:id="@+id/nav_premium"
-            android:icon="@drawable/ic_drawer_premium"
-            android:textColor="@color/colorAccent"
-            android:title="@string/toolbarPremium" />
-
         <item
             android:id="@+id/nav_email"
             android:icon="@drawable/ic_drawer_email"
-            android:textColor="@color/colorAccent"
             android:title="Email" />
-
-
    </group>
+
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/menu_center">
+
+        <item
+            android:id="@+id/nav_turno"
+            android:icon="@drawable/ic_drawer_turno"
+            android:title="@string/toolbarOre" />
+
+        <item
+            android:id="@+id/nav_lista_turni"
+            android:icon="@drawable/ic_drawer_lista_turni"
+            android:title="@string/toolbarTurni" />
+
+        <item
+            android:id="@+id/nav_entrate"
+            android:icon="@drawable/ic_drawer_entrate"
+            android:title="@string/toolbarEntrate" />
+
+        <item
+            android:id="@+id/nav_spesa"
+            android:icon="@drawable/ic_drawer_spesa"
+            android:title="@string/toolbarSpese" />
+
+        <item
+            android:id="@+id/nav_riepilogo"
+            android:icon="@drawable/ic_drawer_riepilogo"
+            android:title="@string/toolbarRiepilogo" />
+
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/ic_drawer_note"
+            android:title="@string/toolbarNote" />
+
+    </group>
 
     <group
         android:checkableBehavior="none"
         android:id="@+id/menu_bottom">
 
         <item
+            android:id="@+id/nav_premium"
+            android:icon="@drawable/ic_drawer_premium"
+            android:title="@string/toolbarPremium" />
+
+        <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_drawer_setting"
-            android:textColor="@color/colorAccent"
             android:title="@string/toolbarSettings" />
 
         <item
             android:id="@+id/nav_valuta"
             android:icon="@drawable/ic_drawer_valuta"
-            android:textColor="@color/colorAccent"
             android:title="@string/valuta_app"
             android:visible="false" />
 
         <item
             android:id="@+id/nav_plus"
             android:icon="@drawable/ic_drawer_googleplus"
-            android:textColor="@color/colorAccent"
             android:title="Kubix su google +" />
 
     </group>

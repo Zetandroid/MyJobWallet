@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        app:theme="@style/AppTheme" />
 
     <ImageView
         android:id="@+id/imageBottonSalvaSpesa"
@@ -20,7 +20,7 @@
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
         android:onClick="inserisciUscitaMonetaria"
-        app:srcCompat="@color/colorAccent" />
+        app:srcCompat="@color/colorAccent" android:contentDescription="TODO"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -51,7 +51,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="56dp">
 
                 <EditText
                     android:id="@+id/testoTitoloSpesa"
@@ -72,7 +72,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_titolo" />
+                    app:srcCompat="@drawable/ic_spesa_titolo" android:contentDescription="TODO"/>
             </RelativeLayout>
 
             <View
@@ -84,7 +84,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="56dp">
 
                 <EditText
                     android:id="@+id/testoPrezzoSpesa"
@@ -116,7 +116,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="56dp">
 
                 <Spinner
                     android:id="@+id/tagSpinner"
@@ -144,7 +144,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="56dp">
 
                 <EditText
                     android:id="@+id/testoDataSpesa"
@@ -177,7 +177,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp">
+                android:layout_height="56dp">
 
                 <EditText
                     android:id="@+id/testoPromemoriaSpesa"

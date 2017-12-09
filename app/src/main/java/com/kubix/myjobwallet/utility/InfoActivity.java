@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import com.kubix.myjobwallet.R;
@@ -19,8 +20,9 @@ public class InfoActivity extends AppCompatActivity {
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarInfo);
         setTitle(R.string.toolbarInfo);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //INDICIZZAZIONE OGGETTI
         Button googleMorgan = (Button) findViewById(R.id.googleMorgan);
@@ -70,6 +72,15 @@ public class InfoActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/walter.tomiati")));
             }
         });
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

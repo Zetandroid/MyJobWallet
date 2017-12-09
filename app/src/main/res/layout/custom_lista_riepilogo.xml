@@ -30,7 +30,7 @@
                     android:padding="4dp"
                     android:text="Novembre"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -42,7 +42,7 @@
                     android:padding="4dp"
                     android:text="2017"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -63,7 +63,7 @@
                     android:padding="4dp"
                     android:text="@string/entrate"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/coloreTestoNero" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -91,7 +91,7 @@
                     android:padding="4dp"
                     android:text="@string/spese"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/coloreTestoNero" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -119,7 +119,7 @@
                     android:padding="4dp"
                     android:text="@string/ore_ordinarie"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/coloreTestoNero" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -148,7 +148,7 @@
                     android:padding="4dp"
                     android:text="@string/straordinari"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/coloreTestoNero" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -176,7 +176,7 @@
                     android:padding="4dp"
                     android:text="@string/stipendio"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/coloreTestoNero" />
+                    android:textColor="@color/textColorPrimary" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -188,37 +188,6 @@
                     android:text="1156,00€"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/colorAccent" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/coloreNeroTrasparente" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/btnCardModifica"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#00ffffff"
-                    app:srcCompat="@drawable/ic_card_modifica" />
-
-                <ImageButton
-                    android:id="@+id/btnCardCancella"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#00ffffff"
-                    app:srcCompat="@drawable/ic_card_cancella" />
-
             </LinearLayout>
 
         </LinearLayout>

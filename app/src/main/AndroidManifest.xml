@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/AppTheme">
 
         <activity
             android:name=".IntroduzioneActivity"
@@ -23,90 +23,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme"/>
 
-        <!-- IMPOSTAZIONI -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".profilo.ProfiloActivity"/>
+        <activity android:name=".profilo.ProfiloDatiActivity" />
+        <activity android:name=".spese.SpeseActivity" />
+        <activity android:name=".note.NoteActivity" />
+        <activity android:name=".calendario.CalendarioActivity" />
+        <activity android:name=".calendario.CalendarioActivityDue" />
+        <activity android:name=".calendario.TurniActivity" />
+        <activity android:name=".entrate.EntrateActivity" />
+        <activity android:name=".RiepilogoActivity" />
+        <activity android:name=".utility.InfoActivity" />
+
         <activity
             android:name=".setting.SettingsActivity"
-            android:label="@string/toolbarSettings"
             android:theme="@style/ThemeImpostazioni"/>
-
-        <!-- PROFILO -->
-        <activity
-            android:name=".profilo.ProfiloActivity"
-            android:label="@string/toolbarProfile"
-            android:theme="@style/AppTheme"/>
-
-        <activity
-            android:name=".profilo.ProfiloDatiActivity"
-            android:label="@string/toolbarProfileDati"
-            android:theme="@style/AppTheme"/>
-
-        <!-- SPESA -->
-        <activity
-            android:name=".spese.SpeseActivity"
-            android:label="@string/toolbarSpese"
-            android:theme="@style/AppTheme"/>
 
         <activity
             android:name=".spese.SpeseAggiungiActivity"
-            android:label="@string/toolbarSpeseAggiungi"
-            android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden" />
-
-        <!-- MEMO -->
-        <activity
-            android:name=".note.NoteActivity"
-            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".note.NoteAggiungiActivity"
-            android:windowSoftInputMode="stateHidden"
-            android:label="@string/toolbarNoteAggiungi"
-            android:theme="@style/AppTheme" />
-
-        <!-- CALENDARIO/ORE -->
-        <activity
-            android:name=".calendario.CalendarioActivity"
-            android:label="@string/toolbarCalendario"
-            android:theme="@style/AppTheme" />
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
-            android:name=".calendario.CalendarioActivityDue"
-            android:label="@string/toolbarCalendario"
-            android:theme="@style/AppTheme" />
-
-        <!-- TURNI -->
-
-        <activity
-            android:name=".calendario.TurniActivity"
-            android:label="@string/toolbarTurni"
-            android:theme="@style/AppTheme" />
-
-        <!-- PREMIUM -->
-
-        <!-- ENTRATE -->
-        <activity
-            android:name=".entrate.EntrateActivity"
-            android:label="@string/toolbarEntrate"
-            android:theme="@style/AppTheme" />
-
-        <activity android:name=".entrate.EntrateAggiungiActivity"
-            android:windowSoftInputMode="stateHidden"
-            android:label="@string/toolbarEntrateAggiungi"
-            android:theme="@style/AppTheme"/>
-
-        <!-- RIEPILOGO -->
-        <activity
-            android:name=".RiepilogoActivity"
-            android:label="@string/toolbarRiepilogo"
-            android:theme="@style/AppTheme" />
-
-        <!-- INFO STAFF -->
-        <activity android:name=".utility.InfoActivity"
-            android:theme="@style/AppTheme"/>
+            android:name=".entrate.EntrateAggiungiActivity"
+            android:windowSoftInputMode="stateHidden" />
 
         <!-- WIDGET -->
         <receiver android:name=".widget.WidgetLight">
@@ -128,9 +72,5 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_dark"/>
         </receiver>
-
     </application>
-
-
-
 </manifest>

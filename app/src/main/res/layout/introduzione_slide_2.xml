@@ -34,7 +34,7 @@
                 android:padding="8dp"
                 android:text="@string/testoSlide2"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
-                android:textColor="@color/coloreTestoNero" />
+                android:textColor="@color/textColorPrimary" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

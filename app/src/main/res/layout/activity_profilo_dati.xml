@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        app:theme="@style/AppTheme" />
 
     <ScrollView
         android:layout_width="match_parent"

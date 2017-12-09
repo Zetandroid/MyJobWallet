@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -82,8 +83,9 @@ public class TurniActivity extends AppCompatActivity  {
         //TODO TOOLBAR
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarTurni);
         setTitle(R.string.toolbarTurni);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //INDICIZZA
         recyclerView = (RecyclerView) findViewById(R.id.listaTurni);
@@ -139,7 +141,7 @@ public class TurniActivity extends AppCompatActivity  {
                                 // NOTHING
                             }
                         })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setIcon(R.drawable.ic_dialog_alert)
                         .show();
             }
         }));
@@ -315,5 +317,14 @@ public class TurniActivity extends AppCompatActivity  {
         MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO', Ordinarie = 'RIPOSO', Straordinarie = 'RIPOSO' WHERE numeroGiorno = '"+vecchioNumeroGiorno+"' AND mese = '"+vecchioNumeroMese+"' AND anno  = '"+vecchioNumeroAnno+"'");
         Toast.makeText(this, "MODIFICA TURNO EFFETTUATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
         finish();
+    }
+
+    // Freccia Indietro
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

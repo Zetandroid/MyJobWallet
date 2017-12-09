@@ -17,7 +17,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -61,8 +60,7 @@ public class MainActivity extends AppCompatActivity
 
         //SETTAGGI TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
-        setTitle(R.string.app_name);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
+        setTitle(R.string.toolbarHome);
         setSupportActionBar(toolbar);
 
         //SETTAGGI NAVIGATION DRAWER
@@ -74,51 +72,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // CARD HOME
-        CardView cardTurni = (CardView) findViewById(R.id.cardTurni);
-        CardView cardListaTurni = (CardView) findViewById(R.id.cardListaTurni);
-        CardView cardEntrate = (CardView) findViewById(R.id.cardEntrate);
-        CardView cardSpese = (CardView) findViewById(R.id.cardSpese);
-        CardView cardRiepilogo = (CardView) findViewById(R.id.cardRiepilogo);
-        CardView cardMemo = (CardView) findViewById(R.id.cardMemo);
-
-        //CARD HOME CLICK EVENT
-        cardTurni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CalendarioActivity.class));
-            }
-        });
-        cardListaTurni.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, TurniActivity.class));
-            }
-        });
-        cardEntrate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, EntrateActivity.class));
-            }
-        });
-        cardSpese.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SpeseActivity.class));
-            }
-        });
-        cardRiepilogo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RiepilogoActivity.class));
-            }
-        });
-        cardMemo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NoteActivity.class));
-            }
-        });
 
         //CREA ADMOB NATIVA
         mAdView = (NativeExpressAdView) findViewById(R.id.adViewHome);
@@ -256,6 +209,24 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_profile) {
             startActivity(new Intent(this, ProfiloActivity.class));
+
+        } else if (id == R.id.nav_turno) {
+            startActivity(new Intent(this,CalendarioActivity.class));
+
+        } else if (id == R.id.nav_lista_turni) {
+            startActivity(new Intent(this,TurniActivity.class));
+
+        } else if (id == R.id.nav_entrate) {
+            startActivity(new Intent(this,EntrateActivity.class));
+
+        } else if (id == R.id.nav_spesa) {
+            startActivity(new Intent(this,SpeseActivity.class));
+
+        } else if (id == R.id.nav_riepilogo) {
+            startActivity(new Intent(this,RiepilogoActivity.class));
+
+        } else if (id == R.id.nav_note) {
+            startActivity(new Intent(this,NoteActivity.class));
 
             //Alert Dialog
         } else if (id == R.id.nav_premium) {

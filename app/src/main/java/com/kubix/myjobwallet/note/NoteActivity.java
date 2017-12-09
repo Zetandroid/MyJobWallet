@@ -167,7 +167,7 @@ public class NoteActivity extends AppCompatActivity {
                                 // NOTHING
                             }
                         })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setIcon(R.drawable.ic_dialog_alert)
                         .show();
             }
         }));

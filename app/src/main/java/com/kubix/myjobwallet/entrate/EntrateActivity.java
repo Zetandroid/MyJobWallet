@@ -44,7 +44,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
     private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
     //ADMOB NATIVA
-    private static String LOG_TAG = "ENTRATE";
+    private static String LOG_TAG = "EXAMPLE";
     NativeExpressAdView mAdView;
     VideoController mVideoController;
 
@@ -104,7 +104,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINA
                                 final Entrate movie = entrateList.get(position);
-                                MainActivity.db.execSQL("DELETE FROM Entrate WHERE Titolo = '"+movie.getTitolo()+"' AND Cifra = '"+movie.getEntrata()+"' AND Ora = '"+movie.getPromemoria()+"' AND Data = '"+movie.getDataEntrata()+"' AND Categoria = '"+movie.getCategoria()+"'");
+                                MainActivity.db.execSQL("DELETE FROM Entrate WHERE Titolo = '" + movie.getTitolo() + "' AND Cifra = '" + movie.getEntrata() + "' AND Ora = '" + movie.getPromemoria() + "' AND Data = '" + movie.getDataEntrata() + "' AND Categoria = '" + movie.getCategoria() + "'");
                                 entrateList.remove(position);
                                 mAdapter.notifyItemRemoved(position);
                             }
@@ -114,7 +114,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                                 // NOTHING
                             }
                         })
-                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setIcon(R.drawable.ic_dialog_alert)
                         .show();
             }
         }));
@@ -122,7 +122,6 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEntrate);
         setTitle(R.string.toolbarEntrate);
-        toolbar.setTitleTextColor(getResources().getColor(R.color.coloreTestoBianco));
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -152,6 +151,7 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         });
 
         mAdView.loadAd(new AdRequest.Builder().build());
+
 
         //FAB MENU
         fab = (FloatingActionButton) findViewById(R.id.fab);

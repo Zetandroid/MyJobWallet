@@ -25,7 +25,6 @@
                 android:id="@+id/linearTitolo"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/colorBiancoScuro"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -36,7 +35,7 @@
                     android:padding="4dp"
                     android:text="Mar"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/colorAccent"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:visibility="gone"
@@ -49,7 +48,7 @@
                     android:padding="4dp"
                     android:text="18"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/colorAccent"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -61,7 +60,7 @@
                     android:padding="4dp"
                     android:text="Ott"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/colorAccent"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -73,12 +72,17 @@
                     android:padding="4dp"
                     android:text="2017"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/colorAccent"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -96,9 +100,8 @@
                     android:text="Titolo"
                     android:textAlignment="textStart"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/coloreTestoNero"
+                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
-                    android:textStyle="bold"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
                 <ImageView
@@ -128,7 +131,7 @@
                     android:padding="4dp"
                     android:text="200,00 €"
                     android:textAppearance="@android:style/TextAppearance.Material.Small"
-                    android:textColor="@color/coloreSommarioNero"
+                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
@@ -159,7 +162,7 @@
                     android:padding="4dp"
                     android:text="Ora notifica"
                     android:textAppearance="@android:style/TextAppearance.Material.Small"
-                    android:textColor="@color/coloreSommarioNero"
+                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
@@ -180,43 +183,12 @@
                     android:padding="4dp"
                     android:text="15 Ottobre 2017"
                     android:textAppearance="@android:style/TextAppearance.Material.Small"
-                    android:textColor="@color/coloreSommarioNero"
+                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText,RtlHardcoded"
                     tools:text="Data notifica" />
 
             </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/coloreNeroTrasparente" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:id="@+id/btnCardModifica"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#00ffffff"
-                    app:srcCompat="@drawable/ic_card_modifica" />
-
-                <ImageButton
-                    android:id="@+id/btnCardCancella"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#00ffffff"
-                    app:srcCompat="@drawable/ic_card_cancella" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
