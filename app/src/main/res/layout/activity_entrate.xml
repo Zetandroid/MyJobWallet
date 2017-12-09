@@ -28,7 +28,7 @@
             android:layout_alignParentBottom="false"
             android:layout_centerHorizontal="true"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-9460579775308491/9696367794"
+            ads:adUnitId="ca-app-pub-9460579775308491/1196336333"
             android:layout_below="@+id/toolbarRiepilogo"/>
 
         <android.support.v7.widget.RecyclerView
