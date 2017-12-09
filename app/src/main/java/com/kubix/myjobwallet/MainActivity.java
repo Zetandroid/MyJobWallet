@@ -35,7 +35,6 @@ import com.kubix.myjobwallet.note.NoteActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
-import com.kubix.myjobwallet.utility.EmailActivity;
 import com.kubix.myjobwallet.utility.PremiumActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
@@ -261,7 +260,12 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(this,SettingsActivity.class));
 
         } else if (id == R.id.nav_email){
-            startActivity(new Intent(this, EmailActivity.class));
+                final Intent _Intent = new Intent(android.content.Intent.ACTION_SEND);
+                _Intent.setType("text/html");
+                _Intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{ "studio.kubix@gmail.com" });
+                _Intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "MyJobWallet");
+                _Intent.putExtra(android.content.Intent.EXTRA_TEXT, "Ciao Kubix Studio...");
+                startActivity(Intent.createChooser(_Intent, "Invia email a Kubix Studio"));
 
         } else if (id == R.id.nav_valuta){
             startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.kubix.myjobwallet&ah=Is2oYzVlAaRsq8sYhuOqZ0UACUc&hl=it")));

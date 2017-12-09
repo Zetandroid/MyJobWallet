@@ -109,9 +109,6 @@
             android:theme="@style/AppTheme" />
 
         <!-- EMAIL -->
-        <activity android:name="com.kubix.myjobwallet.utility.EmailActivity"
-            android:label="@string/toolbarEmail"
-            android:theme="@style/AppTheme"/>
 
 
         <!-- INFO STAFF -->
