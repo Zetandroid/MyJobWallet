@@ -77,7 +77,7 @@ public class PremiumActivity extends AppCompatActivity {
 
     }
 
-        public void bottoneAcquista(View view) {
+        public void bottoneAcquista(View v) {
             mHelper.launchPurchaseFlow(this, ITEM_SKU, 10001,
                     mPurchaseFinishedListener, "com.kubix.myjobwallet.pro");
         }

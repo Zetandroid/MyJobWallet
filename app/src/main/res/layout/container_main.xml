@@ -22,15 +22,15 @@
         android:layout_below="@+id/toolbarHome"
         android:orientation="vertical">
 
-        <com.google.android.gms.ads.NativeExpressAdView
-            android:id="@+id/adViewHome"
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentBottom="false"
             android:layout_centerHorizontal="true"
-            ads:adSize="360x100"
-            ads:adUnitId="@string/adsHome"
-            tools:ignore="ObsoleteLayoutParam" />
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9460579775308491/9696367794"
+            android:layout_below="@+id/toolbarRiepilogo"/>
 
         <LinearLayout
             android:layout_width="match_parent"

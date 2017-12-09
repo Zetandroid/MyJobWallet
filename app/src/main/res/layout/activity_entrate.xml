@@ -21,12 +21,15 @@
         android:layout_below="@+id/toolbarEntrate"
         android:orientation="vertical">
 
-        <com.google.android.gms.ads.NativeExpressAdView
-            android:id="@+id/adViewEntrate"
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view_entrate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            ads:adSize="360x132"
-            ads:adUnitId="@string/adsSpese" />
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-9460579775308491/9696367794"
+            android:layout_below="@+id/toolbarRiepilogo"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/listaEntrate"

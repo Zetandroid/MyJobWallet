@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 [{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":27},"path":"app-release.apk","properties":{"packageId":"com.kubix.myjobwallet","split":"","minSdkVersion":"23"}}]
+=======
+[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":25},"path":"app-release.apk","properties":{"packageId":"com.kubix.myjobwallet","split":"","minSdkVersion":"23"}}]
+>>>>>>> Stashed changes

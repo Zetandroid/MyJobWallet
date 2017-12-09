@@ -26,6 +26,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
@@ -36,6 +38,7 @@ import com.kubix.myjobwallet.note.NoteActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
+import com.kubix.myjobwallet.utility.PremiumActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
@@ -45,7 +48,7 @@ public class MainActivity extends AppCompatActivity
 
     //INDICIZZA ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
-    NativeExpressAdView mAdView;
+    private AdView mAdView;
     VideoController mVideoController;
 
 
@@ -73,31 +76,13 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        //CREA ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adViewHome);
-        mAdView.setVideoOptions(new VideoOptions.Builder()
-                .setStartMuted(true)
-                .build());
-        mVideoController = mAdView.getVideoController();
-        mVideoController.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
-            @Override
-            public void onVideoEnd() {
-                Log.d(LOG_TAG, "Video playback is finished.");
-                super.onVideoEnd();
-            }
-        });
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mVideoController.hasVideoContent()) {
-                    Log.d(LOG_TAG, "Received an ad that contains a video asset.");
-                } else {
-                    Log.d(LOG_TAG, "Received an ad that does not contain a video asset.");
-                }
-            }
-        });
-            mAdView.loadAd(new AdRequest.Builder().build());
-
+        // AdMob
+        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
+        mAdView = findViewById(R.id.ad_view_home);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
 
 
         //CREAZIONE EFFETTIVA DEL DATABASE ESEGUENDO QUERY
