@@ -7,8 +7,7 @@
 
     <path
         android:fillColor="@color/coloreTestoBianco"
-        android:pathData="M4 11h5V5H4v6zm0 7h5v-6H4v6zm6 0h5v-6h-5v6zm6
-0h5v-6h-5v6zm-6-7h5V5h-5v6zm6-6v6h5V5h-5z" />
+        android:pathData="M16 18l2.29-2.29-4.88-4.88-4 4L2 7.41 3.41 6l6 6 4-4 6.3 6.29L22 12v6z" />
     <path
         android:pathData="M0 0h24v24H0z" />
 </vector>

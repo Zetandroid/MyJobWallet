@@ -86,10 +86,6 @@
             android:theme="@style/AppTheme" />
 
         <!-- PREMIUM -->
-        <activity
-            android:name="com.kubix.myjobwallet.utility.PremiumActivity"
-            android:label="@string/toolbarPremium"
-            android:theme="@style/AppTheme" />
 
         <!-- ENTRATE -->
         <activity
@@ -108,22 +104,29 @@
             android:label="@string/toolbarRiepilogo"
             android:theme="@style/AppTheme" />
 
-        <!-- EMAIL -->
-
-
         <!-- INFO STAFF -->
         <activity android:name=".utility.InfoActivity"
             android:theme="@style/AppTheme"/>
 
         <!-- WIDGET -->
-        <receiver android:name=".widget.WidgetOne">
+        <receiver android:name=".widget.WidgetLight">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/widget_1"/>
+                android:resource="@xml/widget_light"/>
+        </receiver>
+
+        <receiver android:name=".widget.WidgetDark">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_dark"/>
         </receiver>
 
     </application>

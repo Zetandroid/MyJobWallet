@@ -9,8 +9,5 @@
         android:icon="@drawable/ic_menu_layout"
         android:orderInCategory="300"
         android:title="Cambia Layout"
-        android:visible="false"
-        app:showAsAction="ifRoom"></item>
-
-
+        app:showAsAction="ifRoom" />
 </menu>

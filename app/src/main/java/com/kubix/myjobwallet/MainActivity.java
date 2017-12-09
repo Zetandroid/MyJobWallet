@@ -4,6 +4,7 @@ package com.kubix.myjobwallet;
 //SOLAMENTE LA SUDDETTA AZIENDA HA LA POSSIBILITA' DI MODIFICARE, AGGIORNARE, MODIFICARE E
 //DISTRIBUIRE L'APPLICATIVO...
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -14,6 +15,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
@@ -35,7 +37,6 @@ import com.kubix.myjobwallet.note.NoteActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
-import com.kubix.myjobwallet.utility.PremiumActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity
     private static String LOG_TAG = "EXAMPLE";
     NativeExpressAdView mAdView;
     VideoController mVideoController;
+
+
 
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
@@ -225,7 +228,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_layout) {
-            setContentView(R.layout.activity_profilo);
+            Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
             return true;
         }
 
@@ -243,6 +246,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+
     //SELEZIONE ICONE NAVIGATION DRAWER
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -253,8 +257,40 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_profile) {
             startActivity(new Intent(this, ProfiloActivity.class));
 
+            //Alert Dialog
         } else if (id == R.id.nav_premium) {
-            startActivity(new Intent(this, PremiumActivity.class));
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Premium");
+            // Lista Alert
+            String[] animals = {getString(R.string.premium_linea_1), getString(R.string.premium_linea_2), getString(R.string.premium_linea_3), getString(R.string.premium_linea_4),};
+            builder.setItems(animals, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case 0:
+                        case 1:
+                        case 2:
+                        case 3:
+                    }
+                }
+            });
+            // Bottoni
+            builder.setPositiveButton(getString(R.string.bottone_acquista), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+                }
+            });
+            builder.setNegativeButton(getString(R.string.bottone_ripristina_acquista), new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
+                }
+            });
+
+            // Visualizzazione Alert
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
         } else if (id == R.id.nav_setting) {
             startActivity(new Intent(this,SettingsActivity.class));
