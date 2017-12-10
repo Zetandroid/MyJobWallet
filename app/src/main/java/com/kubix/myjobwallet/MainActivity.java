@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.toolbarHome);
         setSupportActionBar(toolbar);
+
 
         //SETTAGGI NAVIGATION DRAWER
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
