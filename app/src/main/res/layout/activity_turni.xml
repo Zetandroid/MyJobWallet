@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-9460579775308491/4775778253"
-        android:layout_below="@+id/toolbarRiepilogo"/>
+        android:layout_below="@+id/toolbarTurni" />
 
     <ScrollView
         android:layout_width="match_parent"

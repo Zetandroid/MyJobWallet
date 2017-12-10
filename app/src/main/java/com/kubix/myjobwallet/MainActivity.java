@@ -11,6 +11,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -22,34 +23,39 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
-import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.calendario.CalendarioActivity;
 import com.kubix.myjobwallet.calendario.TurniActivity;
 import com.kubix.myjobwallet.entrate.EntrateActivity;
+import com.kubix.myjobwallet.entrate.EntrateAggiungiActivity;
 import com.kubix.myjobwallet.note.NoteActivity;
+import com.kubix.myjobwallet.note.NoteAggiungiActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
-import com.kubix.myjobwallet.utility.PremiumActivity;
+import com.kubix.myjobwallet.spese.SpeseAggiungiActivity;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
 
     //INDICIZZA ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
     private AdView mAdView;
     VideoController mVideoController;
+
+    //FAB
+    private Boolean isFabOpen = false;
+    private FloatingActionButton fab, fab1, fab2, fab3, fab4;
+    private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
@@ -67,11 +73,82 @@ public class MainActivity extends AppCompatActivity
         //SETTAGGI NAVIGATION DRAWER
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                  this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //FAB
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+        fab4 = (FloatingActionButton) findViewById(R.id.fab4);
+        fab_apri = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_apri);
+        fab_chiudi = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_chiudi);
+        fab_ruota_avanti = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_avanti);
+        fab_ruota_indietro = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_indietro);
+        fab.setOnClickListener(this);
+        fab1.setOnClickListener(this);
+        fab2.setOnClickListener(this);
+        fab3.setOnClickListener(this);
+        fab4.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.fab:
+                animateFAB();
+                break;
+            case R.id.fab1:
+                startActivity(new Intent(this, EntrateAggiungiActivity.class));
+                break;
+            case R.id.fab2:
+                startActivity(new Intent(this, SpeseAggiungiActivity.class));
+                break;
+            case R.id.fab3:
+                startActivity(new Intent(this, CalendarioActivity.class));
+                break;
+            case R.id.fab4:
+                startActivity(new Intent(this, NoteAggiungiActivity.class));
+                break;
+        }
+    }
+
+    public void animateFAB() {
+
+        if (isFabOpen) {
+
+            fab.startAnimation(fab_ruota_indietro);
+            fab1.startAnimation(fab_chiudi);
+            fab2.startAnimation(fab_chiudi);
+            fab3.startAnimation(fab_chiudi);
+            fab4.startAnimation(fab_chiudi);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            fab3.setClickable(false);
+            fab4.setClickable(false);
+            isFabOpen = false;
+            Log.d("Raj", "close");
+
+        } else {
+
+            fab.startAnimation(fab_ruota_avanti);
+            fab1.startAnimation(fab_apri);
+            fab2.startAnimation(fab_apri);
+            fab3.startAnimation(fab_apri);
+            fab4.startAnimation(fab_apri);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            fab2.setClickable(true);
+            fab4.setClickable(true);
+            isFabOpen = true;
+            Log.d("Raj", "open");
+        }
+
 
 
         // AdMob

@@ -137,7 +137,7 @@ public class PremiumActivity extends AppCompatActivity {
 
                             //CODICE SORGENTE CHE PARTE DOPO ACQUISTO RIUSCITO
                             MainActivity.db.execSQL("UPDATE Acquisti SET Premium = 'SI' WHERE Premium = 'NO'");
-                            Toast.makeText(PremiumActivity.this, "Grazie per aver acquistato MyJobWallet Premium, al prossimo avvio dell'applicazione non visualizzerai più alcun tipo di annuncio", Toast.LENGTH_LONG).show();
+                            Toast.makeText(PremiumActivity.this, "Grazie per aver acquistato.Riavvia Applicazione", Toast.LENGTH_LONG).show();
                             onBackPressed();
                         } else {
                             // handle error
