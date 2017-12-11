@@ -64,6 +64,14 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entrate);
 
+        // AdMob
+        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
+        mAdView = findViewById(R.id.ad_view_entrate);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
+
         //INDICIZZA
         recyclerView = (RecyclerView) findViewById(R.id.listaEntrate);
 
@@ -127,15 +135,6 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        //ADMOB NATIVA
-        // AdMob
-        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
-        mAdView = findViewById(R.id.ad_view_entrate);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-        mAdView.loadAd(adRequest);
 
 
         //FAB MENU

@@ -64,6 +64,14 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spese);
 
+        // AdMob
+        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
+        mAdView = findViewById(R.id.ad_view_spese);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
+
         //INDICIZZA
         recyclerView = (RecyclerView) findViewById(R.id.listaSpese);
 
@@ -128,14 +136,6 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        // AdMob
-        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
-        mAdView = findViewById(R.id.ad_view_spese);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-        mAdView.loadAd(adRequest);
 
         //FAB MENU
         fab = (FloatingActionButton) findViewById(R.id.fab);
