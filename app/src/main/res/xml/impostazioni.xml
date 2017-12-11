@@ -7,7 +7,7 @@
 
         <SwitchPreference
             android:id="@+id/switchTheme"
-            android:key="temaDark"
+            android:key="@string/SETTINGSKEY_TEMADARK"
             android:summary="@string/sommario_tema"
             android:title="@string/subtitolo_tema" />
 

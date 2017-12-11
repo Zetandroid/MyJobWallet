@@ -19,11 +19,17 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSetting);
-        setTitle(R.string.toolbarSettings);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        try {
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSetting);
+            setTitle(R.string.toolbarSettings);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
+        catch (Exception e) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
 
         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
     }
