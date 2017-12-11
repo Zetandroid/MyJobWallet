@@ -50,7 +50,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="200dp"
         android:layout_marginRight="@dimen/fab_margin"
-        android:src="@drawable/ic_widget_dark_riepilogo"
+        android:src="@drawable/ic_widget_dark_turno"
         android:visibility="invisible"
         app:backgroundTint="@color/colorAccent"
         app:elevation="2dp"
