@@ -191,8 +191,9 @@ public class NoteActivity extends AppCompatActivity {
                         noteList.add(note);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(mFloatingActionButton, R.string.nessuna_modifica, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -207,10 +208,10 @@ public class NoteActivity extends AppCompatActivity {
     public void modificaNota(View v){
         if (! titoloModifica.getText().toString().equals("") && ! corpoModifica.getText().toString().equals("")){
             MainActivity.db.execSQL("UPDATE Note SET Titolo = '"+titoloModifica.getText().toString()+"', Nota = '"+corpoModifica.getText().toString()+"' WHERE Titolo = '"+vecchioTitolo+"' AND Nota = '"+vecchiaNota+"'");
-            Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NOTA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
             finish();
         }else{
-            Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
+            //NOTHING
         }
     }
 

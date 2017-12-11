@@ -282,8 +282,7 @@ public class CalendarioActivity extends AppCompatActivity {
             Double pagaTurnoOrdinaria = VariabiliGlobali.nettoOrario * hours;
             int oreStraordinarie = hours - VariabiliGlobali.oreOrdinarie;
             Double pagaTurnoStraordinaria = VariabiliGlobali.nettoStraordinario * oreStraordinarie;
-            MainActivity.db.execSQL("INSERT INTO CalcoloStipendio (Importo) VALUES ('"+pagaTurnoOrdinaria + pagaTurnoStraordinaria+"')");
-            Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
+            MainActivity.db.execSQL("INSERT INTO CalcoloStipendio (numeroGiorno, mese, anno, Importo) VALUES ('"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', '"+pagaTurnoOrdinaria + pagaTurnoStraordinaria+"')");
             onBackPressed();
             startActivity(new Intent(this, TurniActivity.class));
 
@@ -294,11 +293,8 @@ public class CalendarioActivity extends AppCompatActivity {
 
     public void inserisciRiposo(View v){
         MainActivity.db.execSQL("INSERT INTO Turni (giornoSettimana, numeroGiorno, mese, anno, oraEntrata, oraUscita, ordinarie, straordinarie) VALUES ('"+giornoTestualeAbbreviato+"', '"+numeroGiorno+"', '"+numeroMese+"', '"+numeroAnno+"', 'RIPOSO', 'RIPOSO', 'RIPOSO', 'RIPOSO')");
-        Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
         onBackPressed();
         startActivity(new Intent(this, TurniActivity.class));
-
-
     }
 
     public void dialogTimePickerClickUscita(View v){

@@ -119,7 +119,6 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
     public void inserisciUscitaMonetaria(View v){
         if(! titoloSpesa.getText().toString().equals("") && ! cifraSpesa.getText().toString().equals("")){
             MainActivity.db.execSQL("INSERT INTO Uscite (Data, Titolo, Cifra, Categoria, Ora, GiornoTesto, GiornoNumero, MeseNumero, AnnoNumero) VALUES ('"+dataSpesa.getText().toString()+"', '"+titoloSpesa.getText().toString()+"', '"+cifraSpesa.getText().toString()+"', '"+TagSpese.getSelectedItem().toString()+"', '"+oraSpesa.getText().toString()+"', '"+giornoTestualeAbbreviato+"', '"+String.valueOf(numeroGiorno)+"', '"+String.valueOf(numeroMese)+"', '"+String.valueOf(numeroAnno)+"')");
-            Snackbar.make(v, R.string.dati_inseriti_successo, Snackbar.LENGTH_LONG).show();
             titoloSpesa.setText("");
             cifraSpesa.setText("");
             dataSpesa.setText("");

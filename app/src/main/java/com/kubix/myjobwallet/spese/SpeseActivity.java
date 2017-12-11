@@ -239,8 +239,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -272,8 +273,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -304,8 +306,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -336,8 +339,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -368,8 +372,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -400,8 +405,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -432,8 +438,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -464,8 +471,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -496,8 +504,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -528,8 +537,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab,R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -560,8 +570,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -592,8 +603,9 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
                         usciteList.add(uscite);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -610,10 +622,10 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
     public void modificaSpesa(View v){
        if (! testoModifica.getText().toString().equals("")){
            MainActivity.db.execSQL("UPDATE Uscite SET Cifra = '"+testoModifica.getText().toString()+"' WHERE Data = '"+vecchiaData+"' AND Titolo = '"+vecchioTitolo+"' AND Cifra = '"+vecchiaCifra+"' AND Categoria = '"+vecchioTag+"'");
-           Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "SPESA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
            finish();
        }else{
-           Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
+           //NOTHING
        }
     }
 

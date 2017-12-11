@@ -122,6 +122,7 @@ public class TurniActivity extends AppCompatActivity  {
                                 // ELIMINA
                                 final Turni movie = turniList.get(position);
                                 MainActivity.db.execSQL("DELETE FROM Turni WHERE giornoSettimana = '"+movie.getGiornoSettimana()+"' AND numeroGiorno = '"+movie.getNumeroGiorno()+"' AND mese = '"+movie.getMese()+"' AND anno = '"+movie.getAnno()+"'");
+                                MainActivity.db.execSQL("DELETE FROM CalcoloStipendio WHERE numeroGiorno = '"+movie.getNumeroGiorno()+"' AND mese = '"+movie.getMese()+"' AND anno = '"+movie.getAnno()+"'");
                                 turniList.remove(position);
                                 mAdapter.notifyItemRemoved(position);
                             }
@@ -151,23 +152,24 @@ public class TurniActivity extends AppCompatActivity  {
             turniList.clear();
             mAdapter.notifyDataSetChanged();
             Cursor cr= MainActivity.db.rawQuery("SELECT * FROM Turni",null);
-            if(cr!=null){
-                if(cr.moveToFirst()){
-                    do{
-                        String campoGiornoSettimana=cr.getString(cr.getColumnIndex("giornoSettimana"));
-                        String campoNumeroGiorno=cr.getString(cr.getColumnIndex("numeroGiorno"));
-                        String campoMese=cr.getString(cr.getColumnIndex("mese"));
+            if(cr!=null) {
+                if (cr.moveToFirst()) {
+                    do {
+                        String campoGiornoSettimana = cr.getString(cr.getColumnIndex("giornoSettimana"));
+                        String campoNumeroGiorno = cr.getString(cr.getColumnIndex("numeroGiorno"));
+                        String campoMese = cr.getString(cr.getColumnIndex("mese"));
                         String campoAnno = cr.getString(cr.getColumnIndex("anno"));
-                        String campoOraEntrata= cr.getString(cr.getColumnIndex("oraEntrata"));
-                        String campoOraUscita= cr.getString(cr.getColumnIndex("oraUscita"));
-                        String campoOrdinarie= cr.getString(cr.getColumnIndex("Ordinarie"));
-                        String campoStraordinarie= cr.getString(cr.getColumnIndex("Straordinarie"));
-                        Turni turni = new Turni (campoGiornoSettimana, campoNumeroGiorno, campoMese,campoAnno, campoOraEntrata, campoOraUscita, campoOrdinarie, campoStraordinarie);
+                        String campoOraEntrata = cr.getString(cr.getColumnIndex("oraEntrata"));
+                        String campoOraUscita = cr.getString(cr.getColumnIndex("oraUscita"));
+                        String campoOrdinarie = cr.getString(cr.getColumnIndex("Ordinarie"));
+                        String campoStraordinarie = cr.getString(cr.getColumnIndex("Straordinarie"));
+                        Turni turni = new Turni(campoGiornoSettimana, campoNumeroGiorno, campoMese, campoAnno, campoOraEntrata, campoOraUscita, campoOrdinarie, campoStraordinarie);
                         turniList.add(turni);
                         mAdapter.notifyDataSetChanged();
-                    }while (cr.moveToNext());
-                }else
-                    Snackbar.make(mAdView, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                    } while (cr.moveToNext());
+                } else {
+                //NOTHING
+                }
             }
             cr.close();
 

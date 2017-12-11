@@ -239,8 +239,10 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
+
             }
             cr.close();
 
@@ -273,8 +275,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -305,8 +308,10 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
+
             }
             cr.close();
 
@@ -337,8 +342,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -369,8 +375,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -401,8 +408,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -433,8 +441,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -465,8 +474,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -497,8 +507,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
@@ -529,8 +540,9 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
                         entrateList.add(entrate);
                         mAdapter.notifyDataSetChanged();
                     }while (cr.moveToNext());
-                }else
-                    Snackbar.make(fab, R.string.dati_non_inseriti, Snackbar.LENGTH_LONG).show();
+                }else{
+                    //NOTHING
+                }
             }
             cr.close();
 
