@@ -179,5 +179,6 @@
     <string name="novembre">Novembre</string>
     <string name="dicembre">Dicembre</string>
 
+    <string name="temadark_changed">Questa modifica avrà effetto al prossimo avvio</string>
 
 </resources>

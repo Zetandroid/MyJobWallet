@@ -38,6 +38,7 @@ import com.kubix.myjobwallet.entrate.EntrateAggiungiActivity;
 import com.kubix.myjobwallet.note.NoteActivity;
 import com.kubix.myjobwallet.note.NoteAggiungiActivity;
 import com.kubix.myjobwallet.profilo.ProfiloActivity;
+import com.kubix.myjobwallet.setting.ClsSettings;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 import com.kubix.myjobwallet.spese.SpeseAggiungiActivity;
@@ -67,6 +68,11 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ClsSettings settings = new ClsSettings(getBaseContext());
+        if (settings.get_temadark()) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

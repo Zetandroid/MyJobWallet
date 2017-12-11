@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.kubix.myjobwallet.setting.ClsSettings;
 import com.kubix.myjobwallet.utility.PrefManager;
 
 public class IntroduzioneActivity extends AppCompatActivity {
@@ -33,6 +34,11 @@ public class IntroduzioneActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ClsSettings settings = new ClsSettings(getBaseContext());
+        if (settings.get_temadark()) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
 
 

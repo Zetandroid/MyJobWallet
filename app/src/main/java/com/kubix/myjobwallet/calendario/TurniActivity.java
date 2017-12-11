@@ -28,6 +28,7 @@ import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.setting.ClsSettings;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.ArrayList;
@@ -53,6 +54,11 @@ public class TurniActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ClsSettings settings = new ClsSettings(getBaseContext());
+        if (settings.get_temadark()) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_turni);
 

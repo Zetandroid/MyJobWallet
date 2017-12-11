@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 
+import com.kubix.myjobwallet.setting.ClsSettings;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class ProfiloDatiActivity extends AppCompatActivity {
@@ -21,6 +22,11 @@ public class ProfiloDatiActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ClsSettings settings = new ClsSettings(getBaseContext());
+        if (settings.get_temadark()) {
+            setTheme(R.style.AppTheme_Dark);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profilo_dati);
 

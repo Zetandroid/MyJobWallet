@@ -146,4 +146,6 @@
     <string name="modifica_turno">Change round</string>
     <string name="trasforma_riposo">Transform into rest</string>
 
+    <string name="temadark_changed">This change take effect at next start</string>
+
 </resources>
