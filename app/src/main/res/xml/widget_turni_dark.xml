@@ -5,7 +5,7 @@
     android:initialLayout="@layout/widget_turni_dark"
     android:minHeight="60dp"
     android:minWidth="120dp"
-    android:previewImage="@drawable/widget_light"
+    android:previewImage="@drawable/widget_dark_turni"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="0"
     android:widgetCategory="home_screen">
