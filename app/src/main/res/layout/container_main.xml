@@ -7,6 +7,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/AppTheme" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarHome"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9460579775308491/9696367794" />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab4"
         android:layout_width="wrap_content"
@@ -80,29 +97,14 @@
         app:elevation="2dp"
         app:pressedTranslationZ="12dp" />
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarHome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/AppTheme" />
-
     <LinearLayout
+        android:id="@+id/contenitore"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@+id/toolbarHome">
+        android:layout_below="@+id/ad_view_home"
+        android:orientation="vertical">
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/ad_view_home"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbarHome"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-9460579775308491/9696367794" />
-
-        <include layout="@layout/container_main_list"/>
+        <include layout="@layout/container_main_list" />
 
     </LinearLayout>
 

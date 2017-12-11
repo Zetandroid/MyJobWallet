@@ -51,18 +51,6 @@ public class RiepilogoActivity extends AppCompatActivity{
         super.onPause();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
-
-        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
-        if (VariabiliGlobali.statoPremium.equals("SI")){
-            mAdView.setVisibility(View.GONE);
-        }
-    }
 
     @Override
     public void onDestroy() {

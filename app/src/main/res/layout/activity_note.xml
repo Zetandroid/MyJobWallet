@@ -22,14 +22,6 @@
         android:orientation="vertical"
         android:layout_below="@+id/toolbarNote">
 
-        <com.google.android.gms.ads.NativeExpressAdView
-            android:id="@+id/adViewNote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            ads:adSize="360x132"
-            ads:adUnitId="@string/adsNote"
-            tools:ignore="ObsoleteLayoutParam" />
 
         <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
@@ -56,6 +48,7 @@
                 android:layout_marginBottom="24dp"
                 android:layout_marginRight="24dp"
                 android:clickable="true"
+                android:visibility="invisible"
                 app:backgroundTint="@color/colorAccent"
                 app:fabSize="normal"
                 app:srcCompat="@drawable/ic_matita" />

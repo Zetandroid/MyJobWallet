@@ -12,7 +12,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,9 +21,6 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.NativeExpressAdView;
-import com.google.android.gms.ads.VideoController;
-import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
@@ -43,10 +39,6 @@ public class NoteActivity extends AppCompatActivity {
     private String TAG = NoteActivity.class.getSimpleName();
     InterstitialAd mInterstitialAd;
 
-    //ADMOB NATIVA
-    private static String LOG_TAG = "EXAMPLE";
-    NativeExpressAdView mAdView;
-    VideoController mVideoController;
 
     //FAB DISSOLVENZA
     private FloatingActionButton mFloatingActionButton;
@@ -94,32 +86,6 @@ public class NoteActivity extends AppCompatActivity {
             }
         });
 
-        //ADMOB NATIVA
-        mAdView = (NativeExpressAdView) findViewById(R.id.adViewNote);
-        mAdView.setVideoOptions(new VideoOptions.Builder()
-                .setStartMuted(true)
-                .build());
-        mVideoController = mAdView.getVideoController();
-        mVideoController.setVideoLifecycleCallbacks(new VideoController.VideoLifecycleCallbacks() {
-            @Override
-            public void onVideoEnd() {
-                Log.d(LOG_TAG, "Video playback is finished.");
-                super.onVideoEnd();
-            }
-        });
-
-        mAdView.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mVideoController.hasVideoContent()) {
-                    Log.d(LOG_TAG, "Ricevuto CON video assets");
-                } else {
-                    Log.d(LOG_TAG, "Ricevuto SENZA video assets");
-                }
-            }
-        });
-
-        mAdView.loadAd(new AdRequest.Builder().build());
 
         //SETTAGGI RECYCLER VIEW
         mAdapter = new CustomAdapter(noteList);
@@ -198,10 +164,6 @@ public class NoteActivity extends AppCompatActivity {
             });
         }
 
-        //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
-        if (VariabiliGlobali.statoPremium.equals("SI")){
-            mAdView.setVisibility(View.GONE);
-        }
 
         caricaNote();
     }

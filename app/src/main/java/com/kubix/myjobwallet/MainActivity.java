@@ -66,11 +66,18 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // AdMob
+        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
+        mAdView = findViewById(R.id.ad_view_home);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        mAdView.loadAd(adRequest);
+
         //SETTAGGI TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
         setTitle(R.string.toolbarHome);
         setSupportActionBar(toolbar);
-
 
         //SETTAGGI NAVIGATION DRAWER
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -150,17 +157,6 @@ public class MainActivity extends AppCompatActivity
             isFabOpen = true;
             Log.d("Raj", "open");
         }
-
-
-
-        // AdMob
-        MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
-        mAdView = findViewById(R.id.ad_view_home);
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
-        mAdView.loadAd(adRequest);
-
 
         //CREAZIONE EFFETTIVA DEL DATABASE ESEGUENDO QUERY
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
