@@ -102,60 +102,6 @@ public class MainActivity extends AppCompatActivity
         fab2.setOnClickListener(this);
         fab3.setOnClickListener(this);
         fab4.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id) {
-            case R.id.fab:
-                animateFAB();
-                break;
-            case R.id.fab1:
-                startActivity(new Intent(this, EntrateAggiungiActivity.class));
-                break;
-            case R.id.fab2:
-                startActivity(new Intent(this, SpeseAggiungiActivity.class));
-                break;
-            case R.id.fab3:
-                startActivity(new Intent(this, CalendarioActivity.class));
-                break;
-            case R.id.fab4:
-                startActivity(new Intent(this, NoteAggiungiActivity.class));
-                break;
-        }
-    }
-
-    public void animateFAB() {
-
-        if (isFabOpen) {
-
-            fab.startAnimation(fab_ruota_indietro);
-            fab1.startAnimation(fab_chiudi);
-            fab2.startAnimation(fab_chiudi);
-            fab3.startAnimation(fab_chiudi);
-            fab4.startAnimation(fab_chiudi);
-            fab1.setClickable(false);
-            fab2.setClickable(false);
-            fab3.setClickable(false);
-            fab4.setClickable(false);
-            isFabOpen = false;
-            Log.d("Raj", "close");
-
-        } else {
-
-            fab.startAnimation(fab_ruota_avanti);
-            fab1.startAnimation(fab_apri);
-            fab2.startAnimation(fab_apri);
-            fab3.startAnimation(fab_apri);
-            fab4.startAnimation(fab_apri);
-            fab1.setClickable(true);
-            fab2.setClickable(true);
-            fab2.setClickable(true);
-            fab4.setClickable(true);
-            isFabOpen = true;
-            Log.d("Raj", "open");
-        }
 
         //CREAZIONE EFFETTIVA DEL DATABASE ESEGUENDO QUERY
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
@@ -224,6 +170,60 @@ public class MainActivity extends AppCompatActivity
         //CONTROLLO PER LA VISUALIZZAZIONE DEGLI ANNUNCI
         if (VariabiliGlobali.statoPremium.equals("SI")){
             mAdView.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.fab:
+                animateFAB();
+                break;
+            case R.id.fab1:
+                startActivity(new Intent(this, EntrateAggiungiActivity.class));
+                break;
+            case R.id.fab2:
+                startActivity(new Intent(this, SpeseAggiungiActivity.class));
+                break;
+            case R.id.fab3:
+                startActivity(new Intent(this, CalendarioActivity.class));
+                break;
+            case R.id.fab4:
+                startActivity(new Intent(this, NoteAggiungiActivity.class));
+                break;
+        }
+    }
+
+    public void animateFAB() {
+
+        if (isFabOpen) {
+
+            fab.startAnimation(fab_ruota_indietro);
+            fab1.startAnimation(fab_chiudi);
+            fab2.startAnimation(fab_chiudi);
+            fab3.startAnimation(fab_chiudi);
+            fab4.startAnimation(fab_chiudi);
+            fab1.setClickable(false);
+            fab2.setClickable(false);
+            fab3.setClickable(false);
+            fab4.setClickable(false);
+            isFabOpen = false;
+            Log.d("Raj", "close");
+
+        } else {
+
+            fab.startAnimation(fab_ruota_avanti);
+            fab1.startAnimation(fab_apri);
+            fab2.startAnimation(fab_apri);
+            fab3.startAnimation(fab_apri);
+            fab4.startAnimation(fab_apri);
+            fab1.setClickable(true);
+            fab2.setClickable(true);
+            fab2.setClickable(true);
+            fab4.setClickable(true);
+            isFabOpen = true;
+            Log.d("Raj", "open");
         }
     }
 
