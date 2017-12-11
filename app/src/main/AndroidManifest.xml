@@ -36,9 +36,7 @@
         <activity android:name=".RiepilogoActivity" />
         <activity android:name=".utility.InfoActivity" />
 
-        <activity
-            android:name=".setting.SettingsActivity"
-            android:theme="@style/ThemeImpostazioni"/>
+        <activity android:name=".setting.SettingsActivity" />
 
         <activity
             android:name=".spese.SpeseAggiungiActivity"
