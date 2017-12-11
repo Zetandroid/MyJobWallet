@@ -25,8 +25,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -59,6 +59,11 @@ public class MainActivity extends AppCompatActivity
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
 
+    //INDICIZZA COSE HOME
+    TextView sommaEntrate;
+    TextView sommaUscite;
+    TextView sommaStipendio;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +76,11 @@ public class MainActivity extends AppCompatActivity
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
                 .build();
         mAdView.loadAd(adRequest);
+
+        //DICHIARAZIONE COSE HOME
+        sommaEntrate  = (TextView) findViewById(R.id.txtEntrateCard1);
+        sommaUscite = (TextView) findViewById(R.id.txtSpeseCard1);
+        sommaStipendio = (TextView) findViewById(R.id.txtCalcoloStipendio1);
 
         //SETTAGGI TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
@@ -170,6 +180,10 @@ public class MainActivity extends AppCompatActivity
         if (VariabiliGlobali.statoPremium.equals("SI")){
             mAdView.setVisibility(View.GONE);
         }
+
+        contiEntrateBarraSpese();
+        calcoloStipendio();
+
     }
 
     @Override
@@ -180,15 +194,19 @@ public class MainActivity extends AppCompatActivity
                 animateFAB();
                 break;
             case R.id.fab1:
+                animateFAB();
                 startActivity(new Intent(this, EntrateAggiungiActivity.class));
                 break;
             case R.id.fab2:
+                animateFAB();
                 startActivity(new Intent(this, SpeseAggiungiActivity.class));
                 break;
             case R.id.fab3:
+                animateFAB();
                 startActivity(new Intent(this, CalendarioActivity.class));
                 break;
             case R.id.fab4:
+                animateFAB();
                 startActivity(new Intent(this, NoteAggiungiActivity.class));
                 break;
         }
@@ -253,6 +271,13 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        contiEntrateBarraSpese();
+        calcoloStipendio();
     }
 
 
@@ -340,6 +365,75 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void contiEntrateBarraSpese(){
+
+        //SOMMA ENTRATE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Entrate",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaEntrate = cr.getDouble(0);
+                        sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
+                        if (VariabiliGlobali.sommaEntrate == 0){
+                            sommaEntrate.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        //SOMMA USCITE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Uscite",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaUscite = cr.getDouble(0);
+                        sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " €");
+                        if (VariabiliGlobali.sommaUscite == 0){
+                            sommaUscite.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+        Double calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
+        sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " €");
+
+        if(calcoloDelCazzo == 0){
+            sommaUscite.setText("0,00 €");
+            sommaEntrate.setText("0,00 €");
+        }
+    }
+
+    public void calcoloStipendio(){
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Importo) FROM CalcoloStipendio",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.calcoloCompletoStipendio = cr.getDouble(0);
+                        sommaStipendio.setText(String.valueOf(VariabiliGlobali.calcoloCompletoStipendio) + " €");
+                        if (VariabiliGlobali.calcoloCompletoStipendio == 0){
+                            sommaStipendio.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
