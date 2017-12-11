@@ -86,7 +86,6 @@ public class NoteActivity extends AppCompatActivity {
             }
         });
 
-
         //SETTAGGI RECYCLER VIEW
         mAdapter = new CustomAdapter(noteList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -138,8 +137,6 @@ public class NoteActivity extends AppCompatActivity {
             }
         }));
 
-
-
         //CONTROLLO PER LA VISUALIZZAZIONE DELL'INTERSTITIAL
         if(VariabiliGlobali.statoPremium.equals("SI")){
             //NOTHING
@@ -163,7 +160,6 @@ public class NoteActivity extends AppCompatActivity {
                 }
             });
         }
-
 
         caricaNote();
     }
