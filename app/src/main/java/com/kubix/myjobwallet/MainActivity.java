@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity
     public static SQLiteDatabase db;
 
     //INDICIZZA COSE HOME
+    TextView sommaSoloEntrate;
     TextView sommaEntrate;
     TextView sommaUscite;
     TextView sommaStipendio;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity
         mAdView.loadAd(adRequest);
 
         //DICHIARAZIONE COSE HOME
+        sommaSoloEntrate = (TextView) findViewById(R.id.txtEntrate1Card1);
         sommaEntrate  = (TextView) findViewById(R.id.txtEntrateCard1);
         sommaUscite = (TextView) findViewById(R.id.txtSpeseCard1);
         sommaStipendio = (TextView) findViewById(R.id.txtCalcoloStipendio1);
@@ -277,6 +279,7 @@ public class MainActivity extends AppCompatActivity
     public void onResume(){
         super.onResume();
         contiEntrateBarraSpese();
+        calcoloSoloEntrate();
         calcoloStipendio();
     }
 
@@ -426,6 +429,27 @@ public class MainActivity extends AppCompatActivity
                         sommaStipendio.setText(String.valueOf(VariabiliGlobali.calcoloCompletoStipendio) + " €");
                         if (VariabiliGlobali.calcoloCompletoStipendio == 0){
                             sommaStipendio.setText("0,00 €");
+                        }
+                    }while (cr.moveToNext());
+                }
+            }
+            cr.close();
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void calcoloSoloEntrate(){
+        //SOMMA ENTRATE SINGOLE
+        try {
+            Cursor cr=MainActivity.db.rawQuery("SELECT SUM (Cifra) FROM Entrate",null);
+            if(cr!=null){
+                if(cr.moveToFirst()){
+                    do{
+                        VariabiliGlobali.sommaEntrate = cr.getDouble(0);
+                        sommaSoloEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
+                        if (VariabiliGlobali.sommaEntrate == 0){
+                            sommaSoloEntrate.setText("0,00 €");
                         }
                     }while (cr.moveToNext());
                 }
