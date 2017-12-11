@@ -8,39 +8,22 @@
     android:orientation="horizontal">
 
     <ImageButton
-        android:id="@+id/btnWidEntrata"
+        android:id="@+id/btnWidTurno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#00ffffff"
-        android:src="@drawable/ic_widget_light_spesa" />
+        android:src="@drawable/ic_widget_light_turno" />
 
     <ImageButton
-        android:id="@+id/btnWidSpesa"
+        android:id="@+id/btnWidListaTurni"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:backgroundTint="#00ffffff"
-        android:src="@drawable/ic_widget_light_entrata" />
+        android:src="@drawable/ic_widget_light_lista_turni" />
 
-    <ImageButton
-        android:id="@+id/btnWidRiepilogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="#00ffffff"
-        android:src="@drawable/ic_widget_light_riepilogo" />
-
-    <ImageButton
-        android:id="@+id/btnWidMemo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:backgroundTint="#00ffffff"
-        android:src="@drawable/ic_widget_light_memo" />
 
 </LinearLayout>
