@@ -35,9 +35,7 @@
         <item name="colorPrimary">@color/darkColorPrimary</item>
         <item name="colorPrimaryDark">@color/darkColorPrimaryDark</item>
         <item name="colorAccent">@color/darkColorAccent</item>
-        <item name="colorControlNormal">@color/darktextColorPrimary</item>
-        <item name="android:textColorPrimary">@color/darktextColorPrimary</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
 
     <style name="AppTheme.Dark.NoActionBar">

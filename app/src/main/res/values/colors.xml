@@ -13,11 +13,11 @@
     <color name="coloreNeroTrasparente">#20000000</color>
 
     <!-- TEMA DARK -->
-    <color name="darkColorPrimary">#1E2756</color>
-    <color name="darkColorPrimaryDark">#141831</color>
+    <color name="darkColorPrimary">#222222</color>
+    <color name="darkColorPrimaryDark">#222222</color>
     <color name="darkColorAccent">#00BCD4</color>
-    <color name="darktextColorPrimary">#757575</color>
-    <color name="dakrtextColorSecondary">#9e9e9e</color>
+    <color name="darktextColorPrimary">#ffffff</color>
+    <color name="dakrtextColorSecondary">#ffffff</color>
 
     <!-- INTRODUZIONE -->
     <!-- DOTS INATTIVI -->
