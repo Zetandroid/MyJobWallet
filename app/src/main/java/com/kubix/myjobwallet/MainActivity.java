@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
