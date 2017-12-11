@@ -46,7 +46,6 @@ import com.kubix.myjobwallet.utility.VariabiliGlobali;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
-
     //INDICIZZA ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
     private AdView mAdView;
