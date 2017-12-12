@@ -48,7 +48,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarEntrataAggiungi);
-        setTitle(R.string.toolbarEntrateAggiungi);
+        setTitle("Aggiungi Entrata");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -121,7 +121,7 @@ public class EntrateAggiungiActivity extends AppCompatActivity {
             oraEntrata.setText("");
             onBackPressed();
         }else{
-            Snackbar.make(v, "INSERISCI TITOLO E CIFRA PER AGGIUNGERE L'ENTRATA MONETARIA", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "Inserisci Dati", Snackbar.LENGTH_LONG).show();
         }
     }
 

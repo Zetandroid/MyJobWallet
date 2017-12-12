@@ -48,5 +48,5 @@
         android:layout_marginTop="8dp"
         android:onClick="modificaEntrata"
         android:padding="8dp"
-        android:text="SALVA" />
+        android:text="Salva" />
 </LinearLayout>

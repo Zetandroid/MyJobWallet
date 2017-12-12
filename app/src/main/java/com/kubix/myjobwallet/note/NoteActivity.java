@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -63,7 +62,7 @@ public class NoteActivity extends AppCompatActivity {
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarNote);
-        setTitle(R.string.toolbarNote);
+        setTitle("Note");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -122,8 +121,8 @@ public class NoteActivity extends AppCompatActivity {
             public void onLongClick(View view, final int position) {
                 AlertDialog.Builder builder;
                 builder = new AlertDialog.Builder(NoteActivity.this);
-                builder.setTitle(R.string.elimina)
-                        .setMessage(R.string.elimina_veramente)
+                builder.setTitle("Elimina")
+                        .setMessage("Vuoi Eliminare?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINAZIONE
@@ -208,7 +207,7 @@ public class NoteActivity extends AppCompatActivity {
     public void modificaNota(View v){
         if (! titoloModifica.getText().toString().equals("") && ! corpoModifica.getText().toString().equals("")){
             MainActivity.db.execSQL("UPDATE Note SET Titolo = '"+titoloModifica.getText().toString()+"', Nota = '"+corpoModifica.getText().toString()+"' WHERE Titolo = '"+vecchioTitolo+"' AND Nota = '"+vecchiaNota+"'");
-            Toast.makeText(this, "NOTA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Modificata!", Toast.LENGTH_SHORT).show();
             finish();
         }else{
             //NOTHING

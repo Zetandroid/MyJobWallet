@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -23,13 +22,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.NativeExpressAdView;
 import com.google.android.gms.ads.VideoController;
-import com.google.android.gms.ads.VideoOptions;
 import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.fragment.BtnSheetSpeseFragment;
@@ -115,8 +111,8 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
 
                 AlertDialog.Builder builder;
                 builder = new AlertDialog.Builder(SpeseActivity.this);
-                builder.setTitle(R.string.elimina)
-                        .setMessage(R.string.elimina_veramente)
+                builder.setTitle("Elimina")
+                        .setMessage("Vuoi Eliminare?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINAZIONE
@@ -138,7 +134,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpese);
-        setTitle(R.string.toolbarSpese);
+        setTitle("Spese");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -622,7 +618,7 @@ public class SpeseActivity extends AppCompatActivity implements View.OnClickList
     public void modificaSpesa(View v){
        if (! testoModifica.getText().toString().equals("")){
            MainActivity.db.execSQL("UPDATE Uscite SET Cifra = '"+testoModifica.getText().toString()+"' WHERE Data = '"+vecchiaData+"' AND Titolo = '"+vecchioTitolo+"' AND Cifra = '"+vecchiaCifra+"' AND Categoria = '"+vecchioTag+"'");
-           Toast.makeText(this, "SPESA MODIFICATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+           Toast.makeText(this, "Modificata!", Toast.LENGTH_SHORT).show();
            finish();
        }else{
            //NOTHING

@@ -25,7 +25,7 @@ public class InfoActivity extends AppCompatActivity {
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarInfo);
-        setTitle(R.string.toolbarInfo);
+        setTitle("Info");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

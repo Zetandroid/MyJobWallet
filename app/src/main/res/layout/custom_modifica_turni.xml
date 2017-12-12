@@ -19,7 +19,7 @@
         android:layout_marginTop="24dp"
         android:editable="false"
         android:ems="10"
-        android:hint="@string/entrata_lavoro"
+        android:hint="Ora Entrata"
         android:onClick="settaEntrataPerModifica"
         android:textAlignment="center" />
 
@@ -31,7 +31,7 @@
         android:layout_marginRight="16dp"
         android:editable="false"
         android:ems="10"
-        android:hint="@string/uscita_lavoro"
+        android:hint="Ora Uscita"
         android:onClick="settaUscitaPerModifica"
         android:textAlignment="center" />
 
@@ -44,7 +44,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="24dp"
         android:onClick="aggiornaTurnoEsistente"
-        android:text="@string/modifica_turno"
+        android:text="Modifica"
         android:textSize="12sp" />
 
     <Button
@@ -57,7 +57,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
         android:onClick="trasformaInRiposo"
-        android:text="@string/trasforma_riposo"
+        android:text="Trasforma in turno"
         android:textSize="12sp" />
 
 </LinearLayout>

@@ -49,16 +49,10 @@ public class ProfiloActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profilo);
 
 
-        bottoneGoogle = (Button) findViewById(R.id.btnLoginGoogle);
-        bottoneGoogle.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)  {
-                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
-            }
-        });
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfilo);
-        setTitle(R.string.toolbarProfile);
+        setTitle("Profilo");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -123,7 +117,7 @@ public class ProfiloActivity extends AppCompatActivity {
 
     //EVENTO TEMPORANEO
     public void alertAggiornamento(View v){
-        Toast.makeText(this, R.string.prossimamente, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show();
     }
 
     public void contiEntrateBarraSpese(){

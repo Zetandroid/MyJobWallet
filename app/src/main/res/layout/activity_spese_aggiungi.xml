@@ -10,8 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/AppTheme" />
+        android:minHeight="?attr/actionBarSize"/>
 
     <ImageView
         android:id="@+id/imageBottonSalvaSpesa"
@@ -28,7 +27,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:text="@string/salva"
+        android:text="Salva"
         android:textColor="@color/coloreTestoBianco"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -61,7 +60,7 @@
                     android:layout_marginRight="8dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="@string/titolo"
+                    android:hint="Descrizione"
                     android:inputType="textMultiLine"
                     android:textSize="16sp" />
 
@@ -93,7 +92,7 @@
                     android:layout_marginLeft="72dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
-                    android:hint="@string/valore"
+                    android:hint="Importo"
                     android:inputType="numberDecimal"
                     android:textSize="16sp" />
 
@@ -154,7 +153,7 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:enabled="false"
-                    android:hint="@string/data"
+                    android:hint="Data"
                     android:inputType="date"
                     android:textSize="16sp" />
 
@@ -187,7 +186,7 @@
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:enabled="false"
-                    android:hint="@string/ora"
+                    android:hint="Ora"
                     android:inputType="time"
                     android:textSize="16sp" />
 

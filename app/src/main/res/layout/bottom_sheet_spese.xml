@@ -11,7 +11,7 @@
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
         android:paddingTop="8dp"
-        android:text="@string/seleziona_categoria"
+        android:text="Seleziona categoria"
         android:textAppearance="@android:style/TextAppearance.Material.Title"
         android:textColor="@color/textColorPrimary"
         android:textSize="14sp" />

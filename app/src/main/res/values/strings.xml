@@ -7,61 +7,13 @@
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
 
-    <!-- GENERALI -->
-    <string name="salva">Salva</string>
-    <string name="titolo">Titolo</string>
-    <string name="data">Data</string>
-    <string name="ora">Ora</string>
-    <string name="valore">Importo</string>
-    <string name="scrivi">Scrivi</string>
-    <string name="nome">Nome</string>
-    <string name="backup">BackUp</string>
-    <string name="valuta">Valuta</string>
-    <string name="entrate">Entrate</string>
-    <string name="spese">Spese</string>
-    <string name="ore_ordinarie">Ore ordinarie</string>
-    <string name="ore_lavorate">Ore lavorate</string>
-    <string name="ore_straordinarie">Straordinari del turno</string>
-    <string name="stipendio">Stipendio</string>
-    <string name="straordinari">Straordinari</string>
-    <string name="seleziona_categoria">Seleziona categoria</string>
-    <string name="entrata_lavoro">Entrata</string>
-    <string name="uscita_lavoro">Uscita</string>
-    <string name="valuta_app">Valuta app</string>
-    <string name="prossimamente">Prossimamente</string>
-    <string name="imposta_entrata">Imposta Entrata</string>
-    <string name="imposta_uscita">Imposta Uscita</string>
-    <string name="modifica_turno">Modifica turno</string>
-    <string name="trasforma_riposo">Trasforma in riposo</string>
-
-    <!-- POPUP -->
-    <string name="dati_inseriti_successo">DATI INSERITI CON SUCCESSO</string>
-    <string name="compila_tutti_dati">COMPILA TUTTI I DATI</string>
-    <string name="elimina">ELIMINA</string>
-    <string name="elimina_veramente">VUOI ELIMINARE?</string>
-    <string name="dati_non_inseriti">DATI NON INSERITI</string>
-    <string name="dati_inseriti">DATI INSERITI</string>
-    <string name="nessuna_modifica">NESSUNA MODIFICA</string>
-
-
-    <string name="toolbarHome">Pannello di controllo</string>
-    <string name="toolbarSettings">Impostazioni</string>
-    <string name="toolbarProfile">Profilo</string>
-    <string name="toolbarOre">Turno</string>
-    <string name="toolbarTurni">Lista Turni</string>
-    <string name="toolbarSpese">Spese</string>
-    <string name="toolbarSpeseAggiungi">Aggiungi Spese</string>
-    <string name="toolbarNote">Note</string>
-    <string name="toolbarNoteAggiungi">Aggiungi Nota</string>
-    <string name="toolbarCalendario">Calendario</string>
-    <string name="toolbarCalcoloPaga">Calcolo Paga</string>
-    <string name="toolbarPremium">Premium</string>
-    <string name="toolbarEntrate">Entrate</string>
-    <string name="toolbarEntrateAggiungi">Aggiungi Entrata</string>
-    <string name="toolbarRiepilogo">Riepilogo</string>
-    <string name="toolbarProfileDati">Dati Utente</string>
-    <string name="toolbarEmail">Invia Email</string>
-    <string name="toolbarInfo">Staff Kubix Studio</string>
+    <!-- PREMIUM -->
+    <string name="bottone_acquista">Acquista</string>
+    <string name="bottone_ripristina_acquisto">Ripristina Acquisto</string>
+    <string name="premium_linea_1">Rimuovi Pubblicità</string>
+    <string name="premium_linea_2">Sblocca i Widget</string>
+    <string name="premium_linea_3">Sblocca il BackUp</string>
+    <string name="premium_linea_4">Sblocca la Modalità Notturna</string>
 
     <!-- INTRODUZIONE -->
     <string name="next">Avanti</string>
@@ -76,42 +28,6 @@
     <string name="testoSlide4">Scrivi le tue Note con Testo e Immagini. Potrai anche inserire una notifica come promemoria</string>
     <string name="titoloSlide5">Riepilogo</string>
     <string name="testoSlide5">Grazie al riepilogo potrai monitorare tutte le tue translazioni mese dopo mese</string>
-
-
-    <!-- CALENDARIO/TURNI -->
-    <string name="calendario_inserisci_entrata">Inserisci Entrata</string>
-    <string name="calendario_inserisci_uscita">Inserisci Uscita</string>
-    <string name="calendario_inserisci_riposo">Inserisci Riposo</string>
-    <string name="ore">Ore</string>
-    <string name="minuti">Minuti</string>
-
-    <!-- EMAIL -->
-    <string name="email_linea_1">Hai un problema?</string>
-    <string name="email_linea_2">Hai una richiesta?</string>
-    <string name="email_linea_3">Inviaci una E-mail!</string>
-
-    <!-- PREMIUM -->
-    <string name="bottone_acquista">Acquista</string>
-    <string name="bottone_ripristina_acquista">Ripristina Acquista</string>
-    <string name="premium_linea_1">Rimuovi Pubblicità</string>
-    <string name="premium_linea_2">Calcola stipendio</string>
-    <string name="premium_linea_3">Crea BackUp sul telefono</string>
-    <string name="premium_linea_4">Sbocca i Widget</string>
-    <string name="aquisto_fallito">Acquisto fallito!</string>
-    <string name="acquisto_ok">Acquisto avvenuto con successo!</string>
-
-    <!-- PROFILO -->
-    <string name="profilo_disconnetti">Disconnetti</string>
-    <string name="profilo_login_google">Accedi con Google</string>
-    <string name="ore_lavorative">Ore lavorative</string>
-    <string name="paga_oraria">Paga oraria</string>
-    <string name="paga_straordinaria">Paga straordinaria</string>
-    <string name="imposta_dati">Imposta Dati</string>
-
-    <!-- PROFILO DATI -->
-    <string name="paga_oraria_ordinaria">Paga oraria</string>
-    <string name="paga_oraria_straordinaria">Paga straordinaria</string>
-
 
     <!-- BOTTOMSHEET ENTRATE -->
     <string name="bottomSheet_bonifico">Bonifico</string>
@@ -134,31 +50,6 @@
     <string name="bottomSheet_cibo">Cibo</string>
     <string name="bottomSheet_svago">Svago</string>
     <string name="bottomSheet_viaggi">Viaggi</string>
-
-    <!-- IMPOSTAZIONI -->
-    <string name="titolo_tema">Temi</string>
-    <string name="subtitolo_tema">Modalità notturna</string>
-    <string name="sommario_tema">Imposta il tema scuro</string>
-
-    <string name="titolo_notifiche">Notifiche</string>
-    <string name="subtitolo_tono_notifiche">Tono notifica</string>
-    <string name="sommario_tono_notifiche">Imposta il tono delle notifiche</string>
-
-    <string name="subtitolo_notifica_memo">Notifica Memo</string>
-    <string name="sommario_notifica_memo">Imposta un promemoria per le Note</string>
-
-    <string name="subtitolo_notifica_spesa">Notifica Spese</string>
-    <string name="sommario_notifica_spesa">Imposta un promemoria per le Spese</string>
-
-    <string name="subtitolo_backup_crea">Crea BackUp</string>
-    <string name="sommario_backup_crea">Salva il BackUp sul tio Dispositivo</string>
-
-    <string name="subtitolo_backup_carica">Carica BackUp</string>
-    <string name="sommario_backup_carica">Carica il BackUp sul tio Dispositivo</string>
-
-    <string name="titolo_cache">Dati e Cache</string>
-    <string name="subtitolo_cache">Cancella Dati e Cache</string>
-
 
     <!-- GIORNI -->
     <string name="lunedi">Lunedì</string>
@@ -183,6 +74,8 @@
     <string name="novembre">Novembre</string>
     <string name="dicembre">Dicembre</string>
 
+    <!-- IMPOSTAZIONI -->
     <string name="temadark_changed">Questa modifica avrà effetto al prossimo avvio</string>
+
 
 </resources>

@@ -61,7 +61,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/entrate"
+                    android:text="Entrate"
                     android:textAlignment="viewStart"
                     android:textColor="@color/textColorPrimary" />
 
@@ -89,7 +89,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/spese"
+                    android:text="Spese"
                     android:textAlignment="viewStart"
                     android:textColor="@color/textColorPrimary" />
 
@@ -117,7 +117,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/ore_ordinarie"
+                    android:text="Ore ordinarie"
                     android:textAlignment="viewStart"
                     android:textColor="@color/textColorPrimary" />
 
@@ -146,7 +146,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/straordinari"
+                    android:text="Ore straordinarie"
                     android:textAlignment="viewStart"
                     android:textColor="@color/textColorPrimary" />
 
@@ -174,7 +174,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:padding="4dp"
-                    android:text="@string/stipendio"
+                    android:text="Stipendio"
                     android:textAlignment="viewStart"
                     android:textColor="@color/textColorPrimary" />
 

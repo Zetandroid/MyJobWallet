@@ -8,7 +8,7 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_drawer_profilo"
-            android:title="@string/toolbarProfile" />
+            android:title="Profilo" />
         <item
             android:id="@+id/nav_email"
             android:icon="@drawable/ic_drawer_email"
@@ -22,32 +22,32 @@
         <item
             android:id="@+id/nav_turno"
             android:icon="@drawable/ic_drawer_turno"
-            android:title="@string/toolbarOre" />
+            android:title="Turno" />
 
         <item
             android:id="@+id/nav_lista_turni"
             android:icon="@drawable/ic_drawer_lista_turni"
-            android:title="@string/toolbarTurni" />
+            android:title="Lista Turni" />
 
         <item
             android:id="@+id/nav_entrate"
             android:icon="@drawable/ic_drawer_entrate"
-            android:title="@string/toolbarEntrate" />
+            android:title="Entrate" />
 
         <item
             android:id="@+id/nav_spesa"
             android:icon="@drawable/ic_drawer_spesa"
-            android:title="@string/toolbarSpese" />
+            android:title="Spese" />
 
         <item
             android:id="@+id/nav_riepilogo"
             android:icon="@drawable/ic_drawer_riepilogo"
-            android:title="@string/toolbarRiepilogo" />
+            android:title="Riepilogo" />
 
         <item
             android:id="@+id/nav_note"
             android:icon="@drawable/ic_drawer_note"
-            android:title="@string/toolbarNote" />
+            android:title="Note" />
 
     </group>
 
@@ -58,17 +58,17 @@
         <item
             android:id="@+id/nav_premium"
             android:icon="@drawable/ic_drawer_premium"
-            android:title="@string/toolbarPremium" />
+            android:title="Premium" />
 
         <item
             android:id="@+id/nav_setting"
             android:icon="@drawable/ic_drawer_setting"
-            android:title="@string/toolbarSettings" />
+            android:title="Impostazioni" />
 
         <item
             android:id="@+id/nav_valuta"
             android:icon="@drawable/ic_drawer_valuta"
-            android:title="@string/valuta_app"
+            android:title="Valuta MyJobWallet"
             android:visible="false" />
 
         <item

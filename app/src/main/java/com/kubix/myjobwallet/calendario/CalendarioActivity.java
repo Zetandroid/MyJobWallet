@@ -55,7 +55,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarOrologio);
-        setTitle(R.string.toolbarOre);
+        setTitle("Turno");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -219,7 +219,7 @@ public class CalendarioActivity extends AppCompatActivity {
             }
 
         }, hour, minute, true);
-        mTimePicker.setTitle(getString(R.string.imposta_entrata));
+        mTimePicker.setTitle("Inserisci Entrata");
         mTimePicker.show();
     }
 
@@ -266,7 +266,7 @@ public class CalendarioActivity extends AppCompatActivity {
                 int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
 
                 if(hours > oreOrdinarie){
-                    resaCalcoloOrdinarie = hours + getString(R.string.ore) +minutes + getString(R.string.minuti);
+                    resaCalcoloOrdinarie = hours + "Ore" +minutes + "Minuti";
                     resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " Ore " + minutes + " Minuti ";
                 }else{
                     resaCalcoloOrdinarie = hours + " Ore "+ minutes + " Minuti ";
@@ -287,7 +287,7 @@ public class CalendarioActivity extends AppCompatActivity {
             startActivity(new Intent(this, TurniActivity.class));
 
         }else{
-            Snackbar.make(v, R.string.compila_tutti_dati, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "Compila tutti i Dati", Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -330,7 +330,7 @@ public class CalendarioActivity extends AppCompatActivity {
 
             }
         }, hour, minute, true);
-        mTimePicker.setTitle(getString(R.string.imposta_uscita));
+        mTimePicker.setTitle("Inserisci Uscita");
         mTimePicker.show();
     }
 

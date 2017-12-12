@@ -12,8 +12,7 @@
         android:id="@+id/toolbarHome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/AppTheme" />
+        android:minHeight="?attr/actionBarSize"/>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view_home"

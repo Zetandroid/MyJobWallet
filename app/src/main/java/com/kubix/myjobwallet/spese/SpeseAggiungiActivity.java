@@ -52,7 +52,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarSpeseAggiungi);
-        setTitle(R.string.toolbarSpeseAggiungi);
+        setTitle("Aggiungi Spesa");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -126,7 +126,7 @@ public class SpeseAggiungiActivity extends AppCompatActivity {
             onBackPressed();
 
         }else{
-            Snackbar.make(v, "INSERISCI TITOLO E CIFRA PER AGGIUNGERE LA SPESA MONETARIA", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "Inserisci Dati", Snackbar.LENGTH_LONG).show();
         }
     }
 

@@ -3,44 +3,45 @@
 
 
     <!-- TEMA -->
-    <PreferenceCategory android:title="@string/titolo_tema">
+    <PreferenceCategory android:title="Tema">
 
         <SwitchPreference
             android:id="@+id/switchTheme"
             android:key="@string/SETTINGSKEY_TEMADARK"
-            android:summary="@string/sommario_tema"
-            android:title="@string/subtitolo_tema" />
+            android:title="Modalità Notturna"
+            android:summary="Imposta il tema scuro"/>
+
 
     </PreferenceCategory>
 
     <!-- NOTIFICHE -->
-    <PreferenceCategory android:title="@string/titolo_notifiche">
+    <PreferenceCategory android:title="Notifiche">
         <RingtonePreference
-            android:title="@string/subtitolo_tono_notifiche"
-            android:summary="@string/sommario_tono_notifiche"/>
+            android:title="Tono Notifica"
+            android:summary="Imposta il Tono delle Notifiche"/>
         <CheckBoxPreference
-            android:title="@string/subtitolo_notifica_memo"
-            android:summary="@string/sommario_notifica_memo"/>
+            android:title="Notifica Memo"
+            android:summary="Imposta una notifica per le Note"/>
         <CheckBoxPreference
-            android:title="@string/subtitolo_notifica_spesa"
-            android:summary="@string/sommario_notifica_spesa"/>/>
+            android:title="Notifica Spese"
+            android:summary="Imposta una notifica per le Spese"/>
 
     </PreferenceCategory>
 
     <!-- BACKUP -->
-    <PreferenceCategory  android:title="@string/backup">
+    <PreferenceCategory  android:title="BackUp">
         <Preference
-            android:title="@string/subtitolo_backup_crea"
-            android:summary="@string/sommario_backup_crea"/>
+            android:title="Crea BackUp"
+            android:summary="Salva il BackUp sul Dispositivo"/>
         <Preference
-            android:title="@string/subtitolo_backup_carica"
-            android:summary="@string/sommario_backup_carica"/>
+            android:title="Carica BackUp"
+            android:summary="Carica il BackUp dal Dispositivo"/>
     </PreferenceCategory>
 
     <!-- DATA E CACHE -->
-    <PreferenceCategory android:title="@string/titolo_cache">
+    <PreferenceCategory android:title="Dati &amp; Cache">
         <Preference
-            android:title="@string/subtitolo_cache"/>
+            android:title="Cancella Dati &amp; Cache"/>
     </PreferenceCategory>
 
     <!-- ABOUT -->

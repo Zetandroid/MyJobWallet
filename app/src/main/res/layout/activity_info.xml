@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/AppTheme" />
+        android:minHeight="?attr/actionBarSize"/>
 
     <ScrollView
         android:layout_width="match_parent"

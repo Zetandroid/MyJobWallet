@@ -60,7 +60,7 @@
                         android:editable="false"
                         android:ems="10"
                         android:focusable="false"
-                        android:hint="@string/calendario_inserisci_entrata"
+                        android:hint="Inserisci Entrata"
                         android:inputType="time"
                         android:onClick="dialogTimePickerClickEntrata"
                         android:padding="16dp"
@@ -83,7 +83,7 @@
                         android:background="@color/coloreLineaTrasparente"
                         android:ems="10"
                         android:focusable="false"
-                        android:hint="@string/calendario_inserisci_uscita"
+                        android:hint="Inserisci Uscita"
                         android:inputType="time"
                         android:onClick="dialogTimePickerClickUscita"
                         android:padding="16dp"
@@ -104,12 +104,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:clickable="true"
+                        android:focusable="true"
                         android:onClick="inserisciRiposo"
                         android:padding="16dp"
-                        android:text="@string/calendario_inserisci_riposo"
+                        android:text="Inserisci Riposo"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
-                        android:textSize="14sp" android:focusable="true" />
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -125,8 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:minHeight="?attr/actionBarSize"
-        app:theme="@style/AppTheme" />
+        android:minHeight="?attr/actionBarSize"/>
 
     <Button
         android:id="@+id/button4"
@@ -136,7 +137,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/imageView4"
         android:onClick="inserisciTurno"
-        android:text="@string/salva"
+        android:text="Salva"
         android:textColor="@color/coloreTestoBianco"
         android:textStyle="bold" />
 

@@ -9,8 +9,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbarProfilo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:theme="@style/AppTheme" />
+        android:layout_height="wrap_content"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,34 +25,12 @@
                 android:id="@+id/imgProfilePic"
                 android:layout_width="match_parent"
                 android:layout_height="96dp"
+                android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_profilo"
                 app:civ_border_color="@color/textColorPrimary"
                 app:civ_border_width="2dp" />
-
-            <TextView
-                android:id="@+id/idNome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_weight="1"
-                android:text="@string/nome"
-                android:textAlignment="center"
-                android:textColor="@color/textColorPrimary"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/idEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:text="E-mail"
-                android:textAlignment="center"
-                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -64,45 +41,9 @@
                 android:orientation="horizontal"
                 android:visibility="gone">
 
-                <Button
-                    android:id="@+id/btnProfiloDisconnetti"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_weight="1"
-                    android:text="@string/profilo_disconnetti"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/btnProfiloBackup"
-                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="4dp"
-                    android:layout_weight="1"
-                    android:text="@string/backup"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnLoginGoogle"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                android:layout_weight="1"
-                android:text="@string/profilo_login_google"
-                android:textAllCaps="false"
-                android:textColor="@color/colorAccent"
-                android:textSize="12sp"
-                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
@@ -143,7 +84,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
                             android:layout_marginTop="4dp"
-                            android:text="@string/entrate"
+                            android:text="Entrata"
                             android:textAlignment="center"
                             android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
@@ -188,7 +129,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
                             android:layout_marginTop="4dp"
-                            android:text="@string/spese"
+                            android:text="Spesa"
                             android:textAlignment="center"
                             android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
@@ -243,7 +184,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
                             android:layout_marginTop="4dp"
-                            android:text="@string/ore_ordinarie"
+                            android:text="Ore"
                             android:textAlignment="center"
                             android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
@@ -289,7 +230,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
                             android:layout_marginTop="4dp"
-                            android:text="@string/ore_straordinarie"
+                            android:text="Ore"
                             android:textAlignment="center"
                             android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
@@ -345,7 +286,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="4dp"
                             android:layout_marginTop="8dp"
-                            android:text="@string/stipendio"
+                            android:text="Stipendio"
                             android:textAlignment="center"
                             android:textColor="@color/textColorPrimary"
                             android:textSize="14sp"
@@ -410,7 +351,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="@string/ore_lavorative"
+                                android:text="Ore lavorative"
                                 android:textAlignment="viewStart"
                                 android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
@@ -442,7 +383,7 @@
                                 android:layout_centerHorizontal="true"
                                 android:layout_centerInParent="true"
                                 android:layout_weight="1"
-                                android:text="@string/paga_oraria"
+                                android:text="Paga oraria"
                                 android:textAlignment="viewStart"
                                 android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
@@ -476,7 +417,7 @@
                                 android:layout_centerInParent="true"
                                 android:layout_centerVertical="true"
                                 android:layout_weight="1"
-                                android:text="@string/paga_straordinaria"
+                                android:text="Paga straordinaria"
                                 android:textAlignment="viewStart"
                                 android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
@@ -511,7 +452,7 @@
                                 android:layout_centerInParent="true"
                                 android:layout_centerVertical="true"
                                 android:layout_weight="1"
-                                android:text="@string/valuta"
+                                android:text="Valuta"
                                 android:textAlignment="viewStart"
                                 android:textColor="@color/textColorPrimary"
                                 android:textStyle="bold" />
@@ -538,7 +479,7 @@
                             style="@style/Widget.AppCompat.Button.Borderless.Colored"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/imposta_dati"
+                            android:text="Imposta Dati"
                             android:textAllCaps="false"
                             android:textSize="14sp" />
 

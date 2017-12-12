@@ -29,7 +29,7 @@ public class RiepilogoActivity extends AppCompatActivity{
 
         //Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarRiepilogo);
-        setTitle(R.string.toolbarRiepilogo);
+        setTitle("Riepilogo");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);

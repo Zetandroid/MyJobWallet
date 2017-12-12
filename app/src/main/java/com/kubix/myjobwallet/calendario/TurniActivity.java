@@ -72,7 +72,7 @@ public class TurniActivity extends AppCompatActivity  {
 
         //TODO TOOLBAR
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarTurni);
-        setTitle(R.string.toolbarTurni);
+        setTitle("Lista Turni");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -115,8 +115,8 @@ public class TurniActivity extends AppCompatActivity  {
 
                 AlertDialog.Builder builder;
                 builder = new AlertDialog.Builder(TurniActivity.this);
-                builder.setTitle(R.string.elimina)
-                        .setMessage("VUOI VERAMENTE ELIMINARE?")
+                builder.setTitle("Elimina")
+                        .setMessage("VUOI ELIMINARE?")
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // ELIMINA
@@ -190,7 +190,7 @@ public class TurniActivity extends AppCompatActivity  {
             //Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_SHORT).show();
             //finish();
         }else{
-            Toast.makeText(this, R.string.nessuna_modifica, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nessuna Modifica", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -283,7 +283,7 @@ public class TurniActivity extends AppCompatActivity  {
                 int oreOrdinarie = VariabiliGlobali.oreOrdinarie;
 
                 if(hours > oreOrdinarie){
-                    resaCalcoloOrdinarie = hours + getString(R.string.ore) +minutes + getString(R.string.minuti);
+                    resaCalcoloOrdinarie = hours + "Ore" +minutes + "Minuti";
                     resaCalcoloStraordinarie = String.valueOf(Integer.valueOf(hours - oreOrdinarie)) + " Ore " + minutes + " Minuti ";
                 }else{
                     resaCalcoloOrdinarie = hours + " Ore "+ minutes + " Minuti ";
@@ -296,18 +296,18 @@ public class TurniActivity extends AppCompatActivity  {
 
             //MODIFICA TURNO
             MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = '"+oraEntrataPerModificaTurno.getText().toString()+"', oraUscita = '"+oraUscitaPerModificaTurno.getText().toString()+"', Ordinarie = '"+resaCalcoloOrdinarie+"', Straordinarie = '"+resaCalcoloStraordinarie+"' WHERE numeroGiorno = '"+vecchioNumeroGiorno+"' AND mese = '"+vecchioNumeroMese+"' AND anno  = '"+vecchioNumeroAnno+"'");
-            Toast.makeText(this, "MODIFICA TURNO EFFETTUATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Modificato!", Toast.LENGTH_SHORT).show();
             finish();
 
         }else{
-            Snackbar.make(v, R.string.compila_tutti_dati, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "Compila tutti i Dati", Snackbar.LENGTH_LONG).show();
         }
     }
 
     public void trasformaInRiposo (View v){
         //TRASFORMA TURNO IN RIPOSO
         MainActivity.db.execSQL("UPDATE Turni SET oraEntrata = 'RIPOSO', oraUscita = 'RIPOSO', Ordinarie = 'RIPOSO', Straordinarie = 'RIPOSO' WHERE numeroGiorno = '"+vecchioNumeroGiorno+"' AND mese = '"+vecchioNumeroMese+"' AND anno  = '"+vecchioNumeroAnno+"'");
-        Toast.makeText(this, "MODIFICA TURNO EFFETTUATA CON SUCCESSO", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Modificato!", Toast.LENGTH_SHORT).show();
         finish();
     }
 

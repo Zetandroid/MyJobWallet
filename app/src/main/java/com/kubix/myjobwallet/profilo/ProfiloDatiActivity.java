@@ -32,7 +32,7 @@ public class ProfiloDatiActivity extends AppCompatActivity {
 
         //TODO TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarProfiloDati);
-        setTitle(R.string.toolbarProfileDati);
+        setTitle("Dati Utente");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -50,10 +50,10 @@ public class ProfiloDatiActivity extends AppCompatActivity {
             VariabiliGlobali.oreOrdinarie = Integer.valueOf(aggiornaOrdinarie.getText().toString());
             VariabiliGlobali.nettoOrario = Double.valueOf(aggiornaPaga.getText().toString());
             VariabiliGlobali.nettoStraordinario = Double.valueOf(aggiornaPagaStraordinari.getText().toString());
-            Toast.makeText(this, R.string.dati_inseriti_successo, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Dati inseriti!", Toast.LENGTH_LONG).show();
             finish();
         }else{
-            Toast.makeText(this, R.string.compila_tutti_dati, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Compila tutti i Dati", Toast.LENGTH_SHORT).show();
         }
     }
 

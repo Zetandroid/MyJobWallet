@@ -49,20 +49,20 @@ public class PremiumActivity extends AppCompatActivity {
         bottoneAcquista = (Button) findViewById(R.id.btnAcquista);
         bottoneAcquista.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)  {
-                Toast.makeText(getBaseContext(), R.string.prossimamente , Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getBaseContext(), "Coming Soon", Toast.LENGTH_SHORT ).show();
             }
         });
         bottoneRipristina = (Button) findViewById(R.id.btnRipristana);
         bottoneRipristina.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)  {
-                Toast.makeText(getBaseContext(), R.string.prossimamente , Toast.LENGTH_SHORT ).show();
+                Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
             }
         });
         bottoneRipristina.setEnabled(true);
 
         //TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarPremium);
-        setTitle(R.string.toolbarPremium);
+        setTitle("Premium");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -73,9 +73,9 @@ public class PremiumActivity extends AppCompatActivity {
         mHelper.startSetup(new IabHelper.OnIabSetupFinishedListener() {
             public void onIabSetupFinished(IabResult result) {
                 if (!result.isSuccess()) {
-                    Log.d(TAG, getString(R.string.aquisto_fallito) + result);
+                    Log.d(TAG, "Acquisto Fallito!" + result);
                 } else {
-                    Log.d(TAG, getString(R.string.acquisto_ok));
+                    Log.d(TAG, "Acquisto OK!");
                 }
             }
         });

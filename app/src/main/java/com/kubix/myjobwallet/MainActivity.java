@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity
 
         //SETTAGGI TOOLBAR
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarHome);
-        setTitle(R.string.toolbarHome);
+        setTitle("Pannello di Controllo");
         setSupportActionBar(toolbar);
 
         //SETTAGGI NAVIGATION DRAWER
@@ -342,7 +342,7 @@ public class MainActivity extends AppCompatActivity
                     Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
                 }
             });
-            builder.setNegativeButton(getString(R.string.bottone_ripristina_acquista), new DialogInterface.OnClickListener() {
+            builder.setNegativeButton(getString(R.string.bottone_ripristina_acquisto), new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Toast.makeText(getBaseContext(), "Coming Soon" , Toast.LENGTH_SHORT ).show();
@@ -361,8 +361,8 @@ public class MainActivity extends AppCompatActivity
                 _Intent.setType("text/html");
                 _Intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{ "studio.kubix@gmail.com" });
                 _Intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "MyJobWallet");
-                _Intent.putExtra(android.content.Intent.EXTRA_TEXT, "Ciao Kubix Studio...");
-                startActivity(Intent.createChooser(_Intent, "Invia email a Kubix Studio"));
+                _Intent.putExtra(android.content.Intent.EXTRA_TEXT, "Hello Kubix Studio...");
+                startActivity(Intent.createChooser(_Intent, "Send email a Kubix Studio"));
 
         } else if (id == R.id.nav_valuta){
             startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://play.google.com/store/apps/details?id=com.kubix.myjobwallet&ah=Is2oYzVlAaRsq8sYhuOqZ0UACUc&hl=it")));

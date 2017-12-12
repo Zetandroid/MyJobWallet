@@ -11,8 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/AppTheme" />
+        android:minHeight="?attr/actionBarSize"/>
 
 
     <com.google.android.gms.ads.AdView
