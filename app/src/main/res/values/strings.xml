@@ -68,10 +68,14 @@
     <string name="skip">Salta</string>
     <string name="start">Vai</string>
     <string name="testoSlide1">Benvenuto in MyJobWallet</string>
-    <string name="testoSlide2">Calcola il tuo stipendio in modo facile e veloce</string>
-    <string name="testoSlide3">Traccia tutte le tue spese</string>
+    <string name="titoloSlide2">Stipendio</string>
+    <string name="testoSlide2">Inserisci i Dati nel Profilo e i turni di Lavoro giornalieri,MyJobWallet calcolerà il tuo stipendio </string>
+    <string name="titoloSlide3">Tracciamento</string>
+    <string name="testoSlide3">Traccia tutte le tue spese in modo semplice e veloce</string>
+    <string name="titoloSlide4">Note</string>
     <string name="testoSlide4">Scrivi le tue Note con Testo e Immagini. Potrai anche inserire una notifica come promemoria</string>
-    <string name="testoSlide5">Tieni traccia di tutte le tue spese mensili tramite il Riepilogo</string>
+    <string name="titoloSlide5">Riepilogo</string>
+    <string name="testoSlide5">Grazie al riepilogo potrai monitorare tutte le tue translazioni mese dopo mese</string>
 
 
     <!-- CALENDARIO/TURNI -->

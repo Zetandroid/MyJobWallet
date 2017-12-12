@@ -19,7 +19,7 @@
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:id="@+id/immagineSlide3"
+                android:id="@+id/immagineSlide2"
                 android:layout_width="match_parent"
                 android:layout_height="256dp"
                 android:layout_gravity="center"
@@ -28,15 +28,27 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/testoSlide3"
+                android:id="@+id/titoloTestoSlide1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:padding="8dp"
+                android:text="@string/titoloSlide2"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/testoSlide2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
                 android:padding="8dp"
                 android:text="@string/testoSlide2"
-                android:textAppearance="@android:style/TextAppearance.Medium" />
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/textColorPrimary" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
