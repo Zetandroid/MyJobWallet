@@ -24,7 +24,7 @@
             android:layout_height="24dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            app:srcCompat="@drawable/ic_spesa_costo" />
+            app:srcCompat="@drawable/ic_spesa_importo" />
 
         <EditText
             android:id="@+id/testoModificaCifraEntrata"

@@ -102,7 +102,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_costo" />
+                    app:srcCompat="@drawable/ic_spesa_importo" />
             </RelativeLayout>
 
             <View
