@@ -10,6 +10,8 @@ public class VariabiliGlobali {
     public static Double nettoOrario;
     public static Double nettoStraordinario;
     public static Double calcoloCompletoStipendio;
+    public static int calcoloOrdinarie;
+    public static int calcoloStraordinarie;
 
     //INERENTI A HOME PAGE
     public static Double sommaEntrate;

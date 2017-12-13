@@ -192,6 +192,10 @@ public class MainActivity extends AppCompatActivity
         contiEntrateBarraSpese();
         calcoloStipendio();
 
+        sommaStipendio.setText(sommaStipendio.getText().toString().replace(".",",").toString());
+        sommaSoloEntrate.setText(sommaSoloEntrate.getText().toString().replace(".",",").toString());
+        sommaEntrate.setText(sommaEntrate.getText().toString().replace(".",",").toString());
+        sommaUscite.setText(sommaUscite.getText().toString().replace(".",",").toString());
     }
 
     @Override
@@ -287,6 +291,10 @@ public class MainActivity extends AppCompatActivity
         contiEntrateBarraSpese();
         calcoloSoloEntrate();
         calcoloStipendio();
+        sommaStipendio.setText(sommaStipendio.getText().toString().replace(".",",").toString());
+        sommaSoloEntrate.setText(sommaSoloEntrate.getText().toString().replace(".",",").toString());
+        sommaEntrate.setText(sommaEntrate.getText().toString().replace(".",",").toString());
+        sommaUscite.setText(sommaUscite.getText().toString().replace(".",",").toString());
     }
 
 
@@ -464,6 +472,11 @@ public class MainActivity extends AppCompatActivity
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+
+    //CALCOLO ORE LAVORATIVE E STRAORDINARI TOTALI
+    public void calcoloOreLavorative(){
+
     }
 
 }
