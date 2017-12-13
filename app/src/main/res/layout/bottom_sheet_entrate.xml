@@ -16,7 +16,6 @@
         android:paddingTop="8dp"
         android:text="Seleziona categoria"
         android:textAppearance="@android:style/TextAppearance.Material.Title"
-        android:textColor="@color/textColorPrimary"
         android:textSize="14sp" />
 
     <RelativeLayout
@@ -44,7 +43,6 @@
             android:text="@string/bottomSheet_bonifico"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -73,7 +71,6 @@
             android:text="@string/bottomSheet_assegno"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -101,7 +98,6 @@
             android:text="@string/bottomSheet_vincita"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -129,7 +125,6 @@
             android:text="@string/bottomSheet_regalo"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -157,7 +152,6 @@
             android:text="@string/bottomSheet_beni"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -185,7 +179,6 @@
             android:text="@string/bottomSheet_rimborsi"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -213,7 +206,6 @@
             android:text="@string/bottomSheet_vendite"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
@@ -241,14 +233,12 @@
             android:text="@string/bottomSheet_altro"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/textColorPrimary" />
+        android:layout_height="1dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -275,7 +265,6 @@
             android:text="@string/bottomSheet_tutte_categorie"
             android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textColor="@color/textColorSecondary"
             android:textSize="14sp" />
     </RelativeLayout>
 

@@ -85,7 +85,6 @@
                     android:padding="4dp"
                     android:text="Ora Entrata"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -99,7 +98,6 @@
                     android:padding="4dp"
                     android:text="07:30"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
@@ -119,7 +117,6 @@
                     android:padding="4dp"
                     android:text="Ora Uscita"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -133,7 +130,6 @@
                     android:padding="4dp"
                     android:text="18:00"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
@@ -153,7 +149,6 @@
                     android:padding="4dp"
                     android:text="Ore ordinarie"
                     android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -167,7 +162,6 @@
                     android:padding="4dp"
                     android:text="8h"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
@@ -188,7 +182,6 @@
                     android:padding="4dp"
                     android:text="Ore straordinarie"
                     android:textAlignment="textStart"
-                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -202,7 +195,6 @@
                     android:padding="4dp"
                     android:text="1h"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/textColorSecondary"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 

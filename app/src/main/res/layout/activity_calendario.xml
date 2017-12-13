@@ -7,6 +7,14 @@
     android:orientation="vertical">
 
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarOrologio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
@@ -36,8 +44,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/textColorPrimary" />
+                android:layout_height="1dp"/>
 
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
@@ -65,7 +72,6 @@
                         android:onClick="dialogTimePickerClickEntrata"
                         android:padding="16dp"
                         android:textAlignment="center"
-                        android:textColor="@color/textColorSecondary"
                         android:textSize="14sp"
                         tools:ignore="Deprecated,HardcodedText" />
 
@@ -88,7 +94,6 @@
                         android:onClick="dialogTimePickerClickUscita"
                         android:padding="16dp"
                         android:textAlignment="center"
-                        android:textColor="@color/textColorSecondary"
                         android:textSize="14sp"
                         tools:ignore="HardcodedText" />
 
@@ -121,14 +126,6 @@
 
     </ScrollView>
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbarOrologio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:minHeight="?attr/actionBarSize"/>
-
     <Button
         android:id="@+id/button4"
         style="@style/Widget.AppCompat.Button.Borderless"
@@ -138,7 +135,7 @@
         android:layout_alignTop="@+id/imageView4"
         android:onClick="inserisciTurno"
         android:text="Salva"
-        android:textColor="@color/coloreTestoBianco"
+        android:textColor="@android:color/white"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -19,7 +19,6 @@
                 android:id="@+id/linearTitolo"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/colorBiancoScuro"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -30,7 +29,6 @@
                     android:padding="4dp"
                     android:text="Novembre"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -42,7 +40,6 @@
                     android:padding="4dp"
                     android:text="2017"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/textColorPrimary"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText" />
@@ -62,8 +59,7 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Entrate"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary" />
+                    android:textAlignment="viewStart"/>
 
                 <TextView
                     android:id="@+id/textView7"
@@ -90,8 +86,7 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Spese"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary" />
+                    android:textAlignment="viewStart"/>
 
                 <TextView
                     android:id="@+id/textView8"
@@ -118,8 +113,7 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Ore ordinarie"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary" />
+                    android:textAlignment="viewStart"/>
 
                 <TextView
                     android:id="@+id/textView9"
@@ -147,8 +141,7 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Ore straordinarie"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary" />
+                    android:textAlignment="viewStart"/>
 
                 <TextView
                     android:id="@+id/textView11"
@@ -175,8 +168,7 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Stipendio"
-                    android:textAlignment="viewStart"
-                    android:textColor="@color/textColorPrimary" />
+                    android:textAlignment="viewStart"/>
 
                 <TextView
                     android:id="@+id/textView13"

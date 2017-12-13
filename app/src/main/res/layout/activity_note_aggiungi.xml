@@ -11,9 +11,9 @@
         android:id="@+id/toolbarAggiungiNota"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:minHeight="?attr/actionBarSize"/>
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="Salva"
-        android:textColor="@color/coloreTestoBianco"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 

@@ -26,11 +26,9 @@
                 android:id="@+id/dataNote"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="@color/colorBiancoScuro"
                 android:gravity="center"
                 android:paddingLeft="16dp"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
-                android:textColor="@color/textColorPrimary"
                 android:textSize="18sp" />
 
             <TextView
@@ -45,7 +43,6 @@
                 android:paddingTop="4dp"
                 android:text="TextView"
                 android:textAppearance="@android:style/TextAppearance.Material.Title"
-                android:textColor="@color/textColorPrimary"
                 android:textSize="14sp" />
 
             <TextView
@@ -61,7 +58,6 @@
                 android:paddingTop="4dp"
                 android:text="TextView"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
-                android:textColor="@color/textColorSecondary"
                 android:textSize="14sp" />
 
         </LinearLayout>

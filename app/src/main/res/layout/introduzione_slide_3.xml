@@ -35,7 +35,6 @@
                 android:layout_marginStart="16dp"
                 android:padding="8dp"
                 android:text="@string/titoloSlide3"
-                android:textColor="@color/textColorPrimary"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -47,8 +46,7 @@
                 android:layout_marginStart="16dp"
                 android:padding="8dp"
                 android:text="@string/testoSlide3"
-                android:textAppearance="@android:style/TextAppearance.Medium"
-                android:textColor="@color/textColorPrimary" />
+                android:textAppearance="@android:style/TextAppearance.Medium"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

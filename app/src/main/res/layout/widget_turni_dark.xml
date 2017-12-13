@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="40dp"
     android:layout_margin="4dp"
-    android:background="@color/textColorPrimary"
+    android:background="#333333"
     android:elevation="2dp"
     android:gravity="center_horizontal|center"
     android:orientation="horizontal">
@@ -26,6 +26,4 @@
         android:layout_marginStart="8dp"
         android:backgroundTint="#00ffffff"
         android:src="@drawable/ic_widget_dark_lista_turni" />
-
-
 </LinearLayout>

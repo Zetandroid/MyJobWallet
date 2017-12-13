@@ -48,7 +48,7 @@
             android:layout_weight="1"
             android:stateListAnimator="@null"
             android:text="Ripristina"
-            android:textColor="@color/coloreTestoBianco"
+            android:textColor="@android:color/white"
             android:textSize="12sp"
             android:textStyle="bold"
             tools:ignore="RtlHardcoded" />
