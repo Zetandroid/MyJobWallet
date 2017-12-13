@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,12 +19,15 @@ import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.setting.ClsSettings;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
+import org.w3c.dom.Text;
+
 public class ProfiloActivity extends AppCompatActivity {
 
     //INDICIZZAZIONE OGGETTI ORA
     public static TextView oreOrdinarieText;
     public static TextView pagaOrariaText;
     public static TextView pagaStraordinariaText;
+    public static TextView valutaMondiale;
     public static TextView sommaEntrate;
     public static TextView sommaUscite;
     public static TextView sommaStipendio;
@@ -72,6 +76,7 @@ public class ProfiloActivity extends AppCompatActivity {
         oreOrdinarieText = (TextView) findViewById(R.id.txtOre);
         pagaOrariaText = (TextView) findViewById(R.id.txtPagaOraria);
         pagaStraordinariaText = (TextView) findViewById(R.id.txtStraordinaria);
+        valutaMondiale = (TextView) findViewById(R.id.txtValuta);
 
         //INDICIZZO OGGETTI CALCOLI VARI
         sommaEntrate = (TextView) findViewById(R.id.txtEntrateCard1);
@@ -103,6 +108,7 @@ public class ProfiloActivity extends AppCompatActivity {
                         oreOrdinarieText.setText(cr.getString(cr.getColumnIndex("OreOrdinarie")).toString());
                         pagaOrariaText.setText(cr.getString(cr.getColumnIndex("NettoOrario")).toString());
                         pagaStraordinariaText.setText(cr.getString(cr.getColumnIndex("NettoStraordinario")).toString());
+                        valutaMondiale.setText(cr.getString(cr.getColumnIndex("ValutaSimbolo")).toString());
                     }while (cr.moveToNext());
                 }else{
 

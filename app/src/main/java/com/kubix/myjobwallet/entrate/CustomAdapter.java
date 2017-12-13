@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.List;
 
@@ -48,7 +49,7 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Entrate entrate = entrateList.get(position);
         holder.titolo.setText(entrate.getTitolo());
-        holder.entrata.setText(entrate.getEntrata() + " €");
+        holder.entrata.setText(entrate.getEntrata() + " " + VariabiliGlobali.simboloValuta);
         String categoria = entrate.getCategoria();
 
         if(categoria.equals("Bonifico")){

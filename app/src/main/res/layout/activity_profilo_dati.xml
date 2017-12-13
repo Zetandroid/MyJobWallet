@@ -168,7 +168,7 @@
                     android:layout_marginLeft="16dp"
                     app:srcCompat="@drawable/ic_profilo_valuta" />
 
-                <EditText
+                <Spinner
                     android:id="@+id/valutaMondiale"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -184,6 +184,7 @@
                     android:inputType="number"
                     android:textAlignment="viewStart"
                     android:textSize="14sp" />
+
             </RelativeLayout>
 
             <View

@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.kubix.myjobwallet.R;
+import com.kubix.myjobwallet.utility.VariabiliGlobali;
+
 import java.util.List;
 
 class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
@@ -45,7 +47,7 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
     public void onBindViewHolder(MyViewHolder holder, int position) {
         Uscite uscite = usciteList.get(position);
         holder.titolo.setText(uscite.getTitolo());
-        holder.uscita.setText(uscite.getUscita() + " €");
+        holder.uscita.setText(uscite.getUscita() + " " + VariabiliGlobali.simboloValuta);
         String categoria = uscite.getCategoriaUscita();
         if(categoria.equals("Casa")){
             holder.categoriaImg.setImageResource(R.drawable.ic_btnsheet_spese_casa);

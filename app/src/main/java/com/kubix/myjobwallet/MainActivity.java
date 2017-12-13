@@ -137,7 +137,6 @@ public class MainActivity extends AppCompatActivity
             //NOTHING
         }
 
-
         //CARICA DA DATABASE IN VARIABILI GLOBALI I DATI DELLO STATO PREMIUM
         try {
             Cursor cr=MainActivity.db.rawQuery("SELECT * FROM Acquisti",null);
@@ -161,6 +160,7 @@ public class MainActivity extends AppCompatActivity
         //IMPOSTA DATI INIZIALI TABELLA INFOPROFILO
         try{
             db.execSQL("INSERT INTO InfoProfilo (ID, OreOrdinarie, NettoOrario, NettoStraordinario) VALUES ('0', '8', '8', '10')");
+            db.execSQL("UPDATE InfoProfilo SET ValutaSimbolo = '€' WHERE ID = '0'");
         }catch (SQLException e){
             //NOTHING
         }
@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity
                         VariabiliGlobali.oreOrdinarie = Integer.valueOf(cr.getString(cr.getColumnIndex("OreOrdinarie")));
                         VariabiliGlobali.nettoOrario = Double.valueOf(cr.getString(cr.getColumnIndex("NettoOrario")));
                         VariabiliGlobali.nettoStraordinario = Double.valueOf(cr.getString(cr.getColumnIndex("NettoStraordinario")));
+                        VariabiliGlobali.simboloValuta = String.valueOf(cr.getString(cr.getColumnIndex("ValutaSimbolo")));
                     }while (cr.moveToNext());
                 }else{
                     Toast.makeText(getApplicationContext(), "NESSUN DATO INSERITO", Toast.LENGTH_LONG).show();
@@ -393,7 +394,7 @@ public class MainActivity extends AppCompatActivity
                 if(cr.moveToFirst()){
                     do{
                         VariabiliGlobali.sommaEntrate = cr.getDouble(0);
-                        sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
+                        sommaEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " " + VariabiliGlobali.simboloValuta);
                         if (VariabiliGlobali.sommaEntrate == 0){
                             sommaEntrate.setText("0,00 €");
                         }
@@ -412,9 +413,9 @@ public class MainActivity extends AppCompatActivity
                 if(cr.moveToFirst()){
                     do{
                         VariabiliGlobali.sommaUscite = cr.getDouble(0);
-                        sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " €");
+                        sommaUscite.setText(String.valueOf(VariabiliGlobali.sommaUscite) + " "+VariabiliGlobali.simboloValuta);
                         if (VariabiliGlobali.sommaUscite == 0){
-                            sommaUscite.setText("0,00 €");
+                            sommaUscite.setText("0,00 " + VariabiliGlobali.simboloValuta);
                         }
                     }while (cr.moveToNext());
                 }
@@ -425,11 +426,11 @@ public class MainActivity extends AppCompatActivity
         }
 
         Double calcoloDelCazzo = VariabiliGlobali.sommaEntrate - VariabiliGlobali.sommaUscite;
-        sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " €");
+        sommaEntrate.setText(String.valueOf(calcoloDelCazzo) + " " + VariabiliGlobali.simboloValuta);
 
         if(calcoloDelCazzo == 0){
-            sommaUscite.setText("0,00 €");
-            sommaEntrate.setText("0,00 €");
+            sommaUscite.setText("0,00 " + VariabiliGlobali.simboloValuta);
+            sommaEntrate.setText("0,00 " + VariabiliGlobali.simboloValuta);
         }
     }
 
@@ -440,9 +441,9 @@ public class MainActivity extends AppCompatActivity
                 if(cr.moveToFirst()){
                     do{
                         VariabiliGlobali.calcoloCompletoStipendio = cr.getDouble(0);
-                        sommaStipendio.setText(String.valueOf(VariabiliGlobali.calcoloCompletoStipendio) + " €");
+                        sommaStipendio.setText(String.valueOf(VariabiliGlobali.calcoloCompletoStipendio) + " " + VariabiliGlobali.simboloValuta);
                         if (VariabiliGlobali.calcoloCompletoStipendio == 0){
-                            sommaStipendio.setText("0,00 €");
+                            sommaStipendio.setText("0,00 " + VariabiliGlobali.simboloValuta);
                         }
                     }while (cr.moveToNext());
                 }
@@ -461,9 +462,9 @@ public class MainActivity extends AppCompatActivity
                 if(cr.moveToFirst()){
                     do{
                         VariabiliGlobali.sommaEntrate = cr.getDouble(0);
-                        sommaSoloEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " €");
+                        sommaSoloEntrate.setText(String.valueOf(VariabiliGlobali.sommaEntrate) + " " + VariabiliGlobali.simboloValuta);
                         if (VariabiliGlobali.sommaEntrate == 0){
-                            sommaSoloEntrate.setText("0,00 €");
+                            sommaSoloEntrate.setText("0,00 " + VariabiliGlobali.simboloValuta);
                         }
                     }while (cr.moveToNext());
                 }
