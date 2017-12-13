@@ -80,19 +80,19 @@ public class PremiumActivity extends AppCompatActivity {
             }
         });
     }
-        public void bottoneAcquista(View v) {
-            mHelper.launchPurchaseFlow(this, ITEM_SKU, 10001,
-                    mPurchaseFinishedListener, "com.kubix.myjobwallet.pro");
-        }
+    public void bottoneAcquista(View v) {
+        mHelper.launchPurchaseFlow(this, ITEM_SKU, 10001,
+                mPurchaseFinishedListener, "com.kubix.myjobwallet.pro");
+    }
 
-        protected void onActivityResult(int requestCode, int resultCode,
-        Intent data)
-        {
-            if (!mHelper.handleActivityResult(requestCode,
-                    resultCode, data)) {
-                super.onActivityResult(requestCode, resultCode, data);
-            }
+    protected void onActivityResult(int requestCode, int resultCode,
+                                    Intent data)
+    {
+        if (!mHelper.handleActivityResult(requestCode,
+                resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
         }
+    }
 
     IabHelper.OnIabPurchaseFinishedListener mPurchaseFinishedListener
             = new IabHelper.OnIabPurchaseFinishedListener() {
@@ -106,7 +106,7 @@ public class PremiumActivity extends AppCompatActivity {
             else if (purchase.getSku().equals(ITEM_SKU)) {
                 consumeItem();
                 bottoneAcquista.setEnabled(false);
-                
+
             }
 
         }
@@ -180,7 +180,9 @@ public class PremiumActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    
+
 }
+
+
 
 

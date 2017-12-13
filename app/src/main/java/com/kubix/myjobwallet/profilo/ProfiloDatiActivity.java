@@ -48,7 +48,7 @@ public class ProfiloDatiActivity extends AppCompatActivity {
         //RIEMPIO LO SPINNER CON I SIMBOLI DI VALUTA
         String[] arraySpinner;
         arraySpinner = new String[] {
-                "€", "$", "¥", "£"
+                "€  EUR", "$  USD", "¥  JPY", "£  GPB"
         };
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, arraySpinner);
