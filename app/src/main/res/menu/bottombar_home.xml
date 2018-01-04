@@ -20,7 +20,7 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_note"
+        android:id="@+id/action_memo"
         android:enabled="true"
         android:icon="@drawable/ic_widget_dark_memo"
         android:title="Memo"

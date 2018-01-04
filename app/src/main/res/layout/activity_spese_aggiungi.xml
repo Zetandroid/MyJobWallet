@@ -42,10 +42,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="24dp"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -57,8 +53,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="72dp"
-                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="56dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Descrizione"
@@ -71,14 +67,16 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/ic_spesa_titolo" android:contentDescription="TODO"/>
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="TODO"
+                    app:srcCompat="@drawable/ic_spesa_titolo" />
             </RelativeLayout>
 
             <View
                 android:id="@+id/view7"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="72dp"
+                android:layout_marginStart="56dp"
                 android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
@@ -90,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="72dp"
+                    android:layout_marginStart="56dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:hint="Importo"
@@ -103,6 +101,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
                     app:srcCompat="@drawable/ic_spesa_importo" />
             </RelativeLayout>
 
@@ -110,7 +109,7 @@
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="72dp"
+                android:layout_marginStart="56dp"
                 android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
@@ -122,7 +121,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="72dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="56dp"
                     android:textAlignment="textStart" />
 
                 <ImageView
@@ -131,6 +131,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
                     app:srcCompat="@drawable/ic_spesa_tag" />
             </RelativeLayout>
 
@@ -138,7 +139,7 @@
                 android:id="@+id/view5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="72dp"
+                android:layout_marginStart="56dp"
                 android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
@@ -147,10 +148,11 @@
 
                 <EditText
                     android:id="@+id/testoDataSpesa"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="72dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="56dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:enabled="false"
@@ -164,6 +166,7 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
                     app:srcCompat="@drawable/ic_spesa_data" />
             </RelativeLayout>
 
@@ -171,7 +174,7 @@
                 android:id="@+id/view6"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="72dp"
+                android:layout_marginStart="56dp"
                 android:background="@color/coloreNeroTrasparente" />
 
             <RelativeLayout
@@ -180,10 +183,11 @@
 
                 <EditText
                     android:id="@+id/testoPromemoriaSpesa"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="72dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="56dp"
                     android:background="@color/coloreLineaTrasparente"
                     android:ems="10"
                     android:enabled="false"
@@ -197,14 +201,14 @@
                     android:layout_height="24dp"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
                     app:srcCompat="@drawable/ic_spesa_notifica" />
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginBottom="72dp"
-                android:layout_marginLeft="72dp"
+                android:layout_marginStart="56dp"
                 android:background="@color/coloreNeroTrasparente" />
 
 

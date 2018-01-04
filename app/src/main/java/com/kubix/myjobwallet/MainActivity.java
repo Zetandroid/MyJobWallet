@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
                     case R.id.action_turni:
                         startActivity(new Intent(MainActivity.this, CalendarioActivity.class));
                         break;
-                    case R.id.action_note:
+                    case R.id.action_memo:
                         startActivity(new Intent(MainActivity.this, NoteAggiungiActivity.class));
                         break;
 
