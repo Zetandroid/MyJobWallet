@@ -13,7 +13,8 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Titolo"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
     <EditText
         android:id="@+id/testoModificaCorpoNote"
@@ -23,7 +24,8 @@
         android:layout_marginRight="16dp"
         android:ems="10"
         android:hint="Nota"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
     <Button
         style="@style/Widget.AppCompat.Button.Borderless.Colored"

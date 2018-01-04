@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
+        android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -24,454 +25,246 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imgProfilePic"
+            <RelativeLayout
+                android:id="@+id/ProfileLayout"
                 android:layout_width="match_parent"
-                android:layout_height="96dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ic_profilo"
-                app:civ_border_color="#000000"
-                app:civ_border_width="2dp" />
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="88dp"
+                    android:layout_height="88dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    app:cardCornerRadius="44dp"
+                    app:cardElevation="6dp">
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_profilo" />
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/textEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:padding="4dp"
+                    android:text="Email"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/textName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardView"
+                    android:layout_centerHorizontal="true"
+                    android:padding="4dp"
+                    android:text="Name"
+                    android:textAlignment="center"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
 
 
-            </LinearLayout>
-
+            <Button
+                android:id="@+id/button9"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/coloreNeroTrasparente" />
 
-
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:columnCount="2"
-                android:visibility="gone">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="4dp"
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtEntrateCard"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Entrata"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtEntrateCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="1345,00 €"
-                            android:textAlignment="center"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="4dp"
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtSpeseCard"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Spesa"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtSpeseCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="990,00 €"
-                            android:textAlignment="center"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-            </GridLayout>
-
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:columnCount="2"
-                android:visibility="gone">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="4dp"
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtOrdinarieCard"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Ore"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtOrdinarieCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="0 Ore"
-                            android:textAlignment="center"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="160dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="4dp"
-                    android:padding="8dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="4dp"
-                        android:layout_marginRight="4dp"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:id="@+id/txtStraordinarieCard"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="Ore"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtStraordinarieCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="0 Ore"
-                            android:textAlignment="center"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-            </GridLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_weight="1"
-                android:baselineAligned="false"
-                android:orientation="vertical"
-                tools:ignore="InefficientWeight">
+                android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
+                <LinearLayout
+                    android:id="@+id/oreLavorate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    tools:ignore="NestedWeights">
+
+                    <TextView
+                        android:id="@+id/txtOreLavorate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Ore lavorative"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+
+                    <TextView
+                        android:id="@+id/txtOre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textAlignment="viewEnd"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/coloreNeroTrasparente" />
+
+                <LinearLayout
+                    android:id="@+id/pagaOraria"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textPagaOraria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Paga oraria"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+
+                    <TextView
+                        android:id="@+id/txtPagaOraria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textAlignment="viewEnd"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/coloreNeroTrasparente" />
+
+                <LinearLayout
+                    android:id="@+id/pagaStraordinaria"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtPagaStraordinaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Paga straordinaria"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+
+                    <TextView
+                        android:id="@+id/txtStraordinaria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textAlignment="viewEnd"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/coloreNeroTrasparente" />
+
+
+                <LinearLayout
+                    android:id="@+id/valuta"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textValuta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:text="Valuta"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
+
+                    <TextView
+                        android:id="@+id/txtValuta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textAlignment="viewEnd"
+                        android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/coloreNeroTrasparente" />
+
+                <Button
+                    android:id="@+id/bottoneDati"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1"
-                    android:visibility="visible">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:orientation="vertical"
-                        android:visibility="gone">
-
-                        <TextView
-                            android:id="@+id/txtStipendioCard"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="Stipendio"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/txtCalcoloStipendio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginRight="4dp"
-                            android:layout_marginTop="4dp"
-                            android:text="0,00 €"
-                            android:textAlignment="center"
-                            android:textSize="14sp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/coloreNeroTrasparente" />
-
-                        <Button
-                            android:id="@+id/btnAggiungiStipendio"
-                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Aggiungi alle Entrate"
-                            android:textAllCaps="false"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_weight="1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:id="@+id/oreLavorate"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            tools:ignore="NestedWeights">
-
-                            <TextView
-                                android:id="@+id/txtOreLavorate"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="Ore lavorative"
-                                android:textAlignment="viewStart"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/txtOre"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:padding="4dp"
-                                android:textAlignment="viewEnd"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/pagaOraria"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textPagaOraria"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:text="Paga oraria"
-                                android:textAlignment="viewStart"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/txtPagaOraria"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:layout_weight="1"
-                                android:padding="4dp"
-                                android:textAlignment="viewEnd"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/pagaStraordinaria"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/txtPagaStraordinaria"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:layout_centerInParent="true"
-                                android:layout_centerVertical="true"
-                                android:layout_weight="1"
-                                android:text="Paga straordinaria"
-                                android:textAlignment="viewStart"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/txtStraordinaria"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:layout_weight="1"
-                                android:padding="4dp"
-                                android:textAlignment="viewEnd"/>
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:id="@+id/valuta"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textValuta"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:layout_centerInParent="true"
-                                android:layout_centerVertical="true"
-                                android:layout_weight="1"
-                                android:text="Valuta"
-                                android:textAlignment="viewStart"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/txtValuta"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:padding="4dp"
-                                android:textAlignment="viewEnd"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="@color/coloreNeroTrasparente" />
-
-                        <Button
-                            android:id="@+id/bottoneDati"
-                            style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Imposta Dati"
-                            android:textAllCaps="false"
-                            android:textSize="14sp" />
-
-                    </LinearLayout>
-                </android.support.v7.widget.CardView>
-
+                    android:text="Imposta Dati"
+                    android:textAllCaps="false"
+                    android:textSize="14sp" />
 
             </LinearLayout>
 

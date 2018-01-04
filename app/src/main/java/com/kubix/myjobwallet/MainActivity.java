@@ -11,7 +11,8 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -19,14 +20,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -42,20 +41,16 @@ import com.kubix.myjobwallet.setting.ClsSettings;
 import com.kubix.myjobwallet.setting.SettingsActivity;
 import com.kubix.myjobwallet.spese.SpeseActivity;
 import com.kubix.myjobwallet.spese.SpeseAggiungiActivity;
+import com.kubix.myjobwallet.utility.BottomNavigationViewHelper;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     //INDICIZZA ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
     private AdView mAdView;
     VideoController mVideoController;
-
-    //FAB
-    private Boolean isFabOpen = false;
-    private FloatingActionButton fab, fab1, fab2, fab3, fab4;
-    private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
     //DICHIARA DATABASE SQLITE
     public static SQLiteDatabase db;
@@ -72,9 +67,32 @@ public class MainActivity extends AppCompatActivity
         if (settings.get_temadark()) {
             setTheme(R.style.AppTheme_Dark);
         }
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //BottomBar
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationViewHelper.removeShiftMode(bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_spese:
+                        startActivity(new Intent(MainActivity.this, SpeseAggiungiActivity.class));
+                        break;
+                    case R.id.action_entrate:
+                        startActivity(new Intent(MainActivity.this, EntrateAggiungiActivity.class));
+                        break;
+                    case R.id.action_turni:
+                        startActivity(new Intent(MainActivity.this, CalendarioActivity.class));
+                        break;
+                    case R.id.action_note:
+                        startActivity(new Intent(MainActivity.this, NoteAggiungiActivity.class));
+                        break;
+
+                }
+                return true;
+            }
+        });
 
         // AdMob
         MobileAds.initialize(this, "ca-app-pub-9460579775308491~5760945149");
@@ -104,21 +122,6 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        //FAB
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
-        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
-        fab3 = (FloatingActionButton) findViewById(R.id.fab3);
-        fab4 = (FloatingActionButton) findViewById(R.id.fab4);
-        fab_apri = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_apri);
-        fab_chiudi = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_chiudi);
-        fab_ruota_avanti = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_avanti);
-        fab_ruota_indietro = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_indietro);
-        fab.setOnClickListener(this);
-        fab1.setOnClickListener(this);
-        fab2.setOnClickListener(this);
-        fab3.setOnClickListener(this);
-        fab4.setOnClickListener(this);
 
         //CREAZIONE EFFETTIVA DEL DATABASE ESEGUENDO QUERY
         db = this.openOrCreateDatabase("Turnazioni.db", MODE_PRIVATE, null);
@@ -199,63 +202,6 @@ public class MainActivity extends AppCompatActivity
         sommaUscite.setText(sommaUscite.getText().toString().replace(".",",").toString());
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id) {
-            case R.id.fab:
-                animateFAB();
-                break;
-            case R.id.fab1:
-                animateFAB();
-                startActivity(new Intent(this, EntrateAggiungiActivity.class));
-                break;
-            case R.id.fab2:
-                animateFAB();
-                startActivity(new Intent(this, SpeseAggiungiActivity.class));
-                break;
-            case R.id.fab3:
-                animateFAB();
-                startActivity(new Intent(this, CalendarioActivity.class));
-                break;
-            case R.id.fab4:
-                animateFAB();
-                startActivity(new Intent(this, NoteAggiungiActivity.class));
-                break;
-        }
-    }
-
-    public void animateFAB() {
-
-        if (isFabOpen) {
-
-            fab.startAnimation(fab_ruota_indietro);
-            fab1.startAnimation(fab_chiudi);
-            fab2.startAnimation(fab_chiudi);
-            fab3.startAnimation(fab_chiudi);
-            fab4.startAnimation(fab_chiudi);
-            fab1.setClickable(false);
-            fab2.setClickable(false);
-            fab3.setClickable(false);
-            fab4.setClickable(false);
-            isFabOpen = false;
-            Log.d("Raj", "close");
-
-        } else {
-
-            fab.startAnimation(fab_ruota_avanti);
-            fab1.startAnimation(fab_apri);
-            fab2.startAnimation(fab_apri);
-            fab3.startAnimation(fab_apri);
-            fab4.startAnimation(fab_apri);
-            fab1.setClickable(true);
-            fab2.setClickable(true);
-            fab2.setClickable(true);
-            fab4.setClickable(true);
-            isFabOpen = true;
-            Log.d("Raj", "open");
-        }
-    }
 
     //TOOLBAR MENU DESTRA
     @Override
@@ -478,6 +424,8 @@ public class MainActivity extends AppCompatActivity
     //CALCOLO ORE LAVORATIVE E STRAORDINARI TOTALI
     public void calcoloOreLavorative(){
 
-    }
 
+    }
 }
+
+

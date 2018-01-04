@@ -9,10 +9,10 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp">
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,9 +84,8 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Ora Entrata"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -98,7 +97,9 @@
                     android:padding="4dp"
                     android:text="07:30"
                     android:textAlignment="viewEnd"
-                    android:textSize="14sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
 
@@ -116,9 +117,8 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Ora Uscita"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -130,7 +130,9 @@
                     android:padding="4dp"
                     android:text="18:00"
                     android:textAlignment="viewEnd"
-                    android:textSize="14sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
 
@@ -148,9 +150,8 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Ore ordinarie"
-                    android:textAlignment="viewStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -162,7 +163,9 @@
                     android:padding="4dp"
                     android:text="8h"
                     android:textAlignment="viewEnd"
-                    android:textSize="14sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
 
@@ -181,9 +184,8 @@
                     android:layout_weight="1"
                     android:padding="4dp"
                     android:text="Ore straordinarie"
-                    android:textAlignment="textStart"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -195,7 +197,9 @@
                     android:padding="4dp"
                     android:text="1h"
                     android:textAlignment="viewEnd"
-                    android:textSize="14sp"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>

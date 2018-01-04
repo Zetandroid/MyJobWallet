@@ -2,18 +2,21 @@
 <resources>
 
     <!-- TEMA LIGHT -->
-    <color name="colorPrimary">#f5f5f5</color>
-    <color name="colorPrimaryDark">#f5f5f5</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
     <color name="colorAccent">#00BCD4</color>
+    <color name="text_color_primary">#505050</color>
+    <color name="colorBackground">#fafafa</color>
+    <color name="navigationBar">#00BCD4</color>
     <color name="coloreLineaTrasparente">#00000000</color>
     <color name="coloreNeroTrasparente">#20000000</color>
 
     <!-- TEMA DARK -->
-    <color name="darkColorPrimary">#222222</color>
-    <color name="darkColorPrimaryDark">#222222</color>
+    <color name="darkColorPrimary">#424242</color>
+    <color name="darkColorPrimaryDark">#424242</color>
     <color name="darkColorAccent">#00BCD4</color>
-    <color name="darktextColorPrimary">#000000</color>
-    <color name="dakrtextColorSecondary">#ffffff</color>
+    <color name="dark_text_color_primary">#fafafa</color>
+    <color name="dark_colorBackground">#303030</color>
 
     <!-- INTRODUZIONE -->
     <!-- DOTS INATTIVI -->
@@ -37,6 +40,8 @@
     <color name="dot_light_screen3">#00BCD4</color>
     <color name="dot_light_screen4">#00BCD4</color>
     <color name="dot_light_screen5">#00BCD4</color>
+
+
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>

@@ -21,7 +21,8 @@
         android:ems="10"
         android:hint="Ora Entrata"
         android:onClick="settaEntrataPerModifica"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
     <EditText
         android:id="@+id/oraUscitaPerModificaTurno"
@@ -33,7 +34,8 @@
         android:ems="10"
         android:hint="Ora Uscita"
         android:onClick="settaUscitaPerModifica"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
     <Button
         android:id="@+id/button6"

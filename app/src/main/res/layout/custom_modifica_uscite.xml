@@ -12,7 +12,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:padding="8dp"
-        android:text="Modifica" />
+        android:text="Modifica"
+        android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
     <RelativeLayout
         android:layout_width="match_parent"

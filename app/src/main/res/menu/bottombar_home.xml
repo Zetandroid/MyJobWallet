@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_spese"
+        android:icon="@drawable/ic_widget_dark_spesa"
+        android:title="Spese"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_entrate"
+        android:enabled="true"
+        android:icon="@drawable/ic_widget_dark_entrata"
+        android:title="Entrate"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_turni"
+        android:enabled="true"
+        android:icon="@drawable/ic_widget_dark_turno"
+        android:title="Turni"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_note"
+        android:enabled="true"
+        android:icon="@drawable/ic_widget_dark_memo"
+        android:title="Memo"
+        app:showAsAction="ifRoom" />
+</menu>

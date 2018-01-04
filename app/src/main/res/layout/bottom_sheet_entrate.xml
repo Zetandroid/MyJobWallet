@@ -41,9 +41,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateBonifico"
             android:text="@string/bottomSheet_bonifico"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -69,9 +68,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateAssegno"
             android:text="@string/bottomSheet_assegno"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -96,9 +94,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateVincite"
             android:text="@string/bottomSheet_vincita"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -123,9 +120,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateRegalo"
             android:text="@string/bottomSheet_regalo"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -150,9 +146,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateBeni"
             android:text="@string/bottomSheet_beni"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -177,9 +172,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateRimborsi"
             android:text="@string/bottomSheet_rimborsi"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -204,9 +198,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateVendita"
             android:text="@string/bottomSheet_vendite"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -231,9 +224,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateAltro"
             android:text="@string/bottomSheet_altro"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <View
@@ -263,9 +255,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetEntrateTutteLeCategorie"
             android:text="@string/bottomSheet_tutte_categorie"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
 </LinearLayout>

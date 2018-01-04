@@ -38,8 +38,7 @@
             android:onClick="clickBottomSheetSpeseCasa"
             android:text="@string/bottomSheet_casa"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -65,8 +64,7 @@
             android:onClick="clickBottomSheetSpeseTrasporti"
             android:text="@string/bottomSheet_trasporti"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -92,8 +90,7 @@
             android:onClick="clickBottomSheetSpeseAuto"
             android:text="@string/bottomSheet_auto"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -119,8 +116,7 @@
             android:onClick="clickBottomSheetSpeseCarburante"
             android:text="@string/bottomSheet_carburante"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -146,8 +142,7 @@
             android:onClick="clickBottomSheetSpeseBollette"
             android:text="@string/bottomSheet_bollette"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -173,8 +168,7 @@
             android:onClick="clickBottomSheetSpeseShopping"
             android:text="@string/bottomSheet_shopping"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -202,8 +196,7 @@
             android:onClick="clickBottomSheetSpeseCibo"
             android:text="@string/bottomSheet_cibo"
             android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -228,9 +221,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetSpeseSvago"
             android:text="@string/bottomSheet_svago"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -255,9 +247,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetSpeseViaggi"
             android:text="@string/bottomSheet_viaggi"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -282,9 +273,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetSpeseAltro"
             android:text="@string/bottomSheet_altro"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
     <View
@@ -314,9 +304,8 @@
             android:layout_marginRight="16dp"
             android:onClick="clickBottomSheetSpeseTutte"
             android:text="@string/bottomSheet_tutte_categorie"
-            android:textAlignment="viewStart"
-            android:textAppearance="@android:style/TextAppearance.Material.Medium"
-            android:textSize="14sp" />
+            android:textAlignment="textStart"
+            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
     </RelativeLayout>
 
 </LinearLayout>

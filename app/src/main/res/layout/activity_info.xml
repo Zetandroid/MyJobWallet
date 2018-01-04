@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
+        android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -42,15 +43,27 @@
                         android:layout_marginTop="16dp"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/imgMorgan"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_immagine_morgan"
-                            app:civ_border_color="#000000"
-                            app:civ_border_width="2dp" />
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardView1"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            app:cardCornerRadius="44dp"
+                            app:cardElevation="6dp">
+
+                            <ImageView
+                                android:id="@+id/imgProfile1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/logo_dev_1" />
+
+                        </android.support.v7.widget.CardView>
 
                         <TextView
                             android:id="@+id/nomeMorgan"
@@ -60,8 +73,7 @@
                             android:paddingTop="4dp"
                             android:text="Morgan Ciancio"
                             android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
                         <TextView
                             android:id="@+id/presentazioneMorgan"
@@ -71,6 +83,7 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER / GRAPHIC DESIGN"
                             android:textAlignment="center"
+                            android:textAppearance="@android:style/TextAppearance.Material.Body1"
                             android:textSize="10sp" />
 
                         <View
@@ -120,100 +133,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                android:id="@+id/cardAlessio"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:orientation="vertical">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/imgAlessio"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_immagine_alessio"
-                            app:civ_border_color="#000000"
-                            app:civ_border_width="2dp" />
-
-                        <TextView
-                            android:id="@+id/nomeAlessio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingBottom="2dp"
-                            android:paddingTop="4dp"
-                            android:text="Alessio Boe"
-                            android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/presentazioneAlessio"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingBottom="4dp"
-                            android:paddingTop="2dp"
-                            android:text="DEVELOPER "
-                            android:textAlignment="center"
-                            android:textSize="10sp" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="16dp"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/googleAlessio"
-                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:layout_weight="1"
-                                android:text="Google Plus"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                tools:ignore="DuplicateIds,ObsoleteLayoutParam" />
-
-                            <Button
-                                android:id="@+id/twitterAlessio"
-                                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="8dp"
-                                android:layout_weight="1"
-                                android:text="Twitter"
-                                android:textAlignment="viewStart"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
                 android:id="@+id/cardWalter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -232,15 +151,27 @@
                         android:layout_marginTop="16dp"
                         android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/imgWalter"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_gravity="center"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_immagine_walter"
-                            app:civ_border_color="#000000"
-                            app:civ_border_width="2dp" />
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cardView"
+                            android:layout_width="88dp"
+                            android:layout_height="88dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            app:cardCornerRadius="44dp"
+                            app:cardElevation="6dp">
+
+                            <ImageView
+                                android:id="@+id/imgProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/logo_dev_3" />
+
+                        </android.support.v7.widget.CardView>
 
                         <TextView
                             android:id="@+id/nomeWalter"
@@ -250,8 +181,8 @@
                             android:paddingTop="4dp"
                             android:text="Walter Tomiati"
                             android:textAlignment="center"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                            android:textSize="12sp" />
 
                         <TextView
                             android:id="@+id/presentazioneWalter"
@@ -261,6 +192,7 @@
                             android:paddingTop="2dp"
                             android:text="DEVELOPER "
                             android:textAlignment="center"
+                            android:textAppearance="@android:style/TextAppearance.Material.Body1"
                             android:textSize="10sp" />
 
                         <View
