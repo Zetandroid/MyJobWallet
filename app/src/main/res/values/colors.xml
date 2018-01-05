@@ -4,17 +4,17 @@
     <!-- TEMA LIGHT -->
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#ffffff</color>
-    <color name="colorAccent">#00BCD4</color>
+    <color name="colorAccent">#00BFA5</color>
     <color name="text_color_primary">#505050</color>
     <color name="colorBackground">#fafafa</color>
-    <color name="navigationBar">#00BCD4</color>
+    <color name="navigationBar">#00BFA5</color>
     <color name="coloreLineaTrasparente">#00000000</color>
     <color name="coloreNeroTrasparente">#20000000</color>
 
     <!-- TEMA DARK -->
     <color name="darkColorPrimary">#424242</color>
     <color name="darkColorPrimaryDark">#424242</color>
-    <color name="darkColorAccent">#00BCD4</color>
+    <color name="darkColorAccent">#00BFA5</color>
     <color name="dark_text_color_primary">#fafafa</color>
     <color name="dark_colorBackground">#303030</color>
 

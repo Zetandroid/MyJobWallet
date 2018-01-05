@@ -4,20 +4,18 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.BottomSheetDialogFragment;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,17 +28,13 @@ import com.kubix.myjobwallet.MainActivity;
 import com.kubix.myjobwallet.R;
 import com.kubix.myjobwallet.fragment.BtnSheetEntrateFragment;
 import com.kubix.myjobwallet.setting.ClsSettings;
+import com.kubix.myjobwallet.utility.BottomNavigationViewHelper;
 import com.kubix.myjobwallet.utility.VariabiliGlobali;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EntrateActivity extends AppCompatActivity implements View.OnClickListener {
-
-    //FAB
-    private Boolean isFabOpen = false;
-    private FloatingActionButton fab, fab1, fab2;
-    private Animation fab_apri, fab_chiudi, fab_ruota_avanti, fab_ruota_indietro;
 
     //ADMOB NATIVA
     private static String LOG_TAG = "EXAMPLE";
@@ -138,20 +132,6 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-
-        //FAB MENU
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab1 = (FloatingActionButton) findViewById(R.id.fab1);
-        fab2 = (FloatingActionButton) findViewById(R.id.fab2);
-        fab_apri = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_apri);
-        fab_chiudi = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_chiudi);
-        fab_ruota_avanti = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_avanti);
-        fab_ruota_indietro = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_ruota_indietro);
-        fab.setOnClickListener(this);
-        fab1.setOnClickListener(this);
-        fab2.setOnClickListener(this);
-
-
         //CONTROLLO PER LA VISUALIZZAZIONE DELL'ADD VIEW
         if (VariabiliGlobali.statoPremium.equals("SI")){
             mAdView.setVisibility(View.GONE);
@@ -159,51 +139,24 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
 
         caricaEntrate();
 
-    }
-
-    //ON CLICK DEL FAB
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id) {
-            case R.id.fab:
-                animateFAB();
-                break;
-            case R.id.fab1:
-                animateFAB();
-                BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetEntrateFragment();
-                bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
-                break;
-            case R.id.fab2:
-                animateFAB();
-                startActivity(new Intent(this, EntrateAggiungiActivity.class));
-                break;
-        }
-    }
-
-    public void animateFAB() {
-
-        if (isFabOpen) {
-
-            fab.startAnimation(fab_ruota_indietro);
-            fab1.startAnimation(fab_chiudi);
-            fab2.startAnimation(fab_chiudi);
-            fab1.setClickable(false);
-            fab2.setClickable(false);
-            isFabOpen = false;
-            Log.d("Raj", "close");
-
-        } else {
-
-            fab.startAnimation(fab_ruota_avanti);
-            fab1.startAnimation(fab_apri);
-            fab2.startAnimation(fab_apri);
-            fab1.setClickable(true);
-            fab2.setClickable(true);
-            isFabOpen = true;
-            Log.d("Raj", "open");
-
-        }
+        //BottomBar
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
+        BottomNavigationViewHelper.removeShiftMode(bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_category:
+                        BottomSheetDialogFragment bottomSheetDialogFragment = new BtnSheetEntrateFragment();
+                        bottomSheetDialogFragment.show(getSupportFragmentManager(), bottomSheetDialogFragment.getTag());
+                        break;
+                    case R.id.action_add:
+                        startActivity(new Intent(EntrateActivity.this, EntrateAggiungiActivity.class));
+                        break;
+                }
+                return true;
+            }
+        });
 
     }
 
@@ -569,6 +522,11 @@ public class EntrateActivity extends AppCompatActivity implements View.OnClickLi
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
 

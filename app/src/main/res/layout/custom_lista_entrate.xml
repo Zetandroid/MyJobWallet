@@ -12,173 +12,67 @@
         android:layout_marginBottom="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
 
         <LinearLayout
-            android:id="@+id/linearEntrateDati"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="UselessParent">
-
-            <LinearLayout
-                android:id="@+id/linearTitolo"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/testoGiornoGiornoEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="Mar"
-                    android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/testoNumeroGiornoEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="18"
-                    android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/testoMeseEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="Ott"
-                    android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-                <TextView
-                    android:id="@+id/testoAnnoEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="4dp"
-                    android:text="2017"
-                    android:textAppearance="@android:style/TextAppearance.Material.Title"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/coloreNeroTrasparente" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="16dp">
+                android:layout_height="40dp">
 
                 <TextView
-                    android:id="@+id/txtTitoloEntrate"
+                    android:id="@+id/textEntrata_titolo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentTop="false"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="72dp"
-                    android:padding="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
                     android:text="Titolo"
                     android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/textEntrata_cifra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:text="200,00 €"
+                    android:textAlignment="viewEnd"
+                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     tools:ignore="HardcodedText,RtlHardcoded" />
 
                 <ImageView
-                    android:id="@+id/iconaTagEntrata"
+                    android:id="@+id/iconsEntrata_tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="16dp"
                     app:srcCompat="@drawable/ic_btnsheet_entrate_beni"
                     tools:ignore="ContentDescription,RtlHardcoded" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="16dp">
-
-                <TextView
-                    android:id="@+id/txtEntrata"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="72dp"
-                    android:padding="4dp"
-                    android:text="200,00 €"
-                    android:textAppearance="@android:style/TextAppearance.Material.Body1"
-                    tools:ignore="HardcodedText,RtlHardcoded" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="16dp"
-                android:visibility="gone">
-
-                <ImageView
-                    android:id="@+id/imgNotificaEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="16dp"
-                    app:srcCompat="@drawable/ic_icona_notifica"
-                    tools:ignore="ContentDescription,RtlHardcoded" />
-
-                <TextView
-                    android:id="@+id/txtPromemoria"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:padding="4dp"
-                    android:text="Ora notifica"
-                    android:textAppearance="@android:style/TextAppearance.Material.Small"
-                    android:textSize="14sp"
-                    tools:ignore="HardcodedText,RtlHardcoded" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="32dp"
-                android:layout_marginLeft="16dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/txtDataEntrata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:padding="4dp"
-                    android:text="Data notifica"
-                    android:textAppearance="@android:style/TextAppearance.Material.Small"
-                    android:textSize="14sp"
-                    tools:ignore="HardcodedText,RtlHardcoded" />
-
-            </RelativeLayout>
-
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

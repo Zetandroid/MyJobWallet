@@ -19,16 +19,16 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
         public ImageView categoriaImg, notificaImg;
         MyViewHolder(View view) {
             super(view);
-            titolo = (TextView) view.findViewById(R.id.txtTitoloSpesa);
-            uscita = (TextView) view.findViewById(R.id.txtSpesa);
-            categoriaImg = (ImageView) view.findViewById(R.id.iconaTagUscite);
-            notificaImg = (ImageView) view.findViewById(R.id.imgNotificaSpese);
-            promemoria = (TextView) view.findViewById(R.id.txtPromemoriaUsc);
-            dataUscita = (TextView) view.findViewById(R.id.txtDataSpesa);
-            giornoCorrente = (TextView) view.findViewById(R.id.testoGiornoGiornoSpesa);
-            numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoSpese);
-            meseCorrente = (TextView)view.findViewById(R.id.testoMeseSpese);
-            annoCorrente = (TextView)view.findViewById(R.id.testoAnnoSpese);
+            titolo = (TextView) view.findViewById(R.id.textSpesa_titolo);
+            uscita = (TextView) view.findViewById(R.id.textSpesa_cifra);
+            categoriaImg = (ImageView) view.findViewById(R.id.iconsSpesa_tag);
+            //notificaImg = (ImageView) view.findViewById(R.id.imgNotificaSpese);
+            //promemoria = (TextView) view.findViewById(R.id.txtPromemoriaUsc);
+            //dataUscita = (TextView) view.findViewById(R.id.txtDataSpesa);
+            //giornoCorrente = (TextView) view.findViewById(R.id.testoGiornoGiornoSpesa);
+            //numeroCorrente = (TextView) view.findViewById(R.id.testoNumeroGiornoSpese);
+            //meseCorrente = (TextView)view.findViewById(R.id.testoMeseSpese);
+            //annoCorrente = (TextView)view.findViewById(R.id.testoAnnoSpese);
         }
     }
 
@@ -71,22 +71,22 @@ class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
             holder.categoriaImg.setImageResource(R.drawable.ic_btnsheet_spese_altro);
         }
 
-        holder.promemoria.setText(uscite.getPromemoria());
-        holder.dataUscita.setText(uscite.getDataUscita());
+        //holder.promemoria.setText(uscite.getPromemoria());
+        //holder.dataUscita.setText(uscite.getDataUscita());
 
-        String oraEntrata = uscite.getPromemoria();
-        String dataUscita = uscite.getDataUscita();
+        //String oraEntrata = uscite.getPromemoria();
+        //String dataUscita = uscite.getDataUscita();
 
-        if(oraEntrata.equals("") && dataUscita.equals("")){
-            holder.notificaImg.setVisibility(View.INVISIBLE);
-        }else{
-            holder.notificaImg.setVisibility(View.VISIBLE);
-        }
+        //if(oraEntrata.equals("") && dataUscita.equals("")){
+            //holder.notificaImg.setVisibility(View.INVISIBLE);
+        //}else{
+            //holder.notificaImg.setVisibility(View.VISIBLE);
+        //}
 
-        holder.giornoCorrente .setText(uscite.getNumeroCorrente());
-        holder.numeroCorrente.setText(uscite.getNumeroCorrente());
-        holder.meseCorrente.setText(uscite.getMeseCorrente());
-        holder.annoCorrente.setText(uscite.getAnnoCorrente());
+        //holder.giornoCorrente .setText(uscite.getNumeroCorrente());
+        //holder.numeroCorrente.setText(uscite.getNumeroCorrente());
+        //holder.meseCorrente.setText(uscite.getMeseCorrente());
+        //holder.annoCorrente.setText(uscite.getAnnoCorrente());
     }
 
     @Override
